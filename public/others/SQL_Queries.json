@@ -1,0 +1,963 @@
+[
+  {
+    "id": 1,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query returns every column and every row from Employee?",
+    "code": "Table: Employee(employee_id, name, salary, department_id)",
+    "options": [
+      "SELECT * FROM Employee;",
+      "SELECT Employee FROM *;",
+      "SHOW ALL FROM Employee;",
+      "SELECT ALL Employee;"
+    ],
+    "answer": 0,
+    "explanation": "SELECT * retrieves all columns from the table.",
+    "tags": [
+      "select",
+      "basics"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query returns employees whose salary is greater than 50000?",
+    "code": "Table: Employee(employee_id, name, salary, department_id)",
+    "options": [
+      "SELECT * FROM Employee WHERE salary > 50000;",
+      "SELECT * FROM Employee HAVING salary > 50000;",
+      "SELECT salary > 50000 FROM Employee;",
+      "SELECT * FROM Employee ORDER BY salary > 50000;"
+    ],
+    "answer": 0,
+    "explanation": "WHERE filters rows before they are returned.",
+    "tags": [
+      "where",
+      "filtering"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query counts all rows in Student?",
+    "code": "Table: Student(student_id, name, email)",
+    "options": [
+      "SELECT COUNT(*) FROM Student;",
+      "SELECT SUM(*) FROM Student;",
+      "SELECT TOTAL(*) FROM Student;",
+      "SELECT ROWS(*) FROM Student;"
+    ],
+    "answer": 0,
+    "explanation": "COUNT(*) returns the number of rows.",
+    "tags": [
+      "count",
+      "aggregate-functions"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query sorts products from highest price to lowest price?",
+    "code": "Table: Product(product_id, product_name, price)",
+    "options": [
+      "SELECT * FROM Product ORDER BY price DESC;",
+      "SELECT * FROM Product ORDER BY price ASC;",
+      "SELECT * FROM Product GROUP BY price DESC;",
+      "SELECT * FROM Product SORT BY price DESC;"
+    ],
+    "answer": 0,
+    "explanation": "DESC sorts values in descending order.",
+    "tags": [
+      "order-by",
+      "sorting"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query inserts a student with ID 1 and name Ana?",
+    "code": "Table: Student(student_id, name)",
+    "options": [
+      "INSERT INTO Student(student_id, name) VALUES (1, 'Ana');",
+      "INSERT Student(student_id, name) VALUE (1, 'Ana');",
+      "UPDATE Student SET student_id = 1, name = 'Ana';",
+      "CREATE INTO Student(student_id, name) VALUES (1, 'Ana');"
+    ],
+    "answer": 0,
+    "explanation": "INSERT INTO adds a new row using VALUES.",
+    "tags": [
+      "insert",
+      "dml"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query changes employee 5's salary to 60000?",
+    "code": "Table: Employee(employee_id, name, salary)",
+    "options": [
+      "UPDATE Employee SET salary = 60000 WHERE employee_id = 5;",
+      "UPDATE Employee WHERE employee_id = 5 SET salary = 60000;",
+      "ALTER Employee SET salary = 60000 WHERE employee_id = 5;",
+      "INSERT INTO Employee(salary) VALUES (60000) WHERE employee_id = 5;"
+    ],
+    "answer": 0,
+    "explanation": "UPDATE uses SET for new values and WHERE to target the row.",
+    "tags": [
+      "update",
+      "where"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query deletes the student whose ID is 3?",
+    "code": "Table: Student(student_id, name)",
+    "options": [
+      "DELETE FROM Student WHERE student_id = 3;",
+      "DROP FROM Student WHERE student_id = 3;",
+      "REMOVE FROM Student WHERE student_id = 3;",
+      "DELETE Student_id = 3 FROM Student;"
+    ],
+    "answer": 0,
+    "explanation": "DELETE FROM removes rows matching the WHERE condition.",
+    "tags": [
+      "delete",
+      "dml"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query calculates the average employee salary?",
+    "code": "Table: Employee(employee_id, name, salary)",
+    "options": [
+      "SELECT AVG(salary) FROM Employee;",
+      "SELECT SUM(salary) FROM Employee;",
+      "SELECT COUNT(salary) FROM Employee;",
+      "SELECT MAX(salary) FROM Employee;"
+    ],
+    "answer": 0,
+    "explanation": "AVG returns the arithmetic mean.",
+    "tags": [
+      "avg",
+      "aggregate-functions"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query returns students whose email is missing?",
+    "code": "Table: Student(student_id, name, email)",
+    "options": [
+      "SELECT * FROM Student WHERE email IS NULL;",
+      "SELECT * FROM Student WHERE email = NULL;",
+      "SELECT * FROM Student WHERE email == NULL;",
+      "SELECT * FROM Student WHERE email IS EMPTY;"
+    ],
+    "answer": 0,
+    "explanation": "NULL values are tested using IS NULL.",
+    "tags": [
+      "null",
+      "where"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query returns unique department IDs?",
+    "code": "Table: Employee(employee_id, department_id)",
+    "options": [
+      "SELECT DISTINCT department_id FROM Employee;",
+      "SELECT UNIQUE(department_id) FROM Employee;",
+      "SELECT department_id ONLY FROM Employee;",
+      "SELECT department_id FROM Employee GROUP DISTINCT;"
+    ],
+    "answer": 0,
+    "explanation": "DISTINCT removes duplicate result values.",
+    "tags": [
+      "distinct",
+      "select"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query returns students whose names begin with A?",
+    "code": "Table: Student(student_id, name)",
+    "options": [
+      "SELECT * FROM Student WHERE name LIKE 'A%';",
+      "SELECT * FROM Student WHERE name LIKE '%A';",
+      "SELECT * FROM Student WHERE name = 'A%';",
+      "SELECT * FROM Student WHERE name IN ('A%');"
+    ],
+    "answer": 0,
+    "explanation": "A% matches strings starting with A.",
+    "tags": [
+      "like",
+      "pattern-matching"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query creates the Course table with a primary key?",
+    "code": "Required columns: course_id INT, title VARCHAR(100)",
+    "options": [
+      "CREATE TABLE Course (course_id INT PRIMARY KEY, title VARCHAR(100));",
+      "CREATE Course TABLE (course_id INT PRIMARY KEY, title VARCHAR(100));",
+      "INSERT TABLE Course (course_id INT PRIMARY KEY, title VARCHAR(100));",
+      "ALTER TABLE Course CREATE (course_id INT PRIMARY KEY, title VARCHAR(100));"
+    ],
+    "answer": 0,
+    "explanation": "CREATE TABLE defines the new table and its constraints.",
+    "tags": [
+      "ddl",
+      "create-table"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which query returns products priced from 100 through 500 inclusive?",
+    "code": "Table: Product(product_id, product_name, price)",
+    "options": [
+      "SELECT * FROM Product WHERE price BETWEEN 100 AND 500;",
+      "SELECT * FROM Product WHERE price > 100 AND price < 500;",
+      "SELECT * FROM Product HAVING price BETWEEN 100 AND 500;",
+      "SELECT * FROM Product WHERE price IN (100, 500);"
+    ],
+    "answer": 0,
+    "explanation": "BETWEEN includes both boundary values.",
+    "tags": [
+      "between",
+      "where"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which transaction permanently saves the balance update?",
+    "code": "Table: Account(id, balance)",
+    "options": [
+      "BEGIN; UPDATE Account SET balance = balance - 100 WHERE id = 1; COMMIT;",
+      "BEGIN; UPDATE Account SET balance = balance - 100 WHERE id = 1; ROLLBACK;",
+      "UPDATE Account SET balance = balance - 100 WHERE id = 1; SAVEPOINT;",
+      "BEGIN; SELECT balance FROM Account WHERE id = 1; ROLLBACK;"
+    ],
+    "answer": 0,
+    "explanation": "COMMIT makes transaction changes permanent.",
+    "tags": [
+      "transactions",
+      "commit"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "sql",
+    "difficulty": "easy",
+    "question": "Which transaction cancels the uncommitted balance update?",
+    "code": "Table: Account(id, balance)",
+    "options": [
+      "BEGIN; UPDATE Account SET balance = 0 WHERE id = 1; ROLLBACK;",
+      "BEGIN; UPDATE Account SET balance = 0 WHERE id = 1; COMMIT;",
+      "UPDATE Account SET balance = 0 WHERE id = 1; GRANT;",
+      "BEGIN; SELECT * FROM Account; COMMIT;"
+    ],
+    "answer": 0,
+    "explanation": "ROLLBACK reverses uncommitted changes.",
+    "tags": [
+      "transactions",
+      "rollback"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query counts employees in each department?",
+    "code": "Table: Employee(employee_id, department_id)",
+    "options": [
+      "SELECT department_id, COUNT(*) FROM Employee GROUP BY department_id;",
+      "SELECT department_id, COUNT(*) FROM Employee;",
+      "SELECT COUNT(department_id) FROM Employee ORDER BY department_id;",
+      "SELECT department_id FROM Employee HAVING COUNT(*);"
+    ],
+    "answer": 0,
+    "explanation": "GROUP BY creates one group per department.",
+    "tags": [
+      "group-by",
+      "count"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns departments with more than five employees?",
+    "code": "Table: Employee(employee_id, department_id)",
+    "options": [
+      "SELECT department_id, COUNT(*) FROM Employee GROUP BY department_id HAVING COUNT(*) > 5;",
+      "SELECT department_id, COUNT(*) FROM Employee WHERE COUNT(*) > 5 GROUP BY department_id;",
+      "SELECT department_id FROM Employee WHERE employee_id > 5;",
+      "SELECT department_id FROM Employee ORDER BY COUNT(*) > 5;"
+    ],
+    "answer": 0,
+    "explanation": "HAVING filters grouped aggregate results.",
+    "tags": [
+      "having",
+      "group-by"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns only employees with matching departments?",
+    "code": "Tables: Employee(employee_id, name, department_id), Department(department_id, department_name)",
+    "options": [
+      "SELECT e.name, d.department_name FROM Employee e INNER JOIN Department d ON e.department_id = d.department_id;",
+      "SELECT e.name, d.department_name FROM Employee e LEFT JOIN Department d ON e.department_id = d.department_id;",
+      "SELECT e.name, d.department_name FROM Employee e CROSS JOIN Department d;",
+      "SELECT e.name, d.department_name FROM Employee e FULL OUTER JOIN Department d ON 1 = 1;"
+    ],
+    "answer": 0,
+    "explanation": "INNER JOIN keeps rows that match in both tables.",
+    "tags": [
+      "inner-join",
+      "joins"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query includes every department even when it has no employees?",
+    "code": "Tables: Department(department_id, department_name), Employee(employee_id, name, department_id)",
+    "options": [
+      "SELECT d.department_name, e.name FROM Department d LEFT JOIN Employee e ON d.department_id = e.department_id;",
+      "SELECT d.department_name, e.name FROM Department d INNER JOIN Employee e ON d.department_id = e.department_id;",
+      "SELECT d.department_name, e.name FROM Department d CROSS JOIN Employee e;",
+      "SELECT d.department_name, e.name FROM Department d RIGHT JOIN Employee e ON d.department_id = e.department_id;"
+    ],
+    "answer": 0,
+    "explanation": "LEFT JOIN preserves all rows from Department.",
+    "tags": [
+      "left-join",
+      "joins"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns employees earning above the company average?",
+    "code": "Table: Employee(employee_id, name, salary)",
+    "options": [
+      "SELECT * FROM Employee WHERE salary > (SELECT AVG(salary) FROM Employee);",
+      "SELECT * FROM Employee WHERE salary > AVG(salary);",
+      "SELECT * FROM Employee HAVING salary > AVG(salary);",
+      "SELECT AVG(salary) FROM Employee WHERE salary > salary;"
+    ],
+    "answer": 0,
+    "explanation": "The scalar subquery calculates the average salary.",
+    "tags": [
+      "subquery",
+      "avg"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns the highest salary in each department?",
+    "code": "Table: Employee(employee_id, department_id, salary)",
+    "options": [
+      "SELECT department_id, MAX(salary) FROM Employee GROUP BY department_id;",
+      "SELECT department_id, salary FROM Employee GROUP BY department_id;",
+      "SELECT MAX(salary), department_id FROM Employee;",
+      "SELECT department_id FROM Employee HAVING MAX(salary);"
+    ],
+    "answer": 0,
+    "explanation": "MAX is calculated for each department group.",
+    "tags": [
+      "max",
+      "group-by"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query replaces NULL bonus values with 0?",
+    "code": "Table: Employee(employee_id, bonus)",
+    "options": [
+      "SELECT employee_id, COALESCE(bonus, 0) AS bonus FROM Employee;",
+      "SELECT employee_id, NULLIF(bonus, 0) AS bonus FROM Employee;",
+      "SELECT employee_id, AVG(bonus, 0) AS bonus FROM Employee;",
+      "SELECT employee_id, CAST(bonus AS 0) AS bonus FROM Employee;"
+    ],
+    "answer": 0,
+    "explanation": "COALESCE returns the first non-NULL value.",
+    "tags": [
+      "coalesce",
+      "null"
+    ]
+  },
+  {
+    "id": 23,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query combines customer and supplier emails while removing duplicates?",
+    "code": "Tables: Customer(email), Supplier(email)",
+    "options": [
+      "SELECT email FROM Customer UNION SELECT email FROM Supplier;",
+      "SELECT email FROM Customer UNION ALL SELECT email FROM Supplier;",
+      "SELECT email FROM Customer JOIN Supplier ON Customer.email = Supplier.email;",
+      "SELECT DISTINCT email FROM Customer, Supplier;"
+    ],
+    "answer": 0,
+    "explanation": "UNION combines compatible result sets and removes duplicates.",
+    "tags": [
+      "union",
+      "set-operations"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns the second-highest distinct salary?",
+    "code": "Table: Employee(employee_id, salary)",
+    "options": [
+      "SELECT MAX(salary) FROM Employee WHERE salary < (SELECT MAX(salary) FROM Employee);",
+      "SELECT MAX(salary) FROM Employee;",
+      "SELECT salary FROM Employee ORDER BY salary DESC LIMIT 1;",
+      "SELECT AVG(salary) FROM Employee;"
+    ],
+    "answer": 0,
+    "explanation": "The outer MAX selects the greatest salary below the overall maximum.",
+    "tags": [
+      "subquery",
+      "ranking",
+      "max"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns rows 11 through 20 using MySQL-style pagination?",
+    "code": "Table: Product(product_id, product_name)",
+    "options": [
+      "SELECT * FROM Product LIMIT 10 OFFSET 10;",
+      "SELECT * FROM Product LIMIT 20 OFFSET 10;",
+      "SELECT * FROM Product LIMIT 10 OFFSET 20;",
+      "SELECT TOP 10 * FROM Product OFFSET 10;"
+    ],
+    "answer": 0,
+    "explanation": "OFFSET 10 skips ten rows and LIMIT 10 returns the next ten.",
+    "tags": [
+      "pagination",
+      "limit",
+      "offset"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns customers who have at least one order?",
+    "code": "Tables: Customer(customer_id, name), Orders(order_id, customer_id)",
+    "options": [
+      "SELECT * FROM Customer c WHERE EXISTS (SELECT 1 FROM Orders o WHERE o.customer_id = c.customer_id);",
+      "SELECT * FROM Customer c WHERE NOT EXISTS (SELECT 1 FROM Orders o WHERE o.customer_id = c.customer_id);",
+      "SELECT * FROM Customer c WHERE c.customer_id = NULL;",
+      "SELECT * FROM Customer c CROSS JOIN Orders o;"
+    ],
+    "answer": 0,
+    "explanation": "EXISTS is true when the correlated subquery finds an order.",
+    "tags": [
+      "exists",
+      "correlated-subquery"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query correctly defines and uses a CTE for high-salary employees?",
+    "code": "Table: Employee(employee_id, name, salary)",
+    "options": [
+      "WITH HighSalary AS (SELECT * FROM Employee WHERE salary > 50000) SELECT * FROM HighSalary;",
+      "CTE HighSalary = SELECT * FROM Employee WHERE salary > 50000;",
+      "WITH SELECT HighSalary FROM Employee WHERE salary > 50000;",
+      "CREATE TEMP CTE HighSalary SELECT * FROM Employee;"
+    ],
+    "answer": 0,
+    "explanation": "A CTE uses WITH name AS (subquery).",
+    "tags": [
+      "cte",
+      "with"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query assigns a unique sequence number based on salary descending?",
+    "code": "Table: Employee(employee_id, salary)",
+    "options": [
+      "SELECT employee_id, salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS rn FROM Employee;",
+      "SELECT employee_id, salary, COUNT(*) OVER (ORDER BY salary DESC) AS rn FROM Employee;",
+      "SELECT employee_id, salary, RANK salary DESC AS rn FROM Employee;",
+      "SELECT employee_id, salary, GROUP_NUMBER() OVER (salary DESC) AS rn FROM Employee;"
+    ],
+    "answer": 0,
+    "explanation": "ROW_NUMBER assigns a unique sequence based on window ordering.",
+    "tags": [
+      "window-functions",
+      "row-number"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query classifies salaries as High or Normal?",
+    "code": "Table: Employee(employee_id, salary)",
+    "options": [
+      "SELECT salary, CASE WHEN salary >= 50000 THEN 'High' ELSE 'Normal' END AS level FROM Employee;",
+      "SELECT salary IF salary >= 50000 'High' ELSE 'Normal' FROM Employee;",
+      "SELECT CASE salary >= 50000 RETURN 'High' FROM Employee;",
+      "SELECT salary, SWITCH salary >= 50000 AS level FROM Employee;"
+    ],
+    "answer": 0,
+    "explanation": "CASE WHEN returns a derived value based on conditions.",
+    "tags": [
+      "case",
+      "conditional-expression"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query creates an index on Employee.email?",
+    "code": "Table: Employee(employee_id, email)",
+    "options": [
+      "CREATE INDEX idx_employee_email ON Employee(email);",
+      "CREATE Employee INDEX idx_employee_email(email);",
+      "ALTER INDEX idx_employee_email ON Employee(email);",
+      "ADD INDEX Employee.email AS idx_employee_email;"
+    ],
+    "answer": 0,
+    "explanation": "CREATE INDEX defines an index on a table column.",
+    "tags": [
+      "indexing",
+      "performance"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which transaction correctly transfers 500 from account 1 to account 2 atomically?",
+    "code": "Table: Account(id, balance)",
+    "options": [
+      "BEGIN; UPDATE Account SET balance = balance - 500 WHERE id = 1; UPDATE Account SET balance = balance + 500 WHERE id = 2; COMMIT;",
+      "UPDATE Account SET balance = balance - 500 WHERE id = 1; COMMIT; UPDATE Account SET balance = balance + 500 WHERE id = 2;",
+      "BEGIN; UPDATE Account SET balance = balance - 500 WHERE id = 1; ROLLBACK; UPDATE Account SET balance = balance + 500 WHERE id = 2;",
+      "SELECT balance FROM Account WHERE id IN (1,2);"
+    ],
+    "answer": 0,
+    "explanation": "Both updates are enclosed in one transaction and committed together.",
+    "tags": [
+      "transactions",
+      "acid",
+      "atomicity"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which table definition correctly adds a foreign key from Orders to Customer?",
+    "code": "Parent table: Customer(customer_id PRIMARY KEY)",
+    "options": [
+      "CREATE TABLE Orders (order_id INT PRIMARY KEY, customer_id INT, FOREIGN KEY (customer_id) REFERENCES Customer(customer_id));",
+      "CREATE TABLE Orders (order_id INT PRIMARY KEY, customer_id INT REFERENCES Orders(order_id));",
+      "CREATE TABLE Orders (order_id INT, customer_id INT UNIQUE Customer(customer_id));",
+      "CREATE TABLE Orders (order_id INT PRIMARY KEY, customer_id FOREIGN Customer);"
+    ],
+    "answer": 0,
+    "explanation": "The foreign key references Customer(customer_id).",
+    "tags": [
+      "foreign-key",
+      "referential-integrity"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which table definition prevents duplicate email values?",
+    "code": "Required table: UserAccount(user_id, email)",
+    "options": [
+      "CREATE TABLE UserAccount (user_id INT PRIMARY KEY, email VARCHAR(100) UNIQUE);",
+      "CREATE TABLE UserAccount (user_id INT PRIMARY KEY, email VARCHAR(100) CHECK NULL);",
+      "CREATE TABLE UserAccount (user_id INT, email VARCHAR(100) FOREIGN KEY);",
+      "CREATE TABLE UserAccount (user_id INT PRIMARY KEY, email VARCHAR(100) DEFAULT UNIQUE);"
+    ],
+    "answer": 0,
+    "explanation": "UNIQUE prevents duplicate email values.",
+    "tags": [
+      "constraints",
+      "unique"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which corrected query is valid under standard GROUP BY rules?",
+    "code": "Invalid query:\nSELECT department_id, employee_name, COUNT(*) FROM Employee GROUP BY department_id;",
+    "options": [
+      "SELECT department_id, COUNT(*) FROM Employee GROUP BY department_id;",
+      "SELECT department_id, employee_name, COUNT(*) FROM Employee;",
+      "SELECT department_id, employee_name FROM Employee HAVING COUNT(*);",
+      "SELECT department_id, COUNT(*) FROM Employee ORDER BY employee_name GROUP BY department_id;"
+    ],
+    "answer": 0,
+    "explanation": "Only grouped or aggregated columns should be selected.",
+    "tags": [
+      "group-by",
+      "debugging"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which decomposition removes the partial dependency student_id → student_name?",
+    "code": "Enrollment(student_id, course_id, student_name, grade)\nPrimary key: (student_id, course_id)",
+    "options": [
+      "CREATE TABLE Student(student_id INT PRIMARY KEY, student_name VARCHAR(100)); CREATE TABLE Enrollment(student_id INT, course_id INT, grade VARCHAR(5), PRIMARY KEY(student_id, course_id));",
+      "CREATE TABLE Enrollment(student_id INT, course_id INT, student_name VARCHAR(100), grade VARCHAR(5), PRIMARY KEY(student_id, course_id));",
+      "CREATE TABLE Student(course_id INT PRIMARY KEY, student_name VARCHAR(100));",
+      "CREATE TABLE Enrollment(student_name VARCHAR(100), grade VARCHAR(5));"
+    ],
+    "answer": 0,
+    "explanation": "Student data is separated from the composite-key enrollment relation.",
+    "tags": [
+      "normalization",
+      "2nf",
+      "partial-dependency"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which decomposition removes the transitive dependency instructor_id → instructor_name?",
+    "code": "Course(course_id, course_name, instructor_id, instructor_name)",
+    "options": [
+      "CREATE TABLE Instructor(instructor_id INT PRIMARY KEY, instructor_name VARCHAR(100)); CREATE TABLE Course(course_id INT PRIMARY KEY, course_name VARCHAR(100), instructor_id INT);",
+      "CREATE TABLE Course(course_id INT PRIMARY KEY, course_name VARCHAR(100), instructor_id INT, instructor_name VARCHAR(100));",
+      "CREATE TABLE Instructor(course_id INT PRIMARY KEY, instructor_name VARCHAR(100));",
+      "CREATE TABLE Course(instructor_name VARCHAR(100));"
+    ],
+    "answer": 0,
+    "explanation": "Instructor details are moved to a separate relation.",
+    "tags": [
+      "normalization",
+      "3nf",
+      "transitive-dependency"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query ranks customers by total order amount from highest to lowest?",
+    "code": "Table: Orders(order_id, customer_id, total_amount)",
+    "options": [
+      "SELECT customer_id, SUM(total_amount) AS total FROM Orders GROUP BY customer_id ORDER BY total DESC;",
+      "SELECT customer_id, total_amount FROM Orders ORDER BY total_amount DESC;",
+      "SELECT SUM(total_amount) FROM Orders ORDER BY customer_id;",
+      "SELECT customer_id, AVG(total_amount) FROM Orders GROUP BY customer_id;"
+    ],
+    "answer": 0,
+    "explanation": "SUM aggregates each customer's spending and ORDER BY sorts the totals.",
+    "tags": [
+      "group-by",
+      "sum",
+      "order-by"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns customers with no orders?",
+    "code": "Tables: Customer(customer_id, name), Orders(order_id, customer_id)",
+    "options": [
+      "SELECT c.* FROM Customer c LEFT JOIN Orders o ON c.customer_id = o.customer_id WHERE o.order_id IS NULL;",
+      "SELECT c.* FROM Customer c INNER JOIN Orders o ON c.customer_id = o.customer_id;",
+      "SELECT c.* FROM Customer c WHERE c.customer_id IS NULL;",
+      "SELECT c.* FROM Customer c CROSS JOIN Orders o;"
+    ],
+    "answer": 0,
+    "explanation": "The LEFT JOIN plus NULL test implements an anti-join.",
+    "tags": [
+      "anti-join",
+      "left-join"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query returns employees in departments 1, 2, or 3?",
+    "code": "Table: Employee(employee_id, department_id)",
+    "options": [
+      "SELECT * FROM Employee WHERE department_id IN (1, 2, 3);",
+      "SELECT * FROM Employee WHERE department_id BETWEEN 1 AND 2;",
+      "SELECT * FROM Employee WHERE department_id = (1, 2, 3);",
+      "SELECT * FROM Employee HAVING department_id IN 1, 2, 3;"
+    ],
+    "answer": 0,
+    "explanation": "IN checks membership in a set of values.",
+    "tags": [
+      "in",
+      "filtering"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "sql",
+    "difficulty": "medium",
+    "question": "Which query increases salaries by 10% only for department 5?",
+    "code": "Table: Employee(employee_id, department_id, salary)",
+    "options": [
+      "UPDATE Employee SET salary = salary * 1.10 WHERE department_id = 5;",
+      "UPDATE Employee SET salary = salary * 1.10;",
+      "UPDATE Employee WHERE department_id = 5 SET salary = salary * 1.10;",
+      "SELECT salary * 1.10 FROM Employee WHERE department_id = 5;"
+    ],
+    "answer": 0,
+    "explanation": "The WHERE clause restricts the update to department 5.",
+    "tags": [
+      "update",
+      "where"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which query returns the top two distinct salary ranks in each department?",
+    "code": "Table: Employee(employee_id, department_id, salary)",
+    "options": [
+      "WITH Ranked AS (SELECT employee_id, department_id, salary, DENSE_RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS rnk FROM Employee) SELECT * FROM Ranked WHERE rnk <= 2;",
+      "SELECT * FROM Employee ORDER BY salary DESC LIMIT 2;",
+      "SELECT department_id, MAX(salary) FROM Employee GROUP BY department_id;",
+      "SELECT * FROM Employee WHERE salary IN (1, 2);"
+    ],
+    "answer": 0,
+    "explanation": "DENSE_RANK restarts within each department and preserves ties.",
+    "tags": [
+      "window-functions",
+      "dense-rank",
+      "cte"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which transaction isolation setting prevents dirty reads?",
+    "code": "A dirty read occurs when one transaction reads another transaction's uncommitted update.",
+    "options": [
+      "SET TRANSACTION ISOLATION LEVEL READ COMMITTED;",
+      "SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;",
+      "SET TRANSACTION ISOLATION LEVEL NONE;",
+      "SET TRANSACTION ISOLATION LEVEL DIRTY READ;"
+    ],
+    "answer": 0,
+    "explanation": "READ COMMITTED prevents reading uncommitted changes.",
+    "tags": [
+      "transactions",
+      "isolation",
+      "dirty-read"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which index best supports filtering by department_id and sorting by salary?",
+    "code": "SELECT * FROM Employee WHERE department_id = 5 ORDER BY salary DESC;",
+    "options": [
+      "CREATE INDEX idx_emp_dept_salary ON Employee(department_id, salary);",
+      "CREATE INDEX idx_emp_name ON Employee(employee_name);",
+      "CREATE INDEX idx_emp_salary ON Employee(salary);",
+      "CREATE INDEX idx_emp_id ON Employee(employee_id);"
+    ],
+    "answer": 0,
+    "explanation": "The composite index follows the filter column with the sort column.",
+    "tags": [
+      "composite-index",
+      "query-optimization"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which query is more likely to use an index on order_date efficiently?",
+    "code": "Table: Orders(order_id, order_date)",
+    "options": [
+      "SELECT * FROM Orders WHERE order_date >= '2025-01-01' AND order_date < '2026-01-01';",
+      "SELECT * FROM Orders WHERE YEAR(order_date) = 2025;",
+      "SELECT DISTINCT * FROM Orders WHERE YEAR(order_date) = 2025;",
+      "SELECT * FROM Orders HAVING YEAR(order_date) = 2025;"
+    ],
+    "answer": 0,
+    "explanation": "The range predicate is sargable.",
+    "tags": [
+      "query-optimization",
+      "sargability"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which query calculates a running total of sales by date?",
+    "code": "Table: Sales(sale_date, amount)",
+    "options": [
+      "SELECT sale_date, amount, SUM(amount) OVER (ORDER BY sale_date) AS running_total FROM Sales;",
+      "SELECT sale_date, SUM(amount) FROM Sales GROUP BY sale_date;",
+      "SELECT SUM(amount) FROM Sales;",
+      "SELECT sale_date, amount FROM Sales ORDER BY amount;"
+    ],
+    "answer": 0,
+    "explanation": "The ordered window SUM accumulates values through each row.",
+    "tags": [
+      "window-functions",
+      "running-total"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which recursive CTE generates the integers 1 through 5?",
+    "code": "",
+    "options": [
+      "WITH RECURSIVE nums AS (SELECT 1 AS n UNION ALL SELECT n + 1 FROM nums WHERE n < 5) SELECT * FROM nums;",
+      "WITH nums AS (SELECT 1 AS n) SELECT n + 1 FROM nums;",
+      "SELECT RECURSIVE 1 TO 5;",
+      "WITH RECURSIVE nums AS (SELECT 1 AS n UNION ALL SELECT n + 1 FROM nums) SELECT * FROM nums;"
+    ],
+    "answer": 0,
+    "explanation": "The anchor starts at 1 and the recursive member stops after 5.",
+    "tags": [
+      "recursive-cte",
+      "recursion"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which transaction pattern reduces deadlock risk by locking accounts in a consistent order?",
+    "code": "Two transactions transfer funds between accounts 1 and 2.",
+    "options": [
+      "BEGIN; SELECT * FROM Account WHERE id IN (1,2) ORDER BY id FOR UPDATE; UPDATE Account SET balance = balance - 100 WHERE id = 1; UPDATE Account SET balance = balance + 100 WHERE id = 2; COMMIT;",
+      "BEGIN; SELECT * FROM Account WHERE id = 1 FOR UPDATE; SELECT * FROM Account WHERE id = 2 FOR UPDATE; COMMIT;",
+      "BEGIN; SELECT * FROM Account WHERE id = 2 FOR UPDATE; SELECT * FROM Account WHERE id = 1 FOR UPDATE; COMMIT;",
+      "SELECT * FROM Account WHERE id IN (1,2);"
+    ],
+    "answer": 0,
+    "explanation": "Consistent lock ordering reduces circular wait conditions.",
+    "tags": [
+      "transactions",
+      "deadlock",
+      "locking"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which query returns employees earning above their own department average?",
+    "code": "Table: Employee(employee_id, department_id, salary)",
+    "options": [
+      "SELECT e1.* FROM Employee e1 WHERE salary > (SELECT AVG(e2.salary) FROM Employee e2 WHERE e2.department_id = e1.department_id);",
+      "SELECT * FROM Employee WHERE salary > (SELECT AVG(salary) FROM Employee);",
+      "SELECT department_id, AVG(salary) FROM Employee GROUP BY department_id;",
+      "SELECT * FROM Employee WHERE salary = MAX(salary);"
+    ],
+    "answer": 0,
+    "explanation": "The correlated subquery recalculates the average for each department.",
+    "tags": [
+      "correlated-subquery",
+      "avg"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which schema design converts the non-atomic product_ids field into 1NF?",
+    "code": "Original: Orders(order_id, product_ids) where product_ids may contain 'P01,P02,P03'",
+    "options": [
+      "CREATE TABLE OrderItem(order_id INT, product_id VARCHAR(10), PRIMARY KEY(order_id, product_id));",
+      "CREATE TABLE Orders(order_id INT PRIMARY KEY, product_ids VARCHAR(255));",
+      "CREATE TABLE Orders(order_id INT PRIMARY KEY, product_ids ARRAY);",
+      "CREATE TABLE Orders(order_id INT, product_ids TEXT UNIQUE);"
+    ],
+    "answer": 0,
+    "explanation": "Each product is stored in a separate row, making values atomic.",
+    "tags": [
+      "normalization",
+      "1nf",
+      "atomic-values"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "sql",
+    "difficulty": "hard",
+    "question": "Which query plan-friendly rewrite filters customers before joining to Orders?",
+    "code": "Tables: Customer(customer_id, country), Orders(order_id, customer_id)",
+    "options": [
+      "SELECT o.* FROM Orders o JOIN (SELECT customer_id FROM Customer WHERE country = 'PH') c ON o.customer_id = c.customer_id;",
+      "SELECT * FROM Orders o CROSS JOIN Customer c WHERE c.country = 'PH';",
+      "SELECT * FROM Orders o JOIN Customer c ON FUNCTION(o.customer_id) = FUNCTION(c.customer_id) WHERE c.country = 'PH';",
+      "SELECT * FROM Orders o, Customer c;"
+    ],
+    "answer": 0,
+    "explanation": "Filtering the dimension early reduces rows before the join.",
+    "tags": [
+      "query-optimization",
+      "joins",
+      "filtering"
+    ]
+  }
+]

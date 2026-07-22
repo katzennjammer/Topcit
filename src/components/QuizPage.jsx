@@ -47,8 +47,9 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
       userAnswers,
       flagged,
       timeSeconds,
+      questions,
     });
-  }, [quizModule.id, currentIndex, userAnswers, flagged, timeSeconds]);
+  }, [quizModule.id, currentIndex, userAnswers, flagged, timeSeconds, questions]);
 
   const handleSelectChoice = (choiceIndex) => {
     // If an answer has already been cast for this question, prevent changing it
@@ -202,6 +203,12 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
         </div>
 
         <h3 className="question-text">{currentQuestion.question}</h3>
+
+        {currentQuestion.code && (
+          <pre className="code-snippet-box">
+            <code>{currentQuestion.code}</code>
+          </pre>
+        )}
 
         {/* Choices Grid */}
         <div className="choices-list">
@@ -508,6 +515,20 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
           font-weight: 700;
           line-height: 1.45;
           color: var(--text);
+        }
+
+        .code-snippet-box {
+          background-color: var(--background);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          padding: 1rem;
+          font-family: monospace;
+          font-size: 0.9rem;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          word-break: break-word;
+          color: var(--text);
+          line-height: 1.5;
         }
 
         .choices-list {

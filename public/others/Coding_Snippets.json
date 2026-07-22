@@ -1,0 +1,975 @@
+[
+  {
+    "id": 1,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output of the code?",
+    "code": "int a = 5;\nint b = 2;\nprintf(\"%d\", a + b);",
+    "options": [
+      "7",
+      "10",
+      "52",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "The code adds 5 and 2, producing 7.",
+    "tags": [
+      "code-tracing",
+      "variables",
+      "operators"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output of the code?",
+    "code": "int n = 8;\nif (n > 5)\n    printf(\"High\");\nelse\n    printf(\"Low\");",
+    "options": [
+      "High",
+      "Low",
+      "8",
+      "No output"
+    ],
+    "answer": 0,
+    "explanation": "Since 8 is greater than 5, the first branch executes.",
+    "tags": [
+      "conditionals",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "How many times is X printed?",
+    "code": "for (int i = 0; i < 4; i++) {\n    printf(\"X\");\n}",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "Infinite"
+    ],
+    "answer": 1,
+    "explanation": "The loop runs for i values 0, 1, 2, and 3.",
+    "tags": [
+      "loops",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the value of arr[2]?",
+    "code": "int arr[] = {10, 20, 30, 40};",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "40"
+    ],
+    "answer": 2,
+    "explanation": "Array indexing starts at 0, so arr[2] is the third element.",
+    "tags": [
+      "arrays",
+      "indexing"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output of the function call?",
+    "code": "int add(int x, int y) {\n    return x + y;\n}\n\nprintf(\"%d\", add(3, 4));",
+    "options": [
+      "3",
+      "4",
+      "7",
+      "12"
+    ],
+    "answer": 2,
+    "explanation": "The function returns 3 + 4, which is 7.",
+    "tags": [
+      "functions",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output?",
+    "code": "int x = 9;\nif (x % 2 == 0)\n    printf(\"Even\");\nelse\n    printf(\"Odd\");",
+    "options": [
+      "Even",
+      "Odd",
+      "9",
+      "Error"
+    ],
+    "answer": 1,
+    "explanation": "Nine leaves a remainder of 1 when divided by 2.",
+    "tags": [
+      "modulus",
+      "conditionals"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the final value of sum?",
+    "code": "int sum = 0;\nfor (int i = 1; i <= 3; i++) {\n    sum += i;\n}",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "The code adds 1 + 2 + 3.",
+    "tags": [
+      "loops",
+      "accumulator"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What error is present in the code?",
+    "code": "int i = 0;\nwhile (i < 5) {\n    printf(\"%d\", i);\n}",
+    "options": [
+      "The loop may run forever because i is never updated",
+      "The while condition is invalid",
+      "printf cannot be used in a loop",
+      "i must start at 1"
+    ],
+    "answer": 0,
+    "explanation": "The value of i never changes, so the loop condition remains true.",
+    "tags": [
+      "debugging",
+      "loops",
+      "infinite-loop"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output?",
+    "code": "int x = 10;\nint *p = &x;\nprintf(\"%d\", *p);",
+    "options": [
+      "10",
+      "Address of x",
+      "0",
+      "Error"
+    ],
+    "answer": 0,
+    "explanation": "Dereferencing p returns the value stored in x.",
+    "tags": [
+      "pointers",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "Which value is removed first?",
+    "code": "Queue q;\nenqueue(q, 10);\nenqueue(q, 20);\nenqueue(q, 30);\ndequeue(q);",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "All values"
+    ],
+    "answer": 0,
+    "explanation": "A queue follows First-In, First-Out order.",
+    "tags": [
+      "queue",
+      "data-structures"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "Which value is removed by pop?",
+    "code": "Stack s;\npush(s, 10);\npush(s, 20);\npush(s, 30);\npop(s);",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "All values"
+    ],
+    "answer": 2,
+    "explanation": "A stack follows Last-In, First-Out order.",
+    "tags": [
+      "stack",
+      "data-structures"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is wrong with the condition?",
+    "code": "if (x = 5) {\n    printf(\"Equal\");\n}",
+    "options": [
+      "It assigns 5 to x instead of comparing x with 5",
+      "An if statement cannot contain numbers",
+      "printf is not allowed inside if",
+      "The braces must be removed"
+    ],
+    "answer": 0,
+    "explanation": "The equality comparison operator should be ==.",
+    "tags": [
+      "debugging",
+      "operators",
+      "conditionals"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output?",
+    "code": "int x = 3;\nint y = 4;\nprintf(\"%d\", x * y);",
+    "options": [
+      "7",
+      "12",
+      "34",
+      "1"
+    ],
+    "answer": 1,
+    "explanation": "The multiplication of 3 and 4 is 12.",
+    "tags": [
+      "operators",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output?",
+    "code": "char word[] = \"TOPCIT\";\nprintf(\"%c\", word[0]);",
+    "options": [
+      "T",
+      "O",
+      "TOPCIT",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "word[0] is the first character of the string.",
+    "tags": [
+      "strings",
+      "arrays",
+      "indexing"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "coding",
+    "difficulty": "easy",
+    "question": "What is the output?",
+    "code": "int x = 10;\nprintf(\"%d\", x % 3);",
+    "options": [
+      "0",
+      "1",
+      "3",
+      "3.33"
+    ],
+    "answer": 1,
+    "explanation": "The remainder when 10 is divided by 3 is 1.",
+    "tags": [
+      "modulus",
+      "operators"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the output?",
+    "code": "int a = 2;\nint b = 3;\nprintf(\"%d\", a++ + ++b);",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "a++ contributes 2, while ++b changes b to 4 before use.",
+    "tags": [
+      "increment",
+      "operators",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the output?",
+    "code": "int x = 1;\nswitch (x) {\n    case 1: printf(\"A\");\n    case 2: printf(\"B\"); break;\n    default: printf(\"C\");\n}",
+    "options": [
+      "A",
+      "AB",
+      "B",
+      "AC"
+    ],
+    "answer": 1,
+    "explanation": "Because case 1 has no break, execution falls through to case 2.",
+    "tags": [
+      "switch",
+      "control-flow",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is returned by factorial(4)?",
+    "code": "int factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}",
+    "options": [
+      "4",
+      "10",
+      "16",
+      "24"
+    ],
+    "answer": 3,
+    "explanation": "The function computes 4 × 3 × 2 × 1.",
+    "tags": [
+      "recursion",
+      "functions"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the time complexity of the code?",
+    "code": "for (int i = 0; i < n; i++) {\n    printf(\"%d\", i);\n}",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "answer": 2,
+    "explanation": "The loop executes n times.",
+    "tags": [
+      "complexity",
+      "loops"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which correction prevents an out-of-bounds access?",
+    "code": "int arr[5] = {1,2,3,4,5};\nfor (int i = 0; i <= 5; i++)\n    printf(\"%d\", arr[i]);",
+    "options": [
+      "Change i <= 5 to i < 5",
+      "Change i = 0 to i = 1",
+      "Change arr[5] to arr[6]",
+      "Remove i++"
+    ],
+    "answer": 0,
+    "explanation": "Valid indexes are 0 through 4.",
+    "tags": [
+      "arrays",
+      "debugging",
+      "bounds"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the output?",
+    "code": "int arr[] = {2,4,6,8};\nint total = 0;\nfor (int i = 0; i < 4; i += 2)\n    total += arr[i];\nprintf(\"%d\", total);",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "20"
+    ],
+    "answer": 1,
+    "explanation": "The code adds arr[0] and arr[2], which are 2 and 6.",
+    "tags": [
+      "arrays",
+      "loops",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the time complexity?",
+    "code": "for (int i = 0; i < n; i++)\n    for (int j = 0; j < n; j++)\n        count++;",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "answer": 3,
+    "explanation": "The inner statement executes n × n times.",
+    "tags": [
+      "complexity",
+      "nested-loops"
+    ]
+  },
+  {
+    "id": 23,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which data structure should replace the placeholder?",
+    "code": "for each character c in expression:\n    if c is an opening delimiter:\n        PLACEHOLDER.push(c)\n    else if c is a closing delimiter:\n        compare c with PLACEHOLDER.pop()",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Graph"
+    ],
+    "answer": 1,
+    "explanation": "Balanced delimiters require Last-In, First-Out processing.",
+    "tags": [
+      "stack",
+      "parsing",
+      "algorithms"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the output?",
+    "code": "int f(int n) {\n    if (n == 0) return 0;\n    return n + f(n - 1);\n}\nprintf(\"%d\", f(3));",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "The recursion returns 3 + 2 + 1 + 0.",
+    "tags": [
+      "recursion",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which OOP concept is demonstrated?",
+    "code": "class Animal {\npublic:\n    virtual void sound() { printf(\"Animal\"); }\n};\n\nclass Dog : public Animal {\npublic:\n    void sound() override { printf(\"Bark\"); }\n};",
+    "options": [
+      "Encapsulation",
+      "Method overriding",
+      "Method overloading",
+      "Aggregation"
+    ],
+    "answer": 1,
+    "explanation": "Dog provides a new implementation of an inherited method.",
+    "tags": [
+      "oop",
+      "inheritance",
+      "overriding"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the result of the operation?",
+    "code": "int x = 10;\nint *p = &x;\n*p = 25;\nprintf(\"%d\", x);",
+    "options": [
+      "10",
+      "25",
+      "Address of x",
+      "Error"
+    ],
+    "answer": 1,
+    "explanation": "Updating *p changes the value stored in x.",
+    "tags": [
+      "pointers",
+      "memory"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which traversal is implemented?",
+    "code": "void traverse(Node* root) {\n    if (root == NULL) return;\n    printf(\"%d\", root->data);\n    traverse(root->left);\n    traverse(root->right);\n}",
+    "options": [
+      "Inorder",
+      "Preorder",
+      "Postorder",
+      "Level-order"
+    ],
+    "answer": 1,
+    "explanation": "The root is processed before the left and right subtrees.",
+    "tags": [
+      "trees",
+      "preorder",
+      "recursion"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What search algorithm is represented?",
+    "code": "while (low <= high) {\n    mid = (low + high) / 2;\n    if (arr[mid] == target) return mid;\n    if (arr[mid] < target) low = mid + 1;\n    else high = mid - 1;\n}",
+    "options": [
+      "Linear search",
+      "Binary search",
+      "Depth-first search",
+      "Breadth-first search"
+    ],
+    "answer": 1,
+    "explanation": "The algorithm repeatedly halves a sorted search range.",
+    "tags": [
+      "binary-search",
+      "algorithms"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the average-case time complexity of the shown search?",
+    "code": "index = hash(key) % tableSize;\nwhile (table[index] is occupied and key differs)\n    index = (index + 1) % tableSize;",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "answer": 0,
+    "explanation": "Hash-table lookup is O(1) on average when collisions are controlled.",
+    "tags": [
+      "hash-table",
+      "complexity",
+      "linear-probing"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which testing technique is best represented by these inputs?",
+    "code": "Valid input range: 1 to 100\nTest inputs: 0, 1, 2, 99, 100, 101",
+    "options": [
+      "Statement coverage",
+      "Boundary value analysis",
+      "Random testing",
+      "Mutation testing"
+    ],
+    "answer": 1,
+    "explanation": "The tests focus on values around the lower and upper limits.",
+    "tags": [
+      "testing",
+      "boundary-value-analysis"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What software design problem is shown?",
+    "code": "class OrderManager {\n    void validateOrder();\n    void saveToDatabase();\n    void sendEmail();\n    void generateReport();\n}",
+    "options": [
+      "Too many responsibilities in one class",
+      "Too many subclasses",
+      "No method overloading",
+      "Too much recursion"
+    ],
+    "answer": 0,
+    "explanation": "The class violates the Single Responsibility Principle.",
+    "tags": [
+      "software-engineering",
+      "solid",
+      "srp"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which graph traversal does this code implement?",
+    "code": "Queue q;\nq.enqueue(start);\nwhile (!q.empty()) {\n    v = q.dequeue();\n    for each unvisited neighbor of v:\n        q.enqueue(neighbor);\n}",
+    "options": [
+      "DFS",
+      "BFS",
+      "Dijkstra",
+      "Topological sort"
+    ],
+    "answer": 1,
+    "explanation": "The queue processes nodes level by level, which is BFS.",
+    "tags": [
+      "graphs",
+      "bfs",
+      "queue"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which issue can occur?",
+    "code": "sharedCounter = sharedCounter + 1; // executed by two threads without a lock",
+    "options": [
+      "Race condition",
+      "Compilation error",
+      "Stack overflow",
+      "Memory leak only"
+    ],
+    "answer": 0,
+    "explanation": "The read-modify-write operations may overlap and lose an update.",
+    "tags": [
+      "concurrency",
+      "race-condition"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the output?",
+    "code": "int x = 5;\nint y = x++;\nprintf(\"%d %d\", x, y);",
+    "options": [
+      "5 5",
+      "6 5",
+      "6 6",
+      "5 6"
+    ],
+    "answer": 1,
+    "explanation": "Post-increment assigns 5 to y, then changes x to 6.",
+    "tags": [
+      "increment",
+      "code-tracing"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which sorting algorithm is represented?",
+    "code": "for i from 0 to n-2:\n    min = i\n    for j from i+1 to n-1:\n        if arr[j] < arr[min]: min = j\n    swap(arr[i], arr[min])",
+    "options": [
+      "Bubble sort",
+      "Selection sort",
+      "Insertion sort",
+      "Merge sort"
+    ],
+    "answer": 1,
+    "explanation": "Each pass selects the smallest remaining element.",
+    "tags": [
+      "sorting",
+      "selection-sort"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which design pattern is suggested?",
+    "code": "class NewsPublisher {\n    List<Subscriber> subscribers;\n    void notifyAllSubscribers();\n}",
+    "options": [
+      "Observer",
+      "Factory",
+      "Singleton",
+      "Adapter"
+    ],
+    "answer": 0,
+    "explanation": "The publisher notifies multiple subscribers when its state changes.",
+    "tags": [
+      "design-patterns",
+      "observer"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the output?",
+    "code": "int values[] = {1,2,3,4,5};\nint count = 0;\nfor (int i = 0; i < 5; i++)\n    if (values[i] % 2 == 0) count++;\nprintf(\"%d\", count);",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "Only 2 and 4 are even.",
+    "tags": [
+      "arrays",
+      "loops",
+      "conditionals"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "Which refactoring is most appropriate?",
+    "code": "void printInvoice() {\n    // 25 lines calculating tax\n    // 10 lines formatting output\n    // 15 lines printing\n}",
+    "options": [
+      "Extract Method",
+      "Rename Class",
+      "Inline Variable",
+      "Remove Parameter"
+    ],
+    "answer": 0,
+    "explanation": "Separate cohesive blocks such as tax calculation and formatting into methods.",
+    "tags": [
+      "refactoring",
+      "extract-method"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the time complexity?",
+    "code": "int i = 1;\nwhile (i < n) {\n    i *= 2;\n}",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "answer": 1,
+    "explanation": "The value doubles each iteration, so the loop runs logarithmically.",
+    "tags": [
+      "complexity",
+      "loops"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "coding",
+    "difficulty": "medium",
+    "question": "What is the result of the method call?",
+    "code": "class Calculator {\npublic:\n    int add(int a, int b) { return a + b; }\n    double add(double a, double b) { return a + b; }\n};\n\nCalculator c;\nprintf(\"%d\", c.add(2, 3));",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "5.0 only"
+    ],
+    "answer": 2,
+    "explanation": "The integer overload is selected for integer arguments.",
+    "tags": [
+      "oop",
+      "overloading"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "What is the time complexity?",
+    "code": "for (int i = 1; i < n; i *= 2)\n    for (int j = 0; j < n; j++)\n        work();",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "answer": 2,
+    "explanation": "The outer loop runs O(log n) times and the inner loop runs O(n) times.",
+    "tags": [
+      "complexity",
+      "nested-loops"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "What is the main error in the function?",
+    "code": "int sum(int n) {\n    return n + sum(n - 1);\n}",
+    "options": [
+      "It has no base case",
+      "It uses the wrong return type",
+      "It must use multiplication",
+      "Recursive functions cannot return values"
+    ],
+    "answer": 0,
+    "explanation": "Without a base case, recursion continues until stack overflow.",
+    "tags": [
+      "recursion",
+      "debugging",
+      "stack-overflow"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "Which algorithm is implemented?",
+    "code": "distance[start] = 0;\nwhile unvisited vertices remain:\n    choose unvisited vertex u with smallest distance\n    for each edge (u, v):\n        relax distance[v]",
+    "options": [
+      "Dijkstra",
+      "Kruskal",
+      "DFS",
+      "Merge sort"
+    ],
+    "answer": 0,
+    "explanation": "The algorithm repeatedly chooses the nearest unvisited vertex and relaxes edges.",
+    "tags": [
+      "graphs",
+      "dijkstra",
+      "shortest-path"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "Which problem can this synchronization prevent?",
+    "code": "lock(mutex);\nsharedBalance = sharedBalance - amount;\nunlock(mutex);",
+    "options": [
+      "Race condition",
+      "Syntax error",
+      "Memory allocation failure",
+      "Recursion depth"
+    ],
+    "answer": 0,
+    "explanation": "The mutex ensures only one thread updates sharedBalance at a time.",
+    "tags": [
+      "concurrency",
+      "mutex",
+      "critical-section"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "Which SOLID principle is being violated?",
+    "code": "class Bird { virtual void fly(); };\nclass Penguin : public Bird { void fly() { throw Error(); } };",
+    "options": [
+      "Single Responsibility",
+      "Open/Closed",
+      "Liskov Substitution",
+      "Dependency Inversion"
+    ],
+    "answer": 2,
+    "explanation": "Penguin cannot safely substitute for Bird when flying is expected.",
+    "tags": [
+      "solid",
+      "liskov-substitution",
+      "oop"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "What traversal order is produced?",
+    "code": "void visit(Node* root) {\n    if (!root) return;\n    visit(root->left);\n    printf(\"%d \", root->data);\n    visit(root->right);\n}",
+    "options": [
+      "Preorder",
+      "Inorder",
+      "Postorder",
+      "Level-order"
+    ],
+    "answer": 1,
+    "explanation": "The root is processed between the left and right subtrees.",
+    "tags": [
+      "trees",
+      "inorder",
+      "recursion"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "What is the worst-case time complexity?",
+    "code": "quickSort(arr, low, high) using the first element as pivot on an already sorted array",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "answer": 3,
+    "explanation": "The pivot creates extremely unbalanced partitions on already sorted input.",
+    "tags": [
+      "quicksort",
+      "complexity",
+      "worst-case"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "Which design change improves testability?",
+    "code": "class UserService {\n    Database db = new RealDatabase();\n}",
+    "options": [
+      "Pass a Database interface into the constructor",
+      "Make db global",
+      "Make every method static",
+      "Combine UserService and Database"
+    ],
+    "answer": 0,
+    "explanation": "Dependency injection allows a mock database during testing.",
+    "tags": [
+      "dependency-injection",
+      "testing",
+      "design"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "Which issue is most likely?",
+    "code": "Thread 1: lock(A); lock(B);\nThread 2: lock(B); lock(A);",
+    "options": [
+      "Deadlock",
+      "Race condition only",
+      "Stack overflow",
+      "Compilation error"
+    ],
+    "answer": 0,
+    "explanation": "Each thread may wait for the lock held by the other.",
+    "tags": [
+      "concurrency",
+      "deadlock",
+      "locking"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "coding",
+    "difficulty": "hard",
+    "question": "Which algorithmic approach is represented?",
+    "code": "solve(problem):\n    if problem is small: solve directly\n    divide problem into smaller parts\n    solve each part recursively\n    combine the results",
+    "options": [
+      "Greedy",
+      "Divide and conquer",
+      "Dynamic programming",
+      "Backtracking"
+    ],
+    "answer": 1,
+    "explanation": "The problem is divided, solved recursively, and recombined.",
+    "tags": [
+      "divide-and-conquer",
+      "algorithms"
+    ]
+  }
+]

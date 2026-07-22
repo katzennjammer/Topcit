@@ -184,6 +184,12 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
 
                   <h4 className="review-q-text">{q.question}</h4>
 
+                  {q.code && (
+                    <pre className="code-snippet-box">
+                      <code>{q.code}</code>
+                    </pre>
+                  )}
+
                   <div className="review-choices-grid">
                     {q.choices.map((choiceText, cIdx) => {
                       const isUserChoice = q.userAnswerIdx === cIdx;
@@ -424,6 +430,20 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
           font-size: 1.05rem;
           font-weight: 700;
           line-height: 1.4;
+        }
+
+        .code-snippet-box {
+          background-color: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          padding: 0.85rem 1rem;
+          font-family: monospace;
+          font-size: 0.875rem;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          word-break: break-word;
+          color: var(--text);
+          line-height: 1.5;
         }
 
         .review-choices-grid {

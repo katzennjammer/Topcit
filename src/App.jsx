@@ -4,8 +4,8 @@ import { HomePage } from './components/HomePage';
 import { QuizPage } from './components/QuizPage';
 import { ResultsPage } from './components/ResultsPage';
 import { ReviewersPage } from './components/ReviewersPage';
-import { fetchAllQuizSummaries, loadQuizData } from './utils/quizLoader';
-import { getThemePreference, setThemePreference, clearQuizDraft } from './utils/storage';
+import { fetchAllQuizSummaries, loadQuizData, randomizeQuiz } from './utils/quizLoader';
+import { getThemePreference, setThemePreference, clearQuizDraft, getQuizDraft } from './utils/storage';
 import { Loader2, AlertTriangle, Star, UserPlus } from 'lucide-react';
 import './App.css';
 
@@ -60,10 +60,20 @@ export function App() {
     try {
       setLoading(true);
       setError(null);
-      const questions = await loadQuizData(quizModule.filename);
+      let questions = await loadQuizData(quizModule.filePath || quizModule.filename);
       if (!questions || questions.length === 0) {
         throw new Error('No questions found in this quiz module.');
       }
+
+      const existingDraft = getQuizDraft(quizModule.id);
+      if (!existingDraft) {
+        questions = randomizeQuiz(questions);
+      } else if (existingDraft.questions && existingDraft.questions.length > 0) {
+        questions = existingDraft.questions;
+      } else {
+        questions = randomizeQuiz(questions);
+      }
+
       setActiveQuizModule(quizModule);
       setActiveQuestions(questions);
       setCurrentView('quiz');
