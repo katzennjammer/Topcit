@@ -1,0 +1,1002 @@
+[
+  {
+    "question": "What is IT business?",
+    "choices": [
+      "All activities that integrate IT into business processes to realize company objectives",
+      "The purchase of computer hardware without business integration",
+      "A process limited to software maintenance",
+      "The removal of technology from corporate decision-making"
+    ],
+    "answer": "All activities that integrate IT into business processes to realize company objectives"
+  },
+  {
+    "question": "How has IT evolved within companies?",
+    "choices": [
+      "It has become limited to typing and document printing",
+      "It has been separated from all business processes",
+      "It has shifted from strategy to hardware inventory only",
+      "It has become a core enterprise-wide resource for decision-making and competitive advantage"
+    ],
+    "answer": "It has become a core enterprise-wide resource for decision-making and competitive advantage"
+  },
+  {
+    "question": "What does business and IT alignment maximize?",
+    "choices": [
+      "The separation of technology from organizational goals",
+      "The number of independent software vendors",
+      "The interdependence of IT with business strategy, objectives, and processes",
+      "The amount of unused IT infrastructure"
+    ],
+    "answer": "The interdependence of IT with business strategy, objectives, and processes"
+  },
+  {
+    "question": "Which is one of the four areas of strategic alignment?",
+    "choices": [
+      "Customer demographics and advertising",
+      "Organizational infrastructure and processes",
+      "Product pricing and packaging",
+      "Financial auditing and taxation"
+    ],
+    "answer": "Organizational infrastructure and processes"
+  },
+  {
+    "question": "Which Hype Cycle phase introduces a new technology with high initial expectations?",
+    "choices": [
+      "Innovation Trigger",
+      "Trough of Disillusionment",
+      "Slope of Enlightenment",
+      "Plateau of Productivity"
+    ],
+    "answer": "Innovation Trigger"
+  },
+  {
+    "question": "Which Hype Cycle phase represents exaggerated expectations?",
+    "choices": [
+      "Innovation Trigger",
+      "Trough of Disillusionment",
+      "Plateau of Productivity",
+      "Peak of Inflated Expectations"
+    ],
+    "answer": "Peak of Inflated Expectations"
+  },
+  {
+    "question": "What happens in the Trough of Disillusionment?",
+    "choices": [
+      "The technology begins generating stable value",
+      "Organizations steadily improve adoption",
+      "The technology's bubble bursts and it enters a period of retreat",
+      "The technology is introduced for the first time"
+    ],
+    "answer": "The technology's bubble bursts and it enters a period of retreat"
+  },
+  {
+    "question": "What does CPNDS stand for?",
+    "choices": [
+      "Customer, Process, Network, Data, and Strategy",
+      "Contents, Platform, Network, Device, and Security",
+      "Contents, Program, Node, Database, and Service",
+      "Company, Platform, Need, Device, and Support"
+    ],
+    "answer": "Contents, Platform, Network, Device, and Security"
+  },
+  {
+    "question": "Which is a benefit of IT resources?",
+    "choices": [
+      "Improved production efficiency",
+      "Reduced ability to operate globally",
+      "Removal of information exchange",
+      "Dependence on manual processes"
+    ],
+    "answer": "Improved production efficiency"
+  },
+  {
+    "question": "Which is a traditional value-chain support activity?",
+    "choices": [
+      "Inbound goods",
+      "Operations",
+      "Marketing and sales",
+      "Human resource management"
+    ],
+    "answer": "Human resource management"
+  },
+  {
+    "question": "What is strategy establishment?",
+    "choices": [
+      "The process of buying only information systems",
+      "The process of eliminating unit-level strategies",
+      "The process of defining strategies that fulfill an organization's mission",
+      "The process of replacing the company's mission"
+    ],
+    "answer": "The process of defining strategies that fulfill an organization's mission"
+  },
+  {
+    "question": "Which strategy-plan element contains the company's mission, goals, and quantitative performance results?",
+    "choices": [
+      "Current status model",
+      "Basic information",
+      "Future goal model",
+      "Implementation strategy"
+    ],
+    "answer": "Basic information"
+  },
+  {
+    "question": "What does the current status model describe?",
+    "choices": [
+      "The company's internal and external environment in terms of business principles and values",
+      "Only its future vision",
+      "Only its software inventory",
+      "Only its financial investment returns"
+    ],
+    "answer": "The company's internal and external environment in terms of business principles and values"
+  },
+  {
+    "question": "What is the purpose of strategic analysis?",
+    "choices": [
+      "To immediately implement every alternative",
+      "To review results after implementation",
+      "To sign an outsourcing contract",
+      "To collect information required for business decisions"
+    ],
+    "answer": "To collect information required for business decisions"
+  },
+  {
+    "question": "What occurs during strategic selection?",
+    "choices": [
+      "Past performance is deleted",
+      "Only internal weaknesses are listed",
+      "The best possible future direction is selected",
+      "Every strategic alternative is implemented"
+    ],
+    "answer": "The best possible future direction is selected"
+  },
+  {
+    "question": "Which PEST factor includes inflation and interest rates?",
+    "choices": [
+      "Politics",
+      "Economy",
+      "Society",
+      "Technology"
+    ],
+    "answer": "Economy"
+  },
+  {
+    "question": "Which PEST factor includes population growth, age, and social mobility?",
+    "choices": [
+      "Society",
+      "Economy",
+      "Politics",
+      "Technology"
+    ],
+    "answer": "Society"
+  },
+  {
+    "question": "Which is one of Porter's Five Forces?",
+    "choices": [
+      "Shared values",
+      "Employee learning",
+      "Process monitoring",
+      "Bargaining power of buyers"
+    ],
+    "answer": "Bargaining power of buyers"
+  },
+  {
+    "question": "What are the three elements of 3C analysis?",
+    "choices": [
+      "Cost, Control, and Capacity",
+      "Customer, Communication, and Capital",
+      "Customer, Company, and Competition",
+      "Company, Cloud, and Compliance"
+    ],
+    "answer": "Customer, Company, and Competition"
+  },
+  {
+    "question": "Which BCG category has high market share and low growth potential?",
+    "choices": [
+      "Star",
+      "Cash Cow",
+      "Question Mark",
+      "Dog"
+    ],
+    "answer": "Cash Cow"
+  },
+  {
+    "question": "What is IT governance?",
+    "choices": [
+      "A system that controls and manages IT so resources align with company goals and strategies",
+      "A method that separates technology from business leadership",
+      "A framework used only for purchasing hardware",
+      "A process limited to software coding"
+    ],
+    "answer": "A system that controls and manages IT so resources align with company goals and strategies"
+  },
+  {
+    "question": "Which framework is a reference model for IT governance?",
+    "choices": [
+      "SERVQUAL",
+      "Six Sigma",
+      "BCG Matrix",
+      "COBIT 5"
+    ],
+    "answer": "COBIT 5"
+  },
+  {
+    "question": "Which COBIT 5 management phase is represented by APO?",
+    "choices": [
+      "Deployment",
+      "Operation",
+      "Planning",
+      "Monitoring"
+    ],
+    "answer": "Planning"
+  },
+  {
+    "question": "Which IT-governance focus area manages factors that could interrupt IT business?",
+    "choices": [
+      "Strategic Alignment",
+      "Risk Management",
+      "Performance Measurement",
+      "IT Value Delivery"
+    ],
+    "answer": "Risk Management"
+  },
+  {
+    "question": "What is Enterprise Architecture?",
+    "choices": [
+      "A blueprint that describes the current and future relationship between IT and the enterprise",
+      "A customer service contract",
+      "A method of financial evaluation",
+      "A software acquisition request"
+    ],
+    "answer": "A blueprint that describes the current and future relationship between IT and the enterprise"
+  },
+  {
+    "question": "Which EA component designs interdependencies among people, processes, and information?",
+    "choices": [
+      "Application Architecture",
+      "Data Architecture",
+      "Technical Architecture",
+      "Business Architecture"
+    ],
+    "answer": "Business Architecture"
+  },
+  {
+    "question": "Which EA component defines functions required for application development?",
+    "choices": [
+      "Business Architecture",
+      "Data Architecture",
+      "Application Architecture",
+      "Standard Profile"
+    ],
+    "answer": "Application Architecture"
+  },
+  {
+    "question": "Which EA component defines technical support services?",
+    "choices": [
+      "Business Architecture",
+      "Technical Architecture",
+      "Application Architecture",
+      "Data Architecture"
+    ],
+    "answer": "Technical Architecture"
+  },
+  {
+    "question": "Which EA framework is commonly expressed as a matrix using rows and perspectives?",
+    "choices": [
+      "Zachman Framework",
+      "TOGAF",
+      "FEAF",
+      "COBIT 5"
+    ],
+    "answer": "Zachman Framework"
+  },
+  {
+    "question": "What is the key output of Information Strategic Planning?",
+    "choices": [
+      "A list of employee salaries",
+      "A single software license",
+      "A customer complaint report",
+      "A master plan for building the To-Be work system"
+    ],
+    "answer": "A master plan for building the To-Be work system"
+  },
+  {
+    "question": "What is the first step of the IT business ordering process?",
+    "choices": [
+      "Prepare the RFP",
+      "Evaluate the proposal",
+      "Plan the order",
+      "Monitor the supplier"
+    ],
+    "answer": "Plan the order"
+  },
+  {
+    "question": "What does RFP stand for?",
+    "choices": [
+      "Review for Performance",
+      "Request for Proposal",
+      "Resource Funding Plan",
+      "Requirement Fulfillment Procedure"
+    ],
+    "answer": "Request for Proposal"
+  },
+  {
+    "question": "Which standard defines the software adoption lifecycle?",
+    "choices": [
+      "ISO/IEC 12207",
+      "ISO 9001",
+      "ISO/IEC 27001",
+      "ISO 14001"
+    ],
+    "answer": "ISO/IEC 12207"
+  },
+  {
+    "question": "Which is one of the five basic ISO/IEC 12207 lifecycle processes?",
+    "choices": [
+      "Marketing",
+      "Recruitment",
+      "Financial auditing",
+      "Acquisition"
+    ],
+    "answer": "Acquisition"
+  },
+  {
+    "question": "What is the purpose of the tailoring process?",
+    "choices": [
+      "To require every possible lifecycle task",
+      "To eliminate software maintenance",
+      "To remove lifecycle activities and tasks that are not applicable or necessary",
+      "To outsource every development activity"
+    ],
+    "answer": "To remove lifecycle activities and tasks that are not applicable or necessary"
+  },
+  {
+    "question": "What is an advantage of in-house development?",
+    "choices": [
+      "The company becomes fully dependent on a supplier",
+      "User needs can be fully reflected and know-how remains inside the company",
+      "The system cannot be customized",
+      "No internal knowledge is developed"
+    ],
+    "answer": "User needs can be fully reflected and know-how remains inside the company"
+  },
+  {
+    "question": "What is an advantage of package purchase?",
+    "choices": [
+      "It applies standardized advanced processes that can improve work efficiency",
+      "It always perfectly matches every unique need",
+      "It eliminates all implementation work",
+      "It prevents process innovation"
+    ],
+    "answer": "It applies standardized advanced processes that can improve work efficiency"
+  },
+  {
+    "question": "What is IT business outsourcing?",
+    "choices": [
+      "Keeping all IT work within the company",
+      "Buying hardware without any service",
+      "Removing all IT resources",
+      "Subcontracting IT-related work to outside experts or third-party companies"
+    ],
+    "answer": "Subcontracting IT-related work to outside experts or third-party companies"
+  },
+  {
+    "question": "What is total outsourcing?",
+    "choices": [
+      "Selected functions are given to several vendors",
+      "Only IT strategy is outsourced",
+      "The entire IT functionality is subcontracted to one vendor",
+      "All IT work stays internal"
+    ],
+    "answer": "The entire IT functionality is subcontracted to one vendor"
+  },
+  {
+    "question": "Which is a possible outsourcing management problem?",
+    "choices": [
+      "Guaranteed control over every subcontractor",
+      "Increased dependency on the vendor",
+      "Complete removal of inter-company disputes",
+      "Perfect certainty about all costs"
+    ],
+    "answer": "Increased dependency on the vendor"
+  },
+  {
+    "question": "What is Business Process Management?",
+    "choices": [
+      "A technique for integrated management, optimization, and automation of people, information, and tasks",
+      "A financial investment formula",
+      "A hardware procurement process",
+      "A customer classification model"
+    ],
+    "answer": "A technique for integrated management, optimization, and automation of people, information, and tasks"
+  },
+  {
+    "question": "Which is a key BPM component?",
+    "choices": [
+      "Balanced Scorecard",
+      "BCG Matrix",
+      "Porter's Five Forces",
+      "Business Activity Monitoring"
+    ],
+    "answer": "Business Activity Monitoring"
+  },
+  {
+    "question": "What occurs during BPM process definition?",
+    "choices": [
+      "Financial returns are calculated",
+      "Vendors are selected",
+      "Core processes and rules are defined",
+      "Employee goals are evaluated"
+    ],
+    "answer": "Core processes and rules are defined"
+  },
+  {
+    "question": "What is the purpose of Business Activity Monitoring?",
+    "choices": [
+      "To measure only investment costs",
+      "To detect and control process bottlenecks in real time",
+      "To manage product drawings",
+      "To prepare outsourcing contracts"
+    ],
+    "answer": "To detect and control process bottlenecks in real time"
+  },
+  {
+    "question": "What does a Business Rule Engine manage?",
+    "choices": [
+      "Complex business rules and process flows",
+      "Only computer hardware",
+      "Only financial statements",
+      "Only customer addresses"
+    ],
+    "answer": "Complex business rules and process flows"
+  },
+  {
+    "question": "What is Business Process Reengineering?",
+    "choices": [
+      "A method for preserving all current practices",
+      "A technique for making only minor changes",
+      "A system for avoiding process improvement",
+      "A technique for fundamentally redesigning business processes"
+    ],
+    "answer": "A technique for fundamentally redesigning business processes"
+  },
+  {
+    "question": "What does zero-base thinking mean in BPR?",
+    "choices": [
+      "Current practices must never change",
+      "The workforce is reduced to zero",
+      "Existing practices are abandoned and processes are reconsidered from the beginning",
+      "All performance measurements are removed"
+    ],
+    "answer": "Existing practices are abandoned and processes are reconsidered from the beginning"
+  },
+  {
+    "question": "What distinguishes Process Innovation from BPR in emphasis?",
+    "choices": [
+      "It avoids the use of IT",
+      "It places greater emphasis on IT integration",
+      "It focuses only on accounting",
+      "It eliminates enterprise systems"
+    ],
+    "answer": "It places greater emphasis on IT integration"
+  },
+  {
+    "question": "What defect rate does Six Sigma seek?",
+    "choices": [
+      "Fewer than three defects per one million products",
+      "Fewer than three defects per one hundred products",
+      "One defect per ten products",
+      "No defined defect target"
+    ],
+    "answer": "Fewer than three defects per one million products"
+  },
+  {
+    "question": "What does SERVQUAL measure?",
+    "choices": [
+      "The gap between cost and revenue",
+      "The number of suppliers",
+      "The speed of software development",
+      "The gap between expected and actual service quality"
+    ],
+    "answer": "The gap between expected and actual service quality"
+  },
+  {
+    "question": "What is ERP?",
+    "choices": [
+      "A system used only for customer support",
+      "A system used only for product drawings",
+      "A system that integrates management resources to maximize enterprise productivity",
+      "A written service-quality contract"
+    ],
+    "answer": "A system that integrates management resources to maximize enterprise productivity"
+  },
+  {
+    "question": "Which ERP characteristic allows settings to be changed for unique business requirements?",
+    "choices": [
+      "Integration",
+      "Flexibility",
+      "Openness",
+      "International support"
+    ],
+    "answer": "Flexibility"
+  },
+  {
+    "question": "What does SCM encompass?",
+    "choices": [
+      "The entire process from order placement to final customer delivery",
+      "Only customer complaints",
+      "Only product design",
+      "Only financial reporting"
+    ],
+    "answer": "The entire process from order placement to final customer delivery"
+  },
+  {
+    "question": "What is the bullwhip effect?",
+    "choices": [
+      "Demand becomes perfectly stable throughout the supply chain",
+      "Inventory differences are eliminated",
+      "Customer loyalty automatically increases",
+      "Consumer demand changes create increasingly larger imbalances farther up the supply chain"
+    ],
+    "answer": "Consumer demand changes create increasingly larger imbalances farther up the supply chain"
+  },
+  {
+    "question": "What is the goal of CRM?",
+    "choices": [
+      "To manage only supplier inventory",
+      "To replace enterprise planning",
+      "To maximize customer lifetime value and improve profitability",
+      "To store only product drawings"
+    ],
+    "answer": "To maximize customer lifetime value and improve profitability"
+  },
+  {
+    "question": "Which CRM type supports call centers, mobile contacts, and SMS?",
+    "choices": [
+      "Analysis CRM",
+      "Operations CRM",
+      "Collaboration CRM",
+      "Strategy BI"
+    ],
+    "answer": "Operations CRM"
+  },
+  {
+    "question": "What is PLM?",
+    "choices": [
+      "A solution that integrates and manages product-related resources throughout the product lifecycle",
+      "A customer service contract",
+      "A financial evaluation formula",
+      "A software acquisition standard"
+    ],
+    "answer": "A solution that integrates and manages product-related resources throughout the product lifecycle"
+  },
+  {
+    "question": "Which is a characteristic of an Enterprise Data Warehouse?",
+    "choices": [
+      "Frequently modified",
+      "Unintegrated",
+      "Limited to current transactions",
+      "Non-volatile"
+    ],
+    "answer": "Non-volatile"
+  },
+  {
+    "question": "What type of problems does a Decision Support System address?",
+    "choices": [
+      "Only repetitive fully structured tasks",
+      "Only network failures",
+      "Non-structured and semi-structured problems",
+      "Only database backup problems"
+    ],
+    "answer": "Non-structured and semi-structured problems"
+  },
+  {
+    "question": "What is Business Intelligence?",
+    "choices": [
+      "A method for outsourcing IT",
+      "Processes that improve business decisions and performance through enterprise-data analysis",
+      "A software lifecycle standard",
+      "A mobile-device policy"
+    ],
+    "answer": "Processes that improve business decisions and performance through enterprise-data analysis"
+  },
+  {
+    "question": "What is IT Service Management?",
+    "choices": [
+      "A systematic method for managing IT services and their quality",
+      "A process for evaluating only financial investments",
+      "A method for product design",
+      "A customer segmentation technique"
+    ],
+    "answer": "A systematic method for managing IT services and their quality"
+  },
+  {
+    "question": "What is ITIL?",
+    "choices": [
+      "A financial ratio",
+      "A customer relationship strategy",
+      "A software programming language",
+      "A collection of best practices for IT service management"
+    ],
+    "answer": "A collection of best practices for IT service management"
+  },
+  {
+    "question": "What is a Service Level Agreement?",
+    "choices": [
+      "An enterprise architecture blueprint",
+      "A product lifecycle report",
+      "A written contract that defines the expected level of service quality",
+      "A data-warehouse schema"
+    ],
+    "answer": "A written contract that defines the expected level of service quality"
+  },
+  {
+    "question": "What does Service Level Management ensure?",
+    "choices": [
+      "Every service is outsourced",
+      "The agreed level of service quality can be delivered",
+      "All service contracts are removed",
+      "Only application code is managed"
+    ],
+    "answer": "The agreed level of service quality can be delivered"
+  },
+  {
+    "question": "What does ROI measure?",
+    "choices": [
+      "The ratio of net effect to total cost",
+      "The time until benefits exceed costs",
+      "The present value of all currencies",
+      "The percentage of customer complaints"
+    ],
+    "answer": "The ratio of net effect to total cost"
+  },
+  {
+    "question": "What does the Payback Period measure?",
+    "choices": [
+      "The ratio of net effect to total cost",
+      "The internal rate of customer growth",
+      "The value of employee learning",
+      "The time needed for cumulative benefits to exceed cumulative costs"
+    ],
+    "answer": "The time needed for cumulative benefits to exceed cumulative costs"
+  },
+  {
+    "question": "What is the Balanced Scorecard?",
+    "choices": [
+      "A technique that measures revenue only",
+      "A software acquisition process",
+      "A method that evaluates both financial and non-financial performance",
+      "A customer database"
+    ],
+    "answer": "A method that evaluates both financial and non-financial performance"
+  },
+  {
+    "question": "Which BSC perspective focuses on customer satisfaction and loyalty?",
+    "choices": [
+      "Financial perspective",
+      "Customer perspective",
+      "Internal process perspective",
+      "Learning and growth perspective"
+    ],
+    "answer": "Customer perspective"
+  },
+  {
+    "question": "What is a KPI?",
+    "choices": [
+      "A quantifiable indicator containing an organization's critical success factor",
+      "A software outsourcing contract",
+      "A mobile service platform",
+      "A product-design document"
+    ],
+    "answer": "A quantifiable indicator containing an organization's critical success factor"
+  },
+  {
+    "question": "What is Management by Objectives?",
+    "choices": [
+      "A process for managing suppliers",
+      "A standard for software adoption",
+      "A customer-service agreement",
+      "A system for managing organizational goals"
+    ],
+    "answer": "A system for managing organizational goals"
+  },
+  {
+    "question": "What is disruptive innovation?",
+    "choices": [
+      "A strategy that preserves every existing business model",
+      "A method that ignores dissatisfied customers",
+      "A strategy that addresses slow growth through low-end or new-market disruption",
+      "A service-quality measurement technique"
+    ],
+    "answer": "A strategy that addresses slow growth through low-end or new-market disruption"
+  },
+  {
+    "question": "What is crowdsourcing?",
+    "choices": [
+      "Restricting all activities to internal employees",
+      "Opening business activities to participation by consumers and the general public",
+      "Using only a single outsourcing vendor",
+      "Closing the R&D process"
+    ],
+    "answer": "Opening business activities to participation by consumers and the general public"
+  },
+  {
+    "question": "What is open innovation?",
+    "choices": [
+      "Opening R&D activities to outside experts to share ideas and knowledge",
+      "Keeping all ideas inside the organization",
+      "Replacing research with customer support",
+      "Avoiding cooperation with external specialists"
+    ],
+    "answer": "Opening R&D activities to outside experts to share ideas and knowledge"
+  },
+  {
+    "question": "What is the API economy?",
+    "choices": [
+      "A model that hides all digital services",
+      "A business based only on hardware",
+      "A system that blocks external developers",
+      "A model in which companies expose internal assets or services to third parties through APIs"
+    ],
+    "answer": "A model in which companies expose internal assets or services to third parties through APIs"
+  },
+  {
+    "question": "What is servitization?",
+    "choices": [
+      "Replacing services with one-time physical products",
+      "Ending support immediately after purchase",
+      "Transforming a product into an ongoing service bundle over the customer experience lifetime",
+      "Eliminating recurring customer relationships"
+    ],
+    "answer": "Transforming a product into an ongoing service bundle over the customer experience lifetime"
+  },
+  {
+    "question": "What is a major capability of HTML5?",
+    "choices": [
+      "It requires a unique plug-in for every feature",
+      "It provides services without requiring a separate plug-in",
+      "It works only on desktop computers",
+      "It cannot support multimedia content"
+    ],
+    "answer": "It provides services without requiring a separate plug-in"
+  },
+  {
+    "question": "What is the semantic web?",
+    "choices": [
+      "A web that enables intelligent processing through structured data",
+      "A web limited to static text",
+      "A payment-only network",
+      "A mobile-device management service"
+    ],
+    "answer": "A web that enables intelligent processing through structured data"
+  },
+  {
+    "question": "Which Open API approach is described as the most widely used?",
+    "choices": [
+      "Closed API",
+      "Hardware API",
+      "Private file interface",
+      "REST API"
+    ],
+    "answer": "REST API"
+  },
+  {
+    "question": "Which phrase describes mobile commerce?",
+    "choices": [
+      "Fast, Fixed, and Free",
+      "Secure, Static, and Separate",
+      "Anytime, Anywhere, and Any Device",
+      "Online, Local, and Limited"
+    ],
+    "answer": "Anytime, Anywhere, and Any Device"
+  },
+  {
+    "question": "What is Mobile Device Management?",
+    "choices": [
+      "A business-strategy evaluation method",
+      "A solution for managing enterprise mobile devices and applications",
+      "A customer-relationship classification",
+      "A product-lifecycle system"
+    ],
+    "answer": "A solution for managing enterprise mobile devices and applications"
+  },
+  {
+    "question": "What is a Smart Grid?",
+    "choices": [
+      "A power grid that uses IT to monitor and control electricity supply and demand",
+      "A customer-loyalty system",
+      "An online shopping network",
+      "An investment-evaluation method"
+    ],
+    "answer": "A power grid that uses IT to monitor and control electricity supply and demand"
+  },
+  {
+    "question": "What does V2V mean?",
+    "choices": [
+      "Vehicle-to-vendor",
+      "Virtual-to-virtual",
+      "Value-to-volume",
+      "Vehicle-to-vehicle"
+    ],
+    "answer": "Vehicle-to-vehicle"
+  },
+  {
+    "question": "Which is one of the Big Data characteristics listed in the reviewer?",
+    "choices": [
+      "Verification",
+      "Visibility",
+      "Volume",
+      "Virtualization"
+    ],
+    "answer": "Volume"
+  },
+  {
+    "question": "What is FinTech?",
+    "choices": [
+      "A product-lifecycle management method",
+      "The combination of financial services and technology",
+      "A quality-control framework",
+      "A business-process monitor"
+    ],
+    "answer": "The combination of financial services and technology"
+  },
+  {
+    "question": "What is an advantage of 3D printing?",
+    "choices": [
+      "It is suitable for customized small-batch production",
+      "It can only support mass production",
+      "It cannot use digital designs",
+      "It requires identical products in every batch"
+    ],
+    "answer": "It is suitable for customized small-batch production"
+  },
+  {
+    "question": "What are professional ethics?",
+    "choices": [
+      "A financial-performance formula",
+      "A customer-segmentation system",
+      "A software-architecture model",
+      "A code of conduct that people with a job should follow"
+    ],
+    "answer": "A code of conduct that people with a job should follow"
+  },
+  {
+    "question": "Which is an example of work ethics?",
+    "choices": [
+      "Market share",
+      "Scalability",
+      "Honesty",
+      "Price"
+    ],
+    "answer": "Honesty"
+  },
+  {
+    "question": "Which is an example of community ethics?",
+    "choices": [
+      "Production volume",
+      "Workplace etiquette",
+      "Product customization",
+      "Return on investment"
+    ],
+    "answer": "Workplace etiquette"
+  },
+  {
+    "question": "Which general ethical principle requires professionals to protect private business information?",
+    "choices": [
+      "Honor confidentiality",
+      "Maximize vendor dependency",
+      "Ignore property rights",
+      "Avoid professional standards"
+    ],
+    "answer": "Honor confidentiality"
+  },
+  {
+    "question": "What should software engineers ensure about products and related modifications?",
+    "choices": [
+      "They are released without testing",
+      "They ignore user safety",
+      "They contain no documentation",
+      "They meet the highest professional standards possible"
+    ],
+    "answer": "They meet the highest professional standards possible"
+  },
+  {
+    "question": "What is personal information?",
+    "choices": [
+      "Only publicly available company information",
+      "Only anonymous statistics",
+      "Information that identifies a person by itself or when combined with other information",
+      "Only computer hardware information"
+    ],
+    "answer": "Information that identifies a person by itself or when combined with other information"
+  },
+  {
+    "question": "Which is identification information?",
+    "choices": [
+      "Fingerprint",
+      "Resident registration number",
+      "Credit rating",
+      "Employment history"
+    ],
+    "answer": "Resident registration number"
+  },
+  {
+    "question": "Which is physical personal information?",
+    "choices": [
+      "Iris information",
+      "Address",
+      "Loan details",
+      "Educational information"
+    ],
+    "answer": "Iris information"
+  },
+  {
+    "question": "Which is property information?",
+    "choices": [
+      "Genetic information",
+      "Military service information",
+      "Phone number",
+      "Credit rating information"
+    ],
+    "answer": "Credit rating information"
+  },
+  {
+    "question": "Who is a personal information processor?",
+    "choices": [
+      "Only a government ministry",
+      "Only a network engineer",
+      "An institution, organization, company, or individual that processes personal information",
+      "Only a software vendor"
+    ],
+    "answer": "An institution, organization, company, or individual that processes personal information"
+  },
+  {
+    "question": "What is personal information leakage?",
+    "choices": [
+      "The authorized correction of a record",
+      "The loss or theft of documents or devices containing personal information",
+      "The lawful destruction of expired information",
+      "The creation of anonymous statistics"
+    ],
+    "answer": "The loss or theft of documents or devices containing personal information"
+  },
+  {
+    "question": "What is the first stage of the personal-information processing procedure?",
+    "choices": [
+      "Collection and use of personal information",
+      "Storage and management",
+      "Provision to a third party",
+      "Destruction of personal information"
+    ],
+    "answer": "Collection and use of personal information"
+  },
+  {
+    "question": "Which GDPR right permits a person to request deletion of personal information?",
+    "choices": [
+      "Right to profit",
+      "Right to outsourcing",
+      "Right to automation",
+      "Right to erasure"
+    ],
+    "answer": "Right to erasure"
+  },
+  {
+    "question": "What is an administrative personal-information protection measure?",
+    "choices": [
+      "Publishing encryption keys",
+      "Disabling access controls",
+      "Establishing and implementing an internal management plan",
+      "Removing security policies"
+    ],
+    "answer": "Establishing and implementing an internal management plan"
+  },
+  {
+    "question": "What occurs during Stage 2 of the de-identification process?",
+    "choices": [
+      "The information is collected for the first time",
+      "Personal information is transformed using methods such as pseudonymization, aggregation, and masking",
+      "The information is immediately published",
+      "The data is used without adequacy assessment"
+    ],
+    "answer": "Personal information is transformed using methods such as pseudonymization, aggregation, and masking"
+  }
+]

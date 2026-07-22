@@ -1,0 +1,1002 @@
+[
+  {
+    "question": "What is information security?",
+    "choices": [
+      "Protecting information administratively, physically, and technically during collection, storage, processing, and transmission",
+      "Compressing all information before storage",
+      "Allowing all users to access every system resource",
+      "Managing only the physical devices in a network"
+    ],
+    "answer": "Protecting information administratively, physically, and technically during collection, storage, processing, and transmission"
+  },
+  {
+    "question": "Which security goal ensures information is not exposed to unauthorized users?",
+    "choices": [
+      "Availability",
+      "Integrity",
+      "Confidentiality",
+      "Non-repudiation"
+    ],
+    "answer": "Confidentiality"
+  },
+  {
+    "question": "Which information security goal ensures that original information is not illegally created, modified, or deleted?",
+    "choices": [
+      "Integrity",
+      "Availability",
+      "Authentication",
+      "Confidentiality"
+    ],
+    "answer": "Integrity"
+  },
+  {
+    "question": "What does availability mean in information security?",
+    "choices": [
+      "Only administrators can view stored information",
+      "Authorized users can access and use requested information when necessary",
+      "Every message must be digitally signed",
+      "Information cannot be copied to another device"
+    ],
+    "answer": "Authorized users can access and use requested information when necessary"
+  },
+  {
+    "question": "What is non-repudiation used to prevent?",
+    "choices": [
+      "The denial of having sent or received a message",
+      "The use of public key cryptography",
+      "The storage of passwords as hashes",
+      "The encryption of transmitted information"
+    ],
+    "answer": "The denial of having sent or received a message"
+  },
+  {
+    "question": "What does a hash function produce from an input string of varying length?",
+    "choices": [
+      "A public encryption key",
+      "A fixed-length hash value",
+      "A variable-length password",
+      "A digital certificate"
+    ],
+    "answer": "A fixed-length hash value"
+  },
+  {
+    "question": "Which malware runs independently and replicates itself to other computers?",
+    "choices": [
+      "Trojan horse",
+      "Virus",
+      "Worm",
+      "Ransomware"
+    ],
+    "answer": "Worm"
+  },
+  {
+    "question": "Which malware is inserted into the code of another independent program?",
+    "choices": [
+      "Virus",
+      "Worm",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": "Virus"
+  },
+  {
+    "question": "What best describes a Trojan horse?",
+    "choices": [
+      "A network protocol that encrypts traffic",
+      "A normal-looking program containing hidden malicious code",
+      "A program that only replicates without user execution",
+      "A tool that blocks SQL injection"
+    ],
+    "answer": "A normal-looking program containing hidden malicious code"
+  },
+  {
+    "question": "Where is a firewall commonly placed?",
+    "choices": [
+      "Between the public network and the private network",
+      "Inside every database table",
+      "Only between two application modules",
+      "Between the CPU and main memory"
+    ],
+    "answer": "Between the public network and the private network"
+  },
+  {
+    "question": "What is the main function of an Intrusion Prevention System?",
+    "choices": [
+      "To issue digital certificates",
+      "To block intrusions in real time after detecting abnormal behavior",
+      "To replace all encryption algorithms",
+      "To create user passwords automatically"
+    ],
+    "answer": "To block intrusions in real time after detecting abnormal behavior"
+  },
+  {
+    "question": "What does a Virtual Private Network provide over a public network?",
+    "choices": [
+      "A private network connection with secure access, authentication, and confidentiality",
+      "An unencrypted channel for all users",
+      "A replacement for database backups",
+      "A method for deleting user accounts"
+    ],
+    "answer": "A private network connection with secure access, authentication, and confidentiality"
+  },
+  {
+    "question": "What is the purpose of Single Sign On?",
+    "choices": [
+      "To require a new password for every site",
+      "To allow access to another site after one successful login without separate authentication",
+      "To disable account authentication",
+      "To encrypt every database column"
+    ],
+    "answer": "To allow access to another site after one successful login without separate authentication"
+  },
+  {
+    "question": "Which security solution is located in front of a web server to block attacks such as SQL injection and XSS?",
+    "choices": [
+      "SIEM",
+      "WAF",
+      "TPM",
+      "FDS"
+    ],
+    "answer": "WAF"
+  },
+  {
+    "question": "What does SIEM primarily establish?",
+    "choices": [
+      "An early warning and monitoring system for intelligent threats",
+      "A private key encryption algorithm",
+      "A biometric authentication standard",
+      "A physical network segregation device"
+    ],
+    "answer": "An early warning and monitoring system for intelligent threats"
+  },
+  {
+    "question": "How are transactions verified in a blockchain?",
+    "choices": [
+      "By one centralized server only",
+      "By the consent of network members",
+      "By a single database administrator",
+      "By a web application firewall"
+    ],
+    "answer": "By the consent of network members"
+  },
+  {
+    "question": "What type of network method does blockchain use instead of relying on a centralized system?",
+    "choices": [
+      "Client-only",
+      "P2P",
+      "Circuit switching",
+      "Mainframe"
+    ],
+    "answer": "P2P"
+  },
+  {
+    "question": "What is FIDO mainly associated with?",
+    "choices": [
+      "Biometric authentication in online environments",
+      "Database replication",
+      "File compression",
+      "Network routing"
+    ],
+    "answer": "Biometric authentication in online environments"
+  },
+  {
+    "question": "What is the purpose of network segregation?",
+    "choices": [
+      "To combine business and external networks",
+      "To separate the business network from the external network to prevent illegal access",
+      "To increase the number of public IP addresses",
+      "To remove all network security controls"
+    ],
+    "answer": "To separate the business network from the external network to prevent illegal access"
+  },
+  {
+    "question": "What does a Fraud Detection System analyze to detect suspicious transactions?",
+    "choices": [
+      "Device information, access information, and transaction details",
+      "Only the user's password length",
+      "Only the transaction amount",
+      "Only the operating system version"
+    ],
+    "answer": "Device information, access information, and transaction details"
+  },
+  {
+    "question": "Why can quantum cryptography reveal an eavesdropping attempt?",
+    "choices": [
+      "The quantum state changes when measured by a third party",
+      "Every quantum message uses a firewall",
+      "Quantum keys are stored only in databases",
+      "The receiver blocks all network packets"
+    ],
+    "answer": "The quantum state changes when measured by a third party"
+  },
+  {
+    "question": "What does a Trusted Platform Module securely store?",
+    "choices": [
+      "Encryption keys, passwords, and digital certificates",
+      "Only website images",
+      "Temporary browser cookies",
+      "Public advertisements"
+    ],
+    "answer": "Encryption keys, passwords, and digital certificates"
+  },
+  {
+    "question": "What is G-re-identification described as in the reviewer?",
+    "choices": [
+      "Converting data so that an individual cannot be identified",
+      "Restoring anonymized data to its original owner",
+      "Encrypting only database indexes",
+      "Linking business and external networks"
+    ],
+    "answer": "Converting data so that an individual cannot be identified"
+  },
+  {
+    "question": "When was the EU-GDPR enacted according to the reviewer?",
+    "choices": [
+      "May 2018",
+      "July 2012",
+      "January 2020",
+      "March 2005"
+    ],
+    "answer": "May 2018"
+  },
+  {
+    "question": "What is encryption?",
+    "choices": [
+      "Converting plaintext into unreadable ciphertext",
+      "Converting ciphertext into plaintext",
+      "Comparing two message digests",
+      "Deleting information after transmission"
+    ],
+    "answer": "Converting plaintext into unreadable ciphertext"
+  },
+  {
+    "question": "What is decryption?",
+    "choices": [
+      "Creating a digital certificate",
+      "Converting ciphertext back into plaintext",
+      "Generating a random salt",
+      "Blocking unauthorized users"
+    ],
+    "answer": "Converting ciphertext back into plaintext"
+  },
+  {
+    "question": "What is the key relationship in symmetric cryptography?",
+    "choices": [
+      "The encryption and decryption keys are the same",
+      "The encryption and decryption keys are always unrelated certificates",
+      "Only a public key is used",
+      "No key is used"
+    ],
+    "answer": "The encryption and decryption keys are the same"
+  },
+  {
+    "question": "Which is an example of a symmetric cryptographic algorithm?",
+    "choices": [
+      "RSA",
+      "ECC",
+      "AES",
+      "ElGamal"
+    ],
+    "answer": "AES"
+  },
+  {
+    "question": "Which is an example of a public key cryptographic algorithm?",
+    "choices": [
+      "DES",
+      "AES",
+      "RSA",
+      "SHA-256"
+    ],
+    "answer": "RSA"
+  },
+  {
+    "question": "Which cryptographic approach generally has faster encryption and decryption?",
+    "choices": [
+      "Public key cryptography",
+      "Symmetric cryptography",
+      "Hashing without a key",
+      "Digital certificate verification"
+    ],
+    "answer": "Symmetric cryptography"
+  },
+  {
+    "question": "What does pre-image resistance mean?",
+    "choices": [
+      "It is difficult to find an input x for a given hash output y",
+      "It is easy to recover the original message from a hash",
+      "Two different inputs always produce different lengths",
+      "A hash function must use a public key"
+    ],
+    "answer": "It is difficult to find an input x for a given hash output y"
+  },
+  {
+    "question": "What does collision resistance mean?",
+    "choices": [
+      "It is difficult to find two different inputs with the same hash value",
+      "It is impossible to calculate any hash value",
+      "It is easy to recover a password from its hash",
+      "Every hash requires an encryption certificate"
+    ],
+    "answer": "It is difficult to find two different inputs with the same hash value"
+  },
+  {
+    "question": "What is salting?",
+    "choices": [
+      "Adding an arbitrary bit string before hashing",
+      "Encrypting data with two public keys",
+      "Removing random characters from a password",
+      "Storing a password in plaintext"
+    ],
+    "answer": "Adding an arbitrary bit string before hashing"
+  },
+  {
+    "question": "What is a message authentication code used to protect?",
+    "choices": [
+      "The integrity of a message transmitted over a network",
+      "The physical availability of a server",
+      "The size of a database",
+      "The speed of an authentication device"
+    ],
+    "answer": "The integrity of a message transmitted over a network"
+  },
+  {
+    "question": "Which authentication type is based on 'What you know'?",
+    "choices": [
+      "Knowledge-based authentication",
+      "Ownership-based authentication",
+      "Presence-based authentication",
+      "Certificate-based authorization"
+    ],
+    "answer": "Knowledge-based authentication"
+  },
+  {
+    "question": "Which is an example of ownership-based authentication?",
+    "choices": [
+      "Fingerprint",
+      "Password",
+      "OTP",
+      "Iris pattern"
+    ],
+    "answer": "OTP"
+  },
+  {
+    "question": "Which authentication type uses characteristics such as fingerprints or iris patterns?",
+    "choices": [
+      "Presence-based authentication",
+      "Knowledge-based authentication",
+      "Ownership-based authentication",
+      "Role-based authorization"
+    ],
+    "answer": "Presence-based authentication"
+  },
+  {
+    "question": "Why is password authentication described as insecure?",
+    "choices": [
+      "Passwords may be easy to guess or stored and transmitted in plaintext",
+      "Passwords always require biometric sensors",
+      "Passwords cannot be entered over a network",
+      "Passwords are always longer than encryption keys"
+    ],
+    "answer": "Passwords may be easy to guess or stored and transmitted in plaintext"
+  },
+  {
+    "question": "Which OTP type includes challenge-response and time-synchronous methods?",
+    "choices": [
+      "Synchronous OTP",
+      "Asynchronous OTP",
+      "Biometric OTP",
+      "Role-based OTP"
+    ],
+    "answer": "Synchronous OTP"
+  },
+  {
+    "question": "Which biometric technology occupies the largest market share according to the reviewer?",
+    "choices": [
+      "Iris recognition",
+      "DNA recognition",
+      "Fingerprint recognition",
+      "Vein recognition"
+    ],
+    "answer": "Fingerprint recognition"
+  },
+  {
+    "question": "What is multi-factor authentication?",
+    "choices": [
+      "Combining multiple authentication technologies",
+      "Using the same password on several sites",
+      "Allowing one user to hold several roles",
+      "Encrypting one message several times"
+    ],
+    "answer": "Combining multiple authentication technologies"
+  },
+  {
+    "question": "What does an electronic signature provide?",
+    "choices": [
+      "Sender authentication, non-repudiation, and message integrity",
+      "Only message confidentiality",
+      "Only database availability",
+      "Only physical access control"
+    ],
+    "answer": "Sender authentication, non-repudiation, and message integrity"
+  },
+  {
+    "question": "Which key does the sender use to encrypt a message digest when creating an electronic signature?",
+    "choices": [
+      "The sender's private key",
+      "The receiver's private key",
+      "The sender's public key",
+      "A database master key"
+    ],
+    "answer": "The sender's private key"
+  },
+  {
+    "question": "Which key does the receiver use to extract the message digest from an electronic signature?",
+    "choices": [
+      "The sender's public key",
+      "The receiver's private key",
+      "The sender's private key",
+      "A one-time salt"
+    ],
+    "answer": "The sender's public key"
+  },
+  {
+    "question": "What is PKI used to manage?",
+    "choices": [
+      "Public keys, encryption keys, and security certificates",
+      "Only passwords stored in plaintext",
+      "Physical network cables",
+      "Database query performance"
+    ],
+    "answer": "Public keys, encryption keys, and security certificates"
+  },
+  {
+    "question": "What is secured using the receiver's public key in a PKI electronic envelope?",
+    "choices": [
+      "The session key",
+      "The receiver's password",
+      "The sender's private key",
+      "The certificate revocation list"
+    ],
+    "answer": "The session key"
+  },
+  {
+    "question": "Which mechanism lists revoked digital certificates?",
+    "choices": [
+      "CRL",
+      "RBAC",
+      "WAF",
+      "MAC"
+    ],
+    "answer": "CRL"
+  },
+  {
+    "question": "What are the three parts of the access control procedure?",
+    "choices": [
+      "Identification, authentication, and authorization",
+      "Encryption, hashing, and compression",
+      "Detection, prevention, and recovery",
+      "Collection, storage, and destruction"
+    ],
+    "answer": "Identification, authentication, and authorization"
+  },
+  {
+    "question": "What is the minimum privilege policy also called?",
+    "choices": [
+      "Need-to-know policy",
+      "Maximum availability policy",
+      "Open access policy",
+      "Public trust policy"
+    ],
+    "answer": "Need-to-know policy"
+  },
+  {
+    "question": "Which access control policy allows the object owner to grant or revoke permissions?",
+    "choices": [
+      "DAC",
+      "MAC",
+      "RBAC",
+      "Biba"
+    ],
+    "answer": "DAC"
+  },
+  {
+    "question": "Which access control policy is mainly used for military purposes and uses security labels?",
+    "choices": [
+      "MAC",
+      "DAC",
+      "RBAC",
+      "SSO"
+    ],
+    "answer": "MAC"
+  },
+  {
+    "question": "How does RBAC determine access?",
+    "choices": [
+      "According to roles defined and managed by a central administrator",
+      "According to ownership of each individual file only",
+      "According to random passwords",
+      "According to public network location"
+    ],
+    "answer": "According to roles defined and managed by a central administrator"
+  },
+  {
+    "question": "What is an Advanced Persistent Threat attack?",
+    "choices": [
+      "A strategic hacking technique targeting important political, social, economic, or technical systems",
+      "A harmless scan of a public website",
+      "A one-time password authentication method",
+      "A database encryption technique"
+    ],
+    "answer": "A strategic hacking technique targeting important political, social, economic, or technical systems"
+  },
+  {
+    "question": "What is pharming?",
+    "choices": [
+      "Redirecting a user to a fake site by altering the host file",
+      "Sending targeted emails to key personnel",
+      "Mining cryptocurrency with authorized hardware",
+      "Using QR codes for legitimate authentication"
+    ],
+    "answer": "Redirecting a user to a fake site by altering the host file"
+  },
+  {
+    "question": "What is Qshing?",
+    "choices": [
+      "Phishing through a malicious QR code",
+      "Mining cryptocurrency through a browser",
+      "Stealing data by changing a host file",
+      "Sending spam through a VPN"
+    ],
+    "answer": "Phishing through a malicious QR code"
+  },
+  {
+    "question": "What is smishing?",
+    "choices": [
+      "A fraudulent technique using smartphone text messages and small-payment services",
+      "A cloud hypervisor attack",
+      "A network-layer encryption protocol",
+      "A database access control method"
+    ],
+    "answer": "A fraudulent technique using smartphone text messages and small-payment services"
+  },
+  {
+    "question": "What is spear phishing?",
+    "choices": [
+      "Targeted phishing emails sent to key personnel using collected information",
+      "A mass email sent without selecting targets",
+      "A technique for encrypting passwords",
+      "A wireless network security standard"
+    ],
+    "answer": "Targeted phishing emails sent to key personnel using collected information"
+  },
+  {
+    "question": "What is cryptojacking?",
+    "choices": [
+      "Using a victim's infected computer to mine cryptocurrency",
+      "Encrypting data and demanding payment",
+      "Redirecting a user through a forged host file",
+      "Stealing a digital certificate"
+    ],
+    "answer": "Using a victim's infected computer to mine cryptocurrency"
+  },
+  {
+    "question": "What does ransomware typically do?",
+    "choices": [
+      "Encrypts data or disables a system and demands payment",
+      "Only monitors network traffic",
+      "Creates a legal digital certificate",
+      "Improves system performance"
+    ],
+    "answer": "Encrypts data or disables a system and demands payment"
+  },
+  {
+    "question": "What is a drive-by download attack?",
+    "choices": [
+      "Malware distributed through a website that infects a user's computer",
+      "An attack using only removable storage",
+      "A password attack against an offline system",
+      "A method of backing up a database"
+    ],
+    "answer": "Malware distributed through a website that infects a user's computer"
+  },
+  {
+    "question": "What is malvertising?",
+    "choices": [
+      "Distributing malware through legitimate online advertising networks",
+      "Using advertisements to promote antivirus software",
+      "Encrypting web traffic with TLS",
+      "Blocking malicious browser extensions"
+    ],
+    "answer": "Distributing malware through legitimate online advertising networks"
+  },
+  {
+    "question": "What does security by design require for IoT systems?",
+    "choices": [
+      "Security and privacy protections considered during design and development",
+      "Security added only after deployment",
+      "Removal of all device authentication",
+      "Use of high-power hardware only"
+    ],
+    "answer": "Security and privacy protections considered during design and development"
+  },
+  {
+    "question": "Why is hypervisor infection dangerous in cloud computing?",
+    "choices": [
+      "Damage to the hypervisor can affect several virtual machines",
+      "It changes only one user's password",
+      "It prevents all virtual machine portability",
+      "It improves isolation between VMs"
+    ],
+    "answer": "Damage to the hypervisor can affect several virtual machines"
+  },
+  {
+    "question": "Which algorithm is specifically mentioned for encrypting cloud data before storage?",
+    "choices": [
+      "AES-256",
+      "DES-40",
+      "CRC",
+      "MD2"
+    ],
+    "answer": "AES-256"
+  },
+  {
+    "question": "Which technique replaces identifying elements with other values?",
+    "choices": [
+      "Pseudonymization",
+      "Aggregation",
+      "Data reduction",
+      "Data masking"
+    ],
+    "answer": "Pseudonymization"
+  },
+  {
+    "question": "Which mobile security countermeasure is mentioned in the reviewer?",
+    "choices": [
+      "Applying antivirus technology",
+      "Allowing illegal APIs",
+      "Disabling application encryption",
+      "Encouraging device rooting"
+    ],
+    "answer": "Applying antivirus technology"
+  },
+  {
+    "question": "What is the purpose of an Information Security Management System?",
+    "choices": [
+      "To manage security measures that maintain confidentiality, integrity, and availability",
+      "To replace all technical security controls",
+      "To manage only software licenses",
+      "To monitor only database performance"
+    ],
+    "answer": "To manage security measures that maintain confidentiality, integrity, and availability"
+  },
+  {
+    "question": "What is risk management?",
+    "choices": [
+      "Estimating asset values, identifying risks, and preparing protective measures",
+      "Encrypting all information with one password",
+      "Removing every system vulnerability manually",
+      "Disabling all network services"
+    ],
+    "answer": "Estimating asset values, identifying risks, and preparing protective measures"
+  },
+  {
+    "question": "When is a quantitative risk assessment technique appropriate?",
+    "choices": [
+      "When damage can be measured using money or mathematical methods",
+      "When no measurable information exists",
+      "When only personal opinion is available",
+      "When risk cannot be expressed numerically"
+    ],
+    "answer": "When damage can be measured using money or mathematical methods"
+  },
+  {
+    "question": "What is ISMS-P?",
+    "choices": [
+      "A certification system integrating ISMS and PIMS",
+      "A public key encryption algorithm",
+      "A database access control policy",
+      "A web application firewall standard"
+    ],
+    "answer": "A certification system integrating ISMS and PIMS"
+  },
+  {
+    "question": "How should passwords be stored under personal information protection practices?",
+    "choices": [
+      "Using a hash function",
+      "Using plaintext",
+      "Using a reversible two-way cipher only",
+      "Inside a public web page"
+    ],
+    "answer": "Using a hash function"
+  },
+  {
+    "question": "What is ISO 27001:2013?",
+    "choices": [
+      "An international standard for information security management systems",
+      "A mobile operating system",
+      "A database encryption algorithm",
+      "A phishing detection service"
+    ],
+    "answer": "An international standard for information security management systems"
+  },
+  {
+    "question": "What is the OWASP Top 10?",
+    "choices": [
+      "A list of severe web application security risks",
+      "A list of approved password generators",
+      "A set of database backup methods",
+      "A collection of network routing protocols"
+    ],
+    "answer": "A list of severe web application security risks"
+  },
+  {
+    "question": "What does CVSS provide?",
+    "choices": [
+      "An open framework for assessing and identifying security vulnerabilities",
+      "A list of revoked certificates",
+      "A method for creating biometric templates",
+      "A standard for database encryption"
+    ],
+    "answer": "An open framework for assessing and identifying security vulnerabilities"
+  },
+  {
+    "question": "What is the purpose of a Secure SDLC?",
+    "choices": [
+      "To review security measures throughout the entire software lifecycle",
+      "To add security only during maintenance",
+      "To remove testing from development",
+      "To prevent risk assessment during design"
+    ],
+    "answer": "To review security measures throughout the entire software lifecycle"
+  },
+  {
+    "question": "Which Java technique helps prevent SQL injection?",
+    "choices": [
+      "Using PreparedStatement with parameter binding",
+      "Concatenating raw user input into SQL",
+      "Disabling database authentication",
+      "Allowing unrestricted query strings"
+    ],
+    "answer": "Using PreparedStatement with parameter binding"
+  },
+  {
+    "question": "How should special characters be handled to reduce XSS risk?",
+    "choices": [
+      "Replace characters such as <, >, and & with safe equivalents",
+      "Store scripts directly in the database",
+      "Disable all output encoding",
+      "Allow every HTML tag from user input"
+    ],
+    "answer": "Replace characters such as <, >, and & with safe equivalents"
+  },
+  {
+    "question": "What causes an OS command injection vulnerability?",
+    "choices": [
+      "Unverified input is executed as a system command",
+      "A password is stored as a hash",
+      "A user is assigned a limited role",
+      "A certificate is checked through OCSP"
+    ],
+    "answer": "Unverified input is executed as a system command"
+  },
+  {
+    "question": "What is a memory buffer overflow?",
+    "choices": [
+      "Reading or writing beyond the allocated memory range",
+      "Encrypting a buffer with AES",
+      "Adding a null character to a string",
+      "Using a prepared SQL statement"
+    ],
+    "answer": "Reading or writing beyond the allocated memory range"
+  },
+  {
+    "question": "What setting should be used to prevent an Android component from being accessed externally?",
+    "choices": [
+      "android:exported=\"false\"",
+      "android:exported=\"true\"",
+      "android:debuggable=\"true\"",
+      "android:allowBackup=\"true\""
+    ],
+    "answer": "android:exported=\"false\""
+  },
+  {
+    "question": "Which database security principle is supported by database encryption?",
+    "choices": [
+      "Confidentiality",
+      "Availability",
+      "Performance",
+      "Scalability"
+    ],
+    "answer": "Confidentiality"
+  },
+  {
+    "question": "Which database security principle is supported by privilege management?",
+    "choices": [
+      "Integrity",
+      "Availability",
+      "Compression",
+      "Replication"
+    ],
+    "answer": "Integrity"
+  },
+  {
+    "question": "Which database security principle is supported by database redundancy?",
+    "choices": [
+      "Availability",
+      "Confidentiality",
+      "Authentication",
+      "Non-repudiation"
+    ],
+    "answer": "Availability"
+  },
+  {
+    "question": "How does the gateway method control database access?",
+    "choices": [
+      "All database connection requests pass through a proxy access-control server",
+      "Every user connects directly without monitoring",
+      "Network packets are ignored",
+      "Encryption is installed only inside the application"
+    ],
+    "answer": "All database connection requests pass through a proxy access-control server"
+  },
+  {
+    "question": "Where is encryption and decryption installed in the database API method?",
+    "choices": [
+      "Inside an application program module",
+      "Only inside a firewall",
+      "Inside the operating system kernel",
+      "Only in a network switch"
+    ],
+    "answer": "Inside an application program module"
+  },
+  {
+    "question": "What is a key advantage of TDE database encryption?",
+    "choices": [
+      "It requires no modification to the application program",
+      "It stores passwords in plaintext",
+      "It removes the need for encryption keys",
+      "It works only outside the database"
+    ],
+    "answer": "It requires no modification to the application program"
+  },
+  {
+    "question": "Which hashing algorithm is generally used for passwords according to the reviewer?",
+    "choices": [
+      "SHA-256",
+      "AES",
+      "SEED",
+      "ARIA"
+    ],
+    "answer": "SHA-256"
+  },
+  {
+    "question": "What is the purpose of a database master key?",
+    "choices": [
+      "To encrypt and distribute the encryption/decryption key",
+      "To identify a database user",
+      "To store application source code",
+      "To create a firewall rule"
+    ],
+    "answer": "To encrypt and distribute the encryption/decryption key"
+  },
+  {
+    "question": "What should be done with unnecessary Windows guest and user accounts?",
+    "choices": [
+      "Delete them",
+      "Give them administrator privileges",
+      "Share their passwords",
+      "Disable account lockout"
+    ],
+    "answer": "Delete them"
+  },
+  {
+    "question": "What password practice is recommended for Unix-like systems?",
+    "choices": [
+      "Use at least eight characters and include special characters",
+      "Use only a four-digit number",
+      "Reuse the account name as the password",
+      "Store the password in a public file"
+    ],
+    "answer": "Use at least eight characters and include special characters"
+  },
+  {
+    "question": "What is a passive network attack?",
+    "choices": [
+      "Monitoring or eavesdropping on transmitted data",
+      "Modifying messages and creating false data",
+      "Disabling a server with excessive load",
+      "Changing a system's access-control roles"
+    ],
+    "answer": "Monitoring or eavesdropping on transmitted data"
+  },
+  {
+    "question": "What is an active network attack?",
+    "choices": [
+      "Illegal modification of transmitted data or creation of false data",
+      "Only observing network traffic",
+      "Reading a public web page",
+      "Checking a certificate revocation list"
+    ],
+    "answer": "Illegal modification of transmitted data or creation of false data"
+  },
+  {
+    "question": "Which attack exploits the TCP three-way handshake?",
+    "choices": [
+      "SYN flooding",
+      "Land attack",
+      "Ping of death",
+      "Boink attack"
+    ],
+    "answer": "SYN flooding"
+  },
+  {
+    "question": "What is a sniffing attack?",
+    "choices": [
+      "Eavesdropping on traffic by setting a network card to promiscuous mode",
+      "Changing a MAC address in an ARP table",
+      "Encrypting IP packets",
+      "Assigning roles to database users"
+    ],
+    "answer": "Eavesdropping on traffic by setting a network card to promiscuous mode"
+  },
+  {
+    "question": "What does ARP spoofing do?",
+    "choices": [
+      "Maps a fake MAC address to an IP address",
+      "Encrypts all IP datagrams",
+      "Creates a digital signature",
+      "Blocks malicious SQL statements"
+    ],
+    "answer": "Maps a fake MAC address to an IP address"
+  },
+  {
+    "question": "At which layer does IPSec provide authentication and encryption?",
+    "choices": [
+      "Internet or IP layer",
+      "Application layer only",
+      "Physical layer",
+      "Database layer"
+    ],
+    "answer": "Internet or IP layer"
+  },
+  {
+    "question": "Which IPSec component provides encryption?",
+    "choices": [
+      "ESP",
+      "AH",
+      "CRL",
+      "OCSP"
+    ],
+    "answer": "ESP"
+  },
+  {
+    "question": "Which IPSec mode encrypts the entire IP datagram and is used for VPNs?",
+    "choices": [
+      "Tunnel mode",
+      "Transport mode",
+      "Passive mode",
+      "Session mode"
+    ],
+    "answer": "Tunnel mode"
+  },
+  {
+    "question": "What does SSL/TLS provide above the transport layer?",
+    "choices": [
+      "Reliable end-to-end security services",
+      "Physical network separation",
+      "Database normalization",
+      "Operating system scheduling"
+    ],
+    "answer": "Reliable end-to-end security services"
+  },
+  {
+    "question": "Which standard strengthens WLAN security through WPA2?",
+    "choices": [
+      "IEEE 802.11i",
+      "ISO 27001",
+      "IEEE 802.3",
+      "FIDO 2.0"
+    ],
+    "answer": "IEEE 802.11i"
+  }
+]
