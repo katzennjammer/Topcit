@@ -187,7 +187,7 @@ export function App() {
               rel="noopener noreferrer"
               className="footer-author-link"
             >
-              Benedict Avenido
+              Benedict
             </a>
           </p>
 
