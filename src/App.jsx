@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
 import { QuizPage } from './components/QuizPage';
 import { ResultsPage } from './components/ResultsPage';
+import { ReviewersPage } from './components/ReviewersPage';
 import { fetchAllQuizSummaries, loadQuizData } from './utils/quizLoader';
 import { getThemePreference, setThemePreference, clearQuizDraft } from './utils/storage';
 import { Loader2, AlertTriangle } from 'lucide-react';
@@ -11,6 +12,8 @@ import './App.css';
 export function App() {
   const [theme, setTheme] = useState(getThemePreference);
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'quiz' | 'results'
+  const [activeTab, setActiveTab] = useState('quizzes'); // 'quizzes' | 'reviewers'
+  const [activeReviewerId, setActiveReviewerId] = useState('V1');
   const [quizList, setQuizList] = useState([]);
   const [activeQuizModule, setActiveQuizModule] = useState(null);
   const [activeQuestions, setActiveQuestions] = useState([]);
@@ -72,6 +75,13 @@ export function App() {
     }
   };
 
+  const handleStartQuizByEssenceId = (essenceId) => {
+    const targetQuiz = quizList.find((q) => q.id === essenceId);
+    if (targetQuiz) {
+      handleSelectQuiz(targetQuiz);
+    }
+  };
+
   const handleCompleteQuiz = (resultData) => {
     setQuizResult(resultData);
     setCurrentView('results');
@@ -105,13 +115,20 @@ export function App() {
         currentView={currentView}
         onGoHome={handleGoHome}
         activeQuizTitle={activeQuizModule?.title}
+        activeTab={activeTab}
+        onTabChange={(tab) => {
+          setActiveTab(tab);
+          if (currentView !== 'home') {
+            handleGoHome();
+          }
+        }}
       />
 
       <main className="main-content">
         {loading && (
           <div className="loading-state card">
             <Loader2 size={36} className="spinner" />
-            <p>Loading Quiz Content...</p>
+            <p>Loading Content...</p>
           </div>
         )}
 
@@ -126,11 +143,19 @@ export function App() {
           </div>
         )}
 
-        {!loading && !error && currentView === 'home' && (
+        {!loading && !error && currentView === 'home' && activeTab === 'quizzes' && (
           <HomePage
             quizList={quizList}
             onSelectQuiz={handleSelectQuiz}
             onRestartQuiz={handleRestartQuizModule}
+          />
+        )}
+
+        {!loading && !error && currentView === 'home' && activeTab === 'reviewers' && (
+          <ReviewersPage
+            activeReviewerId={activeReviewerId}
+            onSelectReviewer={(id) => setActiveReviewerId(id)}
+            onStartQuizForModule={handleStartQuizByEssenceId}
           />
         )}
 

@@ -1,7 +1,15 @@
 import React from 'react';
-import { Sun, Moon, Sparkles, BookOpen } from 'lucide-react';
+import { Sun, Moon, Sparkles, BookOpen, FileText } from 'lucide-react';
 
-export function Header({ theme, onToggleTheme, currentView, onGoHome, activeQuizTitle }) {
+export function Header({ 
+  theme, 
+  onToggleTheme, 
+  currentView, 
+  onGoHome, 
+  activeQuizTitle,
+  activeTab = 'quizzes',
+  onTabChange
+}) {
   return (
     <header className="site-header">
       <div className="header-container">
@@ -15,6 +23,26 @@ export function Header({ theme, onToggleTheme, currentView, onGoHome, activeQuiz
             <span className="brand-subtitle">Review</span>
           </div>
         </div>
+
+        {/* Navigation Tabs (when in main home view) */}
+        {currentView === 'home' && (
+          <nav className="nav-tabs">
+            <button
+              className={`nav-tab ${activeTab === 'quizzes' ? 'active' : ''}`}
+              onClick={() => onTabChange && onTabChange('quizzes')}
+            >
+              <BookOpen size={16} />
+              <span>Quizzes</span>
+            </button>
+            <button
+              className={`nav-tab ${activeTab === 'reviewers' ? 'active' : ''}`}
+              onClick={() => onTabChange && onTabChange('reviewers')}
+            >
+              <FileText size={16} />
+              <span>Reviewers</span>
+            </button>
+          </nav>
+        )}
 
         {/* Active Breadcrumb / Title if in Quiz Mode */}
         {activeQuizTitle && currentView !== 'home' && (
@@ -103,6 +131,43 @@ export function Header({ theme, onToggleTheme, currentView, onGoHome, activeQuiz
           letter-spacing: 0.05em;
         }
 
+        .nav-tabs {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          background-color: var(--background);
+          padding: 0.25rem;
+          border-radius: var(--radius-full);
+          border: 1px solid var(--border);
+        }
+
+        .nav-tab {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.4rem 0.9rem;
+          border-radius: var(--radius-full);
+          background: transparent;
+          border: none;
+          font-family: var(--font-sans);
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: var(--text-muted);
+          cursor: pointer;
+          transition: all var(--transition-fast);
+        }
+
+        .nav-tab:hover {
+          color: var(--text);
+        }
+
+        .nav-tab.active {
+          background-color: var(--surface);
+          color: var(--primary);
+          box-shadow: var(--shadow-sm);
+          font-weight: 700;
+        }
+
         .active-quiz-badge {
           display: flex;
           align-items: center;
@@ -122,6 +187,14 @@ export function Header({ theme, onToggleTheme, currentView, onGoHome, activeQuiz
         @media (max-width: 640px) {
           .active-quiz-badge {
             display: none;
+          }
+
+          .nav-tab span {
+            display: none;
+          }
+
+          .nav-tab {
+            padding: 0.4rem 0.6rem;
           }
         }
 
