@@ -6,7 +6,7 @@ import { ResultsPage } from './components/ResultsPage';
 import { ReviewersPage } from './components/ReviewersPage';
 import { fetchAllQuizSummaries, loadQuizData } from './utils/quizLoader';
 import { getThemePreference, setThemePreference, clearQuizDraft } from './utils/storage';
-import { Loader2, AlertTriangle } from 'lucide-react';
+import { Loader2, AlertTriangle, Star, UserPlus } from 'lucide-react';
 import './App.css';
 
 export function App() {
@@ -179,7 +179,36 @@ export function App() {
 
       <footer className="site-footer">
         <div className="footer-container">
-          <p className="footer-text">Made by <strong>Benedict Avenido</strong></p>
+          <p className="footer-text">
+            Made by{' '}
+            <a
+              href="https://github.com/ire-zepelli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-author-link"
+            >
+              Benedict Avenido
+            </a>
+          </p>
+
+          <div className="footer-github-actions">
+            <a
+              href="https://github.com/ire-zepelli/topcit-reviewer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-action-btn primary"
+            >
+              <Star size={14} className="star-icon" /> Project Repository
+            </a>
+            <a
+              href="https://github.com/ire-zepelli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-action-btn"
+            >
+              <UserPlus size={14} /> Follow @ire-zepelli
+            </a>
+          </div>
         </div>
       </footer>
 
@@ -209,25 +238,85 @@ export function App() {
         .site-footer {
           background-color: var(--surface);
           border-top: 1px solid var(--border);
-          padding: 1.25rem 1.5rem;
+          padding: 1.5rem;
           margin-top: auto;
-          text-align: center;
           transition: background-color var(--transition-normal), border-color var(--transition-normal);
         }
 
         .footer-container {
           max-width: 1200px;
           margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1rem;
         }
 
         .footer-text {
-          font-size: 0.875rem;
+          font-size: 0.9rem;
           color: var(--text-muted);
         }
 
-        .footer-text strong {
+        .footer-author-link {
           color: var(--text);
+          font-weight: 700;
+          text-decoration: none;
+          transition: color var(--transition-fast);
+        }
+
+        .footer-author-link:hover {
+          color: var(--primary);
+          text-decoration: underline;
+        }
+
+        .footer-github-actions {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .footer-action-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.4rem 0.85rem;
+          border-radius: var(--radius-full);
+          font-size: 0.825rem;
           font-weight: 600;
+          text-decoration: none;
+          background-color: var(--background);
+          border: 1px solid var(--border);
+          color: var(--text-muted);
+          transition: all var(--transition-fast);
+        }
+
+        .footer-action-btn:hover {
+          color: var(--primary);
+          border-color: var(--primary);
+          background-color: var(--primary-light);
+        }
+
+        .footer-action-btn.primary {
+          background-color: var(--primary-light);
+          color: var(--primary);
+          border-color: var(--border-focus);
+        }
+
+        .footer-action-btn.primary:hover {
+          background-color: var(--primary);
+          color: #FFFFFF;
+        }
+
+        .star-icon {
+          color: var(--warning);
+        }
+
+        @media (max-width: 640px) {
+          .footer-container {
+            flex-direction: column;
+            text-align: center;
+          }
         }
       `}</style>
     </div>
