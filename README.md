@@ -9,21 +9,23 @@ Made by **[Benedict Avenido](https://github.com/ire-zepelli)**.
 ## 🌟 Key Features
 
 - ⚡ **Interactive Quiz Engine**:
-  - Dynamically loads and normalizes question sets from `public/essences/`.
-  - Instant visual feedback on every answer (correct vs. incorrect highlighting with explanations).
-  - Choice selection locking once an answer is cast.
-  - Question map jumper grid to inspect, flag, or skip to any question.
-  - Optional count-up timer.
-  - Full keyboard shortcuts (`1`-`4` or `A`-`D` to answer, `Arrow keys` or `N`/`P` to navigate, `F` to flag).
+  - **Randomized Questions & Choices**: Questions and choices (A, B, C, D) are randomly shuffled for every new attempt using the Fisher-Yates algorithm, while keeping correct answer mapping accurate.
+  - **Multiple Question Types**:
+    - **Multiple-Choice Questions**: Instant visual feedback (green/red active option states), choice selection locking once an answer is cast, and detailed explanation banners.
+    - **Descriptive / Essay Questions**: Multiline text area for written responses, model reference answer reveal, and self-evaluation grading (*Mark as Correct* / *Mark as Incorrect*).
+    - **Code Snippets & Tables**: Formatted monospace code blocks and database schema tables embedded directly in questions.
+  - **Question Navigation**: Interactive Question Map jumper grid to inspect, flag, or skip questions.
+  - **Optional Timer**: Toggleable count-up timer.
+  - **Full Keyboard Shortcuts**: `1`-`4` or `A`-`D` to select choices, `Arrow keys` or `N`/`P` to navigate, `F` to flag.
 
 - 📖 **Comprehensive Study Reviewers**:
   - Dedicated **Reviewers Tab** loaded dynamically from `public/reviewers/`.
-  - Full GitHub-Flavored Markdown (GFM) rendering with rich tables, styled code blocks, callouts, and lists.
-  - Built-in search bar to filter concepts and terms across study guides.
-  - Direct **"Take Quiz"** action buttons integrated into each reviewer module.
+  - Full GitHub-Flavored Markdown (GFM) rendering with rich tables, styled code blocks, callouts, and bullet lists.
+  - Direct **"Take Quiz"** action buttons integrated into each reviewer module header.
 
 - 💾 **Draft & High Score Persistence**:
-  - In-progress quiz drafts are auto-saved to `localStorage` (**"Continue Quiz"** or **"Restart Quiz"** anytime).
+  - In-progress quiz drafts auto-saved to `localStorage` (**"Continue Quiz"** or **"Restart Quiz"** anytime).
+  - Preserves exact randomized question sequences during ongoing drafts.
   - Tracks high scores, percentage accuracy, and time spent across attempts.
 
 - 🌗 **Modern UI & Dark Mode**:
@@ -32,16 +34,19 @@ Made by **[Benedict Avenido](https://github.com/ire-zepelli)**.
 
 ---
 
-## 📚 TOPCIT Competency Domains
+## 📚 TOPCIT Competency Domains & Modules
 
-| ID | Domain | Module Files | Description |
+| Module ID | Domain / Focus | File Path | Description |
 | :--- | :--- | :--- | :--- |
-| **01** | **Software Engineering** | `E1_Software_Development.json`<br>`V1_Software Development.md` | Lifecycle models, design patterns, testing, refactoring, reuse, and version control. |
-| **02** | **Database Systems** | `E2_Database.json`<br>`V2_Database.md` | Data modeling, relational algebra, SQL optimization, normalization, transactions, and indexing. |
-| **03** | **System Architecture** | `E3_System_Architecture.json`<br>`V3_System Architecture.md` | Hardware architectures, network protocols, cloud platforms, OS concepts, and virtualization. |
-| **04** | **Information Security** | `E4_Information_Security.json`<br>`V4_Information Security.md` | CIA triad, cryptography, authentication protocols, network security, and threat analysis. |
-| **05** | **IT Business & Ethics** | `E5_IT_Business_and_Ethics.json`<br>`V5_IT Business and Ethics.md` | Digital strategy, IT value creation, IP law, open-source licenses, and tech ethics. |
-| **06** | **Project Management** | `E6_Project_Management.json`<br>`V6_Project Management.md` | PMBOK framework, Agile/Scrum methods, risk assessment, quality control, and budgeting. |
+| **Essence 1** | **Software Development** | `public/essences/E1_Software_Development.json`<br>`public/reviewers/V1_Software Development.md` | Lifecycle models, design patterns, testing, refactoring, reuse, and version control. |
+| **Essence 2** | **Database Systems** | `public/essences/E2_Database.json`<br>`public/reviewers/V2_Database.md` | Data modeling, relational algebra, SQL optimization, normalization, transactions, and indexing. |
+| **Essence 3** | **System Architecture** | `public/essences/E3_System_Architecture.json`<br>`public/reviewers/V3_System Architecture.md` | Hardware architectures, network protocols, cloud platforms, OS concepts, and virtualization. |
+| **Essence 4** | **Information Security** | `public/essences/E4_Information_Security.json`<br>`public/reviewers/V4_Information Security.md` | CIA triad, cryptography, authentication protocols, network security, and threat analysis. |
+| **Essence 5** | **IT Business & Ethics** | `public/essences/E5_IT_Business_and_Ethics.json`<br>`public/reviewers/V5_IT Business and Ethics.md` | Digital strategy, IT value creation, IP law, open-source licenses, and tech ethics. |
+| **Essence 6** | **Project Management** | `public/essences/E6_Project_Management.json`<br>`public/reviewers/V6_Project Management.md` | PMBOK framework, Agile/Scrum methods, risk assessment, quality control, and budgeting. |
+| **Other 1** | **Coding Snippets & Logic** | `public/others/Coding_Snippets.json` | Code tracing, variables, control flow, functions, operators, and memory practice. |
+| **Other 2** | **SQL Queries & Manipulation** | `public/others/SQL_Queries.json` | SELECT queries, JOINs, aggregations, GROUP BY, subqueries, and DDL/DML practice. |
+| **Other 3** | **Descriptive & Conceptual Review** | `public/others/Descriptive_Questions.json` | Self-evaluated open-ended essay questions covering software lifecycle, normal forms, security, and project management. |
 
 ---
 
