@@ -13,7 +13,7 @@ export function App() {
   const [theme, setTheme] = useState(getThemePreference);
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'quiz' | 'results'
   const [activeTab, setActiveTab] = useState('quizzes'); // 'quizzes' | 'reviewers'
-  const [activeReviewerId, setActiveReviewerId] = useState('V1');
+  const [activeReviewerId, setActiveReviewerId] = useState('Essence 1');
   const [quizList, setQuizList] = useState([]);
   const [activeQuizModule, setActiveQuizModule] = useState(null);
   const [activeQuestions, setActiveQuestions] = useState([]);

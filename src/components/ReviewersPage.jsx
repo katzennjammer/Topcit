@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { 
   BookOpen, 
-  Search, 
   Code, 
   Database, 
   Cpu, 
@@ -29,10 +28,9 @@ const ICON_MAP = {
 };
 
 export function ReviewersPage({ activeReviewerId, onSelectReviewer, onStartQuizForModule }) {
-  const [selectedModuleId, setSelectedModuleId] = useState(activeReviewerId || 'V1');
+  const [selectedModuleId, setSelectedModuleId] = useState(activeReviewerId || 'Essence 1');
   const [markdownContent, setMarkdownContent] = useState('');
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const activeModule = useMemo(() => {
@@ -148,23 +146,6 @@ export function ReviewersPage({ activeReviewerId, onSelectReviewer, onStartQuizF
                 >
                   <Play size={16} /> Take Quiz
                 </button>
-              )}
-            </div>
-          </div>
-
-          {/* Search within document */}
-          <div className="reviewer-search-bar">
-            <div className="search-input-box">
-              <Search size={18} className="search-icon" />
-              <input
-                type="text"
-                placeholder="Search topics or terms in this reviewer guide..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="search-input"
-              />
-              {searchQuery && (
-                <button className="clear-search-btn" onClick={() => setSearchQuery('')}>&times;</button>
               )}
             </div>
           </div>

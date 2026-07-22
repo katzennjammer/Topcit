@@ -4,8 +4,8 @@
 
 export const REVIEWER_MODULES = [
   {
-    id: 'V1',
-    essenceId: 'E1',
+    id: 'Essence 1',
+    essenceId: 'Essence 1',
     filename: 'V1_Software Development.md',
     title: 'Software Development Reviewer',
     category: 'Software Engineering',
@@ -15,8 +15,8 @@ export const REVIEWER_MODULES = [
     accentLight: '#EEF2FF',
   },
   {
-    id: 'V2',
-    essenceId: 'E2',
+    id: 'Essence 2',
+    essenceId: 'Essence 2',
     filename: 'V2_Database.md',
     title: 'Database Systems Reviewer',
     category: 'Data Engineering',
@@ -26,8 +26,8 @@ export const REVIEWER_MODULES = [
     accentLight: '#E0F2FE',
   },
   {
-    id: 'V3',
-    essenceId: 'E3',
+    id: 'Essence 3',
+    essenceId: 'Essence 3',
     filename: 'V3_System Architecture.md',
     title: 'System Architecture Reviewer',
     category: 'Architecture & OS',
@@ -37,8 +37,8 @@ export const REVIEWER_MODULES = [
     accentLight: '#F3E8FF',
   },
   {
-    id: 'V4',
-    essenceId: 'E4',
+    id: 'Essence 4',
+    essenceId: 'Essence 4',
     filename: 'V4_Information Security.md',
     title: 'Information Security Reviewer',
     category: 'Cyber Security',
@@ -48,8 +48,8 @@ export const REVIEWER_MODULES = [
     accentLight: '#FFE4E6',
   },
   {
-    id: 'V5',
-    essenceId: 'E5',
+    id: 'Essence 5',
+    essenceId: 'Essence 5',
     filename: 'V5_IT Business and Ethics.md',
     title: 'IT Business & Ethics Reviewer',
     category: 'Business & Ethics',
@@ -59,8 +59,8 @@ export const REVIEWER_MODULES = [
     accentLight: '#FEF3C7',
   },
   {
-    id: 'V6',
-    essenceId: 'E6',
+    id: 'Essence 6',
+    essenceId: 'Essence 6',
     filename: 'V6_Project Management.md',
     title: 'Project Management Reviewer',
     category: 'Management & Agile',

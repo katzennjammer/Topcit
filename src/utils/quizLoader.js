@@ -5,7 +5,7 @@
 
 export const ESSENCE_MODULES = [
   {
-    id: 'E1',
+    id: 'Essence 1',
     filename: 'E1_Software_Development.json',
     title: 'Software Development',
     category: 'Software Engineering',
@@ -15,7 +15,7 @@ export const ESSENCE_MODULES = [
     accentLight: '#EEF2FF',
   },
   {
-    id: 'E2',
+    id: 'Essence 2',
     filename: 'E2_Database.json',
     title: 'Database Systems',
     category: 'Data Engineering',
@@ -25,7 +25,7 @@ export const ESSENCE_MODULES = [
     accentLight: '#E0F2FE',
   },
   {
-    id: 'E3',
+    id: 'Essence 3',
     filename: 'E3_System_Architecture.json',
     title: 'System Architecture',
     category: 'Architecture & OS',
@@ -35,7 +35,7 @@ export const ESSENCE_MODULES = [
     accentLight: '#F3E8FF',
   },
   {
-    id: 'E4',
+    id: 'Essence 4',
     filename: 'E4_Information_Security.json',
     title: 'Information Security',
     category: 'Cyber Security',
@@ -45,7 +45,7 @@ export const ESSENCE_MODULES = [
     accentLight: '#FFE4E6',
   },
   {
-    id: 'E5',
+    id: 'Essence 5',
     filename: 'E5_IT_Business_and_Ethics.json',
     title: 'IT Business & Ethics',
     category: 'Business & Ethics',
@@ -55,7 +55,7 @@ export const ESSENCE_MODULES = [
     accentLight: '#FEF3C7',
   },
   {
-    id: 'E6',
+    id: 'Essence 6',
     filename: 'E6_Project_Management.json',
     title: 'Project Management',
     category: 'Management & Agile',
@@ -85,7 +85,6 @@ export function normalizeQuestion(item, index) {
   let correctIndex = -1;
 
   if (typeof rawAnswer === 'number') {
-    // 0-indexed or 1-indexed number check
     if (rawAnswer >= 0 && rawAnswer < choices.length) {
       correctIndex = rawAnswer;
     } else if (rawAnswer >= 1 && rawAnswer <= choices.length) {
@@ -93,12 +92,10 @@ export function normalizeQuestion(item, index) {
     }
   } else if (typeof rawAnswer === 'string') {
     const trimmed = rawAnswer.trim();
-    // Check if trimmed matches exact choice string
     const foundIdx = choices.findIndex(c => c === trimmed || c.toLowerCase() === trimmed.toLowerCase());
     if (foundIdx !== -1) {
       correctIndex = foundIdx;
     } else {
-      // Check if rawAnswer is letter like "A", "B", "C", "D" or "1", "2"
       if (/^[A-D]$/i.test(trimmed)) {
         correctIndex = trimmed.toUpperCase().charCodeAt(0) - 65;
       } else if (!isNaN(parseInt(trimmed, 10))) {
@@ -109,7 +106,6 @@ export function normalizeQuestion(item, index) {
     }
   }
 
-  // Fallback if answer string couldn't be matched by index but rawAnswer exists
   const answerText = (correctIndex >= 0 && correctIndex < choices.length) 
     ? choices[correctIndex] 
     : String(rawAnswer || '');
