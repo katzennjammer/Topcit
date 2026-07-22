@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "category": "software_development",
+    "question": "A company plans to develop a large software system involving several developers, testing tools, development procedures, and project-management activities. Explain how the four elements of software engineering should be applied to the project.",
+    "answer": "The method should define how planning, analysis, design, coding, testing, and maintenance will be performed. Tools should automate or support development activities and improve productivity. Procedures should define the sequence of methods, tools, deliverables, and milestones. People should include the developers, testers, managers, users, and organizations responsible for developing and managing the software."
+  },
+  {
+    "id": 2,
+    "category": "software_development",
+    "question": "Compare the incremental model and the evolutionary model. Recommend the appropriate model when a company needs the core system to operate early while less important functions are still being developed.",
+    "answer": "The incremental model develops the core parts first and adds the remaining functions through later increments. The evolutionary model repeatedly develops and improves the entire system, including its functions, interface, and non-functional requirements. The incremental model is more appropriate because it allows the core system to become operational early while additional functions are gradually added."
+  },
+  {
+    "id": 3,
+    "category": "software_development",
+    "question": "A module performs authentication, report generation, database access, score calculation, and email delivery. It also directly modifies the internal variables of other modules. Explain the design problems and propose an improved structure.",
+    "answer": "The module has low cohesion because it performs several unrelated responsibilities. It also demonstrates strong coupling, especially content coupling, because it directly modifies another module's internal data. The module should be divided into smaller modules with specific functions. Each module should have high cohesion and communicate through defined interfaces or parameters to achieve low coupling."
+  },
+  {
+    "id": 4,
+    "category": "software_development",
+    "question": "A testing team repeatedly uses the same test cases but no longer discovers new defects. Explain the testing principle involved and describe what the team should do.",
+    "answer": "The situation demonstrates the pesticide paradox. Repeatedly applying the same tests eventually makes them ineffective in discovering new defects. The team should regularly review, modify, and expand its test cases. It should also apply suitable techniques such as equivalence partitioning, boundary value analysis, cause-effect graphs, error guessing, and white-box testing where appropriate."
+  },
+  {
+    "id": 5,
+    "category": "software_development",
+    "question": "A development team wants to improve duplicated and complicated source code without changing the behavior seen by users. Identify the appropriate activity and explain its benefits.",
+    "answer": "The appropriate activity is refactoring. Refactoring improves the internal structure of the program without changing its external operation. It removes duplicated logic, simplifies complex code, improves readability, makes debugging easier, and helps developers respond more effectively to requirement changes."
+  },
+  {
+    "id": 6,
+    "category": "database",
+    "question": "Explain the external, conceptual, and internal schemas of the ANSI-SPARC database architecture and describe the purpose of separating these three levels.",
+    "answer": "The external schema represents the different views required by individual users. The conceptual schema provides one integrated description of the entire database based on all user perspectives. The internal schema describes how the database is physically stored. Separating the levels reduces the effect of database changes on user views and application programs and supports data independence."
+  },
+  {
+    "id": 7,
+    "category": "database",
+    "question": "Differentiate logical data independence from physical data independence and provide one example of each.",
+    "answer": "Logical data independence means that changes to the conceptual schema do not affect external schemas or application programs. An example is adding a new conceptual attribute without changing an existing user view. Physical data independence means that changes to the internal storage structure do not affect the conceptual schema or application programs. An example is changing the storage device or index structure without modifying the applications."
+  },
+  {
+    "id": 8,
+    "category": "database",
+    "question": "A table repeatedly stores student details, course details, and enrollment information. Explain the insertion, deletion, and update anomalies that may occur and how normalization can address them.",
+    "answer": "An insertion anomaly may prevent a student or course from being recorded unless an enrollment record also exists. A deletion anomaly may remove student or course information when the final related enrollment is deleted. An update anomaly occurs when repeated information must be changed in several records. Normalization separates the data into related tables to reduce redundancy and prevent these anomalies."
+  },
+  {
+    "id": 9,
+    "category": "database",
+    "question": "Explain the differences among a super key, candidate key, primary key, and foreign key.",
+    "answer": "A super key is any set of attributes that uniquely identifies a record, even if it contains unnecessary attributes. A candidate key is a super key that satisfies uniqueness and minimality. A primary key is the candidate key selected as the official identifier of a record. A foreign key is an attribute that refers to the primary key of another table and establishes a relationship between the tables."
+  },
+  {
+    "id": 10,
+    "category": "database",
+    "question": "Two transactions simultaneously modify the same account balance, and the result of the first transaction is overwritten by the second. Identify the problem and explain how transaction isolation and concurrency control help prevent it.",
+    "answer": "The problem is a lost update. It occurs when transactions update the same data at the same time and a later transaction overwrites the result of an earlier one. Isolation prevents transactions from interfering with one another's intermediate data. Concurrency-control methods such as locking and two-phase locking control access to shared data and help ensure serializable execution."
+  },
+  {
+    "id": 11,
+    "category": "system_architecture",
+    "question": "Explain the difference between system architecture in the broad sense and in the narrow sense.",
+    "answer": "In the broad sense, system architecture includes Application Architecture, Data Architecture, and Technical Architecture and defines the overall structure needed to support business processes. In the narrow sense, it mainly refers to Technical Architecture and defines the arrangement and connections of hardware, software, security, middleware, database servers, web application servers, storage, and networks."
+  },
+  {
+    "id": 12,
+    "category": "system_architecture",
+    "question": "Compare centralized architecture and multi-region distributed architecture in terms of configuration, load distribution, and data integrity.",
+    "answer": "Centralized architecture integrates systems and data in one location. It has a simpler configuration and makes data integrity easier to maintain, but processing load may become concentrated during peak periods. Multi-region distributed architecture places operations, applications, and data in different regions. It distributes user and server load, but its configuration is more complex and maintaining data integrity is more difficult."
+  },
+  {
+    "id": 13,
+    "category": "system_architecture",
+    "question": "A web application is experiencing scalability and reusability problems because presentation, business logic, and data processing are not properly separated. Explain how three-tier architecture can improve the system.",
+    "answer": "Three-tier architecture separates the system into a presentation tier, a business-logic tier, and a data tier. The client manages presentation, the web application server processes business logic, and the database server manages data. This structure improves scalability, makes business logic more flexible, simplifies database-access management, and improves program development and reuse."
+  },
+  {
+    "id": 14,
+    "category": "system_architecture",
+    "question": "Explain the difference between a process and a thread and discuss why synchronization is necessary when several threads access shared data.",
+    "answer": "A process is a running program that allocates and uses system resources. A thread is a lightweight unit of CPU execution within a process. Threads share code, data, and files but maintain their own registers and stacks. Synchronization is needed because simultaneous access to shared data may create a race condition. A critical section should enforce mutual exclusion, progress, and bounded waiting."
+  },
+  {
+    "id": 15,
+    "category": "system_architecture",
+    "question": "Compare RAID-0, RAID-1, RAID-5, RAID-6, and RAID-10, and recommend a RAID level for a system requiring both high performance and strong redundancy.",
+    "answer": "RAID-0 uses striping and provides excellent speed but no redundancy. RAID-1 mirrors data and provides redundancy but uses additional storage. RAID-5 distributes parity across at least three drives and provides a balance of performance, cost, and fault tolerance. RAID-6 uses dual distributed parity and provides greater redundancy than RAID-5. RAID-10 combines striping and mirroring and requires at least four drives. RAID-10 is appropriate when both high performance and strong redundancy are required."
+  },
+  {
+    "id": 16,
+    "category": "information_security",
+    "question": "An online financial system must prevent unauthorized disclosure, illegal modification, and service interruption. Explain how the three goals of information security apply.",
+    "answer": "Confidentiality ensures that financial and customer information is not exposed to unauthorized users during storage or transmission. Integrity ensures that information is not illegally created, changed, or deleted. Availability ensures that authorized users can access and use the system and its information whenever necessary."
+  },
+  {
+    "id": 17,
+    "category": "information_security",
+    "question": "Compare symmetric-key encryption and public-key encryption in terms of key usage, speed, key management, and common applications.",
+    "answer": "Symmetric-key encryption uses the same key for encryption and decryption. It is fast and uses shorter keys, but the number of keys becomes difficult to manage as the number of users increases. Public-key encryption uses different encryption and decryption keys. It is slower but makes key distribution easier and requires fewer managed keys. Symmetric algorithms include AES and DES, while public-key algorithms include RSA, ElGamal, and ECC."
+  },
+  {
+    "id": 18,
+    "category": "information_security",
+    "question": "Explain how a hash function and a digital signature can be used to protect the integrity and authenticity of an electronic document.",
+    "answer": "A hash function converts the document into a fixed-length hash value and can be used to check whether the document has been changed. A digital signature applies a hash operation and uses the signer's private key to create an electronic signature. The recipient can verify the signature to confirm the integrity of the document and authenticate the signer."
+  },
+  {
+    "id": 19,
+    "category": "information_security",
+    "question": "A company currently uses passwords as its only authentication method. Explain how multi-factor authentication can improve security and provide an appropriate combination of factors.",
+    "answer": "Multi-factor authentication requires evidence from different authentication categories. The company can combine a knowledge-based factor such as a password or PIN, an ownership-based factor such as an OTP or smart card, and a presence-based factor such as a fingerprint or iris scan. An attacker would need to compromise more than one independent factor to gain access."
+  },
+  {
+    "id": 20,
+    "category": "information_security",
+    "question": "A web application directly joins user input into SQL statements and displays user comments without encoding special characters. Identify the two attacks and explain the secure coding controls needed.",
+    "answer": "Directly joining user input into SQL statements creates an SQL injection vulnerability. The application should use prepared statements and parameter binding. Displaying comments without encoding creates a cross-site scripting vulnerability. Special characters such as less-than, greater-than, and ampersand symbols should be converted into safe encoded equivalents before display."
+  },
+  {
+    "id": 21,
+    "category": "project_management",
+    "question": "Explain the five project-management process groups and describe why careful planning at the beginning of a project is important.",
+    "answer": "The initiating process formally begins the project and identifies stakeholders. Planning defines the activities needed to achieve the project goals. Executing completes the work in the project-management plan. Monitoring and controlling tracks performance and applies adjustments. Closing completes all activities and contractual obligations. Early planning is important because problems ignored at the beginning may require exponentially greater cost and effort later."
+  },
+  {
+    "id": 22,
+    "category": "project_management",
+    "question": "Explain how a Work Breakdown Structure supports scope management. Include the roles of the work package, code of account, WBS dictionary, and Responsibility Assignment Matrix.",
+    "answer": "A Work Breakdown Structure decomposes project deliverables and the entire scope into manageable components. A work package is the lowest-level unit used to estimate cost and duration. A code of account uniquely identifies each WBS component. The WBS dictionary provides a detailed description of every work package. The Responsibility Assignment Matrix connects project tasks with the people or groups responsible for completing them."
+  },
+  {
+    "id": 23,
+    "category": "project_management",
+    "question": "Compare the Critical Path Method, Critical Chain Method, crashing, and fast tracking as schedule-management techniques.",
+    "answer": "The Critical Path Method identifies the sequence of activities with zero total float and determines the minimum project duration. The Critical Chain Method considers resource limitations and uncertainty and uses project and feeding buffers. Crashing shortens critical-path activities by adding resources at the minimum possible cost. Fast tracking shortens the schedule by overlapping activities that were originally planned sequentially."
+  },
+  {
+    "id": 24,
+    "category": "project_management",
+    "question": "A project has an Earned Value of 120000, a Planned Value of 150000, and an Actual Cost of 100000. Calculate and interpret the Schedule Variance, Cost Variance, Schedule Performance Index, and Cost Performance Index.",
+    "answer": "Schedule Variance is EV minus PV: 120000 minus 150000 equals -30000, so the project is behind schedule. Cost Variance is EV minus AC: 120000 minus 100000 equals 20000, so the project is under budget. Schedule Performance Index is EV divided by PV: 120000 divided by 150000 equals 0.80, confirming that the project is behind schedule. Cost Performance Index is EV divided by AC: 120000 divided by 100000 equals 1.20, confirming favorable cost performance."
+  },
+  {
+    "id": 25,
+    "category": "project_management",
+    "question": "Differentiate a Request for Proposal from a proposal and explain what each document communicates during project procurement.",
+    "answer": "A Request for Proposal is an official document created by the ordering organization to inform potential bidders about its current situation, business problems, goals, strategies, schedule, system requirements, support needs, and maintenance requirements. A proposal is prepared by a bidder to explain its experience, capabilities, analysis, approach, and ability to satisfy the requested work in order to win the contract."
+  }
+]

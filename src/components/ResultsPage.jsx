@@ -21,7 +21,11 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
 
   const totalQuestions = questions.length;
   const correctCount = questions.reduce((acc, q, idx) => {
-    return userAnswers[idx] === q.correctIndex ? acc + 1 : acc;
+    const ans = userAnswers[idx];
+    if (q.isDescriptive) {
+      return (ans && typeof ans === 'object' && ans.isCorrect) ? acc + 1 : acc;
+    }
+    return ans === q.correctIndex ? acc + 1 : acc;
   }, 0);
 
   const incorrectCount = totalQuestions - correctCount;
@@ -48,13 +52,23 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
     }
   }, [quizId, correctCount, totalQuestions, timeSeconds, percentage]);
 
-  const filteredQuestions = questions.map((q, idx) => ({
-    ...q,
-    originalIndex: idx,
-    userAnswerIdx: userAnswers[idx],
-    isCorrect: userAnswers[idx] === q.correctIndex,
-    isFlagged: Boolean(flagged[idx]),
-  })).filter((item) => {
+  const filteredQuestions = questions.map((q, idx) => {
+    const ans = userAnswers[idx];
+    let isCorrect = false;
+    if (q.isDescriptive) {
+      isCorrect = Boolean(ans && typeof ans === 'object' && ans.isCorrect);
+    } else {
+      isCorrect = ans === q.correctIndex;
+    }
+
+    return {
+      ...q,
+      originalIndex: idx,
+      userAnswerVal: ans,
+      isCorrect,
+      isFlagged: Boolean(flagged[idx]),
+    };
+  }).filter((item) => {
     if (filterMode === 'correct') return item.isCorrect;
     if (filterMode === 'incorrect') return !item.isCorrect;
     if (filterMode === 'flagged') return item.isFlagged;
@@ -165,6 +179,9 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
                   <div className="review-item-header">
                     <div className="review-item-title-group">
                       <span className="q-badge">Q{q.originalIndex + 1}</span>
+                      {q.isDescriptive && (
+                        <span className="type-badge-sm">Descriptive</span>
+                      )}
                       {q.isCorrect ? (
                         <span className="status-badge success">
                           <CheckCircle2 size={14} /> Correct
@@ -190,25 +207,38 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
                     </pre>
                   )}
 
-                  <div className="review-choices-grid">
-                    {q.choices.map((choiceText, cIdx) => {
-                      const isUserChoice = q.userAnswerIdx === cIdx;
-                      const isCorrectChoice = cIdx === q.correctIndex;
+                  {q.isDescriptive ? (
+                    <div className="review-descriptive-grid">
+                      <div className="review-descriptive-box user">
+                        <span className="box-label">Your Submitted Answer:</span>
+                        <p>{typeof q.userAnswerVal === 'object' ? q.userAnswerVal.text : (q.userAnswerVal || '(No answer text submitted)')}</p>
+                      </div>
+                      <div className="review-descriptive-box reference">
+                        <span className="box-label highlight">Reference Model Answer:</span>
+                        <p>{q.answer}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="review-choices-grid">
+                      {q.choices.map((choiceText, cIdx) => {
+                        const isUserChoice = q.userAnswerVal === cIdx;
+                        const isCorrectChoice = cIdx === q.correctIndex;
 
-                      let choiceClass = '';
-                      if (isCorrectChoice) choiceClass = 'correct';
-                      else if (isUserChoice && !isCorrectChoice) choiceClass = 'incorrect';
+                        let choiceClass = '';
+                        if (isCorrectChoice) choiceClass = 'correct';
+                        else if (isUserChoice && !isCorrectChoice) choiceClass = 'incorrect';
 
-                      return (
-                        <div key={cIdx} className={`review-choice-box ${choiceClass}`}>
-                          <span className="choice-label">{String.fromCharCode(65 + cIdx)}</span>
-                          <span className="choice-val">{choiceText}</span>
-                          {isCorrectChoice && <span className="tag-correct">Correct Answer</span>}
-                          {isUserChoice && !isCorrectChoice && <span className="tag-user">Your Choice</span>}
-                        </div>
-                      );
-                    })}
-                  </div>
+                        return (
+                          <div key={cIdx} className={`review-choice-box ${choiceClass}`}>
+                            <span className="choice-label">{String.fromCharCode(65 + cIdx)}</span>
+                            <span className="choice-val">{choiceText}</span>
+                            {isCorrectChoice && <span className="tag-correct">Correct Answer</span>}
+                            {isUserChoice && !isCorrectChoice && <span className="tag-user">Your Choice</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
 
                   {q.explanation && (
                     <div className="review-explanation">
@@ -401,6 +431,15 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
           border-radius: var(--radius-sm);
         }
 
+        .type-badge-sm {
+          font-size: 0.725rem;
+          font-weight: 700;
+          color: var(--secondary);
+          background-color: var(--secondary-light);
+          padding: 0.15rem 0.5rem;
+          border-radius: var(--radius-sm);
+        }
+
         .status-badge {
           display: inline-flex;
           align-items: center;
@@ -444,6 +483,39 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
           word-break: break-word;
           color: var(--text);
           line-height: 1.5;
+        }
+
+        .review-descriptive-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .review-descriptive-box {
+          padding: 1rem;
+          border-radius: var(--radius-md);
+          background-color: var(--surface);
+          border: 1px solid var(--border);
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          font-size: 0.925rem;
+        }
+
+        .review-descriptive-box.reference {
+          border-left: 3px solid var(--primary);
+        }
+
+        .box-label {
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: var(--text-muted);
+        }
+
+        .box-label.highlight {
+          color: var(--primary);
         }
 
         .review-choices-grid {

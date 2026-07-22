@@ -92,6 +92,17 @@ export const ESSENCE_MODULES = [
     color: '#059669',
     accentLight: '#D1FAE5',
   },
+  {
+    id: 'Other 3',
+    filePath: '/others/Descriptive_Questions.json',
+    filename: 'Descriptive_Questions.json',
+    title: 'Descriptive & Conceptual Review',
+    category: 'Open-ended & Conceptual',
+    description: 'Self-evaluated open-ended questions covering software lifecycle, database normal forms, security, and project management.',
+    iconName: 'FileText',
+    color: '#7C3AED',
+    accentLight: '#F3E8FF',
+  },
 ];
 
 /**
@@ -110,7 +121,7 @@ export function shuffleArray(array) {
  * Randomizes the order of choices for a single question while keeping correctIndex accurate
  */
 export function shuffleQuestionChoices(question) {
-  if (!question || !Array.isArray(question.choices) || question.choices.length <= 1) {
+  if (!question || question.isDescriptive || !Array.isArray(question.choices) || question.choices.length <= 1) {
     return question;
   }
 
@@ -157,27 +168,36 @@ export function normalizeQuestion(item, index) {
   }
   choices = choices.map((c) => String(c).trim());
 
+  const isDescriptive = Boolean(
+    item.isDescriptive || 
+    item.type === 'descriptive' || 
+    item.type === 'essay' || 
+    (choices.length === 0 && Boolean(item.answer))
+  );
+
   let rawAnswer = item.answer !== undefined ? item.answer : (item.correctAnswer !== undefined ? item.correctAnswer : item.correct);
   let correctIndex = -1;
 
-  if (typeof rawAnswer === 'number') {
-    if (rawAnswer >= 0 && rawAnswer < choices.length) {
-      correctIndex = rawAnswer;
-    } else if (rawAnswer >= 1 && rawAnswer <= choices.length) {
-      correctIndex = rawAnswer - 1;
-    }
-  } else if (typeof rawAnswer === 'string') {
-    const trimmed = rawAnswer.trim();
-    const foundIdx = choices.findIndex(c => c === trimmed || c.toLowerCase() === trimmed.toLowerCase());
-    if (foundIdx !== -1) {
-      correctIndex = foundIdx;
-    } else {
-      if (/^[A-D]$/i.test(trimmed)) {
-        correctIndex = trimmed.toUpperCase().charCodeAt(0) - 65;
-      } else if (!isNaN(parseInt(trimmed, 10))) {
-        const num = parseInt(trimmed, 10);
-        if (num >= 0 && num < choices.length) correctIndex = num;
-        else if (num >= 1 && num <= choices.length) correctIndex = num - 1;
+  if (!isDescriptive) {
+    if (typeof rawAnswer === 'number') {
+      if (rawAnswer >= 0 && rawAnswer < choices.length) {
+        correctIndex = rawAnswer;
+      } else if (rawAnswer >= 1 && rawAnswer <= choices.length) {
+        correctIndex = rawAnswer - 1;
+      }
+    } else if (typeof rawAnswer === 'string') {
+      const trimmed = rawAnswer.trim();
+      const foundIdx = choices.findIndex(c => c === trimmed || c.toLowerCase() === trimmed.toLowerCase());
+      if (foundIdx !== -1) {
+        correctIndex = foundIdx;
+      } else {
+        if (/^[A-D]$/i.test(trimmed)) {
+          correctIndex = trimmed.toUpperCase().charCodeAt(0) - 65;
+        } else if (!isNaN(parseInt(trimmed, 10))) {
+          const num = parseInt(trimmed, 10);
+          if (num >= 0 && num < choices.length) correctIndex = num;
+          else if (num >= 1 && num <= choices.length) correctIndex = num - 1;
+        }
       }
     }
   }
@@ -190,9 +210,10 @@ export function normalizeQuestion(item, index) {
     id: item.id || `q-${index + 1}`,
     question: questionText,
     code: item.code || null,
+    isDescriptive,
     choices,
     answer: answerText,
-    correctIndex: correctIndex >= 0 ? correctIndex : 0,
+    correctIndex: isDescriptive ? 0 : (correctIndex >= 0 ? correctIndex : 0),
     explanation: item.explanation || item.detail || null,
   };
 }

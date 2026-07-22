@@ -10,7 +10,9 @@ import {
   Bookmark, 
   AlertCircle,
   Award,
-  RotateCcw
+  RotateCcw,
+  Send,
+  HelpCircle
 } from 'lucide-react';
 import { saveQuizDraft, getQuizDraft, clearQuizDraft } from '../utils/storage';
 
@@ -20,6 +22,8 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
   const [currentIndex, setCurrentIndex] = useState(initialDraft?.currentIndex || 0);
   const [userAnswers, setUserAnswers] = useState(initialDraft?.userAnswers || {});
+  const [typedAnswers, setTypedAnswers] = useState(initialDraft?.typedAnswers || {});
+  const [submittedAnswers, setSubmittedAnswers] = useState(initialDraft?.submittedAnswers || {});
   const [flagged, setFlagged] = useState(initialDraft?.flagged || {});
   const [timeSeconds, setTimeSeconds] = useState(initialDraft?.timeSeconds || 0);
   const [showTimer, setShowTimer] = useState(true);
@@ -28,7 +32,15 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
   const currentQuestion = questions[currentIndex] || null;
   const totalQuestions = questions.length;
-  const answeredCount = Object.keys(userAnswers).length;
+  
+  const answeredCount = useMemo(() => {
+    return Object.values(userAnswers).filter((ans) => {
+      if (ans === undefined || ans === null) return false;
+      if (typeof ans === 'object') return ans.isCorrect !== undefined;
+      return true;
+    }).length;
+  }, [userAnswers]);
+
   const progressPercent = Math.round(((currentIndex + 1) / totalQuestions) * 100);
 
   // Timer Tick
@@ -45,11 +57,13 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
     saveQuizDraft(quizModule.id, {
       currentIndex,
       userAnswers,
+      typedAnswers,
+      submittedAnswers,
       flagged,
       timeSeconds,
       questions,
     });
-  }, [quizModule.id, currentIndex, userAnswers, flagged, timeSeconds, questions]);
+  }, [quizModule.id, currentIndex, userAnswers, typedAnswers, submittedAnswers, flagged, timeSeconds, questions]);
 
   const handleSelectChoice = (choiceIndex) => {
     // If an answer has already been cast for this question, prevent changing it
@@ -59,6 +73,26 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
     setUserAnswers((prev) => ({
       ...prev,
       [currentIndex]: choiceIndex,
+    }));
+  };
+
+  const handleDescriptiveSubmit = () => {
+    const text = (typedAnswers[currentIndex] || '').trim();
+    if (!text) return;
+    setSubmittedAnswers((prev) => ({
+      ...prev,
+      [currentIndex]: true,
+    }));
+  };
+
+  const handleDescriptiveSelfEval = (isCorrect) => {
+    const text = (typedAnswers[currentIndex] || '').trim();
+    setUserAnswers((prev) => ({
+      ...prev,
+      [currentIndex]: {
+        text,
+        isCorrect,
+      },
     }));
   };
 
@@ -88,10 +122,11 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
       quizTitle: quizModule.title,
       questions,
       userAnswers,
+      typedAnswers,
       timeSeconds,
       flagged,
     });
-  }, [quizModule, questions, userAnswers, timeSeconds, flagged, onCompleteQuiz]);
+  }, [quizModule, questions, userAnswers, typedAnswers, timeSeconds, flagged, onCompleteQuiz]);
 
   // Keyboard navigation & shortcuts
   useEffect(() => {
@@ -103,15 +138,17 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
         handleNext();
       } else if (e.key === 'ArrowLeft' || e.key === 'p') {
         handlePrev();
-      } else if (['1', '2', '3', '4'].includes(e.key)) {
-        const choiceIdx = parseInt(e.key, 10) - 1;
-        if (currentQuestion && choiceIdx < currentQuestion.choices.length) {
-          handleSelectChoice(choiceIdx);
-        }
-      } else if (['a', 'b', 'c', 'd'].includes(e.key.toLowerCase())) {
-        const choiceIdx = e.key.toLowerCase().charCodeAt(0) - 97;
-        if (currentQuestion && choiceIdx < currentQuestion.choices.length) {
-          handleSelectChoice(choiceIdx);
+      } else if (currentQuestion && !currentQuestion.isDescriptive) {
+        if (['1', '2', '3', '4'].includes(e.key)) {
+          const choiceIdx = parseInt(e.key, 10) - 1;
+          if (choiceIdx < currentQuestion.choices.length) {
+            handleSelectChoice(choiceIdx);
+          }
+        } else if (['a', 'b', 'c', 'd'].includes(e.key.toLowerCase())) {
+          const choiceIdx = e.key.toLowerCase().charCodeAt(0) - 97;
+          if (choiceIdx < currentQuestion.choices.length) {
+            handleSelectChoice(choiceIdx);
+          }
         }
       } else if (e.key.toLowerCase() === 'f') {
         toggleFlag();
@@ -139,7 +176,16 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
   const selectedChoiceIdx = userAnswers[currentIndex];
   const hasAnswered = selectedChoiceIdx !== undefined;
-  const isCorrect = hasAnswered && selectedChoiceIdx === currentQuestion.correctIndex;
+
+  let isCorrect = false;
+  if (currentQuestion.isDescriptive) {
+    isCorrect = typeof userAnswers[currentIndex] === 'object' && userAnswers[currentIndex]?.isCorrect === true;
+  } else {
+    isCorrect = hasAnswered && selectedChoiceIdx === currentQuestion.correctIndex;
+  }
+
+  const isDescriptiveSubmitted = Boolean(submittedAnswers[currentIndex] || userAnswers[currentIndex] !== undefined);
+  const isDescriptiveEvaluated = Boolean(userAnswers[currentIndex] && typeof userAnswers[currentIndex] === 'object');
 
   return (
     <div className="quiz-page animate-fade-in">
@@ -195,6 +241,9 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
       <div className="question-card card">
         <div className="question-card-header">
           <span className="q-number-badge">Q{currentIndex + 1}</span>
+          {currentQuestion.isDescriptive && (
+            <span className="type-badge">Descriptive / Essay</span>
+          )}
           {flagged[currentIndex] && (
             <span className="flagged-tag">
               <Bookmark size={12} /> Flagged
@@ -210,49 +259,130 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
           </pre>
         )}
 
-        {/* Choices Grid */}
-        <div className="choices-list">
-          {currentQuestion.choices.map((choiceText, idx) => {
-            const isSelected = selectedChoiceIdx === idx;
-            const isChoiceCorrect = idx === currentQuestion.correctIndex;
+        {/* Render Descriptive vs Multiple Choice */}
+        {currentQuestion.isDescriptive ? (
+          <div className="descriptive-container">
+            {/* Input Phase */}
+            {!isDescriptiveSubmitted && !isDescriptiveEvaluated && (
+              <div className="descriptive-input-stage">
+                <label className="descriptive-label">Your Response / Explanation:</label>
+                <textarea
+                  className="descriptive-textarea"
+                  rows={6}
+                  placeholder="Type your explanation or response here..."
+                  value={typedAnswers[currentIndex] || ''}
+                  onChange={(e) => setTypedAnswers((prev) => ({ ...prev, [currentIndex]: e.target.value }))}
+                />
+                <button
+                  className="btn btn-primary submit-descriptive-btn"
+                  disabled={!(typedAnswers[currentIndex] || '').trim()}
+                  onClick={handleDescriptiveSubmit}
+                >
+                  <Send size={16} /> Submit Answer
+                </button>
+              </div>
+            )}
 
-            let optionStateClass = '';
-            if (hasAnswered) {
-              if (isChoiceCorrect) {
-                optionStateClass = 'correct-choice';
-              } else if (isSelected && !isChoiceCorrect) {
-                optionStateClass = 'incorrect-choice';
-              } else {
-                optionStateClass = 'muted-choice';
-              }
-            }
+            {/* Revealed Answer & Self Evaluation Phase */}
+            {(isDescriptiveSubmitted || isDescriptiveEvaluated) && (
+              <div className="descriptive-eval-stage animate-fade-in">
+                <div className="user-submitted-box">
+                  <span className="box-title">Your Written Answer:</span>
+                  <p className="user-text">
+                    {typedAnswers[currentIndex] || (typeof userAnswers[currentIndex] === 'object' ? userAnswers[currentIndex]?.text : '') || '(No text submitted)'}
+                  </p>
+                </div>
 
-            const letterLabel = String.fromCharCode(65 + idx);
+                <div className="model-answer-box card">
+                  <span className="box-title highlight">Reference Model Answer:</span>
+                  <p className="model-text">{currentQuestion.answer}</p>
+                </div>
 
-            return (
-              <button
-                key={idx}
-                className={`choice-button ${optionStateClass} ${isSelected ? 'selected' : ''}`}
-                onClick={() => handleSelectChoice(idx)}
-                disabled={hasAnswered}
-                aria-label={`Option ${letterLabel}: ${choiceText}`}
-              >
-                <div className="choice-letter">{letterLabel}</div>
-                <div className="choice-text">{choiceText}</div>
-
-                {hasAnswered && (
-                  <div className="choice-feedback-icon">
-                    {isChoiceCorrect && <CheckCircle2 size={20} className="icon-success" />}
-                    {isSelected && !isChoiceCorrect && <XCircle size={20} className="icon-danger" />}
+                {!isDescriptiveEvaluated ? (
+                  <div className="self-eval-prompt card animate-fade-in">
+                    <p className="eval-question-text">
+                      Compare your response with the reference model answer above. Is your answer correct?
+                    </p>
+                    <div className="eval-buttons">
+                      <button
+                        className="btn eval-btn btn-success"
+                        onClick={() => handleDescriptiveSelfEval(true)}
+                      >
+                        <CheckCircle2 size={18} /> Correct
+                      </button>
+                      <button
+                        className="btn eval-btn btn-danger"
+                        onClick={() => handleDescriptiveSelfEval(false)}
+                      >
+                        <XCircle size={18} /> Incorrect
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className={`feedback-banner ${userAnswers[currentIndex]?.isCorrect ? 'correct' : 'incorrect'} animate-fade-in`}>
+                    <div className="feedback-banner-header">
+                      {userAnswers[currentIndex]?.isCorrect ? (
+                        <>
+                          <CheckCircle2 size={20} />
+                          <span>Self-Evaluated: Correct</span>
+                        </>
+                      ) : (
+                        <>
+                          <XCircle size={20} />
+                          <span>Self-Evaluated: Incorrect</span>
+                        </>
+                      )}
+                    </div>
                   </div>
                 )}
-              </button>
-            );
-          })}
-        </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* Multiple Choice Grid */
+          <div className="choices-list">
+            {currentQuestion.choices.map((choiceText, idx) => {
+              const isSelected = selectedChoiceIdx === idx;
+              const isChoiceCorrect = idx === currentQuestion.correctIndex;
 
-        {/* Instant Feedback Explanation Banner */}
-        {hasAnswered && (
+              let optionStateClass = '';
+              if (hasAnswered) {
+                if (isChoiceCorrect) {
+                  optionStateClass = 'correct-choice';
+                } else if (isSelected && !isChoiceCorrect) {
+                  optionStateClass = 'incorrect-choice';
+                } else {
+                  optionStateClass = 'muted-choice';
+                }
+              }
+
+              const letterLabel = String.fromCharCode(65 + idx);
+
+              return (
+                <button
+                  key={idx}
+                  className={`choice-button ${optionStateClass} ${isSelected ? 'selected' : ''}`}
+                  onClick={() => handleSelectChoice(idx)}
+                  disabled={hasAnswered}
+                  aria-label={`Option ${letterLabel}: ${choiceText}`}
+                >
+                  <div className="choice-letter">{letterLabel}</div>
+                  <div className="choice-text">{choiceText}</div>
+
+                  {hasAnswered && (
+                    <div className="choice-feedback-icon">
+                      {isChoiceCorrect && <CheckCircle2 size={20} className="icon-success" />}
+                      {isSelected && !isChoiceCorrect && <XCircle size={20} className="icon-danger" />}
+                    </div>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Instant Feedback Explanation Banner for Multiple Choice */}
+        {!currentQuestion.isDescriptive && hasAnswered && (
           <div className={`feedback-banner ${isCorrect ? 'correct' : 'incorrect'} animate-fade-in`}>
             <div className="feedback-banner-header">
               {isCorrect ? (
@@ -279,15 +409,18 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
       <div className="question-jumper-bar card">
         <span className="jumper-label">Question Map:</span>
         <div className="jumper-grid">
-          {questions.map((_, qIdx) => {
+          {questions.map((qObj, qIdx) => {
             const isCurrent = qIdx === currentIndex;
             const isAns = userAnswers[qIdx] !== undefined;
             const isFlg = flagged[qIdx];
             
             let statusClass = '';
             if (isAns) {
-              const qObj = questions[qIdx];
-              statusClass = userAnswers[qIdx] === qObj.correctIndex ? 'ans-correct' : 'ans-incorrect';
+              if (qObj.isDescriptive) {
+                statusClass = userAnswers[qIdx]?.isCorrect ? 'ans-correct' : 'ans-incorrect';
+              } else {
+                statusClass = userAnswers[qIdx] === qObj.correctIndex ? 'ans-correct' : 'ans-incorrect';
+              }
             }
 
             return (
@@ -489,7 +622,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
         .question-card-header {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          gap: 0.5rem;
         }
 
         .q-number-badge {
@@ -501,7 +634,17 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
           border-radius: var(--radius-sm);
         }
 
+        .type-badge {
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: var(--secondary);
+          background-color: var(--secondary-light);
+          padding: 0.25rem 0.65rem;
+          border-radius: var(--radius-sm);
+        }
+
         .flagged-tag {
+          margin-left: auto;
           font-size: 0.75rem;
           font-weight: 700;
           color: var(--warning);
@@ -531,6 +674,131 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
           line-height: 1.5;
         }
 
+        /* Descriptive Question Component Styles */
+        .descriptive-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+
+        .descriptive-input-stage {
+          display: flex;
+          flex-direction: column;
+          gap: 0.85rem;
+        }
+
+        .descriptive-label {
+          font-weight: 700;
+          font-size: 0.95rem;
+          color: var(--text);
+        }
+
+        .descriptive-textarea {
+          width: 100%;
+          padding: 1rem;
+          border: 2px solid var(--border);
+          border-radius: var(--radius-lg);
+          font-family: var(--font-sans);
+          font-size: 0.975rem;
+          background-color: var(--surface);
+          color: var(--text);
+          resize: vertical;
+          transition: border-color var(--transition-fast);
+        }
+
+        .descriptive-textarea:focus {
+          border-color: var(--primary);
+          outline: none;
+          box-shadow: 0 0 0 3px var(--primary-light);
+        }
+
+        .submit-descriptive-btn {
+          align-self: flex-start;
+        }
+
+        .descriptive-eval-stage {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+
+        .user-submitted-box, .model-answer-box {
+          padding: 1.25rem;
+          border-radius: var(--radius-lg);
+          background-color: var(--background);
+          border: 1px solid var(--border);
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .model-answer-box {
+          background-color: var(--surface);
+          border-left: 4px solid var(--primary);
+        }
+
+        .box-title {
+          font-size: 0.825rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: var(--text-muted);
+        }
+
+        .box-title.highlight {
+          color: var(--primary);
+        }
+
+        .user-text, .model-text {
+          font-size: 0.975rem;
+          line-height: 1.6;
+          color: var(--text);
+        }
+
+        .self-eval-prompt {
+          padding: 1.25rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          background: linear-gradient(135deg, var(--surface), var(--background));
+        }
+
+        .eval-question-text {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+
+        .eval-buttons {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .eval-btn {
+          min-width: 140px;
+        }
+
+        .btn-success {
+          background-color: var(--success);
+          color: #FFFFFF;
+        }
+
+        .btn-success:hover {
+          background-color: #059669;
+        }
+
+        .btn-danger {
+          background-color: var(--danger);
+          color: #FFFFFF;
+        }
+
+        .btn-danger:hover {
+          background-color: #DC2626;
+        }
+
+        /* Choices List */
         .choices-list {
           display: flex;
           flex-direction: column;
@@ -780,6 +1048,15 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
           .btn-text {
             display: none;
+          }
+
+          .eval-buttons {
+            flex-direction: column;
+            width: 100%;
+          }
+
+          .eval-btn {
+            width: 100%;
           }
         }
       `}</style>
