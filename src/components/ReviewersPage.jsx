@@ -155,7 +155,7 @@ export function ReviewersPage({ activeReviewerId, onSelectReviewer, onStartQuizF
             {loading ? (
               <div className="loading-state-inline">
                 <Loader2 size={36} className="spinner" />
-                <p>Loading Study Material...</p>
+                <p>Loading</p>
               </div>
             ) : (
               <article className="markdown-body">

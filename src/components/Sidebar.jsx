@@ -2,7 +2,7 @@ import { LayoutGrid, Code2, PenTool, Timer, BookOpen, Sun, Moon } from 'lucide-r
 
 const NAV_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', Icon: LayoutGrid },
-  { id: 'code', label: 'Code lab', Icon: Code2 },
+  { id: 'code', label: 'Performance lab', Icon: Code2 },
   { id: 'diagram', label: 'Diagram lab', Icon: PenTool },
   { id: 'exam', label: 'Mock exam', Icon: Timer },
   { id: 'reviewers', label: 'Reviewers', Icon: BookOpen },

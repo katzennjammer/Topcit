@@ -169,7 +169,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
     return (
       <div className="card empty-quiz">
         <p>No question data available.</p>
-        <button className="btn btn-primary" onClick={onExit}>Return Home</button>
+        <button className="btn btn-primary" onClick={onExit}>Back to dashboard</button>
       </div>
     );
   }
@@ -265,7 +265,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
             {/* Input Phase */}
             {!isDescriptiveSubmitted && !isDescriptiveEvaluated && (
               <div className="descriptive-input-stage">
-                <label className="descriptive-label">Your Response / Explanation:</label>
+                <label className="descriptive-label">Your answer</label>
                 <textarea
                   className="descriptive-textarea"
                   rows={6}
@@ -287,14 +287,14 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
             {(isDescriptiveSubmitted || isDescriptiveEvaluated) && (
               <div className="descriptive-eval-stage animate-fade-in">
                 <div className="user-submitted-box">
-                  <span className="box-title">Your Written Answer:</span>
+                  <span className="box-title">Your answer</span>
                   <p className="user-text">
                     {typedAnswers[currentIndex] || (typeof userAnswers[currentIndex] === 'object' ? userAnswers[currentIndex]?.text : '') || '(No text submitted)'}
                   </p>
                 </div>
 
                 <div className="model-answer-box card">
-                  <span className="box-title highlight">Reference Model Answer:</span>
+                  <span className="box-title highlight">Model answer</span>
                   <p className="model-text">{currentQuestion.answer}</p>
                 </div>
 
@@ -388,7 +388,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
               {isCorrect ? (
                 <>
                   <CheckCircle2 size={20} />
-                  <span>Correct Answer! Well done.</span>
+                  <span>Correct.</span>
                 </>
               ) : (
                 <>
@@ -407,7 +407,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
       {/* Question Jumper Grid */}
       <div className="question-jumper-bar card">
-        <span className="jumper-label">Question Map:</span>
+        <span className="jumper-label">Questions</span>
         <div className="jumper-grid">
           {questions.map((qObj, qIdx) => {
             const isCurrent = qIdx === currentIndex;
@@ -456,7 +456,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
             className="btn btn-primary submit-btn"
             onClick={() => setShowConfirmSubmit(true)}
           >
-            <Award size={16} /> Submit Quiz
+            <Award size={16} /> Submit quiz
           </button>
         ) : (
           <button

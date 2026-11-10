@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import confetti from 'canvas-confetti';
 import { 
   Trophy, 
   RotateCcw, 
@@ -39,7 +38,7 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
   });
   const percentage = Math.round((correctCount / totalQuestions) * 100);
 
-  // Trigger confetti if high score
+  // Save the result once
   useEffect(() => {
     // Practice rounds on missed questions don't count toward saved scores
     if (!isPractice) {
@@ -49,19 +48,7 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
         timeSeconds,
       });
     }
-
-    if (percentage >= 75) {
-      try {
-        confetti({
-          particleCount: 80,
-          spread: 70,
-          origin: { y: 0.6 },
-        });
-      } catch (e) {
-        console.log('Confetti effect failed', e);
-      }
-    }
-  }, [quizId, correctCount, totalQuestions, timeSeconds, percentage, isPractice]);
+  }, [quizId, correctCount, totalQuestions, timeSeconds, isPractice]);
 
   const filteredQuestions = questions.map((q, idx) => {
     const ans = userAnswers[idx];
@@ -93,10 +80,10 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
   };
 
   const getPerformanceTag = () => {
-    if (percentage >= 90) return { label: 'Outstanding!', color: 'var(--success)', bg: 'var(--success-bg)' };
-    if (percentage >= 75) return { label: 'Great Job!', color: 'var(--primary)', bg: 'var(--primary-light)' };
-    if (percentage >= 50) return { label: 'Good Effort!', color: 'var(--warning)', bg: 'var(--warning-bg)' };
-    return { label: 'Keep Practicing', color: 'var(--danger)', bg: 'var(--danger-bg)' };
+    if (percentage >= 90) return { label: 'Excellent', color: 'var(--success)', bg: 'var(--success-bg)' };
+    if (percentage >= 75) return { label: 'Good', color: 'var(--primary)', bg: 'var(--primary-light)' };
+    if (percentage >= 50) return { label: 'Fair', color: 'var(--warning)', bg: 'var(--warning-bg)' };
+    return { label: 'Needs more work', color: 'var(--danger)', bg: 'var(--danger-bg)' };
   };
 
   const perf = getPerformanceTag();
@@ -126,7 +113,7 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
 
           <div className="metric-box">
             <span className="metric-value">{formatTime(timeSeconds)}</span>
-            <span className="metric-label">Time Spent</span>
+            <span className="metric-label">Time spent</span>
           </div>
         </div>
 
@@ -134,17 +121,17 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
         <div className="results-actions">
           {missedQuestions.length > 0 && onRetryMissed && (
             <button className="btn btn-primary" onClick={() => onRetryMissed(missedQuestions)}>
-              <Target size={18} /> Retry {missedQuestions.length} Missed
+              <Target size={18} /> Retry {missedQuestions.length} missed
             </button>
           )}
           <button
             className={`btn ${missedQuestions.length > 0 ? 'btn-outline' : 'btn-primary'}`}
             onClick={onRestartQuiz}
           >
-            <RotateCcw size={18} /> {isPractice ? 'Retake Full Quiz' : 'Retake Quiz'}
+            <RotateCcw size={18} /> {isPractice ? 'Retake full quiz' : 'Retake quiz'}
           </button>
           <button className="btn btn-outline" onClick={onGoHome}>
-            <Home size={18} /> Back to Dashboard
+            <Home size={18} /> Back to dashboard
           </button>
         </div>
       </div>
@@ -154,7 +141,7 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
         <div className="review-header">
           <div className="review-title-group">
             <Sparkles size={20} className="icon-primary" />
-            <h3>Question Review Mode</h3>
+            <h3>Review your answers</h3>
           </div>
 
           {/* Filter Pills */}
@@ -229,11 +216,11 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
                   {q.isDescriptive ? (
                     <div className="review-descriptive-grid">
                       <div className="review-descriptive-box user">
-                        <span className="box-label">Your Submitted Answer:</span>
+                        <span className="box-label">Your answer</span>
                         <p>{typeof q.userAnswerVal === 'object' ? q.userAnswerVal.text : (q.userAnswerVal || '(No answer text submitted)')}</p>
                       </div>
                       <div className="review-descriptive-box reference">
-                        <span className="box-label highlight">Reference Model Answer:</span>
+                        <span className="box-label highlight">Model answer</span>
                         <p>{q.answer}</p>
                       </div>
                     </div>
@@ -251,8 +238,8 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
                           <div key={cIdx} className={`review-choice-box ${choiceClass}`}>
                             <span className="choice-label">{String.fromCharCode(65 + cIdx)}</span>
                             <span className="choice-val">{choiceText}</span>
-                            {isCorrectChoice && <span className="tag-correct">Correct Answer</span>}
-                            {isUserChoice && !isCorrectChoice && <span className="tag-user">Your Choice</span>}
+                            {isCorrectChoice && <span className="tag-correct">Correct answer</span>}
+                            {isUserChoice && !isCorrectChoice && <span className="tag-user">Your choice</span>}
                           </div>
                         );
                       })}

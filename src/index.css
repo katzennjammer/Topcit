@@ -1,97 +1,95 @@
 :root {
-  /* Colour: sage paper, green-black ink, exam green */
-  --primary: #0F6B52;
-  --primary-hover: #0B5441;
-  --primary-light: #DCEEE6;
+  /* Neutral paper, dark ink, one ink-blue accent */
+  --primary: #1F4B7A;
+  --primary-hover: #173A60;
+  --primary-light: #E8EEF5;
   --on-primary: #FFFFFF;
-  --secondary: #1F4E79;
-  --secondary-hover: #173C5E;
-  --secondary-light: #DEE9F3;
-  --background: #F2F4EF;
+  --secondary: #1F4B7A;
+  --secondary-hover: #173A60;
+  --secondary-light: #E8EEF5;
+  --background: #F4F5F6;
   --surface: #FFFFFF;
-  --surface-hover: #E9EDE5;
-  --border: #D5DBD0;
-  --border-focus: #9CCBB8;
-  --text: #16241F;
-  --text-muted: #56655E;
-  --text-light: #8A968F;
-  --mark: #F4D35E;
+  --surface-hover: #ECEEF0;
+  --border: #D6DADF;
+  --border-focus: #9DB4CD;
+  --text: #1B2128;
+  --text-muted: #57616C;
+  --text-light: #8A939D;
+  --mark: #F2CF63;
 
   /* One colour per official module */
-  --m1: #0F6B52;
-  --m2: #1F4E79;
-  --m3: #8A3352;
-  --m4: #B36A12;
+  --m1: #1F4B7A;
+  --m2: #1E6B5C;
+  --m3: #7A3B52;
+  --m4: #8F5F17;
 
   /* Status */
-  --success: #17804F;
-  --success-bg: #E3F3EA;
-  --success-border: #A5D6BC;
-  --danger: #C2362F;
-  --danger-bg: #FBEAE8;
-  --danger-border: #EBB3AE;
-  --warning: #B36A12;
-  --warning-bg: #FBF1DF;
+  --success: #1B7447;
+  --success-bg: #E6F2EB;
+  --success-border: #AFD3BF;
+  --danger: #B3352E;
+  --danger-bg: #F9EAE8;
+  --danger-border: #E5B5B1;
+  --warning: #8F5F17;
+  --warning-bg: #F7EFDF;
 
   /* Type */
-  --font-sans: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Bricolage Grotesque', 'Atkinson Hyperlegible', -apple-system, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 0 rgba(22, 36, 31, 0.04);
-  --shadow-md: 0 2px 8px rgba(22, 36, 31, 0.07);
-  --shadow-lg: 0 8px 24px rgba(22, 36, 31, 0.10);
-  --shadow-xl: 0 16px 40px rgba(22, 36, 31, 0.16);
+  /* Depth is shown with borders; shadows are reserved for overlays */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: 0 6px 20px rgba(27, 33, 40, 0.10);
+  --shadow-xl: 0 12px 32px rgba(27, 33, 40, 0.16);
 
   /* Radius */
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 10px;
-  --radius-xl: 14px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
   --radius-full: 9999px;
 
   /* Transitions */
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.25s ease;
-  --transition-slow: 0.4s ease;
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
 }
 
 [data-theme='dark'] {
-  --primary: #4CC39A;
-  --primary-hover: #6FD4B0;
-  --primary-light: rgba(76, 195, 154, 0.14);
-  --on-primary: #06241B;
-  --secondary: #6FA8DC;
-  --secondary-hover: #8FBDE6;
-  --secondary-light: rgba(111, 168, 220, 0.15);
-  --background: #0F1614;
-  --surface: #17211E;
-  --surface-hover: #20302B;
-  --border: #2A3B35;
-  --border-focus: #3E7F69;
-  --text: #E8EFEA;
-  --text-muted: #9DB0A7;
-  --text-light: #6E8179;
+  --primary: #8AB4E0;
+  --primary-hover: #A6C6E8;
+  --primary-light: rgba(138, 180, 224, 0.14);
+  --on-primary: #0C1B2B;
+  --secondary: #8AB4E0;
+  --secondary-hover: #A6C6E8;
+  --secondary-light: rgba(138, 180, 224, 0.14);
+  --background: #121519;
+  --surface: #1A1E23;
+  --surface-hover: #242A31;
+  --border: #2E353D;
+  --border-focus: #4A6789;
+  --text: #E6E9EC;
+  --text-muted: #A0A9B3;
+  --text-light: #6E7883;
 
-  --m1: #4CC39A;
-  --m2: #6FA8DC;
-  --m3: #D97BA0;
-  --m4: #E3A548;
+  --m1: #8AB4E0;
+  --m2: #6CC3B0;
+  --m3: #D48BA6;
+  --m4: #D9A857;
 
-  --success: #4CC38A;
-  --success-bg: rgba(76, 195, 138, 0.14);
-  --success-border: rgba(76, 195, 138, 0.4);
-  --danger: #F0776F;
-  --danger-bg: rgba(240, 119, 111, 0.14);
-  --danger-border: rgba(240, 119, 111, 0.4);
-  --warning: #E3A548;
-  --warning-bg: rgba(227, 165, 72, 0.14);
+  --success: #63C08E;
+  --success-bg: rgba(99, 192, 142, 0.13);
+  --success-border: rgba(99, 192, 142, 0.4);
+  --danger: #EC7C74;
+  --danger-bg: rgba(236, 124, 116, 0.13);
+  --danger-border: rgba(236, 124, 116, 0.4);
+  --warning: #D9A857;
+  --warning-bg: rgba(217, 168, 87, 0.13);
 
-  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
 *, *::before, *::after {
@@ -146,8 +144,9 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-display);
+  font-weight: 600;
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 @media (max-width: 900px) {
@@ -181,15 +180,15 @@ h1, h2, h3 {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(15, 107, 82, 0.4);
+    box-shadow: 0 0 0 0 rgba(31, 75, 122, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(15, 107, 82, 0);
+    box-shadow: 0 0 0 8px rgba(31, 75, 122, 0);
   }
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: none;
 }
 
 /* Common UI Elements */
@@ -208,11 +207,11 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.1rem;
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all var(--transition-fast);
@@ -227,7 +226,6 @@ h1, h2, h3 {
 
 .btn-primary:hover:not(:disabled) {
   background-color: var(--primary-hover);
-  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -239,7 +237,6 @@ h1, h2, h3 {
 .btn-secondary:hover:not(:disabled) {
   background-color: var(--secondary);
   color: var(--on-primary);
-  transform: translateY(-1px);
 }
 
 .btn-outline {
@@ -268,9 +265,6 @@ h1, h2, h3 {
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.card:hover {
-  box-shadow: var(--shadow-md);
-}
 
 /* Focus styles */
 button:focus-visible,
