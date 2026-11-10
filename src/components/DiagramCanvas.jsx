@@ -39,7 +39,7 @@ export function DiagramCanvas({ initialXml, onChange, dark = false }) {
       } else if (msg.event === 'autosave' || msg.event === 'save') {
         latestXmlRef.current = msg.xml;
         onChangeRef.current({ xml: msg.xml });
-        post({ action: 'export', format: 'xmlsvg', spin: false });
+        post({ action: 'export', format: 'svg' });
       } else if (msg.event === 'export') {
         onChangeRef.current({ xml: latestXmlRef.current, preview: msg.data });
       }
