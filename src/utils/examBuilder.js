@@ -4,6 +4,10 @@ import { gradeCalc } from './calcGrader';
 import { OFFICIAL_MODULES, moduleForDescriptiveCategory } from '../data/modules';
 
 const QUIZ_FILES = {
+  'Applied 1': '/applied/A1_Software_Development.json',
+  'Applied 2': '/applied/A2_Data_Management.json',
+  'Applied 3': '/applied/A3_Systems_Security.json',
+  'Applied 4': '/applied/A4_IT_Business.json',
   'Essence 1': '/essences/E1_Software_Development.json',
   'Essence 2': '/essences/E2_Database.json',
   'Essence 3': '/essences/E3_System_Architecture.json',
@@ -76,13 +80,13 @@ export async function buildExam() {
       });
   }
 
+  // Multiple choice: about half scenario questions, the rest recall questions
   for (const mod of OFFICIAL_MODULES) {
-    const pool = shuffleArray(
-      mod.quizIds
-        .flatMap((id) => pools[id].map((q) => ({ ...q, uid: `${id}:${q.id}` })))
-        .filter((q) => !q.isDescriptive)
-    ).slice(0, mcq.perModule[mod.id]);
-    pool.forEach((q) => {
+    const want = mcq.perModule[mod.id];
+    const tagged = (ids) => ids.flatMap((id) => pools[id].map((q) => ({ ...q, uid: `${id}:${q.id}` }))).filter((q) => !q.isDescriptive);
+    const applied = shuffleArray(tagged(mod.quizIds.filter((id) => id.startsWith('Applied')))).slice(0, Math.ceil(want / 2));
+    const recall = shuffleArray(tagged(mod.quizIds.filter((id) => !id.startsWith('Applied')))).slice(0, want - applied.length);
+    shuffleArray([...applied, ...recall]).forEach((q) => {
       const s = shuffleQuestionChoices(q);
       items.push({
         key: `mcq-${q.uid}`,

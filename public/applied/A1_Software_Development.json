@@ -1,0 +1,167 @@
+[
+  {
+    "question": "A team must deliver a payment system whose requirements are fixed by regulation and must be fully documented and signed off before coding begins. Which life cycle model fits best?",
+    "choices": [
+      "Waterfall model",
+      "Prototyping model",
+      "Extreme Programming",
+      "Spiral model with weekly releases"
+    ],
+    "answer": "Waterfall model",
+    "explanation": "When requirements are stable, known up front and need formal sign-off at each stage, the sequential waterfall model fits. Iterative and agile models suit changing or unclear requirements."
+  },
+  {
+    "question": "Users cannot describe what they want from a new booking screen, and keep changing their minds when they see drafts. What should the team do first?",
+    "choices": [
+      "Build a quick prototype and refine the requirements from user feedback",
+      "Freeze the requirements and start detailed design",
+      "Write the full test plan before talking to users again",
+      "Skip analysis and begin coding the final system"
+    ],
+    "answer": "Build a quick prototype and refine the requirements from user feedback",
+    "explanation": "Prototyping exists for exactly this case: a throwaway or evolving model lets users react to something concrete, which uncovers the real requirements early and cheaply."
+  },
+  {
+    "question": "A function validates an age field that accepts 18 to 65 inclusive. Which set of test inputs applies boundary value analysis?",
+    "choices": [
+      "17, 18, 65, 66",
+      "30, 40, 50",
+      "18, 30, 65",
+      "-1, 0, 100, 1000"
+    ],
+    "answer": "17, 18, 65, 66",
+    "explanation": "Boundary value analysis tests at and just outside each edge of the valid range, because defects cluster there: 17 and 18 around the lower limit, 65 and 66 around the upper."
+  },
+  {
+    "question": "After fixing a defect in the invoice module, a tester reruns the existing test suite for the whole billing system. What kind of testing is this?",
+    "choices": [
+      "Regression testing",
+      "Acceptance testing",
+      "Smoke testing of a new build only",
+      "Exploratory testing"
+    ],
+    "answer": "Regression testing",
+    "explanation": "Regression testing reruns existing tests after a change to confirm that the fix did not break behaviour that previously worked."
+  },
+  {
+    "question": "A module named Utilities contains unrelated functions for date formatting, tax calculation and sending email. Which design problem does this show?",
+    "choices": [
+      "Coincidental cohesion",
+      "Functional cohesion",
+      "Data coupling",
+      "Stamp coupling"
+    ],
+    "answer": "Coincidental cohesion",
+    "explanation": "The functions have no meaningful relationship and were simply grouped together, which is coincidental cohesion, the weakest kind. Each responsibility should be in its own module."
+  },
+  {
+    "question": "One class directly changes the private fields of another class by reaching into its internal data structure. Which kind of coupling is this, and why is it a problem?",
+    "choices": [
+      "Content coupling; a change inside one class can silently break the other",
+      "Data coupling; it passes too few parameters",
+      "Control coupling; it uses too many flags",
+      "Stamp coupling; it passes a whole record"
+    ],
+    "answer": "Content coupling; a change inside one class can silently break the other",
+    "explanation": "Content coupling is the strongest and worst form. The fix is to hide the fields and expose behaviour through an interface (information hiding)."
+  },
+  {
+    "question": "A report needs to be exported as PDF, CSV or Excel, and new formats will be added later. The export algorithm should be swappable without changing the report class. Which design pattern fits?",
+    "choices": [
+      "Strategy",
+      "Singleton",
+      "Facade",
+      "Observer"
+    ],
+    "answer": "Strategy",
+    "explanation": "Strategy puts each algorithm (here, each export format) in its own class behind a common interface, so a new one can be added and selected at run time without modifying the caller."
+  },
+  {
+    "question": "Several screens must refresh automatically whenever the stock price object changes, without the price object knowing which screens exist. Which design pattern fits?",
+    "choices": [
+      "Observer",
+      "Abstract Factory",
+      "Adapter",
+      "Strategy"
+    ],
+    "answer": "Observer",
+    "explanation": "Observer defines a one-to-many dependency: observers register with the subject and are notified when its state changes, which keeps the subject independent of its viewers."
+  },
+  {
+    "question": "An algorithm compares every pair of items in a list of n items using two nested loops. What is its time complexity, and what happens to the running time if n doubles?",
+    "choices": [
+      "O(n^2); the running time roughly quadruples",
+      "O(n); the running time doubles",
+      "O(log n); the running time barely changes",
+      "O(n log n); the running time triples"
+    ],
+    "answer": "O(n^2); the running time roughly quadruples",
+    "explanation": "Two nested loops over n items do about n x n comparisons. Doubling n multiplies the work by four."
+  },
+  {
+    "question": "A browser must let the user go back through visited pages in reverse order of visiting. Which data structure models this directly?",
+    "choices": [
+      "Stack",
+      "Queue",
+      "Binary search tree",
+      "Hash table"
+    ],
+    "answer": "Stack",
+    "explanation": "The most recently visited page is the first to return to, which is Last-In-First-Out behaviour, exactly what a stack provides."
+  },
+  {
+    "question": "A developer renames unclear variables and splits a 300-line function into smaller ones. All tests pass before and after, and no feature changes. What is this activity, and what makes it safe?",
+    "choices": [
+      "Refactoring; an automated test suite that confirms behaviour is unchanged",
+      "Reverse engineering; a detailed design document",
+      "Perfective maintenance; a new requirements document",
+      "Re-engineering; a change control board"
+    ],
+    "answer": "Refactoring; an automated test suite that confirms behaviour is unchanged",
+    "explanation": "Refactoring improves internal structure without changing external behaviour. Automated tests are what let you verify that behaviour stayed the same."
+  },
+  {
+    "question": "A new tax law requires the payroll system to calculate deductions differently from next month. Which type of maintenance is this?",
+    "choices": [
+      "Adaptive maintenance",
+      "Corrective maintenance",
+      "Preventive maintenance",
+      "Perfective maintenance"
+    ],
+    "answer": "Adaptive maintenance",
+    "explanation": "The software itself is not faulty; its environment (the law) changed. Adapting software to a changed environment is adaptive maintenance."
+  },
+  {
+    "question": "Two developers changed the same file. The team wants every merge to be built and tested automatically within minutes so conflicts surface quickly. What practice is this?",
+    "choices": [
+      "Continuous integration",
+      "Configuration audit",
+      "Waterfall integration at the end of the project",
+      "Manual code freeze"
+    ],
+    "answer": "Continuous integration",
+    "explanation": "Continuous integration merges changes into the shared repository frequently and runs an automated build and tests each time, so integration problems appear while they are still small."
+  },
+  {
+    "question": "A model is trained on 10,000 emails that people have already marked as spam or not spam, and then classifies new emails. Which type of machine learning is this?",
+    "choices": [
+      "Supervised learning",
+      "Unsupervised learning",
+      "Reinforcement learning",
+      "Clustering"
+    ],
+    "answer": "Supervised learning",
+    "explanation": "The training data comes with the correct answers (labels), which defines supervised learning. Classification is a typical supervised task."
+  },
+  {
+    "question": "A model scores 99% on its training data but only 62% on new data. What is the most likely problem, and one sensible remedy?",
+    "choices": [
+      "Overfitting; use more training data or regularization and validate on held-out data",
+      "Underfitting; make the model much larger",
+      "A slow processor; buy faster hardware",
+      "Too little training; keep training on the same data"
+    ],
+    "answer": "Overfitting; use more training data or regularization and validate on held-out data",
+    "explanation": "A large gap between training and test performance means the model memorised the training set instead of learning general patterns. More data, regularization or a simpler model reduce overfitting."
+  }
+]

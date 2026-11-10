@@ -1,0 +1,167 @@
+[
+  {
+    "question": "A table stores (student_id, course_id, student_name, grade) with the key (student_id, course_id). student_name depends only on student_id. Which normal form does this violate, and how is it fixed?",
+    "choices": [
+      "Second normal form; move student_name to a table keyed by student_id",
+      "First normal form; split grade into several columns",
+      "Third normal form; delete the grade column",
+      "BCNF; add a surrogate key and keep the table as it is"
+    ],
+    "answer": "Second normal form; move student_name to a table keyed by student_id",
+    "explanation": "student_name depends on only part of the composite key, a partial dependency, which breaks 2NF. Splitting out a Student table removes the redundancy and the update anomaly."
+  },
+  {
+    "question": "A table Employee(emp_id, dept_id, dept_name) has the key emp_id, and dept_name depends on dept_id. Which problem is this?",
+    "choices": [
+      "A transitive dependency, which violates third normal form",
+      "A partial dependency, which violates second normal form",
+      "A repeating group, which violates first normal form",
+      "A multivalued dependency, which violates fourth normal form"
+    ],
+    "answer": "A transitive dependency, which violates third normal form",
+    "explanation": "dept_name depends on the key only through the non-key attribute dept_id (emp_id -> dept_id -> dept_name). 3NF removes this by moving department data to its own table."
+  },
+  {
+    "question": "Two bank transactions read the same balance of 100. One adds 50 and writes 150; the other subtracts 30 and writes 70. The final balance is 70. Which concurrency problem occurred?",
+    "choices": [
+      "Lost update",
+      "Dirty read",
+      "Phantom read",
+      "Deadlock"
+    ],
+    "answer": "Lost update",
+    "explanation": "The second write overwrote the first, so the +50 update disappeared. Locking or a stricter isolation level makes the transactions run as if one after the other."
+  },
+  {
+    "question": "A transfer debits account A and then the server crashes before crediting account B. After restart, A's balance is back to its original value. Which ACID property was enforced, and by which recovery operation?",
+    "choices": [
+      "Atomicity, by undoing the incomplete transaction",
+      "Durability, by redoing the incomplete transaction",
+      "Isolation, by locking account B",
+      "Consistency, by deleting the log"
+    ],
+    "answer": "Atomicity, by undoing the incomplete transaction",
+    "explanation": "A transaction is all or nothing. Because it never committed, recovery rolled back (undid) its partial changes using the log."
+  },
+  {
+    "question": "A query filters a 10-million-row Orders table by customer_id and runs slowly, although only about 20 rows match. What is the most appropriate first step?",
+    "choices": [
+      "Create an index on customer_id",
+      "Denormalize the whole database",
+      "Add more columns to the table",
+      "Remove the primary key"
+    ],
+    "answer": "Create an index on customer_id",
+    "explanation": "Without an index the DBMS scans every row. An index on the filter column gives a short access path to the few matching rows. It does add some cost to inserts and updates."
+  },
+  {
+    "question": "A report must list every customer, including those who have never placed an order, with their order count. Which join is needed between Customer and Orders?",
+    "choices": [
+      "LEFT OUTER JOIN from Customer to Orders",
+      "INNER JOIN",
+      "CROSS JOIN",
+      "RIGHT OUTER JOIN from Customer to Orders"
+    ],
+    "answer": "LEFT OUTER JOIN from Customer to Orders",
+    "explanation": "An inner join would drop customers with no orders. A left outer join keeps every row from Customer and fills the order columns with NULL where there is no match."
+  },
+  {
+    "question": "A query must show only departments whose average salary is above 5000. Where does the condition on the average belong?",
+    "choices": [
+      "In the HAVING clause, after GROUP BY",
+      "In the WHERE clause, before GROUP BY",
+      "In the ORDER BY clause",
+      "In the SELECT list as an alias only"
+    ],
+    "answer": "In the HAVING clause, after GROUP BY",
+    "explanation": "WHERE filters individual rows before grouping and cannot use aggregates. HAVING filters the groups after the aggregates are computed."
+  },
+  {
+    "question": "A web form builds SQL by joining user input into a string, and an attacker types ' OR '1'='1. What is the correct fix?",
+    "choices": [
+      "Use parameterized queries (prepared statements) so input is treated as data",
+      "Hide the form field with CSS",
+      "Encrypt the database files on disk",
+      "Increase the password length requirement"
+    ],
+    "answer": "Use parameterized queries (prepared statements) so input is treated as data",
+    "explanation": "This is SQL injection. With bound parameters the input can never change the structure of the SQL statement, whatever characters it contains."
+  },
+  {
+    "question": "A company wants managers to analyse five years of sales by region, product and month without slowing the order-entry system. What should it build?",
+    "choices": [
+      "A data warehouse loaded by ETL, queried with OLAP tools",
+      "More indexes on the order-entry tables only",
+      "A second copy of the order-entry screens",
+      "A key-value cache in front of the web server"
+    ],
+    "answer": "A data warehouse loaded by ETL, queried with OLAP tools",
+    "explanation": "Analytical queries over history belong in a separate, subject-oriented data warehouse. ETL loads it from the operational system and OLAP supports analysis by dimensions."
+  },
+  {
+    "question": "In a sales star schema, which table holds the quantity sold and sales amount, and which hold product names and calendar dates?",
+    "choices": [
+      "The fact table holds the measures; dimension tables hold the descriptions",
+      "Dimension tables hold the measures; the fact table holds the descriptions",
+      "A single normalized table holds everything",
+      "The index holds the measures; views hold the descriptions"
+    ],
+    "answer": "The fact table holds the measures; dimension tables hold the descriptions",
+    "explanation": "The central fact table stores numeric measures and foreign keys. The surrounding dimension tables (product, date, store) describe the context used to slice the facts."
+  },
+  {
+    "question": "A social network must store rapidly growing, loosely structured posts across many servers and can tolerate replicas being briefly out of date. Which kind of database suits this, and what consistency model does it use?",
+    "choices": [
+      "A NoSQL database with eventual consistency",
+      "A single-server relational database with serializable isolation",
+      "A spreadsheet with manual backups",
+      "A hierarchical database on tape"
+    ],
+    "answer": "A NoSQL database with eventual consistency",
+    "explanation": "NoSQL systems trade strict consistency for horizontal scalability and availability. Replicas converge to the same state over time, which is eventual consistency."
+  },
+  {
+    "question": "A retailer wants to group customers by buying behaviour, and no predefined groups exist. Which data analysis technique applies?",
+    "choices": [
+      "Clustering",
+      "Classification",
+      "Regression",
+      "Association rule mining of labelled classes"
+    ],
+    "answer": "Clustering",
+    "explanation": "Clustering finds groups of similar records without predefined labels. Classification needs classes that are already known."
+  },
+  {
+    "question": "A database is backed up in full every Sunday and incrementally each night. It fails on Wednesday afternoon. What is needed to restore to the latest point?",
+    "choices": [
+      "Sunday's full backup, then the Monday and Tuesday incremental backups, then the log since the last backup",
+      "Only Tuesday's incremental backup",
+      "Only Sunday's full backup",
+      "Wednesday's backup, which does not exist yet"
+    ],
+    "answer": "Sunday's full backup, then the Monday and Tuesday incremental backups, then the log since the last backup",
+    "explanation": "Each incremental backup holds only changes since the previous backup, so the full backup and every later incremental are applied in order, followed by redo from the log."
+  },
+  {
+    "question": "During data preparation for a prediction model, 30% of the income values are missing and ages include entries such as 250. What should be done before training?",
+    "choices": [
+      "Clean the data: handle missing values and correct or remove invalid outliers",
+      "Train immediately; the model will ignore bad values",
+      "Delete the income and age columns from the source system",
+      "Convert every column to text"
+    ],
+    "answer": "Clean the data: handle missing values and correct or remove invalid outliers",
+    "explanation": "Model quality depends on data quality. Missing values are imputed or the rows excluded, and impossible values are corrected or removed, before features are built."
+  },
+  {
+    "question": "A logical model is fully normalized, but a key report needs five joins and is too slow even with indexes. What may the designer consider during physical design, and at what cost?",
+    "choices": [
+      "Denormalization, at the cost of redundancy and harder updates",
+      "Removing all primary keys, at no cost",
+      "Further normalization to sixth normal form",
+      "Deleting the oldest half of the data"
+    ],
+    "answer": "Denormalization, at the cost of redundancy and harder updates",
+    "explanation": "Denormalization deliberately duplicates or merges data to cut joins and speed up reads. The price is redundant data that must be kept consistent."
+  }
+]

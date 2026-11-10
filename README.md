@@ -9,7 +9,7 @@ Maintained by **[katzennjammer](https://github.com/katzennjammer)**. Built on [t
 ## Features
 
 - **Dashboard by official module.** Quizzes are grouped under the four TOPCIT modules, and a score map shows how much of the 1,000 points each module is worth next to your best quiz accuracy.
-- **Practice quizzes.** 700 multiple-choice questions and 25 descriptive questions, plus a bank of 60 short-answer questions used by the mock exam. Every multiple-choice question explains why the correct answer is correct, whether you got it right or wrong. Questions and choices are shuffled on each attempt, drafts are saved, and you can retry only the questions you missed.
+- **Practice quizzes.** 760 multiple-choice questions (60 of them scenario questions that ask you to apply a concept to a situation) and 25 descriptive questions, plus a bank of 60 short-answer questions used by the mock exam. Every multiple-choice question explains why the correct answer is correct, whether you got it right or wrong. Questions and choices are shuffled on each attempt, drafts are saved, and you can retry only the questions you missed.
 - **Performance lab.** Write and run real Python and SQL in the browser, and work through calculation problems (subnetting, scheduling, paging, RAID, availability, RSA, earned value, critical path, PERT, ROI). Everything is checked automatically, with a time limit that stops infinite loops.
 - **Diagram lab.** Draw activity, class, ER, sequence and use case diagrams and flow charts in an embedded diagrams.net editor, then mark your drawing against a checklist, a written model answer and a drawn model diagram.
 - **Mock exam.** 65 questions in 150 minutes for 1,000 points, mixed by the official question-type weights (multiple choice 190, short answer 120, descriptive 210, performance 480) and the official module weights (M1 365, M2 265, M3 235, M4 135). Multiple choice, short answer, code and calculations are marked automatically; you mark descriptive answers and diagrams yourself. The result shows your score, competency level and a breakdown by module and question type.
@@ -31,7 +31,8 @@ Everything is stored in the browser's `localStorage`. There is no account or ser
 
 Content lives in `public/`:
 
-- `public/essences/` and `public/others/`: quiz questions
+- `public/essences/` and `public/others/`: recall quiz questions
+- `public/applied/`: scenario questions, one set per module
 - `public/practice/coding_challenges.json`: Python and SQL tasks with tests and solutions
 - `public/practice/calculation_tasks.json`: calculation problems with worked solutions
 - `public/practice/diagram_tasks.json`: diagram tasks with checklists and model answers
@@ -42,6 +43,7 @@ The module-to-question-set mapping and point values are in `src/data/modules.js`
 
 ### Limits to know about
 
+- None of the questions are taken from real TOPCIT papers, which are not published. They cover the official topics and question types, but do not expect to see the same questions in the test.
 - Code runs as Python (through Pyodide) and SQL (SQLite). C, C++ and Java are not supported.
 - The performance lab and diagram lab load their engines from the internet (cdn.jsdelivr.net and embed.diagrams.net), so they need a connection.
 

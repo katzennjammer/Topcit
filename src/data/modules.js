@@ -10,7 +10,7 @@ export const OFFICIAL_MODULES = [
     color: 'var(--m1)',
     fill: 'var(--m1b)',
     summary: 'Life cycle models, design, testing, data structures and programming.',
-    quizIds: ['Essence 1', 'Other 1'],
+    quizIds: ['Applied 1', 'Essence 1', 'Other 1'],
     descriptiveCategories: ['software_development'],
   },
   {
@@ -20,7 +20,7 @@ export const OFFICIAL_MODULES = [
     color: 'var(--m2)',
     fill: 'var(--m2b)',
     summary: 'Data modelling, normalization, SQL, transactions and analytics.',
-    quizIds: ['Essence 2', 'Other 2'],
+    quizIds: ['Applied 2', 'Essence 2', 'Other 2'],
     descriptiveCategories: ['database'],
   },
   {
@@ -30,7 +30,7 @@ export const OFFICIAL_MODULES = [
     color: 'var(--m3)',
     fill: 'var(--m3b)',
     summary: 'Operating systems, networks, cloud, cryptography and threats.',
-    quizIds: ['Essence 3', 'Essence 4'],
+    quizIds: ['Applied 3', 'Essence 3', 'Essence 4'],
     descriptiveCategories: ['system_architecture', 'information_security'],
   },
   {
@@ -40,7 +40,7 @@ export const OFFICIAL_MODULES = [
     color: 'var(--m4)',
     fill: 'var(--m4b)',
     summary: 'IT strategy, ethics, communication and project management.',
-    quizIds: ['Essence 5', 'Essence 6'],
+    quizIds: ['Applied 4', 'Essence 5', 'Essence 6'],
     descriptiveCategories: ['project_management'],
   },
 ];

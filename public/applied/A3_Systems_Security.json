@@ -1,0 +1,167 @@
+[
+  {
+    "question": "Processes P1, P2 and P3 arrive together with burst times of 10, 2 and 3 ms. Which scheduling policy gives the lowest average waiting time, and why?",
+    "choices": [
+      "Shortest Job First, because short jobs do not wait behind the long one",
+      "First-Come First-Served, because it is the fairest",
+      "Round Robin with a 20 ms quantum, because it never preempts here",
+      "Priority scheduling with P1 first"
+    ],
+    "answer": "Shortest Job First, because short jobs do not wait behind the long one",
+    "explanation": "SJF runs the 2 ms and 3 ms jobs first (waits 0, 2 and 5 ms; average 2.33). FCFS in arrival order gives waits of 0, 10 and 12 ms (average 7.33)."
+  },
+  {
+    "question": "Process A holds the printer and waits for the scanner. Process B holds the scanner and waits for the printer. Neither can continue. What is this, and which condition could be broken to prevent it?",
+    "choices": [
+      "Deadlock; prevent circular wait by always requesting resources in the same order",
+      "Starvation; give both processes lower priority",
+      "Thrashing; add more disk space",
+      "A race condition; remove all locks"
+    ],
+    "answer": "Deadlock; prevent circular wait by always requesting resources in the same order",
+    "explanation": "Each process holds one resource and waits for the other, forming a cycle. Imposing a fixed order for acquiring resources makes a cycle impossible."
+  },
+  {
+    "question": "A server with 8 GB of RAM runs many large programs. The CPU is mostly idle, the disk light is constantly on and everything is very slow. What is happening?",
+    "choices": [
+      "Thrashing: the system spends its time swapping pages in and out",
+      "A deadlock between two processes",
+      "A denial-of-service attack",
+      "CPU overheating"
+    ],
+    "answer": "Thrashing: the system spends its time swapping pages in and out",
+    "explanation": "When memory is overcommitted, processes keep faulting on pages that were just swapped out. CPU utilisation falls while disk activity soars. Adding memory or running fewer programs fixes it."
+  },
+  {
+    "question": "A company has the network 192.168.1.0/24 and needs four equal subnets. Which prefix should it use, and how many usable hosts does each subnet have?",
+    "choices": [
+      "/26, with 62 usable hosts each",
+      "/25, with 126 usable hosts each",
+      "/28, with 14 usable hosts each",
+      "/24, with 254 usable hosts each"
+    ],
+    "answer": "/26, with 62 usable hosts each",
+    "explanation": "Four subnets need 2 extra network bits, so /24 becomes /26. Each subnet has 2^6 = 64 addresses, minus the network and broadcast addresses, leaving 62."
+  },
+  {
+    "question": "A video call application can tolerate a few lost packets but not delay. Which transport protocol suits it, and why?",
+    "choices": [
+      "UDP, because it has no connection setup or retransmission delay",
+      "TCP, because it retransmits every lost packet",
+      "ICMP, because it reports errors",
+      "ARP, because it resolves addresses"
+    ],
+    "answer": "UDP, because it has no connection setup or retransmission delay",
+    "explanation": "Real-time media prefers timely delivery over perfect delivery. UDP sends datagrams without handshakes, ordering or retransmission, which keeps latency low."
+  },
+  {
+    "question": "A user can reach a website by its IP address but not by its name. Which service has most likely failed?",
+    "choices": [
+      "DNS",
+      "DHCP",
+      "NAT",
+      "ARP"
+    ],
+    "answer": "DNS",
+    "explanation": "DNS translates names into IP addresses. If the address works but the name does not, name resolution is the problem."
+  },
+  {
+    "question": "An online shop must keep running if one web server fails and must share traffic across servers at peak time. Which design achieves both?",
+    "choices": [
+      "Several web servers behind a load balancer",
+      "One larger server with more memory",
+      "A nightly backup to tape",
+      "A faster network cable"
+    ],
+    "answer": "Several web servers behind a load balancer",
+    "explanation": "Redundant servers remove the single point of failure, and the load balancer distributes requests and stops sending traffic to a failed server."
+  },
+  {
+    "question": "A startup wants to deploy its code without managing operating systems, patches or runtime installation, but still write its own application. Which cloud service model fits?",
+    "choices": [
+      "Platform as a Service",
+      "Infrastructure as a Service",
+      "Software as a Service",
+      "On-premises hosting"
+    ],
+    "answer": "Platform as a Service",
+    "explanation": "PaaS supplies the runtime and platform, so the customer manages only its application and data. IaaS would leave the operating system to the customer; SaaS provides a finished application."
+  },
+  {
+    "question": "A database must tolerate one disk failure with good read performance and without halving its usable capacity. It has four disks. Which RAID level fits?",
+    "choices": [
+      "RAID 5",
+      "RAID 0",
+      "RAID 1",
+      "A single large disk"
+    ],
+    "answer": "RAID 5",
+    "explanation": "RAID 5 stripes data with distributed parity, surviving one disk failure while losing only one disk's worth of capacity. RAID 0 has no redundancy and RAID 1 halves capacity."
+  },
+  {
+    "question": "Alice wants to send Bob a message that only Bob can read, using public-key cryptography. Which key does she encrypt with?",
+    "choices": [
+      "Bob's public key",
+      "Bob's private key",
+      "Alice's private key",
+      "Alice's public key"
+    ],
+    "answer": "Bob's public key",
+    "explanation": "Anything encrypted with Bob's public key can be decrypted only with Bob's private key, which only Bob holds. Encrypting with Alice's private key would be a signature, not secrecy."
+  },
+  {
+    "question": "A software vendor wants customers to verify that a download really came from the vendor and was not altered. What should the vendor provide?",
+    "choices": [
+      "A digital signature made with the vendor's private key",
+      "The file encrypted with each customer's password",
+      "A longer file name",
+      "A hash sent in the same unprotected email as the file"
+    ],
+    "answer": "A digital signature made with the vendor's private key",
+    "explanation": "A signature is a hash of the file encrypted with the vendor's private key. Verifying it with the vendor's public key proves both origin and integrity."
+  },
+  {
+    "question": "A site stores user passwords. Which storage method is appropriate?",
+    "choices": [
+      "A salted hash from a slow password-hashing algorithm",
+      "Plain text, so support staff can read them",
+      "Reversible encryption with one shared key in the source code",
+      "An unsalted MD5 hash"
+    ],
+    "answer": "A salted hash from a slow password-hashing algorithm",
+    "explanation": "Passwords should never be recoverable. A unique salt defeats precomputed tables and a deliberately slow hash makes guessing expensive."
+  },
+  {
+    "question": "A comment field on a forum displays whatever users type. An attacker posts a script tag, and other users' browsers run it. Which attack is this, and what is the main defence?",
+    "choices": [
+      "Cross-site scripting; encode output and validate input",
+      "SQL injection; use prepared statements",
+      "Denial of service; add more servers",
+      "Phishing; train users to check links"
+    ],
+    "answer": "Cross-site scripting; encode output and validate input",
+    "explanation": "Stored XSS runs attacker script in victims' browsers. Encoding special characters when rendering makes the browser display the text instead of executing it."
+  },
+  {
+    "question": "Staff receive an email that appears to come from the IT department asking them to confirm their password on a linked page. Which threat is this, and which control reduces the damage if someone falls for it?",
+    "choices": [
+      "Phishing; multi-factor authentication",
+      "A worm; a firewall rule",
+      "Ransomware; disk encryption",
+      "Sniffing; a longer password"
+    ],
+    "answer": "Phishing; multi-factor authentication",
+    "explanation": "Phishing tricks people into revealing credentials. With multi-factor authentication a stolen password alone is not enough to log in."
+  },
+  {
+    "question": "An accounts clerk can view and edit payroll records, source code and firewall rules, although the job only needs invoices. Which security principle is violated?",
+    "choices": [
+      "Least privilege",
+      "Defence in depth",
+      "Non-repudiation",
+      "Availability"
+    ],
+    "answer": "Least privilege",
+    "explanation": "Users should have only the access their job requires. Excess privileges increase the damage from mistakes or a compromised account."
+  }
+]

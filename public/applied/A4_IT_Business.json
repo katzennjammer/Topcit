@@ -1,0 +1,167 @@
+[
+  {
+    "question": "A project has a planned value of 80,000, an earned value of 60,000 and an actual cost of 75,000. What is its status?",
+    "choices": [
+      "Behind schedule and over budget",
+      "Ahead of schedule and under budget",
+      "Behind schedule but under budget",
+      "Ahead of schedule but over budget"
+    ],
+    "answer": "Behind schedule and over budget",
+    "explanation": "SV = EV - PV = -20,000, so it is behind schedule. CV = EV - AC = -15,000, so it is over budget. SPI is 0.75 and CPI is 0.80."
+  },
+  {
+    "question": "A project is two weeks late. The manager has extra budget and the delayed activities are on the critical path and can be done faster with more people. Which technique applies?",
+    "choices": [
+      "Crashing",
+      "Fast tracking",
+      "Resource levelling",
+      "Scope creep"
+    ],
+    "answer": "Crashing",
+    "explanation": "Crashing shortens critical-path activities by adding resources, at extra cost. Fast tracking would run sequential activities in parallel instead, adding risk but not necessarily cost."
+  },
+  {
+    "question": "Midway through a project, the customer keeps adding small features informally, and the schedule slips. What should the project manager do?",
+    "choices": [
+      "Route every change through formal change control to assess its impact first",
+      "Accept all requests to keep the customer happy",
+      "Refuse all changes for the rest of the project",
+      "Ask the team to work unpaid overtime quietly"
+    ],
+    "answer": "Route every change through formal change control to assess its impact first",
+    "explanation": "Uncontrolled additions are scope creep. Change control evaluates each request's effect on scope, time and cost before it is approved or rejected."
+  },
+  {
+    "question": "A project relies on a single supplier for a custom component, and late delivery would stop the project. The manager signs a second supplier as a backup. Which risk response is this?",
+    "choices": [
+      "Mitigation",
+      "Acceptance",
+      "Transfer",
+      "Exploitation"
+    ],
+    "answer": "Mitigation",
+    "explanation": "Mitigation reduces the probability or impact of a threat. A second source lowers the impact of the first supplier failing. Transfer would shift the risk to a third party, for example by insurance."
+  },
+  {
+    "question": "A Scrum team finishes a sprint and meets to discuss what went well and what to change in how they work. Which event is this?",
+    "choices": [
+      "Sprint retrospective",
+      "Sprint review",
+      "Daily scrum",
+      "Sprint planning"
+    ],
+    "answer": "Sprint retrospective",
+    "explanation": "The retrospective inspects the team's process and agrees improvements. The sprint review, by contrast, shows the product increment to stakeholders."
+  },
+  {
+    "question": "A company uses a library licensed under the GPL inside a product that it sells as closed source. What is the legal issue?",
+    "choices": [
+      "Distributing the product may require releasing its source code under the GPL",
+      "There is no issue because the library was free to download",
+      "The company must pay the library authors a fee per copy",
+      "The company must rename the library"
+    ],
+    "answer": "Distributing the product may require releasing its source code under the GPL",
+    "explanation": "The GPL is a copyleft licence: software that incorporates GPL code and is distributed must itself be offered under the GPL with source. Permissive licences such as MIT or BSD do not require this."
+  },
+  {
+    "question": "A developer invents a new compression method, writes the code for it and designs a logo for the product. Which form of protection applies to each, in that order?",
+    "choices": [
+      "Patent, copyright, trademark",
+      "Copyright, patent, trade secret",
+      "Trademark, patent, copyright",
+      "Trade secret, trademark, patent"
+    ],
+    "answer": "Patent, copyright, trademark",
+    "explanation": "Patents protect inventions and methods, copyright protects the expression of the code, and trademarks protect names and logos that identify a product."
+  },
+  {
+    "question": "An engineer finds that a released medical application sometimes shows the wrong dosage. Management asks the engineer to stay quiet until the next scheduled release in six months. What does professional ethics require?",
+    "choices": [
+      "Report the risk through proper channels, because public safety comes first",
+      "Stay silent, because loyalty to the employer comes first",
+      "Fix it secretly without telling anyone",
+      "Post the details anonymously on social media immediately"
+    ],
+    "answer": "Report the risk through proper channels, because public safety comes first",
+    "explanation": "Codes of ethics for software engineers put the public interest and safety above the interests of the employer. The defect must be escalated and disclosed appropriately."
+  },
+  {
+    "question": "A company collects customers' phone numbers to deliver orders and then sells the list to an advertiser without asking. Which privacy principle is violated?",
+    "choices": [
+      "Personal data may be used only for the purpose it was collected for, unless the person consents",
+      "Data must always be stored in the cloud",
+      "Data must be kept forever",
+      "Phone numbers are not personal data"
+    ],
+    "answer": "Personal data may be used only for the purpose it was collected for, unless the person consents",
+    "explanation": "Purpose limitation and consent are core principles of privacy laws such as the GDPR. Using data for a new purpose needs a legal basis such as the person's consent."
+  },
+  {
+    "question": "A retailer's inventory, sales and accounting systems hold conflicting figures because each department keeps its own data. Which solution addresses this?",
+    "choices": [
+      "ERP",
+      "CRM",
+      "A new company logo",
+      "More spreadsheets"
+    ],
+    "answer": "ERP",
+    "explanation": "Enterprise Resource Planning integrates core business processes on one shared database, so every department works from the same figures."
+  },
+  {
+    "question": "A company must choose between two projects. Project A costs 100,000 and returns 150,000; Project B costs 200,000 and returns 280,000. Which has the higher ROI?",
+    "choices": [
+      "Project A, with 50% against 40%",
+      "Project B, with 80% against 50%",
+      "They are equal",
+      "Project B, because its profit is larger"
+    ],
+    "answer": "Project A, with 50% against 40%",
+    "explanation": "ROI = (return - cost) / cost. A gives 50,000 / 100,000 = 50%. B gives 80,000 / 200,000 = 40%. B earns more in absolute terms but less per unit invested."
+  },
+  {
+    "question": "A firm analyses new entrants, substitute products, supplier power, buyer power and rivalry before entering a market. Which framework is it using?",
+    "choices": [
+      "Porter's Five Forces",
+      "SWOT analysis",
+      "The BCG matrix",
+      "The Balanced Scorecard"
+    ],
+    "answer": "Porter's Five Forces",
+    "explanation": "Porter's Five Forces assesses how attractive an industry is by looking at those five competitive pressures."
+  },
+  {
+    "question": "An outsourcing contract states that the system must be available 99.9% of the time and that incidents must be answered within 30 minutes, with penalties otherwise. What is this document?",
+    "choices": [
+      "A service level agreement",
+      "A request for proposal",
+      "A work breakdown structure",
+      "A non-disclosure agreement"
+    ],
+    "answer": "A service level agreement",
+    "explanation": "An SLA defines measurable service targets between a provider and a customer, usually with remedies if they are missed."
+  },
+  {
+    "question": "You must tell a non-technical executive that a release will be three weeks late. Which message is the most effective?",
+    "choices": [
+      "State the delay and its business impact first, then the cause and the recovery plan",
+      "Begin with a detailed history of the technical problems",
+      "Send the raw defect log and let them work it out",
+      "Wait until the original deadline passes to mention it"
+    ],
+    "answer": "State the delay and its business impact first, then the cause and the recovery plan",
+    "explanation": "Business communication leads with the conclusion and what it means for the reader, followed by supporting detail and next steps, in language the audience understands."
+  },
+  {
+    "question": "A team is estimating a task. The optimistic estimate is 2 days, the most likely is 5 and the pessimistic is 14. What is the PERT expected duration?",
+    "choices": [
+      "6 days",
+      "5 days",
+      "7 days",
+      "8 days"
+    ],
+    "answer": "6 days",
+    "explanation": "PERT weights the most likely value four times: (2 + 4 x 5 + 14) / 6 = 36 / 6 = 6 days."
+  }
+]
