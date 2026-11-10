@@ -3,6 +3,9 @@ import { ArrowLeft, ArrowRight, Clock, Flag, Loader2, Send, CheckCircle2, XCircl
 import { CodeChallenge } from './CodeChallenge';
 import { DiagramCanvas } from './DiagramCanvas';
 import { Checklist } from './Checklist';
+import { CalcTask } from './CalcTask';
+import { ModelDiagram } from './ModelDiagram';
+import { gradeCalc } from '../utils/calcGrader';
 import { buildExam, earnedPoints, isAnswered, isShortAnswerCorrect, TYPE_LABELS } from '../utils/examBuilder';
 import { gradeChallenge, warmUpRunner } from '../utils/pyRunner';
 import { loadJSON, saveJSON, removeKey, LAB_KEYS } from '../utils/storage';
@@ -38,12 +41,13 @@ function ExamIntro({ onStart, onResume, hasDraft, history, starting, error }) {
               <tr><td>Multiple choice</td><td>38</td><td>190</td></tr>
               <tr><td>Short answer</td><td>12</td><td>120</td></tr>
               <tr><td>Descriptive</td><td>7</td><td>210</td></tr>
-              <tr><td>Performance (Python, SQL, diagrams)</td><td>8</td><td>480</td></tr>
+              <tr><td>Performance (code, SQL, diagrams, calculations)</td><td>8</td><td>480</td></tr>
             </tbody>
           </table>
           <ul className="exam-notes">
             <li>The timer keeps running if you leave the page. Your answers are saved as you go.</li>
-            <li>Multiple choice, short answer and code are marked automatically.</li>
+            <li>Multiple choice, short answer, code and calculations are marked automatically.</li>
+            <li>Each module carries its official share: M1 365, M2 265, M3 235 and M4 135 points.</li>
             <li>You mark your own descriptive answers and diagrams against the model answers afterwards.</li>
             <li>Coding and diagram questions need an internet connection.</li>
           </ul>
@@ -153,6 +157,14 @@ function QuestionBody({ item, answer, setAnswer, codeResult, setCodeResult, them
       </>
     );
   }
+  if (item.type === 'calc') {
+    return (
+      <>
+        <h2 className="exam-question">{q.title}</h2>
+        <CalcTask task={q} values={answer || {}} onChange={setAnswer} examMode />
+      </>
+    );
+  }
   return (
     <>
       <h2 className="exam-question">{q.title} ({q.kind.toLowerCase()})</h2>
@@ -166,7 +178,7 @@ function QuestionBody({ item, answer, setAnswer, codeResult, setCodeResult, them
   );
 }
 
-function ReviewItem({ item, index, answer, grade, setGrade }) {
+function ReviewItem({ item, index, answer, grade, setGrade, theme }) {
   const q = item.q;
   const earned = earnedPoints(item, answer, grade);
   const pending = earned === null;
@@ -199,9 +211,9 @@ function ReviewItem({ item, index, answer, grade, setGrade }) {
           {q.explanation && <p className="review-explain">{q.explanation}</p>}
           {answer && (
             <div className="grade-buttons">
-              <span>Matching is strict. Was your answer right?</span>
+              <span>Marked automatically. Disagree?</span>
               {[[true, 'Count as correct'], [false, 'Count as wrong']].map(([value, label]) => {
-                const current = grade && typeof grade.override === 'boolean' ? grade.override : isShortAnswerCorrect(answer, q.answer);
+                const current = grade && typeof grade.override === 'boolean' ? grade.override : isShortAnswerCorrect(answer, q.answers || q.answer);
                 return (
                   <button key={label} className={current === value ? 'active' : ''} onClick={() => setGrade({ override: value })}>
                     {label}
@@ -243,6 +255,27 @@ function ReviewItem({ item, index, answer, grade, setGrade }) {
         </>
       )}
 
+      {item.type === 'calc' && (
+        <>
+          <table className="plain-table calc-review">
+            <thead><tr><th>Asked for</th><th>Your answer</th><th>Correct answer</th></tr></thead>
+            <tbody>
+              {q.fields.map((field, i) => {
+                const ok = gradeCalc(q, answer || {}).marks[i];
+                return (
+                  <tr key={i} className={ok ? 'ok' : 'bad'}>
+                    <td>{field.label}</td>
+                    <td>{answer?.[i] ? answer[i] : 'blank'}</td>
+                    <td>{String(field.answer)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <p className="review-explain">{q.explanation}</p>
+        </>
+      )}
+
       {item.type === 'diagram' && (
         <>
           {answer?.preview ? (
@@ -262,13 +295,19 @@ function ReviewItem({ item, index, answer, grade, setGrade }) {
             </>
           )}
           <p className="review-explain">{q.modelAnswer}</p>
+          {q.mermaid && (
+            <details className="model-details">
+              <summary>Show a model diagram</summary>
+              <ModelDiagram source={q.mermaid} dark={theme === 'dark'} />
+            </details>
+          )}
         </>
       )}
     </li>
   );
 }
 
-function ExamReview({ exam, onDone, setGrade }) {
+function ExamReview({ exam, onDone, setGrade, theme }) {
   const { items, answers, grades } = exam;
   const rows = items.map((item) => ({ item, earned: earnedPoints(item, answers[item.key], grades[item.key]) }));
   const score = rows.reduce((sum, r) => sum + (r.earned || 0), 0);
@@ -283,7 +322,7 @@ function ExamReview({ exam, onDone, setGrade }) {
       available: mine.reduce((s, r) => s + r.item.points, 0),
     };
   });
-  const types = ['mcq', 'short', 'desc', 'code', 'diagram'].map((type) => {
+  const types = ['mcq', 'short', 'desc', 'code', 'calc', 'diagram'].map((type) => {
     const mine = rows.filter((r) => r.item.type === type);
     return {
       type,
@@ -342,6 +381,7 @@ function ExamReview({ exam, onDone, setGrade }) {
             answer={answers[item.key]}
             grade={grades[item.key]}
             setGrade={(g) => setGrade(item.key, g)}
+            theme={theme}
           />
         ))}
       </ol>
@@ -483,7 +523,7 @@ export function ExamPage({ theme }) {
     if (!exam) return [];
     const groups = [];
     exam.items.forEach((item, index) => {
-      const label = item.type === 'code' || item.type === 'diagram' ? 'Performance' : TYPE_LABELS[item.type];
+      const label = ['code', 'calc', 'diagram'].includes(item.type) ? 'Performance' : TYPE_LABELS[item.type];
       const last = groups[groups.length - 1];
       if (last && last.label === label) last.entries.push({ item, index });
       else groups.push({ label, entries: [{ item, index }] });
@@ -505,7 +545,7 @@ export function ExamPage({ theme }) {
   }
 
   if (stage === 'review') {
-    return <ExamReview exam={exam} onDone={finishReview} setGrade={setGrade} />;
+    return <ExamReview exam={exam} onDone={finishReview} setGrade={setGrade} theme={theme} />;
   }
 
   const item = exam.items[exam.index];

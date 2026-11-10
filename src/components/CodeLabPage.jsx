@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { CheckCircle2, Circle } from 'lucide-react';
 import { CodeChallenge } from './CodeChallenge';
-import { loadCodingChallenges } from '../utils/practiceLoader';
+import { loadCodingChallenges, loadCalculationTasks } from '../utils/practiceLoader';
+import { CalcTask } from './CalcTask';
+import { gradeCalc } from '../utils/calcGrader';
 import { warmUpRunner } from '../utils/pyRunner';
 import { loadJSON, saveJSON, LAB_KEYS } from '../utils/storage';
 
@@ -10,13 +12,14 @@ export function CodeLabPage() {
   const [error, setError] = useState(null);
   const [activeId, setActiveId] = useState(null);
   const [filter, setFilter] = useState('all');
-  const [saved, setSaved] = useState(() => loadJSON(LAB_KEYS.CODE, { code: {}, solved: {} }));
+  const [saved, setSaved] = useState(() => ({ code: {}, solved: {}, calc: {}, ...loadJSON(LAB_KEYS.CODE, {}) }));
   const [results, setResults] = useState({});
 
   useEffect(() => {
     let alive = true;
-    loadCodingChallenges()
-      .then((list) => {
+    Promise.all([loadCodingChallenges(), loadCalculationTasks()])
+      .then(([code, calc]) => {
+        const list = [...code, ...calc];
         if (!alive) return;
         setChallenges(list);
         setActiveId((id) => id || list[0]?.id || null);
@@ -43,10 +46,10 @@ export function CodeLabPage() {
   return (
     <div className="lab-page">
       <header className="page-head">
-        <h1>Code lab</h1>
+        <h1>Performance lab</h1>
         <p>
-          Write and run real Python and SQL in your browser. Performance tasks like these carry
-          about 48% of the TOPCIT score.
+          Write and run Python and SQL, and work through calculation problems, all checked
+          automatically. Performance tasks like these carry about 48% of the TOPCIT score.
         </p>
         <p className="page-head-meta">{solvedCount} of {challenges.length} solved</p>
       </header>
@@ -54,7 +57,7 @@ export function CodeLabPage() {
       <div className="lab-layout">
         <nav className="lab-list card" aria-label="Challenges">
           <div className="segmented" role="tablist">
-            {[['all', 'All'], ['python', 'Python'], ['sql', 'SQL']].map(([key, label]) => (
+            {[['all', 'All'], ['python', 'Python'], ['sql', 'SQL'], ['calc', 'Calc']].map(([key, label]) => (
               <button
                 key={key}
                 role="tab"
@@ -89,21 +92,37 @@ export function CodeLabPage() {
             <>
               <div className="lab-main-head">
                 <h2>{active.title}</h2>
-                <span className="kind-tag">{active.kind === 'sql' ? 'SQL' : 'Python'}</span>
+                <span className="kind-tag">{{ sql: 'SQL', python: 'Python', calc: 'Calculation' }[active.kind]}, {active.module}</span>
               </div>
-              <CodeChallenge
-                key={active.id}
-                challenge={active}
-                code={saved.code[active.id]}
-                onCodeChange={(code) => setSaved((s) => ({ ...s, code: { ...s.code, [active.id]: code } }))}
-                result={results[active.id]}
-                onResult={(result) => {
-                  setResults((r) => ({ ...r, [active.id]: result }));
-                  if (result.total > 0 && result.passed === result.total) {
-                    setSaved((s) => ({ ...s, solved: { ...s.solved, [active.id]: true } }));
-                  }
-                }}
-              />
+              {active.kind === 'calc' ? (
+                <CalcTask
+                  key={active.id}
+                  task={active}
+                  values={saved.calc[active.id] || {}}
+                  onChange={(values) => {
+                    const graded = gradeCalc(active, values);
+                    setSaved((s) => ({
+                      ...s,
+                      calc: { ...s.calc, [active.id]: values },
+                      solved: graded.passed === graded.total ? { ...s.solved, [active.id]: true } : s.solved,
+                    }));
+                  }}
+                />
+              ) : (
+                <CodeChallenge
+                  key={active.id}
+                  challenge={active}
+                  code={saved.code[active.id]}
+                  onCodeChange={(code) => setSaved((s) => ({ ...s, code: { ...s.code, [active.id]: code } }))}
+                  result={results[active.id]}
+                  onResult={(result) => {
+                    setResults((r) => ({ ...r, [active.id]: result }));
+                    if (result.total > 0 && result.passed === result.total) {
+                      setSaved((s) => ({ ...s, solved: { ...s.solved, [active.id]: true } }));
+                    }
+                  }}
+                />
+              )}
             </>
           ) : (
             <p className="lab-muted">Loading challenges</p>

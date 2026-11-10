@@ -1,5 +1,6 @@
 import { loadQuizData, shuffleArray, shuffleQuestionChoices } from './quizLoader';
-import { loadCodingChallenges, loadDiagramTasks } from './practiceLoader';
+import { loadCodingChallenges, loadDiagramTasks, loadCalculationTasks, loadShortAnswers } from './practiceLoader';
+import { gradeCalc } from './calcGrader';
 import { OFFICIAL_MODULES, moduleForDescriptiveCategory } from '../data/modules';
 
 const QUIZ_FILES = {
@@ -14,27 +15,17 @@ const QUIZ_FILES = {
 };
 
 /**
- * Question mix. Points per type follow the official weighting:
- * multiple choice 19%, short answer 12%, descriptive 21%, performance 48%.
+ * Question mix. Points per type follow the official weighting (multiple
+ * choice 19%, short answer 12%, descriptive 21%, performance 48%), and the
+ * counts per module are chosen so each module's total matches its official
+ * share: M1 365, M2 265, M3 235, M4 135.
  */
 export const EXAM_SECTIONS = [
-  { type: 'mcq', label: 'Multiple choice', pointsEach: 5, perModule: { M1: 14, M2: 10, M3: 9, M4: 5 } },
-  { type: 'short', label: 'Short answer', pointsEach: 10, perModule: { M1: 4, M2: 3, M3: 3, M4: 2 } },
+  { type: 'mcq', label: 'Multiple choice', pointsEach: 5, perModule: { M1: 15, M2: 11, M3: 7, M4: 5 } },
+  { type: 'short', label: 'Short answer', pointsEach: 10, perModule: { M1: 5, M2: 3, M3: 2, M4: 2 } },
   { type: 'desc', label: 'Descriptive', pointsEach: 30, perModule: { M1: 2, M2: 2, M3: 2, M4: 1 } },
   { type: 'perf', label: 'Performance', pointsEach: 60 },
 ];
-const PERF_MIX = { python: 4, sql: 2, diagram: 2 };
-
-const isShortAnswerCandidate = (q) => {
-  const words = q.answer.trim().split(/\s+/).length;
-  return (
-    !q.code &&
-    words <= 3 &&
-    q.answer.length <= 30 &&
-    !/^which (is|of|statement|set|pair|example|command)\b/i.test(q.question) &&
-    !/example|following/i.test(q.question)
-  );
-};
 
 export function normalizeShortAnswer(text) {
   return String(text || '')
@@ -43,9 +34,11 @@ export function normalizeShortAnswer(text) {
     .replace(/[^a-z0-9%]/g, '');
 }
 
+/** expected may be one accepted answer or a list of them. */
 export function isShortAnswerCorrect(given, expected) {
   const a = normalizeShortAnswer(given);
-  return a.length > 0 && a === normalizeShortAnswer(expected);
+  if (a.length === 0) return false;
+  return [].concat(expected).some((e) => normalizeShortAnswer(e) === a);
 }
 
 export async function buildExam() {
@@ -55,44 +48,39 @@ export async function buildExam() {
       pools[id] = await loadQuizData(file);
     })
   );
-  const [descRes, challenges, diagrams] = await Promise.all([
+  const [descRes, challenges, diagrams, calcTasks, shortBank] = await Promise.all([
     fetch('/others/Descriptive_Questions.json').then((r) => {
       if (!r.ok) throw new Error('Could not load the descriptive questions.');
       return r.json();
     }),
     loadCodingChallenges(),
     loadDiagramTasks(),
+    loadCalculationTasks(),
+    loadShortAnswers(),
   ]);
 
   const items = [];
-  const used = new Set();
   const [mcq, short, desc, perf] = EXAM_SECTIONS;
 
-  // Short answers first, so the same question is not reused as multiple choice
   for (const mod of OFFICIAL_MODULES) {
-    const pool = shuffleArray(
-      mod.quizIds
-        .filter((id) => id.startsWith('Essence'))
-        .flatMap((id) => pools[id].map((q) => ({ ...q, uid: `${id}:${q.id}` })))
-        .filter(isShortAnswerCandidate)
-    ).slice(0, short.perModule[mod.id]);
-    pool.forEach((q) => {
-      used.add(q.uid);
-      items.push({
-        key: `short-${q.uid}`,
-        type: 'short',
-        module: mod.id,
-        points: short.pointsEach,
-        q: { question: q.question, answer: q.answer, explanation: q.explanation },
+    shuffleArray(shortBank.filter((q) => q.module === mod.id))
+      .slice(0, short.perModule[mod.id])
+      .forEach((q, i) => {
+        items.push({
+          key: `short-${mod.id}-${i}-${normalizeShortAnswer(q.answers[0])}`,
+          type: 'short',
+          module: mod.id,
+          points: short.pointsEach,
+          q: { question: q.question, answer: q.answers[0], answers: q.answers, explanation: q.explanation },
+        });
       });
-    });
   }
 
   for (const mod of OFFICIAL_MODULES) {
     const pool = shuffleArray(
       mod.quizIds
         .flatMap((id) => pools[id].map((q) => ({ ...q, uid: `${id}:${q.id}` })))
-        .filter((q) => !q.isDescriptive && !used.has(q.uid))
+        .filter((q) => !q.isDescriptive)
     ).slice(0, mcq.perModule[mod.id]);
     pool.forEach((q) => {
       const s = shuffleQuestionChoices(q);
@@ -121,18 +109,19 @@ export async function buildExam() {
     });
   }
 
+  // Performance tasks: M1 three, M2 two, M3 two, M4 one
   const pick = (list, n) => shuffleArray(list).slice(0, n);
-  [
-    ...pick(challenges.filter((c) => c.kind === 'python'), PERF_MIX.python),
-    ...pick(challenges.filter((c) => c.kind === 'sql'), PERF_MIX.sql),
-  ].forEach((c) => {
-    items.push({ key: `code-${c.id}`, type: 'code', module: c.module, points: perf.pointsEach, q: c });
-  });
-  pick(diagrams, PERF_MIX.diagram).forEach((t) => {
-    items.push({ key: `diagram-${t.id}`, type: 'diagram', module: t.module, points: perf.pointsEach, q: t });
-  });
+  const addPerf = (type, task) =>
+    items.push({ key: `${type}-${task.id}`, type, module: task.module, points: perf.pointsEach, q: task });
 
-  const order = ['mcq', 'short', 'desc', 'code', 'diagram'];
+  pick(challenges.filter((c) => c.kind === 'python'), 2).forEach((c) => addPerf('code', c));
+  pick(challenges.filter((c) => c.kind === 'sql'), 1).forEach((c) => addPerf('code', c));
+  pick(diagrams.filter((t) => t.module === 'M1'), 1).forEach((t) => addPerf('diagram', t));
+  pick(diagrams.filter((t) => t.module === 'M2'), 1).forEach((t) => addPerf('diagram', t));
+  pick(calcTasks.filter((t) => t.module === 'M3'), 2).forEach((t) => addPerf('calc', t));
+  pick(calcTasks.filter((t) => t.module === 'M4'), 1).forEach((t) => addPerf('calc', t));
+
+  const order = ['mcq', 'short', 'desc', 'code', 'calc', 'diagram'];
   items.sort((a, b) => order.indexOf(a.type) - order.indexOf(b.type));
   return items;
 }
@@ -142,6 +131,7 @@ export const TYPE_LABELS = {
   short: 'Short answer',
   desc: 'Descriptive',
   code: 'Performance: coding',
+  calc: 'Performance: calculation',
   diagram: 'Performance: diagram',
 };
 
@@ -149,6 +139,7 @@ export function isAnswered(item, answer) {
   if (answer === undefined || answer === null) return false;
   if (item.type === 'mcq') return true;
   if (item.type === 'diagram') return Boolean(answer.xml);
+  if (item.type === 'calc') return Object.values(answer).some((v) => String(v).trim() !== '');
   if (item.type === 'code') return String(answer).trim() !== String(item.q.starter || '').trim() && String(answer).trim() !== '';
   return String(answer).trim() !== '';
 }
@@ -159,6 +150,7 @@ export function isAnswered(item, answer) {
  *   mcq/short: nothing extra (short may carry { override: boolean })
  *   desc: { self: 0 | 0.5 | 1 }
  *   code: { passed, total }
+ *   calc: nothing extra (checked directly)
  *   diagram: { checked: number[] }
  * Returns null while a self-graded item has not been graded yet.
  */
@@ -167,7 +159,7 @@ export function earnedPoints(item, answer, grade) {
     case 'mcq':
       return answer === item.q.correctIndex ? item.points : 0;
     case 'short': {
-      const auto = isShortAnswerCorrect(answer, item.q.answer);
+      const auto = isShortAnswerCorrect(answer, item.q.answers || item.q.answer);
       const correct = grade && typeof grade.override === 'boolean' ? grade.override : auto;
       return correct ? item.points : 0;
     }
@@ -175,6 +167,10 @@ export function earnedPoints(item, answer, grade) {
       return grade && typeof grade.self === 'number' ? Math.round(item.points * grade.self) : null;
     case 'code':
       return grade && grade.total > 0 ? Math.round((item.points * grade.passed) / grade.total) : 0;
+    case 'calc': {
+      const graded = gradeCalc(item.q, answer || {});
+      return Math.round((item.points * graded.passed) / graded.total);
+    }
     case 'diagram':
       if (!answer || !answer.xml) return 0;
       return grade && Array.isArray(grade.checked)

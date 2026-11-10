@@ -26,3 +26,26 @@ export function loadDiagramTasks() {
   }
   return diagramsPromise;
 }
+
+let calcPromise = null;
+let shortPromise = null;
+
+export function loadCalculationTasks() {
+  if (!calcPromise) {
+    calcPromise = fetchJson('/practice/calculation_tasks.json').catch((err) => {
+      calcPromise = null;
+      throw err;
+    });
+  }
+  return calcPromise;
+}
+
+export function loadShortAnswers() {
+  if (!shortPromise) {
+    shortPromise = fetchJson('/others/Short_Answers.json').catch((err) => {
+      shortPromise = null;
+      throw err;
+    });
+  }
+  return shortPromise;
+}

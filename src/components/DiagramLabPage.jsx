@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CheckCircle2, Circle, Eye, EyeOff } from 'lucide-react';
 import { DiagramCanvas } from './DiagramCanvas';
 import { Checklist } from './Checklist';
+import { ModelDiagram } from './ModelDiagram';
 import { loadDiagramTasks } from '../utils/practiceLoader';
 import { loadJSON, saveJSON, LAB_KEYS } from '../utils/storage';
 
@@ -104,7 +105,13 @@ export function DiagramLabPage({ theme }) {
                   {showAnswer ? <EyeOff size={16} /> : <Eye size={16} />}
                   {showAnswer ? 'Hide model answer' : 'Show model answer'}
                 </button>
-                {showAnswer && <p className="lab-solution-text">{active.modelAnswer}</p>}
+                {showAnswer && (
+                  <>
+                    <p className="lab-solution-text">{active.modelAnswer}</p>
+                    {active.mermaid && <ModelDiagram key={active.id} source={active.mermaid} dark={theme === 'dark'} />}
+                    <p className="lab-muted">The model is one valid answer. Yours can be laid out differently and still be correct.</p>
+                  </>
+                )}
               </div>
             </>
           ) : (

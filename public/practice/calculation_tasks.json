@@ -1,0 +1,241 @@
+[
+  {
+    "id": "calc-subnet",
+    "module": "M3",
+    "title": "Subnet a host address",
+    "difficulty": "medium",
+    "prompt": "A host has the IPv4 address 192.168.10.77 with the prefix /26. Work out the subnet it belongs to.",
+    "fields": [
+      {
+        "label": "Network address",
+        "answer": "192.168.10.64",
+        "type": "text"
+      },
+      {
+        "label": "Broadcast address",
+        "answer": "192.168.10.127",
+        "type": "text"
+      },
+      {
+        "label": "Usable host addresses in the subnet",
+        "answer": 62
+      }
+    ],
+    "explanation": "/26 leaves 6 host bits, so each subnet has 2^6 = 64 addresses and the subnets start at .0, .64, .128 and .192. Address .77 falls in the block .64 to .127: the first address is the network address and the last is the broadcast address. Usable hosts = 64 - 2 = 62.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-scheduling",
+    "module": "M3",
+    "title": "Average waiting time",
+    "difficulty": "medium",
+    "prompt": "Four processes arrive at time 0 in the order P1, P2, P3, P4 with CPU burst times of 6, 8, 7 and 3 ms. Calculate the average waiting time under each scheduling policy.",
+    "fields": [
+      {
+        "label": "FCFS average waiting time (ms)",
+        "answer": 10.25
+      },
+      {
+        "label": "SJF average waiting time (ms)",
+        "answer": 7
+      }
+    ],
+    "explanation": "FCFS runs them in arrival order, so the waits are 0, 6, 14 and 21 ms: (0 + 6 + 14 + 21) / 4 = 10.25. SJF runs the shortest first (3, 6, 7, 8), so the waits are 0, 3, 9 and 16 ms: 28 / 4 = 7. SJF gives the minimum average waiting time.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-paging",
+    "module": "M3",
+    "title": "Page faults",
+    "difficulty": "hard",
+    "prompt": "A process references pages in this order: 7 0 1 2 0 3 0 4 2 3 0 3 2. Memory has 3 frames, all empty at the start. Count the page faults for each replacement policy.",
+    "fields": [
+      {
+        "label": "Page faults with FIFO",
+        "answer": 10
+      },
+      {
+        "label": "Page faults with LRU",
+        "answer": 9
+      }
+    ],
+    "explanation": "Every reference to a page that is not in a frame is a fault, including the first three. FIFO evicts the page that was loaded earliest and produces 10 faults. LRU evicts the page that was used least recently and produces 9 faults. Trace the frames step by step to check.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-raid",
+    "module": "M3",
+    "title": "RAID usable capacity",
+    "difficulty": "easy",
+    "prompt": "A storage array has six 4 TB disks. Give the usable capacity for each RAID level.",
+    "fields": [
+      {
+        "label": "RAID 0 (TB)",
+        "answer": 24
+      },
+      {
+        "label": "RAID 1+0 (TB)",
+        "answer": 12
+      },
+      {
+        "label": "RAID 5 (TB)",
+        "answer": 20
+      },
+      {
+        "label": "RAID 6 (TB)",
+        "answer": 16
+      }
+    ],
+    "explanation": "RAID 0 stripes with no redundancy, so all 6 disks count: 24 TB. RAID 1+0 mirrors every disk, so half is usable: 12 TB. RAID 5 uses one disk of parity: 5 x 4 = 20 TB. RAID 6 uses two disks of parity: 4 x 4 = 16 TB.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-availability",
+    "module": "M3",
+    "title": "System availability",
+    "difficulty": "medium",
+    "prompt": "A service needs a web server (availability 99.9%) and a database server (availability 99.5%) to both be running. Separately, a pair of application servers, each 99% available, is set up so that either one can carry the service.",
+    "fields": [
+      {
+        "label": "Availability of web and database in series (%)",
+        "answer": 99.4,
+        "tolerance": 0.01
+      },
+      {
+        "label": "Availability of the redundant pair (%)",
+        "answer": 99.99,
+        "tolerance": 0.001
+      },
+      {
+        "label": "Yearly downtime at 99.9% availability (hours)",
+        "answer": 8.76,
+        "tolerance": 0.05
+      }
+    ],
+    "explanation": "In series both must work, so multiply: 0.999 x 0.995 = 0.994005, about 99.40%. With redundancy the pair fails only if both fail: 1 - (0.01 x 0.01) = 0.9999, or 99.99%. A year has 8,760 hours, and 0.1% of that is 8.76 hours.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-rsa",
+    "module": "M3",
+    "title": "RSA with small numbers",
+    "difficulty": "hard",
+    "prompt": "Use RSA with the primes p = 3 and q = 11 and the public exponent e = 3.",
+    "fields": [
+      {
+        "label": "Modulus n",
+        "answer": 33
+      },
+      {
+        "label": "phi(n)",
+        "answer": 20
+      },
+      {
+        "label": "Private exponent d",
+        "answer": 7
+      },
+      {
+        "label": "Ciphertext of the message m = 4",
+        "answer": 31
+      }
+    ],
+    "explanation": "n = p x q = 33. phi(n) = (p - 1)(q - 1) = 2 x 10 = 20. d is the inverse of e modulo 20: 3 x 7 = 21, which leaves remainder 1, so d = 7. Encryption is m^e mod n: 4^3 = 64, and 64 mod 33 = 31.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-evm",
+    "module": "M4",
+    "title": "Earned value analysis",
+    "difficulty": "medium",
+    "prompt": "A project has a budget at completion (BAC) of 100,000. At the end of month 5 it was planned to be 50% complete. It is actually 40% complete and has cost 45,000 so far.",
+    "fields": [
+      {
+        "label": "Schedule variance (SV)",
+        "answer": -10000
+      },
+      {
+        "label": "Cost variance (CV)",
+        "answer": -5000
+      },
+      {
+        "label": "Schedule performance index (SPI)",
+        "answer": 0.8,
+        "tolerance": 0.005
+      },
+      {
+        "label": "Cost performance index (CPI), two decimals",
+        "answer": 0.89,
+        "tolerance": 0.005
+      },
+      {
+        "label": "Estimate at completion (EAC = BAC / CPI)",
+        "answer": 112500,
+        "tolerance": 600
+      }
+    ],
+    "explanation": "PV = 50% of 100,000 = 50,000. EV = 40% of 100,000 = 40,000. AC = 45,000. SV = EV - PV = -10,000 (behind schedule). CV = EV - AC = -5,000 (over budget). SPI = EV / PV = 0.80. CPI = EV / AC = 0.89. EAC = 100,000 / 0.889 = 112,500.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-cpm",
+    "module": "M4",
+    "title": "Critical path",
+    "difficulty": "medium",
+    "prompt": "A project has these activities (duration in days, predecessors): A (3, none), B (4, A), C (2, A), D (5, B), E (6, C), F (2, D and E).",
+    "fields": [
+      {
+        "label": "Project duration (days)",
+        "answer": 14
+      },
+      {
+        "label": "Critical path, as letters such as ACEF",
+        "answer": "ABDF",
+        "type": "text"
+      },
+      {
+        "label": "Total float of activity C (days)",
+        "answer": 1
+      }
+    ],
+    "explanation": "There are two paths. A-B-D-F takes 3 + 4 + 5 + 2 = 14 days and A-C-E-F takes 3 + 2 + 6 + 2 = 13 days. The longest path is the critical path, so the project takes 14 days. Activities C and E can slip by 14 - 13 = 1 day without delaying the project.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-pert",
+    "module": "M4",
+    "title": "Three-point estimate",
+    "difficulty": "easy",
+    "prompt": "An activity is estimated at 4 days in the optimistic case, 7 days most likely and 16 days in the pessimistic case. Use the PERT formulas.",
+    "fields": [
+      {
+        "label": "Expected duration (days)",
+        "answer": 8
+      },
+      {
+        "label": "Standard deviation (days)",
+        "answer": 2
+      }
+    ],
+    "explanation": "Expected = (O + 4M + P) / 6 = (4 + 28 + 16) / 6 = 8 days. Standard deviation = (P - O) / 6 = (16 - 4) / 6 = 2 days.",
+    "kind": "calc"
+  },
+  {
+    "id": "calc-roi",
+    "module": "M4",
+    "title": "Payback period and ROI",
+    "difficulty": "easy",
+    "prompt": "A system costs 200,000 to build and returns a net benefit of 80,000 at the end of each year for 4 years. Ignore the time value of money.",
+    "fields": [
+      {
+        "label": "Payback period (years)",
+        "answer": 2.5
+      },
+      {
+        "label": "ROI over the 4 years (%)",
+        "answer": 60
+      }
+    ],
+    "explanation": "The cumulative benefit reaches 200,000 after 200,000 / 80,000 = 2.5 years. Total benefit over 4 years is 320,000, so ROI = (320,000 - 200,000) / 200,000 = 60%.",
+    "kind": "calc"
+  }
+]

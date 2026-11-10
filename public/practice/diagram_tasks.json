@@ -13,7 +13,8 @@
       "A fork and a join showing shipping and the confirmation email happening in parallel",
       "A cancellation path that notifies the customer and reaches a final node"
     ],
-    "modelAnswer": "Start, then Place order, then Check stock. A decision [in stock] leads to Process payment and [out of stock] leads to Cancel order. After payment, a second decision: [approved] leads to a fork whose two branches are Pack item then Ship item, and Send confirmation email; both meet at a join and then the final node. [declined] leads to Cancel order, then Notify customer, then the final node."
+    "modelAnswer": "Start, then Place order, then Check stock. A decision [in stock] leads to Process payment and [out of stock] leads to Cancel order. After payment, a second decision: [approved] leads to a fork whose two branches are Pack item then Ship item, and Send confirmation email; both meet at a join and then the final node. [declined] leads to Cancel order, then Notify customer, then the final node.",
+    "mermaid": "flowchart TD\n  S((Start)) --> A[Place order]\n  A --> B[Check stock]\n  B --> D1{In stock?}\n  D1 -- no --> X[Cancel order]\n  D1 -- yes --> P[Process payment]\n  P --> D2{Payment approved?}\n  D2 -- no --> X\n  D2 -- yes --> F[/Fork/]\n  F --> K[Pack item]\n  K --> H[Ship item]\n  F --> E[Send confirmation email]\n  H --> J[/Join/]\n  E --> J\n  X --> N[Notify customer]\n  J --> Z(((End)))\n  N --> Z"
   },
   {
     "id": "dg-class-library",
@@ -29,7 +30,8 @@
       "Loan associated with one Member and one BookCopy",
       "Student and Staff shown as subclasses of Member using generalization"
     ],
-    "modelAnswer": "Member (memberId, name; borrow(), returnCopy()) is the superclass of Student and Staff (hollow-triangle generalization). Book (isbn, title, author) 1 to 1..* BookCopy (copyId, status). Loan (borrowDate, dueDate, returnDate) is linked to exactly one Member and exactly one BookCopy; a Member has 0..* Loans and a BookCopy has 0..* Loans over time."
+    "modelAnswer": "Member (memberId, name; borrow(), returnCopy()) is the superclass of Student and Staff (hollow-triangle generalization). Book (isbn, title, author) 1 to 1..* BookCopy (copyId, status). Loan (borrowDate, dueDate, returnDate) is linked to exactly one Member and exactly one BookCopy; a Member has 0..* Loans and a BookCopy has 0..* Loans over time.",
+    "mermaid": "classDiagram\n  class Member {\n    +String memberId\n    +String name\n    +borrow(copy)\n    +returnCopy(copy)\n  }\n  class Student\n  class Staff\n  class Book {\n    +String isbn\n    +String title\n    +String author\n  }\n  class BookCopy {\n    +String copyId\n    +String status\n  }\n  class Loan {\n    +Date borrowDate\n    +Date dueDate\n    +Date returnDate\n  }\n  Member <|-- Student\n  Member <|-- Staff\n  Book \"1\" --> \"1..*\" BookCopy : has\n  Member \"1\" --> \"0..*\" Loan : makes\n  BookCopy \"1\" --> \"0..*\" Loan : lent in"
   },
   {
     "id": "dg-er-enrolment",
@@ -45,7 +47,8 @@
       "A one-to-many relationship from Instructor to Course",
       "A one-to-many relationship from Department to Instructor"
     ],
-    "modelAnswer": "Student (student_id PK, name) M:N Course (course_id PK, title, credits) through Enrolment, which carries the attribute grade. Instructor (instructor_id PK, name) 1:N Course. Department (department_id PK, name) 1:N Instructor. When converted to tables, Enrolment becomes a table whose key is (student_id, course_id)."
+    "modelAnswer": "Student (student_id PK, name) M:N Course (course_id PK, title, credits) through Enrolment, which carries the attribute grade. Instructor (instructor_id PK, name) 1:N Course. Department (department_id PK, name) 1:N Instructor. When converted to tables, Enrolment becomes a table whose key is (student_id, course_id).",
+    "mermaid": "erDiagram\n  STUDENT ||--o{ ENROLMENT : has\n  COURSE ||--o{ ENROLMENT : has\n  INSTRUCTOR ||--o{ COURSE : teaches\n  DEPARTMENT ||--o{ INSTRUCTOR : employs\n  STUDENT {\n    int student_id PK\n    string name\n  }\n  COURSE {\n    int course_id PK\n    string title\n    int credits\n    int instructor_id FK\n  }\n  ENROLMENT {\n    int student_id PK\n    int course_id PK\n    string grade\n  }\n  INSTRUCTOR {\n    int instructor_id PK\n    string name\n    int department_id FK\n  }\n  DEPARTMENT {\n    int department_id PK\n    string name\n  }"
   },
   {
     "id": "dg-sequence-login",
@@ -61,7 +64,8 @@
       "An alt fragment separating the success and failure outcomes",
       "Activation bars on the lifelines while they are processing"
     ],
-    "modelAnswer": "User to Browser: enter credentials. Browser to Auth server: login(username, password). Auth server to Database: findUser(username); Database returns the user record (dashed). Auth server verifies the hash (self-message). alt [valid]: Auth server returns a session token, Browser shows the dashboard. [invalid]: Auth server returns an error, Browser shows an error message."
+    "modelAnswer": "User to Browser: enter credentials. Browser to Auth server: login(username, password). Auth server to Database: findUser(username); Database returns the user record (dashed). Auth server verifies the hash (self-message). alt [valid]: Auth server returns a session token, Browser shows the dashboard. [invalid]: Auth server returns an error, Browser shows an error message.",
+    "mermaid": "sequenceDiagram\n  actor User\n  participant Browser\n  participant Auth as Authentication server\n  participant DB as Database\n  User->>Browser: Enter username and password\n  Browser->>+Auth: login(username, password)\n  Auth->>+DB: findUser(username)\n  DB-->>-Auth: user record\n  Auth->>Auth: verify password hash\n  alt valid credentials\n    Auth-->>Browser: session token\n    Browser-->>User: show dashboard\n  else invalid credentials\n    Auth-->>-Browser: error\n    Browser-->>User: show error message\n  end"
   },
   {
     "id": "dg-usecase-atm",
@@ -77,7 +81,8 @@
       "Technician use cases for refilling cash and maintenance",
       "Use cases named as verb phrases from the actor's point of view"
     ],
-    "modelAnswer": "Inside the ATM boundary: Withdraw cash, Deposit cash, Check balance and Transfer funds, each with a dashed «include» arrow to Authenticate customer. Customer is associated with those four. Technician is associated with Refill cash and Perform maintenance. The Bank system is a secondary actor on the right, associated with the transaction use cases."
+    "modelAnswer": "Inside the ATM boundary: Withdraw cash, Deposit cash, Check balance and Transfer funds, each with a dashed «include» arrow to Authenticate customer. Customer is associated with those four. Technician is associated with Refill cash and Perform maintenance. The Bank system is a secondary actor on the right, associated with the transaction use cases.",
+    "mermaid": "flowchart LR\n  C([Customer])\n  T([Technician])\n  B([Bank system])\n  subgraph ATM\n    W(Withdraw cash)\n    D(Deposit cash)\n    K(Check balance)\n    F(Transfer funds)\n    A(Authenticate customer)\n    R(Refill cash)\n    M(Perform maintenance)\n  end\n  C --- W\n  C --- D\n  C --- K\n  C --- F\n  W -. include .-> A\n  D -. include .-> A\n  K -. include .-> A\n  F -. include .-> A\n  T --- R\n  T --- M\n  W --- B\n  D --- B\n  K --- B\n  F --- B"
   },
   {
     "id": "dg-flowchart-grade",
@@ -93,6 +98,7 @@
       "A pass counter that is initialised before the loop and incremented on the Pass branch",
       "Every arrow has a direction and every path reaches the end"
     ],
-    "modelAnswer": "Start; read N; set count = 0 and i = 0. Decision i < N? If no: print count, End. If yes: read score; decision score >= 60? Yes: print Pass and add 1 to count. No: print Fail. Then add 1 to i and return to the loop decision."
+    "modelAnswer": "Start; read N; set count = 0 and i = 0. Decision i < N? If no: print count, End. If yes: read score; decision score >= 60? Yes: print Pass and add 1 to count. No: print Fail. Then add 1 to i and return to the loop decision.",
+    "mermaid": "flowchart TD\n  S([Start]) --> I[/Read N/]\n  I --> Z[count = 0, i = 0]\n  Z --> L{i < N?}\n  L -- no --> O[/Print count/]\n  O --> E([End])\n  L -- yes --> R[/Read score/]\n  R --> D{score >= 60?}\n  D -- yes --> P[/Print Pass/]\n  P --> C[count = count + 1]\n  D -- no --> F[/Print Fail/]\n  C --> N[i = i + 1]\n  F --> N\n  N --> L"
   }
 ]
