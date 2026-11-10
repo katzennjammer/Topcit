@@ -1,0 +1,98 @@
+[
+  {
+    "id": "dg-activity-order",
+    "kind": "Activity diagram",
+    "module": "M1",
+    "title": "Online order processing",
+    "prompt": "Draw an activity diagram for processing an online order. The customer places an order and the system checks stock. If the item is in stock, payment is processed; if payment succeeds, the item is packed and shipped while a confirmation email is sent at the same time. If the item is out of stock or payment fails, the order is cancelled and the customer is notified.",
+    "checklist": [
+      "One initial node and at least one final node",
+      "Actions for place order, check stock, process payment, pack, ship and send confirmation",
+      "A decision node for stock availability with labelled guards",
+      "A decision node for payment success with labelled guards",
+      "A fork and a join showing shipping and the confirmation email happening in parallel",
+      "A cancellation path that notifies the customer and reaches a final node"
+    ],
+    "modelAnswer": "Start, then Place order, then Check stock. A decision [in stock] leads to Process payment and [out of stock] leads to Cancel order. After payment, a second decision: [approved] leads to a fork whose two branches are Pack item then Ship item, and Send confirmation email; both meet at a join and then the final node. [declined] leads to Cancel order, then Notify customer, then the final node."
+  },
+  {
+    "id": "dg-class-library",
+    "kind": "Class diagram",
+    "module": "M1",
+    "title": "Library lending system",
+    "prompt": "Draw a class diagram for a library. Members borrow copies of books. A book has a title, an author and an ISBN, and the library may own several copies of the same book. A loan records which member borrowed which copy, with a borrow date and a due date. Members are either students or staff, and staff may borrow for longer.",
+    "checklist": [
+      "Classes for Member, Book, BookCopy (or Copy) and Loan",
+      "Attributes with sensible types, such as isbn, title, borrowDate and dueDate",
+      "At least one operation, such as borrow() or returnCopy()",
+      "A one-to-many association between Book and BookCopy with multiplicities",
+      "Loan associated with one Member and one BookCopy",
+      "Student and Staff shown as subclasses of Member using generalization"
+    ],
+    "modelAnswer": "Member (memberId, name; borrow(), returnCopy()) is the superclass of Student and Staff (hollow-triangle generalization). Book (isbn, title, author) 1 to 1..* BookCopy (copyId, status). Loan (borrowDate, dueDate, returnDate) is linked to exactly one Member and exactly one BookCopy; a Member has 0..* Loans and a BookCopy has 0..* Loans over time."
+  },
+  {
+    "id": "dg-er-enrolment",
+    "kind": "ER diagram",
+    "module": "M2",
+    "title": "University enrolment",
+    "prompt": "Draw an ER diagram for course enrolment. Students enrol in courses and receive a grade for each. Each course is taught by exactly one instructor, and an instructor can teach several courses. Each instructor belongs to one department. Include primary keys.",
+    "checklist": [
+      "Entities for Student, Course, Instructor and Department",
+      "A primary key marked on every entity",
+      "A many-to-many relationship between Student and Course",
+      "The grade placed on the enrolment relationship (or an associative Enrolment entity), not on Student or Course",
+      "A one-to-many relationship from Instructor to Course",
+      "A one-to-many relationship from Department to Instructor"
+    ],
+    "modelAnswer": "Student (student_id PK, name) M:N Course (course_id PK, title, credits) through Enrolment, which carries the attribute grade. Instructor (instructor_id PK, name) 1:N Course. Department (department_id PK, name) 1:N Instructor. When converted to tables, Enrolment becomes a table whose key is (student_id, course_id)."
+  },
+  {
+    "id": "dg-sequence-login",
+    "kind": "Sequence diagram",
+    "module": "M1",
+    "title": "User login",
+    "prompt": "Draw a sequence diagram for logging in to a web application. The user submits a username and password in the browser. The browser sends them to the authentication server, which looks the user up in the database and verifies the password hash. On success a session token is returned and the dashboard is shown; on failure an error message is shown.",
+    "checklist": [
+      "Lifelines for User, Browser, Authentication server and Database",
+      "Messages in time order from top to bottom",
+      "A request from the server to the database and a return message back",
+      "Return messages drawn as dashed lines",
+      "An alt fragment separating the success and failure outcomes",
+      "Activation bars on the lifelines while they are processing"
+    ],
+    "modelAnswer": "User to Browser: enter credentials. Browser to Auth server: login(username, password). Auth server to Database: findUser(username); Database returns the user record (dashed). Auth server verifies the hash (self-message). alt [valid]: Auth server returns a session token, Browser shows the dashboard. [invalid]: Auth server returns an error, Browser shows an error message."
+  },
+  {
+    "id": "dg-usecase-atm",
+    "kind": "Use case diagram",
+    "module": "M1",
+    "title": "ATM",
+    "prompt": "Draw a use case diagram for an ATM. A customer can withdraw cash, deposit cash, check the balance and transfer funds. Every one of these requires the customer to be authenticated first. A bank technician can refill cash and run maintenance. The bank's central system takes part in every transaction.",
+    "checklist": [
+      "A system boundary labelled ATM",
+      "Actors for Customer, Technician and the Bank system placed outside the boundary",
+      "Use cases for withdraw, deposit, check balance and transfer",
+      "An Authenticate use case connected with «include» from the transaction use cases",
+      "Technician use cases for refilling cash and maintenance",
+      "Use cases named as verb phrases from the actor's point of view"
+    ],
+    "modelAnswer": "Inside the ATM boundary: Withdraw cash, Deposit cash, Check balance and Transfer funds, each with a dashed «include» arrow to Authenticate customer. Customer is associated with those four. Technician is associated with Refill cash and Perform maintenance. The Bank system is a secondary actor on the right, associated with the transaction use cases."
+  },
+  {
+    "id": "dg-flowchart-grade",
+    "kind": "Flow chart",
+    "module": "M1",
+    "title": "Grade classification",
+    "prompt": "Draw a flow chart that reads the scores of N students one at a time. For each score, it outputs Pass if the score is 60 or more and Fail otherwise. After all scores are read, it outputs the number of students who passed.",
+    "checklist": [
+      "Start and end terminal symbols",
+      "Input/output symbols (parallelograms) for reading N and the scores and for printing",
+      "A loop with a decision that ends after N scores",
+      "A decision comparing the score with 60, with both branches labelled",
+      "A pass counter that is initialised before the loop and incremented on the Pass branch",
+      "Every arrow has a direction and every path reaches the end"
+    ],
+    "modelAnswer": "Start; read N; set count = 0 and i = 0. Decision i < N? If no: print count, End. If yes: read score; decision score >= 60? Yes: print Pass and add 1 to count. No: print Fail. Then add 1 to i and return to the loop decision."
+  }
+]

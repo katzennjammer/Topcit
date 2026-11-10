@@ -144,3 +144,36 @@ export function clearAllHistory() {
     console.error('Failed to clear history', e);
   }
 }
+
+/** Generic JSON helpers used by the practice labs and the mock exam. */
+export function loadJSON(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+export function saveJSON(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) {
+    console.error('Failed to save', key, e);
+  }
+}
+
+export function removeKey(key) {
+  try {
+    localStorage.removeItem(key);
+  } catch (e) {
+    console.error('Failed to remove', key, e);
+  }
+}
+
+export const LAB_KEYS = {
+  CODE: 'topcit_code_lab',
+  DIAGRAM: 'topcit_diagram_lab',
+  EXAM_DRAFT: 'topcit_exam_draft',
+  EXAM_HISTORY: 'topcit_exam_history',
+};
