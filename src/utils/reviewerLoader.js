@@ -11,8 +11,8 @@ export const REVIEWER_MODULES = [
     category: 'Software Engineering',
     description: 'Complete study guide for software engineering lifecycle, design patterns, testing, and SCM.',
     iconName: 'Code',
-    color: '#4F46E5',
-    accentLight: '#EEF2FF',
+    color: 'var(--m1)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 2',
@@ -22,8 +22,8 @@ export const REVIEWER_MODULES = [
     category: 'Data Engineering',
     description: 'In-depth notes on data modeling, relational algebra, normalization, SQL, and DBMS transaction processing.',
     iconName: 'Database',
-    color: '#0284C7',
-    accentLight: '#E0F2FE',
+    color: 'var(--m2)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 3',
@@ -33,8 +33,8 @@ export const REVIEWER_MODULES = [
     category: 'Architecture & OS',
     description: 'Hardware architecture, network protocols, cloud platforms, virtual machines, and operating system concepts.',
     iconName: 'Cpu',
-    color: '#7C3AED',
-    accentLight: '#F3E8FF',
+    color: 'var(--m3)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 4',
@@ -44,8 +44,8 @@ export const REVIEWER_MODULES = [
     category: 'Cyber Security',
     description: 'Cybersecurity pillars, cryptography algorithms, authentication protocols, network defenses, and threat analysis.',
     iconName: 'ShieldCheck',
-    color: '#E11D48',
-    accentLight: '#FFE4E6',
+    color: 'var(--m3)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 5',
@@ -55,8 +55,8 @@ export const REVIEWER_MODULES = [
     category: 'Business & Ethics',
     description: 'Digital transformation strategy, enterprise IT value, IP law, open source licensing, and corporate tech ethics.',
     iconName: 'Briefcase',
-    color: '#D97706',
-    accentLight: '#FEF3C7',
+    color: 'var(--m4)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 6',
@@ -66,8 +66,8 @@ export const REVIEWER_MODULES = [
     category: 'Management & Agile',
     description: 'PMBOK framework, Agile/Scrum methodologies, risk management, quality control, and team communication.',
     iconName: 'CheckSquare',
-    color: '#059669',
-    accentLight: '#D1FAE5',
+    color: 'var(--m4)',
+    accentLight: 'var(--surface-hover)',
   },
 ];
 

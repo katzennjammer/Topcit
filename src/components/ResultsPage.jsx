@@ -93,10 +93,10 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
   };
 
   const getPerformanceTag = () => {
-    if (percentage >= 90) return { label: 'Outstanding!', color: '#10B981', bg: '#ECFDF5' };
-    if (percentage >= 75) return { label: 'Great Job!', color: '#4F46E5', bg: '#EEF2FF' };
-    if (percentage >= 50) return { label: 'Good Effort!', color: '#D97706', bg: '#FEF3C7' };
-    return { label: 'Keep Practicing', color: '#EF4444', bg: '#FEF2F2' };
+    if (percentage >= 90) return { label: 'Outstanding!', color: 'var(--success)', bg: 'var(--success-bg)' };
+    if (percentage >= 75) return { label: 'Great Job!', color: 'var(--primary)', bg: 'var(--primary-light)' };
+    if (percentage >= 50) return { label: 'Good Effort!', color: 'var(--warning)', bg: 'var(--warning-bg)' };
+    return { label: 'Keep Practicing', color: 'var(--danger)', bg: 'var(--danger-bg)' };
   };
 
   const perf = getPerformanceTag();
@@ -345,7 +345,6 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
           font-size: 0.75rem;
           color: var(--text-muted);
           font-weight: 600;
-          text-transform: uppercase;
         }
 
         .results-actions {
@@ -411,7 +410,7 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
 
         .filter-pill.active {
           background-color: var(--primary);
-          color: #FFFFFF;
+          color: var(--on-primary);
           border-color: var(--primary);
         }
 
@@ -530,7 +529,6 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
         .box-label {
           font-size: 0.75rem;
           font-weight: 700;
-          text-transform: uppercase;
           letter-spacing: 0.04em;
           color: var(--text-muted);
         }
@@ -581,14 +579,12 @@ export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome
           font-size: 0.7rem;
           font-weight: 700;
           color: var(--success);
-          text-transform: uppercase;
         }
 
         .tag-user {
           font-size: 0.7rem;
           font-weight: 700;
           color: var(--danger);
-          text-transform: uppercase;
         }
 
         .review-explanation {

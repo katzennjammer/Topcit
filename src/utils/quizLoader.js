@@ -12,8 +12,8 @@ export const ESSENCE_MODULES = [
     category: 'Software Engineering',
     description: 'Software lifecycle models, design patterns, reuse, modularity, refactoring, testing, and Git/SCM.',
     iconName: 'Code',
-    color: '#4F46E5',
-    accentLight: '#EEF2FF',
+    color: 'var(--m1)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 2',
@@ -23,8 +23,8 @@ export const ESSENCE_MODULES = [
     category: 'Data Engineering',
     description: 'Data models, relational algebra, SQL optimization, normalization, indexing, and transaction management.',
     iconName: 'Database',
-    color: '#0284C7',
-    accentLight: '#E0F2FE',
+    color: 'var(--m2)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 3',
@@ -34,8 +34,8 @@ export const ESSENCE_MODULES = [
     category: 'Architecture & OS',
     description: 'Hardware architecture, network protocols, cloud infrastructure, OS concepts, and virtualization.',
     iconName: 'Cpu',
-    color: '#7C3AED',
-    accentLight: '#F3E8FF',
+    color: 'var(--m3)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 4',
@@ -45,8 +45,8 @@ export const ESSENCE_MODULES = [
     category: 'Cyber Security',
     description: 'Confidentiality, integrity, availability, cryptography, network defenses, and threat analysis.',
     iconName: 'ShieldCheck',
-    color: '#E11D48',
-    accentLight: '#FFE4E6',
+    color: 'var(--m3)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 5',
@@ -56,8 +56,8 @@ export const ESSENCE_MODULES = [
     category: 'Business & Ethics',
     description: 'Digital strategy, IT value creation, IP law, open source licensing, and corporate tech ethics.',
     iconName: 'Briefcase',
-    color: '#D97706',
-    accentLight: '#FEF3C7',
+    color: 'var(--m4)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Essence 6',
@@ -67,8 +67,8 @@ export const ESSENCE_MODULES = [
     category: 'Management & Agile',
     description: 'Communication, estimation, Agile/Scrum methods, risk assessment, and quality control.',
     iconName: 'CheckSquare',
-    color: '#059669',
-    accentLight: '#D1FAE5',
+    color: 'var(--m4)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Other 1',
@@ -78,8 +78,8 @@ export const ESSENCE_MODULES = [
     category: 'Programming & Logic',
     description: 'Code tracing, variables, control flow, functions, operators, and memory practice.',
     iconName: 'Code',
-    color: '#0284C7',
-    accentLight: '#E0F2FE',
+    color: 'var(--m2)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Other 2',
@@ -89,8 +89,8 @@ export const ESSENCE_MODULES = [
     category: 'Database & SQL',
     description: 'SELECT queries, JOINs, aggregations, GROUP BY, subqueries, and DDL/DML practice.',
     iconName: 'Database',
-    color: '#059669',
-    accentLight: '#D1FAE5',
+    color: 'var(--m4)',
+    accentLight: 'var(--surface-hover)',
   },
   {
     id: 'Other 3',
@@ -100,8 +100,8 @@ export const ESSENCE_MODULES = [
     category: 'Open-ended & Conceptual',
     description: 'Self-evaluated open-ended questions covering software lifecycle, database normal forms, security, and project management.',
     iconName: 'FileText',
-    color: '#7C3AED',
-    accentLight: '#F3E8FF',
+    color: 'var(--m3)',
+    accentLight: 'var(--surface-hover)',
   },
 ];
 

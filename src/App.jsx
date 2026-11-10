@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
 import { HomePage } from './components/HomePage';
 import { QuizPage } from './components/QuizPage';
 import { ResultsPage } from './components/ResultsPage';
 import { ReviewersPage } from './components/ReviewersPage';
+import { CodeLabPage } from './components/CodeLabPage';
+import { DiagramLabPage } from './components/DiagramLabPage';
+import { ExamPage } from './components/ExamPage';
 import { fetchAllQuizSummaries, loadQuizData, randomizeQuiz } from './utils/quizLoader';
 import { getThemePreference, setThemePreference, clearQuizDraft, getQuizDraft } from './utils/storage';
 import { Loader2, AlertTriangle } from 'lucide-react';
-import './App.css';
+import './styles/app.css';
 
 export function App() {
   const [theme, setTheme] = useState(getThemePreference);
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'quiz' | 'results'
-  const [activeTab, setActiveTab] = useState('quizzes'); // 'quizzes' | 'reviewers'
+  const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'code' | 'diagram' | 'exam' | 'reviewers'
   const [activeReviewerId, setActiveReviewerId] = useState('Essence 1');
   const [quizList, setQuizList] = useState([]);
   const [activeQuizModule, setActiveQuizModule] = useState(null);
@@ -138,18 +141,16 @@ export function App() {
 
   return (
     <div className="app-container">
-      <Header
+      <Sidebar
+        active={activeTab}
         theme={theme}
         onToggleTheme={toggleTheme}
-        currentView={currentView}
-        onGoHome={handleGoHome}
-        activeQuizTitle={activeQuizModule?.title}
-        activeTab={activeTab}
-        onTabChange={(tab) => {
+        onNavigate={(tab) => {
           setActiveTab(tab);
           if (currentView !== 'home') {
             handleGoHome();
           }
+          window.scrollTo({ top: 0 });
         }}
       />
 
@@ -157,26 +158,30 @@ export function App() {
         {loading && (
           <div className="loading-state card">
             <Loader2 size={36} className="spinner" />
-            <p>Loading Content...</p>
+            <p>Loading</p>
           </div>
         )}
 
         {!loading && error && (
           <div className="error-state card">
             <AlertTriangle size={36} className="icon-danger" />
-            <h3>Oops! Something went wrong</h3>
+            <h3>Something went wrong</h3>
             <p>{error}</p>
             <button className="btn btn-primary" onClick={handleGoHome}>
-              Return to Dashboard
+              Back to dashboard
             </button>
           </div>
         )}
 
-        {!loading && !error && currentView === 'home' && activeTab === 'quizzes' && (
+        {!loading && !error && currentView === 'home' && activeTab === 'dashboard' && (
           <HomePage
             quizList={quizList}
             onSelectQuiz={handleSelectQuiz}
             onRestartQuiz={handleRestartQuizModule}
+            onNavigate={(tab) => {
+              setActiveTab(tab);
+              window.scrollTo({ top: 0 });
+            }}
           />
         )}
 
@@ -187,6 +192,12 @@ export function App() {
             onStartQuizForModule={handleStartQuizByEssenceId}
           />
         )}
+
+        {!loading && !error && currentView === 'home' && activeTab === 'code' && <CodeLabPage />}
+
+        {!loading && !error && currentView === 'home' && activeTab === 'diagram' && <DiagramLabPage theme={theme} />}
+
+        {!loading && !error && currentView === 'home' && activeTab === 'exam' && <ExamPage theme={theme} />}
 
         {!loading && !error && currentView === 'quiz' && activeQuizModule && (
           <QuizPage

@@ -98,11 +98,11 @@ export function QuizCard({ quiz, onSelectQuiz, onRestartQuiz }) {
             >
               {hasHistory ? (
                 <>
-                  <Play size={16} /> Retake Quiz
+                  <Play size={16} /> Retake quiz
                 </>
               ) : (
                 <>
-                  Start Quiz <ArrowRight size={16} />
+                  Start quiz <ArrowRight size={16} />
                 </>
               )}
             </button>
@@ -159,7 +159,6 @@ export function QuizCard({ quiz, onSelectQuiz, onRestartQuiz }) {
         .quiz-category-badge {
           font-size: 0.725rem;
           font-weight: 700;
-          text-transform: uppercase;
           letter-spacing: 0.04em;
           color: var(--text-muted);
           background-color: var(--background);

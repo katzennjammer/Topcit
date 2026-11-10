@@ -338,7 +338,6 @@ export function ReviewersPage({ activeReviewerId, onSelectReviewer, onStartQuizF
           font-size: 0.725rem;
           font-weight: 700;
           color: var(--text-muted);
-          text-transform: uppercase;
         }
 
         .banner-title {
@@ -528,7 +527,7 @@ export function ReviewersPage({ activeReviewerId, onSelectReviewer, onStartQuizF
           height: 44px;
           border-radius: var(--radius-full);
           background-color: var(--primary);
-          color: #FFFFFF;
+          color: var(--on-primary);
           border: none;
           display: flex;
           align-items: center;

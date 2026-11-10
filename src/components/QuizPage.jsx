@@ -740,7 +740,6 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
         .box-title {
           font-size: 0.825rem;
           font-weight: 700;
-          text-transform: uppercase;
           letter-spacing: 0.04em;
           color: var(--text-muted);
         }
@@ -782,7 +781,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
         .btn-success {
           background-color: var(--success);
-          color: #FFFFFF;
+          color: var(--on-primary);
         }
 
         .btn-success:hover {
@@ -791,7 +790,7 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
         .btn-danger {
           background-color: var(--danger);
-          color: #FFFFFF;
+          color: var(--on-primary);
         }
 
         .btn-danger:hover {
@@ -871,17 +870,17 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
         .choice-button.selected .choice-letter {
           background-color: var(--primary);
-          color: #FFFFFF;
+          color: var(--on-primary);
         }
 
         .choice-button.correct-choice .choice-letter {
           background-color: var(--success);
-          color: #FFFFFF;
+          color: var(--on-primary);
         }
 
         .choice-button.incorrect-choice .choice-letter {
           background-color: var(--danger);
-          color: #FFFFFF;
+          color: var(--on-primary);
         }
 
         .choice-text {
@@ -989,13 +988,13 @@ export function QuizPage({ quizModule, questions, onCompleteQuiz, onExit }) {
 
         .jumper-dot.ans-correct {
           background-color: var(--success);
-          color: #FFFFFF;
+          color: var(--on-primary);
           border-color: var(--success);
         }
 
         .jumper-dot.ans-incorrect {
           background-color: var(--danger);
-          color: #FFFFFF;
+          color: var(--on-primary);
           border-color: var(--danger);
         }
 
