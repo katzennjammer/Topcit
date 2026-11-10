@@ -10,14 +10,15 @@ import {
   Filter, 
   Bookmark, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Target
 } from 'lucide-react';
 import { saveQuizResult } from '../utils/storage';
 
-export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
+export function ResultsPage({ quizResult, onRestartQuiz, onRetryMissed, onGoHome }) {
   const [filterMode, setFilterMode] = useState('all'); // 'all' | 'correct' | 'incorrect' | 'flagged'
 
-  const { quizId, quizTitle, questions, userAnswers, timeSeconds, flagged = {} } = quizResult;
+  const { quizId, quizTitle, questions, userAnswers, timeSeconds, flagged = {}, isPractice = false } = quizResult;
 
   const totalQuestions = questions.length;
   const correctCount = questions.reduce((acc, q, idx) => {
@@ -29,15 +30,25 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
   }, 0);
 
   const incorrectCount = totalQuestions - correctCount;
+
+  // Questions answered wrong or left blank, used for the "retry missed" round
+  const missedQuestions = questions.filter((q, idx) => {
+    const ans = userAnswers[idx];
+    if (q.isDescriptive) return !(ans && typeof ans === 'object' && ans.isCorrect);
+    return ans !== q.correctIndex;
+  });
   const percentage = Math.round((correctCount / totalQuestions) * 100);
 
   // Trigger confetti if high score
   useEffect(() => {
-    saveQuizResult(quizId, {
-      score: correctCount,
-      total: totalQuestions,
-      timeSeconds,
-    });
+    // Practice rounds on missed questions don't count toward saved scores
+    if (!isPractice) {
+      saveQuizResult(quizId, {
+        score: correctCount,
+        total: totalQuestions,
+        timeSeconds,
+      });
+    }
 
     if (percentage >= 75) {
       try {
@@ -50,7 +61,7 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
         console.log('Confetti effect failed', e);
       }
     }
-  }, [quizId, correctCount, totalQuestions, timeSeconds, percentage]);
+  }, [quizId, correctCount, totalQuestions, timeSeconds, percentage, isPractice]);
 
   const filteredQuestions = questions.map((q, idx) => {
     const ans = userAnswers[idx];
@@ -121,8 +132,16 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
 
         {/* Action Buttons */}
         <div className="results-actions">
-          <button className="btn btn-primary" onClick={onRestartQuiz}>
-            <RotateCcw size={18} /> Retake Quiz
+          {missedQuestions.length > 0 && onRetryMissed && (
+            <button className="btn btn-primary" onClick={() => onRetryMissed(missedQuestions)}>
+              <Target size={18} /> Retry {missedQuestions.length} Missed
+            </button>
+          )}
+          <button
+            className={`btn ${missedQuestions.length > 0 ? 'btn-outline' : 'btn-primary'}`}
+            onClick={onRestartQuiz}
+          >
+            <RotateCcw size={18} /> {isPractice ? 'Retake Full Quiz' : 'Retake Quiz'}
           </button>
           <button className="btn btn-outline" onClick={onGoHome}>
             <Home size={18} /> Back to Dashboard
@@ -332,6 +351,8 @@ export function ResultsPage({ quizResult, onRestartQuiz, onGoHome }) {
         .results-actions {
           display: flex;
           align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
           gap: 1rem;
           margin-top: 1rem;
         }
