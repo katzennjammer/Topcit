@@ -7,7 +7,8 @@
       "Application Architecture, Data Architecture, and Technical Architecture",
       "Hardware Architecture, Security Architecture, and User Architecture"
     ],
-    "answer": "Application Architecture, Data Architecture, and Technical Architecture"
+    "answer": "Application Architecture, Data Architecture, and Technical Architecture",
+    "explanation": "In the broad sense system architecture is the overall structure of an information system, made up of Application Architecture (the programs), Data Architecture (the data) and Technical Architecture (the infrastructure)."
   },
   {
     "question": "What does system architecture in the narrow sense specifically refer to?",
@@ -17,7 +18,8 @@
       "Business Architecture that defines organizational policies and staffing",
       "Technical Architecture that defines system components and their layout and connections"
     ],
-    "answer": "Technical Architecture that defines system components and their layout and connections"
+    "answer": "Technical Architecture that defines system components and their layout and connections",
+    "explanation": "In the narrow sense system architecture means only the Technical Architecture: the hardware and system components, how they are laid out and how they connect."
   },
   {
     "question": "Which item is defined as part of server design architecture?",
@@ -27,7 +29,8 @@
       "User-interface colors, fonts, and screen layouts",
       "CPU clock speed, number of cores, memory capacity, and server type"
     ],
-    "answer": "CPU clock speed, number of cores, memory capacity, and server type"
+    "answer": "CPU clock speed, number of cores, memory capacity, and server type",
+    "explanation": "Server design architecture specifies the server hardware itself: CPU clock speed and core count, memory capacity and the type of server."
   },
   {
     "question": "What is the purpose of an L4 switch in network design architecture?",
@@ -37,7 +40,8 @@
       "CPU scheduling",
       "File compression"
     ],
-    "answer": "Load balancing"
+    "answer": "Load balancing",
+    "explanation": "An L4 switch works at the transport layer and distributes incoming traffic across several servers by IP and port, which is load balancing."
   },
   {
     "question": "Which set contains storage media types mentioned in storage design architecture?",
@@ -47,7 +51,8 @@
       "JPEG, MPEG, and XDR",
       "HTTP, FTP, and SMTP"
     ],
-    "answer": "SSD, SAS, and SATA"
+    "answer": "SSD, SAS, and SATA",
+    "explanation": "SSD, SAS and SATA are types of storage media or disk interface chosen in storage design. They differ in speed, reliability and cost."
   },
   {
     "question": "What is a disadvantage of centralized architecture?",
@@ -57,7 +62,8 @@
       "Its configuration is necessarily more complex than a distributed system",
       "It always requires many regional servers"
     ],
-    "answer": "The load becomes concentrated during peak time"
+    "answer": "The load becomes concentrated during peak time",
+    "explanation": "In a centralized architecture one central system does all the processing, so at peak time the whole load lands on it and it becomes a bottleneck and single point of failure."
   },
   {
     "question": "Which mapping correctly represents a three-tier architecture?",
@@ -67,7 +73,8 @@
       "Client for data storage, router for business logic, and firewall for presentation",
       "Client for presentation, WAS for business logic, and database for the data layer"
     ],
-    "answer": "Client for presentation, WAS for business logic, and database for the data layer"
+    "answer": "Client for presentation, WAS for business logic, and database for the data layer",
+    "explanation": "A three-tier architecture separates presentation (the client), business logic (the WAS, or application server) and data (the database), so each tier can be changed and scaled independently."
   },
   {
     "question": "What is a network protocol?",
@@ -77,7 +84,8 @@
       "A physical storage unit for application data",
       "A program used only to compress multimedia files"
     ],
-    "answer": "A standardized communication rule for sending and receiving data through a network"
+    "answer": "A standardized communication rule for sending and receiving data through a network",
+    "explanation": "A protocol is an agreed set of rules (format, order, error handling) that both sides follow so they can send and receive data over a network."
   },
   {
     "question": "Which organization is responsible for most Internet-related standards?",
@@ -87,7 +95,8 @@
       "ITU-T",
       "IANA only for all Internet protocols"
     ],
-    "answer": "IETF"
+    "answer": "IETF",
+    "explanation": "The IETF (Internet Engineering Task Force) develops most Internet standards, such as TCP/IP and HTTP, and publishes them as RFCs."
   },
   {
     "question": "Which OSI layer performs data encoding and encryption and supports exchanged-data syntax?",
@@ -97,7 +106,8 @@
       "Transport layer",
       "Physical layer"
     ],
-    "answer": "Presentation layer"
+    "answer": "Presentation layer",
+    "explanation": "The presentation layer (layer 6) handles how data is represented: translating syntax between systems, encoding, compression and encryption."
   },
   {
     "question": "Which OSI layer establishes, maintains, and synchronizes communication sessions?",
@@ -107,7 +117,8 @@
       "Application layer",
       "Session layer"
     ],
-    "answer": "Session layer"
+    "answer": "Session layer",
+    "explanation": "The session layer (layer 5) sets up, maintains, synchronises and ends the dialogue (session) between communicating applications."
   },
   {
     "question": "Which OSI layer provides reliable message transfer between end-to-end processes and includes error control?",
@@ -117,7 +128,8 @@
       "Data Link layer",
       "Presentation layer"
     ],
-    "answer": "Transport layer"
+    "answer": "Transport layer",
+    "explanation": "The transport layer (layer 4) delivers messages end to end between processes, with reliability features such as error control and flow control. TCP is the main example."
   },
   {
     "question": "What is the main responsibility of the Internet layer in the TCP/IP model?",
@@ -127,7 +139,8 @@
       "User-interface design",
       "File-system allocation"
     ],
-    "answer": "Addressing and routing"
+    "answer": "Addressing and routing",
+    "explanation": "The Internet layer of TCP/IP corresponds to the OSI network layer: it gives hosts logical (IP) addresses and routes packets across networks."
   },
   {
     "question": "Which statement correctly compares MAC and IPv4 addresses?",
@@ -137,7 +150,8 @@
       "A MAC address is 32 bits, while an IPv4 address is 48 bits",
       "Both MAC and IPv4 addresses are 16 bits"
     ],
-    "answer": "A MAC address is 48 bits, while an IPv4 address is 32 bits"
+    "answer": "A MAC address is 48 bits, while an IPv4 address is 32 bits",
+    "explanation": "A MAC address is a 48-bit physical address fixed to the network interface and written in hexadecimal. An IPv4 address is a 32-bit logical address written as four decimal numbers."
   },
   {
     "question": "Which port-number range is used for well-known ports?",
@@ -147,7 +161,8 @@
       "1024 to 49,151",
       "65,536 to 131,071"
     ],
-    "answer": "0 to 1023"
+    "answer": "0 to 1023",
+    "explanation": "Ports 0 to 1023 are the well-known ports reserved for standard services (HTTP 80, FTP 21, and so on). 1024 to 49151 are registered ports and 49152 to 65535 are dynamic ports."
   },
   {
     "question": "What is an operating system?",
@@ -157,7 +172,8 @@
       "A compression standard for audio and video",
       "A hardware device used only for network routing"
     ],
-    "answer": "System software that manages limited computer resources and provides an interface to users or applications"
+    "answer": "System software that manages limited computer resources and provides an interface to users or applications",
+    "explanation": "An operating system is system software that manages the computer's limited resources (CPU, memory, storage, I/O devices) and gives users and applications an interface to use them."
   },
   {
     "question": "In which process state is a process waiting for CPU allocation?",
@@ -167,7 +183,8 @@
       "Finished",
       "Ready"
     ],
-    "answer": "Ready"
+    "answer": "Ready",
+    "explanation": "A process in the Ready state has everything it needs except the CPU and is waiting to be dispatched. Running means it has the CPU, and Waiting (blocked) means it is waiting for an event such as I/O."
   },
   {
     "question": "What information is stored in a Process Control Block?",
@@ -177,7 +194,8 @@
       "Only the source code of the running application",
       "Only network addresses and port numbers"
     ],
-    "answer": "Process information such as PID, status, program counter, priority, and memory information"
+    "answer": "Process information such as PID, status, program counter, priority, and memory information",
+    "explanation": "The PCB is the data structure the OS keeps for each process. It holds what is needed to manage and resume the process: PID, state, program counter, registers, priority and memory information."
   },
   {
     "question": "Which statement about threads is correct?",
@@ -187,7 +205,8 @@
       "Thread context switching always requires more CPU time than process switching",
       "Threads never share any memory with other threads in the same process"
     ],
-    "answer": "Threads share code, data, and files but maintain their own registers and stacks"
+    "answer": "Threads share code, data, and files but maintain their own registers and stacks",
+    "explanation": "Threads in the same process share its code, data and open files, but each thread has its own registers and stack so that it can run independently."
   },
   {
     "question": "What is a critical section?",
@@ -197,7 +216,8 @@
       "A part of a disk reserved only for operating-system files",
       "A network segment that contains a routing table"
     ],
-    "answer": "A section of code where a process changes data shared with other processes"
+    "answer": "A section of code where a process changes data shared with other processes",
+    "explanation": "A critical section is the part of a program that accesses or changes data shared with other processes, so only one process should execute it at a time."
   },
   {
     "question": "Which critical-section condition allows only one process to use a shared resource at a time?",
@@ -207,7 +227,8 @@
       "Bounded waiting",
       "Circular wait"
     ],
-    "answer": "Mutual exclusion"
+    "answer": "Mutual exclusion",
+    "explanation": "Mutual exclusion means that while one process is in its critical section using the shared resource, no other process may enter. The other conditions are progress and bounded waiting."
   },
   {
     "question": "Which deadlock condition occurs when resource requests form a circular chain?",
@@ -217,7 +238,8 @@
       "Circular wait",
       "Non-preemption"
     ],
-    "answer": "Circular wait"
+    "answer": "Circular wait",
+    "explanation": "Circular wait is when processes form a ring, each waiting for a resource held by the next. The other three deadlock conditions are mutual exclusion, hold and wait, and no preemption."
   },
   {
     "question": "How does the first-fit memory allocation technique choose space?",
@@ -227,7 +249,8 @@
       "It always allocates the last available space",
       "It allocates the smallest available space that can satisfy the request"
     ],
-    "answer": "It allocates the first available space that can satisfy the request"
+    "answer": "It allocates the first available space that can satisfy the request",
+    "explanation": "First-fit scans memory from the start and allocates the first free block large enough for the request. Best-fit chooses the smallest adequate block and worst-fit the largest."
   },
   {
     "question": "What is internal fragmentation?",
@@ -237,7 +260,8 @@
       "Wasted space inside a fixed-size partition when a process needs less than the allocated space",
       "A page that has not been used for the longest time"
     ],
-    "answer": "Wasted space inside a fixed-size partition when a process needs less than the allocated space"
+    "answer": "Wasted space inside a fixed-size partition when a process needs less than the allocated space",
+    "explanation": "Internal fragmentation is unused space inside an allocated fixed-size partition, left over because the process is smaller than the partition."
   },
   {
     "question": "Which technique merges small available memory spaces to remove external fragmentation?",
@@ -247,7 +271,8 @@
       "Cycle stealing",
       "Paging"
     ],
-    "answer": "Compaction"
+    "answer": "Compaction",
+    "explanation": "Compaction moves allocated blocks together so that the scattered free spaces merge into one large block, removing external fragmentation."
   },
   {
     "question": "What is a major purpose of CPU scheduling?",
@@ -257,7 +282,8 @@
       "To distribute parity bits across disks",
       "To organize files into XML documents"
     ],
-    "answer": "To allocate CPU time efficiently while maximizing throughput and minimizing response time"
+    "answer": "To allocate CPU time efficiently while maximizing throughput and minimizing response time",
+    "explanation": "CPU scheduling decides which ready process gets the CPU next. The aim is to use CPU time efficiently: high throughput and utilisation, and short response and waiting times."
   },
   {
     "question": "Which scheduling algorithm allocates CPU resources according to a time slice?",
@@ -267,7 +293,8 @@
       "First In First Out",
       "Shortest Job First"
     ],
-    "answer": "Round Robin"
+    "answer": "Round Robin",
+    "explanation": "Round Robin gives each process a fixed time slice (quantum) in turn. When the slice runs out the process goes to the back of the ready queue."
   },
   {
     "question": "What is virtual memory?",
@@ -277,7 +304,8 @@
       "A method that permanently stores every process only in CPU registers",
       "A technique that uses auxiliary memory logically as main memory to address limited memory space"
     ],
-    "answer": "A technique that uses auxiliary memory logically as main memory to address limited memory space"
+    "answer": "A technique that uses auxiliary memory logically as main memory to address limited memory space",
+    "explanation": "Virtual memory uses auxiliary storage (disk) as a logical extension of main memory, so programs larger than physical memory can run."
   },
   {
     "question": "How does paging organize memory and process storage?",
@@ -287,7 +315,8 @@
       "Files are linked using pointer blocks",
       "Main memory is divided into fixed-size frames and process storage into fixed-size pages"
     ],
-    "answer": "Main memory is divided into fixed-size frames and process storage into fixed-size pages"
+    "answer": "Main memory is divided into fixed-size frames and process storage into fixed-size pages",
+    "explanation": "Paging divides physical memory into fixed-size frames and each process's address space into pages of the same size, and loads pages into any free frames."
   },
   {
     "question": "Which page-replacement technique replaces the page unused for the longest time?",
@@ -297,7 +326,8 @@
       "Optimal technique",
       "Least Recently Used"
     ],
-    "answer": "Least Recently Used"
+    "answer": "Least Recently Used",
+    "explanation": "LRU (Least Recently Used) replaces the page that has gone unused for the longest time, assuming pages used recently will be used again soon."
   },
   {
     "question": "What is thrashing?",
@@ -307,7 +337,8 @@
       "A file allocation technique using contiguous addresses",
       "A method of combining adjacent free memory spaces"
     ],
-    "answer": "A condition where CPU utilization decreases because page replacement takes longer than processing"
+    "answer": "A condition where CPU utilization decreases because page replacement takes longer than processing",
+    "explanation": "Thrashing happens when the system spends more time swapping pages in and out than executing processes, so CPU utilisation drops sharply."
   },
   {
     "question": "What is the main difference between Von Neumann and Harvard architectures?",
@@ -317,7 +348,8 @@
       "Von Neumann has no CPU, while Harvard has one CPU",
       "Von Neumann uses the same memory for instructions and data, while Harvard separates them"
     ],
-    "answer": "Von Neumann uses the same memory for instructions and data, while Harvard separates them"
+    "answer": "Von Neumann uses the same memory for instructions and data, while Harvard separates them",
+    "explanation": "In the Von Neumann architecture instructions and data are kept in the same memory. The Harvard architecture uses separate memories for instructions and data, so both can be accessed at the same time."
   },
   {
     "question": "What is the CPU's primary role?",
@@ -327,7 +359,8 @@
       "Storing all files permanently",
       "Assigning network addresses to clients"
     ],
-    "answer": "Interpreting instructions and performing arithmetic, logical, and data-processing operations"
+    "answer": "Interpreting instructions and performing arithmetic, logical, and data-processing operations",
+    "explanation": "The CPU is the brain of the computer: it fetches and interprets instructions and performs the arithmetic, logical and data-processing operations they require."
   },
   {
     "question": "What does the CPU control unit do?",
@@ -337,7 +370,8 @@
       "Performs only arithmetic multiplication",
       "Stores all user files permanently"
     ],
-    "answer": "Generates control signals sequentially to interpret and execute instructions"
+    "answer": "Generates control signals sequentially to interpret and execute instructions",
+    "explanation": "The control unit decodes each instruction and issues the control signals, in the right sequence, that direct the other parts of the computer to execute it."
   },
   {
     "question": "What is the role of the Arithmetic Logic Unit?",
@@ -347,7 +381,8 @@
       "Assigning dynamic IP addresses",
       "Controlling disk backups"
     ],
-    "answer": "Executing arithmetic and logical operations"
+    "answer": "Executing arithmetic and logical operations",
+    "explanation": "The ALU is the part of the CPU that performs the actual calculations: arithmetic (add, subtract) and logical (AND, OR, comparison) operations."
   },
   {
     "question": "Which register stores the address of the next instruction to be executed?",
@@ -357,7 +392,8 @@
       "Memory Buffer Register",
       "Accumulator"
     ],
-    "answer": "Program Counter"
+    "answer": "Program Counter",
+    "explanation": "The Program Counter holds the memory address of the next instruction to be fetched and executed, and is updated after each fetch."
   },
   {
     "question": "What occurs during the fetch cycle?",
@@ -367,7 +403,8 @@
       "The disk controller rearranges file blocks",
       "The CPU performs disaster recovery"
     ],
-    "answer": "The CPU fetches an instruction from memory"
+    "answer": "The CPU fetches an instruction from memory",
+    "explanation": "In the fetch cycle the CPU reads the instruction at the address in the Program Counter from memory into the instruction register. Decoding and execution follow."
   },
   {
     "question": "Which characteristic belongs to RISC?",
@@ -377,7 +414,8 @@
       "Few simple instructions, many registers, and fixed instruction length",
       "Many complex instructions, few registers, and variable instruction length"
     ],
-    "answer": "Few simple instructions, many registers, and fixed instruction length"
+    "answer": "Few simple instructions, many registers, and fixed instruction length",
+    "explanation": "RISC (Reduced Instruction Set Computer) uses a small set of simple, fixed-length instructions and many registers, which makes pipelining easy. CISC has many complex, variable-length instructions."
   },
   {
     "question": "What is the correct memory hierarchy from highest to lowest?",
@@ -387,7 +425,8 @@
       "Auxiliary memory, main memory, cache memory, register",
       "Cache memory, register, auxiliary memory, main memory"
     ],
-    "answer": "Register, cache memory, main memory, auxiliary memory"
+    "answer": "Register, cache memory, main memory, auxiliary memory",
+    "explanation": "The memory hierarchy is ordered by speed and cost per bit: registers are fastest and smallest, then cache, then main memory, then auxiliary storage, which is slowest, cheapest and largest."
   },
   {
     "question": "Which DMA mode is used when transferring data in blocks for high-speed I/O devices?",
@@ -397,7 +436,8 @@
       "Round Robin",
       "Burst mode"
     ],
-    "answer": "Burst mode"
+    "answer": "Burst mode",
+    "explanation": "In burst mode the DMA controller takes over the bus and transfers a whole block of data at once, which suits high-speed I/O devices. Cycle stealing transfers one word at a time."
   },
   {
     "question": "What is parallel processing?",
@@ -407,7 +447,8 @@
       "Executing only one instruction and one task on one processor at all times",
       "Using multiple processors to perform multiple tasks simultaneously"
     ],
-    "answer": "Using multiple processors to perform multiple tasks simultaneously"
+    "answer": "Using multiple processors to perform multiple tasks simultaneously",
+    "explanation": "Parallel processing uses multiple processors working at the same time on multiple tasks, or parts of one task, to increase processing speed."
   },
   {
     "question": "What does SIMD mean in Flynn's classification?",
@@ -417,7 +458,8 @@
       "A single instruction processes a single data stream",
       "Multiple instructions process multiple data streams"
     ],
-    "answer": "A single instruction processes multiple data streams simultaneously"
+    "answer": "A single instruction processes multiple data streams simultaneously",
+    "explanation": "SIMD stands for Single Instruction, Multiple Data: one instruction is applied to many data items at once, as in array and vector processors."
   },
   {
     "question": "Which characteristic describes an SMP system?",
@@ -427,7 +469,8 @@
       "It uses only one processor and one data stream",
       "Each processor has independent memory and communicates only through a network"
     ],
-    "answer": "All processors share main memory in a tightly coupled structure"
+    "answer": "All processors share main memory in a tightly coupled structure",
+    "explanation": "SMP (Symmetric Multiprocessing) is tightly coupled: all processors share the same main memory and one OS. It is simple to program but memory contention limits scaling."
   },
   {
     "question": "Which characteristic describes an MPP system?",
@@ -437,7 +480,8 @@
       "Each processor has independent memory and exchanges data through a network",
       "All processors must share one main memory bus"
     ],
-    "answer": "Each processor has independent memory and exchanges data through a network"
+    "answer": "Each processor has independent memory and exchanges data through a network",
+    "explanation": "MPP (Massively Parallel Processing) is loosely coupled: each processor has its own memory and they exchange data through a network, which allows scaling to very many processors."
   },
   {
     "question": "How does instruction pipelining improve CPU performance?",
@@ -447,7 +491,8 @@
       "It executes only one stage after the entire program finishes",
       "It stores all instructions in auxiliary memory permanently"
     ],
-    "answer": "It divides an operation into stages that can be processed in a pipeline"
+    "answer": "It divides an operation into stages that can be processed in a pipeline",
+    "explanation": "Pipelining splits instruction execution into stages (fetch, decode, execute and so on) so several instructions are in progress at once in different stages, like an assembly line."
   },
   {
     "question": "What programming model does OpenMP use?",
@@ -457,7 +502,8 @@
       "Active/standby model",
       "Fork/join model"
     ],
-    "answer": "Fork/join model"
+    "answer": "Fork/join model",
+    "explanation": "OpenMP uses the fork/join model: a master thread forks a team of threads at a parallel region and they join back into one thread when it ends. It targets shared-memory systems."
   },
   {
     "question": "For which environment is MPI especially suitable?",
@@ -467,7 +513,8 @@
       "Distributed-memory systems",
       "A single process with no communication"
     ],
-    "answer": "Distributed-memory systems"
+    "answer": "Distributed-memory systems",
+    "explanation": "MPI (Message Passing Interface) has processes exchange data by sending messages, which fits distributed-memory systems such as clusters where processes share no memory."
   },
   {
     "question": "Which storage type connects directly to a server using a Fibre Channel or SCSI cable?",
@@ -477,7 +524,8 @@
       "Virtual Tape Library",
       "Direct Attached Storage"
     ],
-    "answer": "Direct Attached Storage"
+    "answer": "Direct Attached Storage",
+    "explanation": "DAS (Direct Attached Storage) is connected directly to one server by a cable such as SCSI or Fibre Channel, without a network in between. NAS and SAN are network-based."
   },
   {
     "question": "Which disk-scheduling technique services the request closest to the current head position?",
@@ -487,7 +535,8 @@
       "First Come First Serve",
       "Round Robin"
     ],
-    "answer": "Shortest Seeking Time First"
+    "answer": "Shortest Seeking Time First",
+    "explanation": "SSTF (Shortest Seek Time First) serves the request nearest to the current head position first to minimise head movement, although distant requests can starve."
   },
   {
     "question": "Which RAID level distributes parity across disks and requires at least three drives?",
@@ -497,7 +546,8 @@
       "RAID-0",
       "RAID-10"
     ],
-    "answer": "RAID-5"
+    "answer": "RAID-5",
+    "explanation": "RAID-5 stripes data and distributes parity blocks across all disks. It needs at least three drives and survives the failure of one."
   },
   {
     "question": "Which compression type preserves the original data without loss?",
@@ -507,7 +557,8 @@
       "Lossless compression",
       "Prediction-only compression"
     ],
-    "answer": "Lossless compression"
+    "answer": "Lossless compression",
+    "explanation": "Lossless compression lets the original data be restored exactly, which is required for text and programs. Lossy compression discards some data, as in JPEG or MP3."
   },
   {
     "question": "What is an embedded system?",
@@ -517,7 +568,8 @@
       "A computer system designed to perform a specific function in controlling a machine or electronic device",
       "A network protocol for transferring web pages"
     ],
-    "answer": "A computer system designed to perform a specific function in controlling a machine or electronic device"
+    "answer": "A computer system designed to perform a specific function in controlling a machine or electronic device",
+    "explanation": "An embedded system is a computer built into a machine or electronic device to perform a specific, dedicated function rather than general-purpose computing."
   },
   {
     "question": "Which two major parts make up an embedded system?",
@@ -527,7 +579,8 @@
       "A client application and a public cloud only",
       "Only a webserver and a database server"
     ],
-    "answer": "Embedded hardware and embedded software"
+    "answer": "Embedded hardware and embedded software",
+    "explanation": "An embedded system combines embedded hardware (processor, memory, I/O devices) with embedded software (OS, drivers, application) that controls it."
   },
   {
     "question": "Which embedded-system characteristic means it should operate reliably without errors for many years?",
@@ -537,7 +590,8 @@
       "Low performance",
       "Heterogeneity"
     ],
-    "answer": "Stability"
+    "answer": "Stability",
+    "explanation": "Embedded systems are often installed in devices that must run unattended for long periods, so stability (operating reliably without errors for years) is a core requirement."
   },
   {
     "question": "What does reactivity mean for embedded software?",
@@ -547,7 +601,8 @@
       "It stores every input permanently without producing output",
       "It operates only when manually restarted"
     ],
-    "answer": "It continuously responds to environmental changes by converting input into output at a specified speed"
+    "answer": "It continuously responds to environmental changes by converting input into output at a specified speed",
+    "explanation": "Reactivity means the embedded software continuously reacts to changes in its environment (sensor input), turning input into output at the specified speed."
   },
   {
     "question": "What does timeliness require in embedded software?",
@@ -557,7 +612,8 @@
       "The system must use unlimited memory",
       "Input must be converted to output within a very short allowable time"
     ],
-    "answer": "Input must be converted to output within a very short allowable time"
+    "answer": "Input must be converted to output within a very short allowable time",
+    "explanation": "Timeliness is the real-time requirement: the response to an input must be produced within a very short allowed time, or it is useless or even dangerous."
   },
   {
     "question": "Which type of embedded operating system focuses on tasks affected by strict time limits?",
@@ -567,7 +623,8 @@
       "Batch processing system",
       "Desktop operating system"
     ],
-    "answer": "Real-Time Operating System"
+    "answer": "Real-Time Operating System",
+    "explanation": "A Real-Time Operating System (RTOS) is designed to guarantee that tasks complete within strict time limits (deadlines)."
   },
   {
     "question": "Which set lists IT infrastructure components from the reviewer?",
@@ -577,7 +634,8 @@
       "Only databases, tables, and primary keys",
       "Only applications, users, and passwords"
     ],
-    "answer": "Networks, hardware, software, IT personnel, and IT services"
+    "answer": "Networks, hardware, software, IT personnel, and IT services",
+    "explanation": "The reviewer lists the components of IT infrastructure as networks, hardware, software, IT personnel and IT services."
   },
   {
     "question": "What is the main role of a webserver?",
@@ -587,7 +645,8 @@
       "Managing disk parity",
       "Executing only database backups"
     ],
-    "answer": "Providing media content through HTTP"
+    "answer": "Providing media content through HTTP",
+    "explanation": "A web server receives HTTP requests from browsers and returns content such as HTML pages, images and other media, mainly static content."
   },
   {
     "question": "What is the role of a Web Application Server?",
@@ -597,7 +656,8 @@
       "Replacing the operating system",
       "Handling web-client requests, business logic, database queries, and stable transaction processing"
     ],
-    "answer": "Handling web-client requests, business logic, database queries, and stable transaction processing"
+    "answer": "Handling web-client requests, business logic, database queries, and stable transaction processing",
+    "explanation": "A WAS runs the dynamic part of a web application: it handles client requests that need business logic, queries the database and manages transactions reliably."
   },
   {
     "question": "What is system sizing?",
@@ -607,7 +667,8 @@
       "Compressing all system data before deployment",
       "Estimating a system's required capacity using mathematical methods based on actual work and applications"
     ],
-    "answer": "Estimating a system's required capacity using mathematical methods based on actual work and applications"
+    "answer": "Estimating a system's required capacity using mathematical methods based on actual work and applications",
+    "explanation": "System sizing estimates the capacity (CPU, memory, disk) a system needs, calculated mathematically from the actual workload and applications it will run."
   },
   {
     "question": "How does Hyper-Converged Infrastructure differ from traditional Converged Infrastructure?",
@@ -617,7 +678,8 @@
       "It removes servers, storage, and networks entirely",
       "It groups direct-attached storage and uses software-defined storage over an IP-based network"
     ],
-    "answer": "It groups direct-attached storage and uses software-defined storage over an IP-based network"
+    "answer": "It groups direct-attached storage and uses software-defined storage over an IP-based network",
+    "explanation": "Hyper-Converged Infrastructure integrates compute and storage in each node: it pools the nodes' direct-attached disks with software-defined storage over an IP network, rather than using separate dedicated storage as in traditional CI."
   },
   {
     "question": "What is required to provide High Availability?",
@@ -627,7 +689,8 @@
       "One system with no backup resources",
       "Two or more systems configured with redundancy"
     ],
-    "answer": "Two or more systems configured with redundancy"
+    "answer": "Two or more systems configured with redundancy",
+    "explanation": "High Availability removes single points of failure with redundancy: at least two systems are configured so that one can continue service if the other fails."
   },
   {
     "question": "How does a hot-standby configuration operate?",
@@ -637,7 +700,8 @@
       "Only one server exists and no backup is available",
       "A standby server takes over when the active server fails"
     ],
-    "answer": "A standby server takes over when the active server fails"
+    "answer": "A standby server takes over when the active server fails",
+    "explanation": "In hot standby the standby server is running and synchronised but does not serve. When the active server fails, the standby takes over (failover)."
   },
   {
     "question": "What is a fault-tolerant system?",
@@ -647,7 +711,8 @@
       "A system that continues performing its functions even when a component fails",
       "A system that has no redundant components"
     ],
-    "answer": "A system that continues performing its functions even when a component fails"
+    "answer": "A system that continues performing its functions even when a component fails",
+    "explanation": "A fault-tolerant system has enough redundancy that it keeps performing its functions without interruption even when a component fails."
   },
   {
     "question": "Which disaster-recovery center type provides immediate recovery through active-active real-time service?",
@@ -657,7 +722,8 @@
       "Mirrored site",
       "Hot site"
     ],
-    "answer": "Mirrored site"
+    "answer": "Mirrored site",
+    "explanation": "A mirrored site is a duplicate of the main site running active-active with real-time data mirroring, so recovery is immediate. Hot, warm and cold sites take progressively longer."
   },
   {
     "question": "What does Recovery Point Objective measure?",
@@ -667,7 +733,8 @@
       "The total cost of building the recovery site",
       "The maximum CPU response time during normal operation"
     ],
-    "answer": "The amount of acceptable data loss expressed as time at the moment of disaster"
+    "answer": "The amount of acceptable data loss expressed as time at the moment of disaster",
+    "explanation": "RPO (Recovery Point Objective) is the point in time to which data must be restored, that is, how much data loss measured in time is acceptable. RTO is how long recovery may take."
   },
   {
     "question": "What is cloud computing?",
@@ -677,7 +744,8 @@
       "A file-allocation method for a local disk",
       "A network protocol used only for email"
     ],
-    "answer": "An Internet-based computing environment using virtualization and distributed processing to provide IT resources"
+    "answer": "An Internet-based computing environment using virtualization and distributed processing to provide IT resources",
+    "explanation": "Cloud computing delivers IT resources (servers, storage, software) as services over the Internet, built on virtualization and distributed processing, used on demand."
   },
   {
     "question": "Which is a benefit of cloud computing mentioned in the reviewer?",
@@ -687,7 +755,8 @@
       "Reduced capital and operating expenses",
       "Elimination of virtualization"
     ],
-    "answer": "Reduced capital and operating expenses"
+    "answer": "Reduced capital and operating expenses",
+    "explanation": "Because resources are rented and paid for as used, there is no need to buy and operate your own equipment, which reduces capital and operating expenses."
   },
   {
     "question": "What does Infrastructure as a Service provide?",
@@ -697,7 +766,8 @@
       "Only database table definitions",
       "Server, storage, and network infrastructure resources"
     ],
-    "answer": "Server, storage, and network infrastructure resources"
+    "answer": "Server, storage, and network infrastructure resources",
+    "explanation": "IaaS provides the basic infrastructure as a service: virtual servers, storage and networks. The user installs and manages the OS and applications."
   },
   {
     "question": "Which service model provides infrastructure, runtime, and a development and operation environment?",
@@ -707,7 +777,8 @@
       "Direct Attached Storage",
       "Infrastructure as a Service"
     ],
-    "answer": "Platform as a Service"
+    "answer": "Platform as a Service",
+    "explanation": "PaaS adds a platform on top of the infrastructure: runtime, middleware and development tools, so developers can build and run applications without managing servers."
   },
   {
     "question": "Which is an example of Software as a Service?",
@@ -717,7 +788,8 @@
       "A bare-metal server",
       "A Fibre Channel switch"
     ],
-    "answer": "Google Docs"
+    "answer": "Google Docs",
+    "explanation": "SaaS delivers finished software over the Internet that users simply use, typically in a browser. Google Docs is an example."
   },
   {
     "question": "How is a Type 1 hypervisor installed?",
@@ -727,7 +799,8 @@
       "As ordinary software on an existing host operating system",
       "Only within an application browser"
     ],
-    "answer": "Directly on physical hardware without requiring a host operating system"
+    "answer": "Directly on physical hardware without requiring a host operating system",
+    "explanation": "A Type 1 (bare-metal) hypervisor is installed directly on the physical hardware. A Type 2 hypervisor runs on top of a host operating system."
   },
   {
     "question": "What is a characteristic of para-virtualization?",
@@ -737,7 +810,8 @@
       "It uses a hypervisor API to access hardware resources",
       "It requires no guest operating system changes or awareness"
     ],
-    "answer": "It uses a hypervisor API to access hardware resources"
+    "answer": "It uses a hypervisor API to access hardware resources",
+    "explanation": "In para-virtualization the guest OS is modified to call the hypervisor's API (hypercalls) for hardware access, which is faster than full virtualization, where the guest runs unmodified."
   },
   {
     "question": "What is Kubernetes used for?",
@@ -747,7 +821,8 @@
       "CPU instruction decoding",
       "XML document validation"
     ],
-    "answer": "Container management and orchestration"
+    "answer": "Container management and orchestration",
+    "explanation": "Kubernetes automates the deployment, scaling and management of containers across a cluster of machines, known as container orchestration."
   },
   {
     "question": "What is Hadoop?",
@@ -757,7 +832,8 @@
       "A transport protocol combining TCP and UDP",
       "A hardware architecture that separates data and instruction memory"
     ],
-    "answer": "A Java-based framework for distributed processing of large amounts of data using HDFS and MapReduce"
+    "answer": "A Java-based framework for distributed processing of large amounts of data using HDFS and MapReduce",
+    "explanation": "Hadoop is an open-source Java framework for storing and processing very large data sets on clusters of ordinary machines. HDFS provides the storage and MapReduce the processing."
   },
   {
     "question": "How does HDFS help prevent data loss?",
@@ -767,7 +843,8 @@
       "It stores each file on only one node",
       "It disables file appending and replication"
     ],
-    "answer": "It stores replicated data across multiple nodes"
+    "answer": "It stores replicated data across multiple nodes",
+    "explanation": "HDFS splits files into blocks and stores copies of each block (three by default) on different nodes, so the data survives if a node fails."
   },
   {
     "question": "What are the roles of the NameNode and DataNodes in HDFS?",
@@ -777,7 +854,8 @@
       "The NameNode stores all user applications, while DataNodes assign IP addresses",
       "The NameNode manages metadata, while DataNodes store data blocks"
     ],
-    "answer": "The NameNode manages metadata, while DataNodes store data blocks"
+    "answer": "The NameNode manages metadata, while DataNodes store data blocks",
+    "explanation": "The NameNode is the master: it keeps the metadata (file names and block locations). DataNodes are the workers that store the actual data blocks."
   },
   {
     "question": "What do the Map and Reduce stages do in Hadoop MapReduce?",
@@ -787,7 +865,8 @@
       "Map stores parity bits, while Reduce mirrors disks",
       "Map classifies data into key-value forms, while Reduce removes duplicates and extracts desired data"
     ],
-    "answer": "Map classifies data into key-value forms, while Reduce removes duplicates and extracts desired data"
+    "answer": "Map classifies data into key-value forms, while Reduce removes duplicates and extracts desired data",
+    "explanation": "The Map stage turns input into key-value pairs. The Reduce stage combines the pairs with the same key, removing duplicates, to produce the desired result."
   },
   {
     "question": "What is a main responsibility of the Data Link layer?",
@@ -797,7 +876,8 @@
       "Providing end-user email and file-transfer applications",
       "Transferring frames between adjacent devices and detecting or correcting transmission errors"
     ],
-    "answer": "Transferring frames between adjacent devices and detecting or correcting transmission errors"
+    "answer": "Transferring frames between adjacent devices and detecting or correcting transmission errors",
+    "explanation": "The data link layer (layer 2) moves frames between directly connected (adjacent) devices and detects or corrects errors that occur during transmission."
   },
   {
     "question": "What does Data Link layer encapsulation add to a Network layer packet?",
@@ -807,7 +887,8 @@
       "A virtual-memory page and frame",
       "Only an application-layer method"
     ],
-    "answer": "A frame header and trailer"
+    "answer": "A frame header and trailer",
+    "explanation": "The data link layer encapsulates the network-layer packet in a frame by adding a header (with MAC addresses) and a trailer (with error-checking bits)."
   },
   {
     "question": "Which two sublayers make up the Data Link layer?",
@@ -817,7 +898,8 @@
       "Internet Protocol and Address Resolution",
       "Logical Link Control and Media Access Control"
     ],
-    "answer": "Logical Link Control and Media Access Control"
+    "answer": "Logical Link Control and Media Access Control",
+    "explanation": "The data link layer has two sublayers: LLC (Logical Link Control) for flow and error control, and MAC (Media Access Control) for access to the shared medium."
   },
   {
     "question": "How does Forward Error Correction handle transmission errors?",
@@ -827,7 +909,8 @@
       "The sender ignores all error reports",
       "The receiver always requests the sender to retransmit without detecting errors"
     ],
-    "answer": "The receiver detects and corrects errors using transmitted redundant bits"
+    "answer": "The receiver detects and corrects errors using transmitted redundant bits",
+    "explanation": "With FEC the sender adds redundant bits that let the receiver both detect and correct errors itself, with no retransmission. ARQ, by contrast, asks the sender to resend."
   },
   {
     "question": "Which IEEE standard covers wireless LAN or Wi-Fi?",
@@ -837,7 +920,8 @@
       "IEEE 802.11",
       "IEEE 802.15"
     ],
-    "answer": "IEEE 802.11"
+    "answer": "IEEE 802.11",
+    "explanation": "IEEE 802.11 is the wireless LAN (Wi-Fi) standard. 802.3 is Ethernet and 802.15 is Bluetooth and other personal area networks."
   },
   {
     "question": "Which Network layer function finds the optimal path to a destination?",
@@ -847,7 +931,8 @@
       "Packetizing",
       "Forwarding"
     ],
-    "answer": "Routing"
+    "answer": "Routing",
+    "explanation": "Routing is the network-layer function that determines the best path for a packet to travel to its destination."
   },
   {
     "question": "Which device finds an optimal communication path when connecting heterogeneous networks?",
@@ -857,7 +942,8 @@
       "Bridge",
       "Router"
     ],
-    "answer": "Router"
+    "answer": "Router",
+    "explanation": "A router operates at the network layer, connects different networks and chooses the optimal path for packets between them."
   },
   {
     "question": "What does ARP do?",
@@ -867,7 +953,8 @@
       "Reports only application-layer errors",
       "Converts a MAC address into an IP address"
     ],
-    "answer": "Converts an IP address into a MAC address"
+    "answer": "Converts an IP address into a MAC address",
+    "explanation": "ARP (Address Resolution Protocol) finds the MAC (physical) address that corresponds to a known IP address. RARP does the reverse."
   },
   {
     "question": "What is the role of ICMP?",
@@ -877,7 +964,8 @@
       "Transferring files through ports 20 and 21",
       "Reporting network error and control information"
     ],
-    "answer": "Reporting network error and control information"
+    "answer": "Reporting network error and control information",
+    "explanation": "ICMP (Internet Control Message Protocol) reports errors and control information about IP delivery, such as \"destination unreachable\". Ping uses it."
   },
   {
     "question": "Which set consists of Quality of Service attributes?",
@@ -887,7 +975,8 @@
       "Confidence, delay, jitter, and bandwidth",
       "CPU speed, memory size, disk size, and file type"
     ],
-    "answer": "Confidence, delay, jitter, and bandwidth"
+    "answer": "Confidence, delay, jitter, and bandwidth",
+    "explanation": "The reviewer lists the QoS attributes as confidence (reliability), delay, jitter (variation in delay) and bandwidth."
   },
   {
     "question": "Which algorithm is used by link-state routing?",
@@ -897,7 +986,8 @@
       "Bellman-Ford algorithm",
       "Round Robin algorithm"
     ],
-    "answer": "Dijkstra algorithm"
+    "answer": "Dijkstra algorithm",
+    "explanation": "Link-state routing (for example OSPF) builds a map of the whole network and computes shortest paths with Dijkstra's algorithm. Distance-vector routing uses Bellman-Ford."
   },
   {
     "question": "Which protocol dynamically allocates IP addresses, a default gateway, and a lease period?",
@@ -907,7 +997,8 @@
       "ICMP",
       "ARP"
     ],
-    "answer": "DHCP"
+    "answer": "DHCP",
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically assigns a host an IP address, subnet mask and default gateway for a lease period."
   },
   {
     "question": "Which statement about IPv6 is correct?",
@@ -917,7 +1008,8 @@
       "It uses 32-bit addresses expressed only in decimal",
       "It uses 48-bit physical addresses"
     ],
-    "answer": "It uses 128-bit addresses expressed in hexadecimal"
+    "answer": "It uses 128-bit addresses expressed in hexadecimal",
+    "explanation": "IPv6 addresses are 128 bits long and written in hexadecimal, in eight groups separated by colons. IPv4 uses 32 bits written in decimal."
   },
   {
     "question": "Which characteristic belongs to TCP?",
@@ -927,7 +1019,8 @@
       "It is connection-oriented and provides reliable stream-based data transfer",
       "It provides no error, flow, or congestion control"
     ],
-    "answer": "It is connection-oriented and provides reliable stream-based data transfer"
+    "answer": "It is connection-oriented and provides reliable stream-based data transfer",
+    "explanation": "TCP is connection-oriented: it sets up a connection first and then delivers a reliable, ordered stream of bytes using acknowledgements, retransmission and flow control."
   },
   {
     "question": "What is the correct order of the TCP three-way handshake?",
@@ -937,7 +1030,8 @@
       "SYN, ACK, FIN",
       "FIN, FIN-ACK, ACK"
     ],
-    "answer": "SYN, SYN-ACK, ACK"
+    "answer": "SYN, SYN-ACK, ACK",
+    "explanation": "TCP opens a connection in three steps: the client sends SYN, the server replies SYN-ACK, and the client answers ACK."
   },
   {
     "question": "Which statement describes UDP?",
@@ -947,7 +1041,8 @@
       "It requires a connection setup and acknowledgment for every packet",
       "It guarantees reliable stream-based delivery"
     ],
-    "answer": "It is a connectionless protocol that generally provides no sequence, flow, error, or congestion control"
+    "answer": "It is a connectionless protocol that generally provides no sequence, flow, error, or congestion control",
+    "explanation": "UDP is connectionless: it sends datagrams without setting up a connection and without sequencing, flow, error or congestion control. That makes it fast but unreliable."
   },
   {
     "question": "Which feature is supported by SCTP?",
@@ -957,7 +1052,8 @@
       "Only one stream and one fixed host address",
       "No acknowledgments or connection support"
     ],
-    "answer": "Multi-streaming and multi-homing with connection-oriented reliable delivery"
+    "answer": "Multi-streaming and multi-homing with connection-oriented reliable delivery",
+    "explanation": "SCTP is connection-oriented and reliable like TCP, and adds multi-streaming (several independent streams in one connection) and multi-homing (several IP addresses per endpoint)."
   },
   {
     "question": "Which set contains only Application layer protocols?",
@@ -967,7 +1063,8 @@
       "FTP, Telnet, SMTP, POP3, IMAP4, and HTTP",
       "Ethernet, Wi-Fi, optical fiber, and PSTN"
     ],
-    "answer": "FTP, Telnet, SMTP, POP3, IMAP4, and HTTP"
+    "answer": "FTP, Telnet, SMTP, POP3, IMAP4, and HTTP",
+    "explanation": "FTP, Telnet, SMTP, POP3, IMAP4 and HTTP all provide services directly to user applications, so they belong to the application layer. TCP, UDP and IP are lower-layer protocols."
   },
   {
     "question": "Which HTTP method is mainly used to retrieve or search for content on a server?",
@@ -977,7 +1074,8 @@
       "GET",
       "POST"
     ],
-    "answer": "GET"
+    "answer": "GET",
+    "explanation": "GET requests a resource from the server without changing it. POST sends data, PUT replaces a resource and DELETE removes one."
   },
   {
     "question": "What do HTTP status codes beginning with 4 or 5 generally indicate?",
@@ -987,7 +1085,8 @@
       "A TCP connection handshake",
       "Successful processing only"
     ],
-    "answer": "Client or server errors"
+    "answer": "Client or server errors",
+    "explanation": "4xx status codes mean a client error (such as 404 Not Found) and 5xx codes mean a server error (such as 500). 2xx means success and 3xx redirection."
   },
   {
     "question": "Which ports are used by FTP in general active transfer mode?",
@@ -997,6 +1096,7 @@
       "Port 25 for control and port 110 for data",
       "Port 21 for control and port 20 for data"
     ],
-    "answer": "Port 21 for control and port 20 for data"
+    "answer": "Port 21 for control and port 20 for data",
+    "explanation": "FTP uses two connections: port 21 for control (commands) and, in active mode, port 20 for transferring the data."
   }
 ]

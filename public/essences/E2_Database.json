@@ -1,1002 +1,1102 @@
 [
-    {
-        "question": "What is data according to the reviewer?",
-        "choices": [
-            "Processed data organized for a specific purpose",
-            "Information generalized for decision-making",
-            "Collected facts that have not yet been evaluated for a specific purpose",
-            "A database schema viewed by all users"
-        ],
-        "answer": "Collected facts that have not yet been evaluated for a specific purpose"
-    },
-    {
-        "question": "What is information?",
-        "choices": [
-            "Raw facts that have not been evaluated",
-            "A physical storage structure",
-            "Data that has been organized, classified, and systematized for a purpose",
-            "A set of database recovery logs"
-        ],
-        "answer": "Data that has been organized, classified, and systematized for a purpose"
-    },
-    {
-        "question": "What is knowledge?",
-        "choices": [
-            "Information accumulated and organized into a generalized form for decision-making",
-            "A real-time query response",
-            "A list of database tables without relationships",
-            "Unprocessed facts collected from a source"
-        ],
-        "answer": "Information accumulated and organized into a generalized form for decision-making"
-    },
-    {
-        "question": "Which is an example of a batch processing system?",
-        "choices": [
-            "Airline seat reservation system",
-            "Real-time navigation system",
-            "Payroll processing system",
-            "Distributed client/server search"
-        ],
-        "answer": "Payroll processing system"
-    },
-    {
-        "question": "What characterizes an online processing system?",
-        "choices": [
-            "Only geographically dispersed processors are used",
-            "Transferred data is processed immediately in real time",
-            "Processing occurs without any computer connection",
-            "Data is collected for a period and processed all at once"
-        ],
-        "answer": "Transferred data is processed immediately in real time"
-    },
-    {
-        "question": "What is a distributed processing system?",
-        "choices": [
-            "A system that connects geographically dispersed processors and databases through a network",
-            "A system that processes all data at one fixed time",
-            "A system that stores data only in main memory",
-            "A system that permits only one user at a time"
-        ],
-        "answer": "A system that connects geographically dispersed processors and databases through a network"
-    },
-    {
-        "question": "Which is a function of a DBMS?",
-        "choices": [
-            "Eliminating the need for database security",
-            "Replacing all users with automated processes",
-            "Controlling redundancy and enabling data sharing among multiple users",
-            "Preventing the expression of complex relationships"
-        ],
-        "answer": "Controlling redundancy and enabling data sharing among multiple users"
-    },
-    {
-        "question": "Which schema represents several users' viewpoints?",
-        "choices": [
-            "Conceptual schema",
-            "Physical index",
-            "External schema",
-            "Internal schema"
-        ],
-        "answer": "External schema"
-    },
-    {
-        "question": "What does the conceptual schema describe?",
-        "choices": [
-            "The integrated view of all users' perspectives",
-            "Only the physical storage format",
-            "The backup copy of the database",
-            "A single user's private view only"
-        ],
-        "answer": "The integrated view of all users' perspectives"
-    },
-    {
-        "question": "What does the internal schema describe?",
-        "choices": [
-            "The physical storage structure of the database",
-            "The integrated business view of all users",
-            "The organization's data governance policy",
-            "The user-specific external view"
-        ],
-        "answer": "The physical storage structure of the database"
-    },
-    {
-        "question": "What is logical data independence?",
-        "choices": [
-            "Changing application programs whenever a table changes",
-            "Allowing users to bypass the DBMS",
-            "Changing the conceptual schema without affecting external schemas or application programs",
-            "Changing storage devices without affecting the conceptual schema"
-        ],
-        "answer": "Changing the conceptual schema without affecting external schemas or application programs"
-    },
-    {
-        "question": "What is physical data independence?",
-        "choices": [
-            "Changing the conceptual schema without affecting external schemas",
-            "Changing all application programs whenever storage changes",
-            "Changing the internal schema without affecting the conceptual schema or application programs",
-            "Separating users from database languages"
-        ],
-        "answer": "Changing the internal schema without affecting the conceptual schema or application programs"
-    },
-    {
-        "question": "How does a relational database mainly store data?",
-        "choices": [
-            "Only as connected graph nodes",
-            "Only in object inheritance hierarchies",
-            "In two-dimensional tables made of rows and columns",
-            "Only as XML documents"
-        ],
-        "answer": "In two-dimensional tables made of rows and columns"
-    },
-    {
-        "question": "Which feature is supported by an object-oriented database?",
-        "choices": [
-            "Storage limited to two-dimensional tables",
-            "No integration of data and logic",
-            "Only fixed primitive data types",
-            "User-defined data types and inheritance"
-        ],
-        "answer": "User-defined data types and inheritance"
-    },
-    {
-        "question": "Why was the object-relational database introduced?",
-        "choices": [
-            "To combine relational capabilities with object-oriented concepts",
-            "To remove all relational features",
-            "To prohibit large object data types",
-            "To replace databases with HTML files"
-        ],
-        "answer": "To combine relational capabilities with object-oriented concepts"
-    },
-    {
-        "question": "What is XML primarily used for?",
-        "choices": [
-            "Replacing all database indexes",
-            "Specifying structure and exchanging data in a web environment",
-            "Managing transaction locks",
-            "Performing physical database recovery"
-        ],
-        "answer": "Specifying structure and exchanging data in a web environment"
-    },
-    {
-        "question": "What does an XML DTD do?",
-        "choices": [
-            "Stores relational rows by column",
-            "Creates database indexes automatically",
-            "Defines the form of an XML document so it can be validated",
-            "Executes distributed transactions"
-        ],
-        "answer": "Defines the form of an XML document so it can be validated"
-    },
-    {
-        "question": "What is a Main Memory Database?",
-        "choices": [
-            "A database distributed only across disks",
-            "A database that has no recovery needs",
-            "A database stored in main memory",
-            "A database stored only in XML files"
-        ],
-        "answer": "A database stored in main memory"
-    },
-    {
-        "question": "What is a spatial database designed to represent?",
-        "choices": [
-            "Only user privileges",
-            "Only source-code dependencies",
-            "Spatial relationships between geographic objects",
-            "Only payroll transactions"
-        ],
-        "answer": "Spatial relationships between geographic objects"
-    },
-    {
-        "question": "How does a column-based database physically store data?",
-        "choices": [
-            "By graph edges only",
-            "By columns",
-            "By complete rows only",
-            "By XML tags only"
-        ],
-        "answer": "By columns"
-    },
-    {
-        "question": "What is data modeling?",
-        "choices": [
-            "The process of granting user privileges",
-            "The process of compiling SQL code",
-            "The process of backing up a database",
-            "The process of abstracting the real world to create a database"
-        ],
-        "answer": "The process of abstracting the real world to create a database"
-    },
-    {
-        "question": "What is normally produced during conceptual data modeling?",
-        "choices": [
-            "A physical partition plan",
-            "A transaction log",
-            "An entity-relationship model",
-            "A backup schedule"
-        ],
-        "answer": "An entity-relationship model"
-    },
-    {
-        "question": "During which modeling level is normalization performed?",
-        "choices": [
-            "Conceptual data modeling",
-            "Logical data modeling",
-            "Physical data modeling",
-            "Data recovery modeling"
-        ],
-        "answer": "Logical data modeling"
-    },
-    {
-        "question": "During which modeling level is denormalization performed?",
-        "choices": [
-            "Requirements extraction",
-            "Logical data modeling",
-            "Physical data modeling",
-            "Conceptual data modeling"
-        ],
-        "answer": "Physical data modeling"
-    },
-    {
-        "question": "In the Chen model, how is an entity represented?",
-        "choices": [
-            "Rectangle",
-            "Ellipse",
-            "Dotted line",
-            "Diamond"
-        ],
-        "answer": "Rectangle"
-    },
-    {
-        "question": "In the Chen model, how is a relationship represented?",
-        "choices": [
-            "Diamond",
-            "Ellipse",
-            "Rectangle",
-            "Triangle"
-        ],
-        "answer": "Diamond"
-    },
-    {
-        "question": "What does cardinality indicate?",
-        "choices": [
-            "The physical size of a table",
-            "The maximum number of relationship instances that can participate",
-            "The number of backups stored",
-            "The speed of a query"
-        ],
-        "answer": "The maximum number of relationship instances that can participate"
-    },
-    {
-        "question": "What is a fan trap?",
-        "choices": [
-            "A missing value in a primary key",
-            "A duplicate row caused by denormalization",
-            "An ambiguous path caused by an N:1 relationship followed by a 1:N relationship",
-            "A deadlock caused by circular wait"
-        ],
-        "answer": "An ambiguous path caused by an N:1 relationship followed by a 1:N relationship"
-    },
-    {
-        "question": "What is a primary key?",
-        "choices": [
-            "A duplicated column added for performance",
-            "A pointer stored in an index",
-            "Any field used in a WHERE clause",
-            "The candidate key selected to uniquely identify a record"
-        ],
-        "answer": "The candidate key selected to uniquely identify a record"
-    },
-    {
-        "question": "What is a foreign key?",
-        "choices": [
-            "An attribute that refers to the primary key of another table",
-            "The smallest possible candidate key in the same table",
-            "A derived attribute shown by a dotted ellipse",
-            "A key used only in main memory"
-        ],
-        "answer": "An attribute that refers to the primary key of another table"
-    },
-    {
-        "question": "What is an insertion anomaly?",
-        "choices": [
-            "Deleting one fact and unintentionally deleting another",
-            "Updating the same fact several times",
-            "Reading uncommitted transaction data",
-            "Being unable to insert certain information without inserting other information"
-        ],
-        "answer": "Being unable to insert certain information without inserting other information"
-    },
-    {
-        "question": "What is a deletion anomaly?",
-        "choices": [
-            "A row cannot be inserted without another fact",
-            "Deleting needed information also removes other related information",
-            "Two transactions wait indefinitely",
-            "The same value must be updated repeatedly"
-        ],
-        "answer": "Deleting needed information also removes other related information"
-    },
-    {
-        "question": "What is an update anomaly?",
-        "choices": [
-            "A transaction reads uncommitted data",
-            "A query optimizer selects a poor path",
-            "A backup contains only changed data",
-            "The same content must be updated repeatedly in several places"
-        ],
-        "answer": "The same content must be updated repeatedly in several places"
-    },
-    {
-        "question": "When does X → Y hold in a relation?",
-        "choices": [
-            "When records with the same X values also have the same Y values",
-            "When X and Y are always primary keys",
-            "When X and Y are stored in different databases",
-            "When Y contains more values than X"
-        ],
-        "answer": "When records with the same X values also have the same Y values"
-    },
-    {
-        "question": "Which dependency is removed to achieve Second Normal Form?",
-        "choices": [
-            "Join dependency",
-            "Partial functional dependency",
-            "Transitive functional dependency",
-            "Multi-valued dependency"
-        ],
-        "answer": "Partial functional dependency"
-    },
-    {
-        "question": "Which dependency is removed to achieve Third Normal Form?",
-        "choices": [
-            "Transitive functional dependency",
-            "Partial functional dependency",
-            "Physical dependency",
-            "Replication dependency"
-        ],
-        "answer": "Transitive functional dependency"
-    },
-    {
-        "question": "What is the goal of First Normal Form?",
-        "choices": [
-            "To introduce transitive dependencies",
-            "To merge every related table",
-            "To ensure attributes contain atomic values",
-            "To remove all candidate keys"
-        ],
-        "answer": "To ensure attributes contain atomic values"
-    },
-    {
-        "question": "What does BCNF require for every functional dependency X → Y?",
-        "choices": [
-            "X must contain duplicate values",
-            "Y must be a foreign key",
-            "X must be a candidate key",
-            "Y must be a multi-valued attribute"
-        ],
-        "answer": "X must be a candidate key"
-    },
-    {
-        "question": "What is denormalization?",
-        "choices": [
-            "Removing all duplicate columns regardless of performance",
-            "Intentionally integrating normalized entities or relationships to improve performance and simplify development",
-            "Decomposing every table until no joins are possible",
-            "Converting a physical model into a conceptual model"
-        ],
-        "answer": "Intentionally integrating normalized entities or relationships to improve performance and simplify development"
-    },
-    {
-        "question": "What does physical modeling convert an ERD into?",
-        "choices": [
-            "A transaction isolation schedule",
-            "An XML stylesheet",
-            "A user-interface prototype",
-            "A table structure drawing"
-        ],
-        "answer": "A table structure drawing"
-    },
-    {
-        "question": "How is a heap-organized table stored?",
-        "choices": [
-            "Only by hash partition",
-            "According to when records are inserted, regardless of attribute values",
-            "Always in primary-key order",
-            "Only by column value"
-        ],
-        "answer": "According to when records are inserted, regardless of attribute values"
-    },
-    {
-        "question": "Why is a partitioned table used?",
-        "choices": [
-            "To prevent distributed processing",
-            "To improve performance by physically splitting data based on criteria",
-            "To remove all data types",
-            "To eliminate every query condition"
-        ],
-        "answer": "To improve performance by physically splitting data based on criteria"
-    },
-    {
-        "question": "What is the most important function of an index?",
-        "choices": [
-            "To normalize all relations",
-            "To guarantee transaction durability",
-            "To replace foreign keys",
-            "To speed up searches by reducing the access path"
-        ],
-        "answer": "To speed up searches by reducing the access path"
-    },
-    {
-        "question": "What is a distributed database?",
-        "choices": [
-            "A database without shared access",
-            "A logically integrated database physically distributed across multiple networked computers",
-            "A database stored on one computer with no network",
-            "A database that contains only temporary data"
-        ],
-        "answer": "A logically integrated database physically distributed across multiple networked computers"
-    },
-    {
-        "question": "Which transparency means users do not need to know where data is physically located?",
-        "choices": [
-            "Partitioning transparency",
-            "Replication transparency",
-            "Location transparency",
-            "Concurrency transparency"
-        ],
-        "answer": "Location transparency"
-    },
-    {
-        "question": "What is data quality control?",
-        "choices": [
-            "Activities that improve data quality across value, structure, and management process",
-            "A process used only to grant SQL privileges",
-            "A method for creating graph databases",
-            "A technique for physical backup"
-        ],
-        "answer": "Activities that improve data quality across value, structure, and management process"
-    },
-    {
-        "question": "What is data standardization?",
-        "choices": [
-            "Storing all data in one physical file",
-            "Defining consistent names, definitions, formats, and rules for data elements across an organization",
-            "Replacing every table with XML",
-            "Allowing each department to use unrelated formats"
-        ],
-        "answer": "Defining consistent names, definitions, formats, and rules for data elements across an organization"
-    },
-    {
-        "question": "How does data standardization improve communication?",
-        "choices": [
-            "By preventing data sharing",
-            "By removing all definitions",
-            "By increasing ambiguity",
-            "By unifying data names"
-        ],
-        "answer": "By unifying data names"
-    },
-    {
-        "question": "What is relational algebra?",
-        "choices": [
-            "A backup method for entire databases",
-            "A set of operations for processing relations in a relational database",
-            "A programming model for big-data batch processing",
-            "A language for defining XML tags"
-        ],
-        "answer": "A set of operations for processing relations in a relational database"
-    },
-    {
-        "question": "What does the select operator do?",
-        "choices": [
-            "Chooses attributes and produces a vertical subset",
-            "Deletes tuples permanently",
-            "Chooses tuples satisfying a condition and produces a horizontal subset",
-            "Combines two relations based on a join condition"
-        ],
-        "answer": "Chooses tuples satisfying a condition and produces a horizontal subset"
-    },
-    {
-        "question": "What does the project operator do?",
-        "choices": [
-            "Chooses attributes from a relation and produces a vertical subset",
-            "Combines tuples from two relations",
-            "Chooses rows based on a condition",
-            "Sorts records by physical address"
-        ],
-        "answer": "Chooses attributes from a relation and produces a vertical subset"
-    },
-    {
-        "question": "What does the join operation do in relational algebra?",
-        "choices": [
-            "Creates only the intersection of identical tuples",
-            "Selects rows from one relation using a condition",
-            "Combines tuples from two relations that satisfy a join condition",
-            "Selects only attributes from one relation"
-        ],
-        "answer": "Combines tuples from two relations that satisfy a join condition"
-    },
-    {
-        "question": "What is the purpose of DDL?",
-        "choices": [
-            "To perform only database backups",
-            "To analyze multidimensional data",
-            "To define relationships, data, and table structures",
-            "To search and modify row values only"
-        ],
-        "answer": "To define relationships, data, and table structures"
-    },
-    {
-        "question": "What is the purpose of DCL?",
-        "choices": [
-            "To perform data mining",
-            "To define XML schemas",
-            "To control access, security, integrity, and concurrency",
-            "To create only table rows"
-        ],
-        "answer": "To control access, security, integrity, and concurrency"
-    },
-    {
-        "question": "Which command belongs to DML?",
-        "choices": [
-            "CREATE",
-            "INSERT",
-            "GRANT",
-            "ALTER"
-        ],
-        "answer": "INSERT"
-    },
-    {
-        "question": "Which functions are used for aggregate DML operations?",
-        "choices": [
-            "CREATE, ALTER, and DROP",
-            "REDO, UNDO, and CHECKPOINT",
-            "SUM, AVG, and COUNT",
-            "GRANT, REVOKE, and COMMIT"
-        ],
-        "answer": "SUM, AVG, and COUNT"
-    },
-    {
-        "question": "What is GROUP BY commonly used for?",
-        "choices": [
-            "Obtaining statistical information for each group",
-            "Creating a physical index",
-            "Defining a transaction lock",
-            "Backing up each table"
-        ],
-        "answer": "Obtaining statistical information for each group"
-    },
-    {
-        "question": "What is a stored procedure?",
-        "choices": [
-            "A stored set of queries that executes a series of queries like one function",
-            "A physical database partition",
-            "A collection of uncommitted transactions",
-            "A file used only for XML validation"
-        ],
-        "answer": "A stored set of queries that executes a series of queries like one function"
-    },
-    {
-        "question": "How does dynamic SQL differ from static SQL?",
-        "choices": [
-            "Dynamic SQL cannot accept user input",
-            "Dynamic SQL changes according to runtime conditions, while static SQL is fixed during development",
-            "Static SQL has no code definition",
-            "Dynamic SQL is always fixed, while static SQL changes at runtime"
-        ],
-        "answer": "Dynamic SQL changes according to runtime conditions, while static SQL is fixed during development"
-    },
-    {
-        "question": "What is query optimization?",
-        "choices": [
-            "Executing every possible strategy simultaneously",
-            "Converting every query into XML",
-            "Systematically evaluating alternatives to choose an optimal query execution strategy",
-            "Removing all access paths"
-        ],
-        "answer": "Systematically evaluating alternatives to choose an optimal query execution strategy"
-    },
-    {
-        "question": "How does a cost-based optimizer choose a path?",
-        "choices": [
-            "It estimates processing costs and selects the least costly method",
-            "It uses only predefined rules without considering cost",
-            "It always chooses the newest index",
-            "It selects a path randomly"
-        ],
-        "answer": "It estimates processing costs and selects the least costly method"
-    },
-    {
-        "question": "What is a transaction?",
-        "choices": [
-            "A set of operations that converts a database into another consistent state",
-            "A physical backup device",
-            "A data-standardization rule",
-            "A single database attribute"
-        ],
-        "answer": "A set of operations that converts a database into another consistent state"
-    },
-    {
-        "question": "What does atomicity require?",
-        "choices": [
-            "Transactions may expose intermediate data",
-            "All transaction steps either succeed together or fail together",
-            "Successful results may disappear",
-            "Every query must return the same row count"
-        ],
-        "answer": "All transaction steps either succeed together or fail together"
-    },
-    {
-        "question": "What does isolation require?",
-        "choices": [
-            "Transactions must not interfere with one another's intermediate data",
-            "Every transaction must use the same user account",
-            "All operations must be stored in one table",
-            "Transactions must never run simultaneously"
-        ],
-        "answer": "Transactions must not interfere with one another's intermediate data"
-    },
-    {
-        "question": "What does durability guarantee?",
-        "choices": [
-            "Every transaction uses a temporary table",
-            "A successful transaction's results persist",
-            "Uncommitted changes are visible to all users",
-            "All failed operations are committed"
-        ],
-        "answer": "A successful transaction's results persist"
-    },
-    {
-        "question": "What is a lost update?",
-        "choices": [
-            "A later transaction overwrites an earlier transaction's update to the same data",
-            "A transaction reads its own committed value",
-            "A backup omits unchanged data",
-            "A query returns a new phantom row"
-        ],
-        "answer": "A later transaction overwrites an earlier transaction's update to the same data"
-    },
-    {
-        "question": "What is a dirty read?",
-        "choices": [
-            "Reading data from another transaction before that transaction is completed",
-            "Reading only from a backup copy",
-            "Reading the same committed value twice",
-            "Deleting data that has no foreign key"
-        ],
-        "answer": "Reading data from another transaction before that transaction is completed"
-    },
-    {
-        "question": "What does 2-Phase Locking guarantee?",
-        "choices": [
-            "Physical independence",
-            "Denormalization",
-            "Schema validation",
-            "Serialization"
-        ],
-        "answer": "Serialization"
-    },
-    {
-        "question": "Which isolation level allows dirty reads?",
-        "choices": [
-            "Serializable",
-            "Read uncommitted",
-            "Read committed",
-            "Repeatable read"
-        ],
-        "answer": "Read uncommitted"
-    },
-    {
-        "question": "Which anomaly may still occur at Repeatable Read?",
-        "choices": [
-            "Lost update only",
-            "No anomaly",
-            "Dirty read",
-            "Phantom read"
-        ],
-        "answer": "Phantom read"
-    },
-    {
-        "question": "What is a deadlock?",
-        "choices": [
-            "A backup runs while the database is active",
-            "A table has no primary key",
-            "Transactions wait indefinitely for resources held by one another",
-            "A query returns different results after an update"
-        ],
-        "answer": "Transactions wait indefinitely for resources held by one another"
-    },
-    {
-        "question": "Which failure is caused by power or hardware problems?",
-        "choices": [
-            "Logical independence failure",
-            "System failure",
-            "User failure",
-            "Transaction failure"
-        ],
-        "answer": "System failure"
-    },
-    {
-        "question": "What is the basic principle of database recovery?",
-        "choices": [
-            "Disabling transaction control",
-            "Removing all duplicate information",
-            "Information redundancy using backups or logs",
-            "Keeping only one copy of data"
-        ],
-        "answer": "Information redundancy using backups or logs"
-    },
-    {
-        "question": "What does Redo do?",
-        "choices": [
-            "Deletes all logs",
-            "Loads a recent copy and reapplies changes made after the recovery point",
-            "Replaces the schema with a shadow table only",
-            "Cancels every change since a transaction began"
-        ],
-        "answer": "Loads a recent copy and reapplies changes made after the recovery point"
-    },
-    {
-        "question": "What does Undo do?",
-        "choices": [
-            "Adds a database index",
-            "Restores the original state by cancelling changes since the transaction began",
-            "Reapplies committed changes after a recovery point",
-            "Creates a new full backup"
-        ],
-        "answer": "Restores the original state by cancelling changes since the transaction began"
-    },
-    {
-        "question": "Which recovery technique is described as the fastest?",
-        "choices": [
-            "Shadow paging",
-            "Checkpoint recovery",
-            "Log-based recovery",
-            "Differential backup"
-        ],
-        "answer": "Shadow paging"
-    },
-    {
-        "question": "What is a full backup?",
-        "choices": [
-            "A copy of changes since the last full backup",
-            "A copy of only transaction logs",
-            "A copy of changes since the previous backup activity",
-            "A copy of the entire database"
-        ],
-        "answer": "A copy of the entire database"
-    },
-    {
-        "question": "What is an incremental backup?",
-        "choices": [
-            "A backup of only unchanged data",
-            "A cumulative backup since the last full backup",
-            "A backup of data changed or created since the previous backup activity",
-            "A full copy of the database"
-        ],
-        "answer": "A backup of data changed or created since the previous backup activity"
-    },
-    {
-        "question": "What is a data warehouse?",
-        "choices": [
-            "A system that prohibits historical data",
-            "An integrated system that supports analysis of internal and external data from multiple viewpoints",
-            "A database used only for current transactions",
-            "A temporary cache for one application"
-        ],
-        "answer": "An integrated system that supports analysis of internal and external data from multiple viewpoints"
-    },
-    {
-        "question": "What does subject-oriented mean in a data warehouse?",
-        "choices": [
-            "Data is organized only by file type",
-            "Data is stored without standards",
-            "Data is organized around business subjects such as customers or products",
-            "Data is deleted after every query"
-        ],
-        "answer": "Data is organized around business subjects such as customers or products"
-    },
-    {
-        "question": "What is a fact table?",
-        "choices": [
-            "A table containing no numeric values",
-            "A table used only for user privileges",
-            "A core table containing highly relevant measures",
-            "A table containing only XML tags"
-        ],
-        "answer": "A core table containing highly relevant measures"
-    },
-    {
-        "question": "What is a dimension table?",
-        "choices": [
-            "A transaction recovery log",
-            "A perspective used to analyze facts",
-            "A physical index pointer",
-            "A table containing only candidate keys"
-        ],
-        "answer": "A perspective used to analyze facts"
-    },
-    {
-        "question": "What occurs during ETL transformation?",
-        "choices": [
-            "Converted data is stored in the warehouse",
-            "Extracted data is cleaned and converted into a suitable warehouse format",
-            "All source data is deleted",
-            "Data is first taken from source systems"
-        ],
-        "answer": "Extracted data is cleaned and converted into a suitable warehouse format"
-    },
-    {
-        "question": "What does OLAP allow end users to do?",
-        "choices": [
-            "Compile SQL into machine code",
-            "Validate XML grammar",
-            "Access multidimensional information for decision-making",
-            "Control transaction locks"
-        ],
-        "answer": "Access multidimensional information for decision-making"
-    },
-    {
-        "question": "Which data-mining algorithm groups similar records into clusters?",
-        "choices": [
-            "Regression backup",
-            "Association",
-            "Classification",
-            "Clustering"
-        ],
-        "answer": "Clustering"
-    },
-    {
-        "question": "What does Volume mean in the 3V model of big data?",
-        "choices": [
-            "Very large data size, reaching petabytes or more",
-            "High data accuracy",
-            "High-speed real-time processing",
-            "Diverse structured and unstructured formats"
-        ],
-        "answer": "Very large data size, reaching petabytes or more"
-    },
-    {
-        "question": "What does Velocity mean in big data?",
-        "choices": [
-            "The number of user accounts",
-            "The age of stored data",
-            "High-speed data generation and real-time processing demands",
-            "The number of data formats"
-        ],
-        "answer": "High-speed data generation and real-time processing demands"
-    },
-    {
-        "question": "What does Variety mean in big data?",
-        "choices": [
-            "The speed of query execution",
-            "The number of user accounts",
-            "The size of data in petabytes",
-            "The presence of structured, semi-structured, and unstructured data"
-        ],
-        "answer": "The presence of structured, semi-structured, and unstructured data"
-    },
-    {
-        "question": "What is MapReduce?",
-        "choices": [
-            "A relational algebra operation",
-            "A model for parallel distributed batch processing of big data",
-            "A transaction isolation level",
-            "A database backup method"
-        ],
-        "answer": "A model for parallel distributed batch processing of big data"
-    },
-    {
-        "question": "What is NoSQL?",
-        "choices": [
-            "A language that prohibits all queries",
-            "A recovery technique based on logs",
-            "A relational model limited to one table",
-            "A non-relational database approach emphasizing scalability and distributed storage"
-        ],
-        "answer": "A non-relational database approach emphasizing scalability and distributed storage"
-    },
-    {
-        "question": "What does Eventually Consistent mean?",
-        "choices": [
-            "Consistency may be temporarily lost but is restored over time",
-            "Transactions cannot be distributed",
-            "All nodes are always instantly identical",
-            "Updates are permanently ignored"
-        ],
-        "answer": "Consistency may be temporarily lost but is restored over time"
-    },
-    {
-        "question": "Which NoSQL model provides simple Get, Put, and Delete operations?",
-        "choices": [
-            "Key-value based",
-            "Document based",
-            "Column family based",
-            "Graph based"
-        ],
-        "answer": "Key-value based"
-    },
-    {
-        "question": "What is artificial intelligence according to the reviewer?",
-        "choices": [
-            "A type of relational algebra",
-            "Technology that realizes human learning, reasoning, perception, and language understanding using computer programs",
-            "A database backup method",
-            "A physical table organization"
-        ],
-        "answer": "Technology that realizes human learning, reasoning, perception, and language understanding using computer programs"
-    },
-    {
-        "question": "What is Artificial Narrow Intelligence?",
-        "choices": [
-            "AI that operates only under given conditions",
-            "AI that thinks like humans in every domain",
-            "AI that surpasses humans in all areas",
-            "AI that cannot perform any defined task"
-        ],
-        "answer": "AI that operates only under given conditions"
-    },
-    {
-        "question": "What is Artificial Super Intelligence?",
-        "choices": [
-            "AI that performs only clustering",
-            "AI that cannot reason",
-            "AI that surpasses humans in all areas",
-            "AI limited to navigation tasks"
-        ],
-        "answer": "AI that surpasses humans in all areas"
-    },
-    {
-        "question": "What does the Turing test evaluate?",
-        "choices": [
-            "Whether an algorithm uses multiple hidden layers",
-            "Whether a database follows ACID properties",
-            "Whether an evaluator can distinguish a machine from a human through its responses",
-            "Whether a query uses an index"
-        ],
-        "answer": "Whether an evaluator can distinguish a machine from a human through its responses"
-    },
-    {
-        "question": "What kind of data is used in supervised learning?",
-        "choices": [
-            "Data describing the intended result",
-            "Only unstructured images",
-            "Only transaction logs",
-            "Data without any intended result"
-        ],
-        "answer": "Data describing the intended result"
-    },
-    {
-        "question": "What is the purpose of unsupervised learning?",
-        "choices": [
-            "To learn only from rewards and punishments",
-            "To guarantee database consistency",
-            "To execute fixed SQL statements",
-            "To discover common characteristics in input patterns without labeled results"
-        ],
-        "answer": "To discover common characteristics in input patterns without labeled results"
-    },
-    {
-        "question": "How does reinforcement learning increase knowledge?",
-        "choices": [
-            "Through rewards for good behavior and punishment for wrong behavior",
-            "Through fixed labeled examples only",
-            "Through XML validation",
-            "Through database normalization"
-        ],
-        "answer": "Through rewards for good behavior and punishment for wrong behavior"
-    },
-    {
-        "question": "Which neural network is especially suitable for image processing?",
-        "choices": [
-            "DBN",
-            "CNN",
-            "RNN",
-            "HMM"
-        ],
-        "answer": "CNN"
-    }
+  {
+    "question": "What is data according to the reviewer?",
+    "choices": [
+      "Processed data organized for a specific purpose",
+      "Information generalized for decision-making",
+      "Collected facts that have not yet been evaluated for a specific purpose",
+      "A database schema viewed by all users"
+    ],
+    "answer": "Collected facts that have not yet been evaluated for a specific purpose",
+    "explanation": "Data is raw, collected facts or values that have not yet been processed or evaluated for any particular purpose. Once it is processed for a purpose it becomes information."
+  },
+  {
+    "question": "What is information?",
+    "choices": [
+      "Raw facts that have not been evaluated",
+      "A physical storage structure",
+      "Data that has been organized, classified, and systematized for a purpose",
+      "A set of database recovery logs"
+    ],
+    "answer": "Data that has been organized, classified, and systematized for a purpose",
+    "explanation": "Information is data that has been processed (organised, classified, systematised) so that it is meaningful and useful for a purpose."
+  },
+  {
+    "question": "What is knowledge?",
+    "choices": [
+      "Information accumulated and organized into a generalized form for decision-making",
+      "A real-time query response",
+      "A list of database tables without relationships",
+      "Unprocessed facts collected from a source"
+    ],
+    "answer": "Information accumulated and organized into a generalized form for decision-making",
+    "explanation": "Knowledge sits above information in the hierarchy: information that has been accumulated and generalised so it can guide decisions."
+  },
+  {
+    "question": "Which is an example of a batch processing system?",
+    "choices": [
+      "Airline seat reservation system",
+      "Real-time navigation system",
+      "Payroll processing system",
+      "Distributed client/server search"
+    ],
+    "answer": "Payroll processing system",
+    "explanation": "Batch processing collects data over a period and processes it all at once. Payroll is the classic example because pay is calculated periodically, not at the moment each event happens."
+  },
+  {
+    "question": "What characterizes an online processing system?",
+    "choices": [
+      "Only geographically dispersed processors are used",
+      "Transferred data is processed immediately in real time",
+      "Processing occurs without any computer connection",
+      "Data is collected for a period and processed all at once"
+    ],
+    "answer": "Transferred data is processed immediately in real time",
+    "explanation": "In online (real-time) processing, data is processed the moment it is transferred and the result is returned immediately, as in seat reservation or banking."
+  },
+  {
+    "question": "What is a distributed processing system?",
+    "choices": [
+      "A system that connects geographically dispersed processors and databases through a network",
+      "A system that processes all data at one fixed time",
+      "A system that stores data only in main memory",
+      "A system that permits only one user at a time"
+    ],
+    "answer": "A system that connects geographically dispersed processors and databases through a network",
+    "explanation": "A distributed processing system links processors and databases located in different places through a network so that work and data are shared among them."
+  },
+  {
+    "question": "Which is a function of a DBMS?",
+    "choices": [
+      "Eliminating the need for database security",
+      "Replacing all users with automated processes",
+      "Controlling redundancy and enabling data sharing among multiple users",
+      "Preventing the expression of complex relationships"
+    ],
+    "answer": "Controlling redundancy and enabling data sharing among multiple users",
+    "explanation": "A DBMS manages the database centrally, which lets it control redundancy (the same data stored repeatedly) and let many users share the same data safely."
+  },
+  {
+    "question": "Which schema represents several users' viewpoints?",
+    "choices": [
+      "Conceptual schema",
+      "Physical index",
+      "External schema",
+      "Internal schema"
+    ],
+    "answer": "External schema",
+    "explanation": "The external schema is the user level of the three-schema architecture: each user or application sees its own view, so there can be several external schemas."
+  },
+  {
+    "question": "What does the conceptual schema describe?",
+    "choices": [
+      "The integrated view of all users' perspectives",
+      "Only the physical storage format",
+      "The backup copy of the database",
+      "A single user's private view only"
+    ],
+    "answer": "The integrated view of all users' perspectives",
+    "explanation": "The conceptual schema is the single, organisation-wide view that integrates all users' views: the entities, relationships and constraints of the whole database."
+  },
+  {
+    "question": "What does the internal schema describe?",
+    "choices": [
+      "The physical storage structure of the database",
+      "The integrated business view of all users",
+      "The organization's data governance policy",
+      "The user-specific external view"
+    ],
+    "answer": "The physical storage structure of the database",
+    "explanation": "The internal schema is the physical level: how data is actually stored, including record layouts, indexes and storage structures."
+  },
+  {
+    "question": "What is logical data independence?",
+    "choices": [
+      "Changing application programs whenever a table changes",
+      "Allowing users to bypass the DBMS",
+      "Changing the conceptual schema without affecting external schemas or application programs",
+      "Changing storage devices without affecting the conceptual schema"
+    ],
+    "answer": "Changing the conceptual schema without affecting external schemas or application programs",
+    "explanation": "Logical data independence means the conceptual schema (for example adding a column or table) can change without changing the external schemas or the programs that use them."
+  },
+  {
+    "question": "What is physical data independence?",
+    "choices": [
+      "Changing the conceptual schema without affecting external schemas",
+      "Changing all application programs whenever storage changes",
+      "Changing the internal schema without affecting the conceptual schema or application programs",
+      "Separating users from database languages"
+    ],
+    "answer": "Changing the internal schema without affecting the conceptual schema or application programs",
+    "explanation": "Physical data independence means the storage structure (internal schema) can change, for example a new index or disk layout, without affecting the conceptual schema or application programs."
+  },
+  {
+    "question": "How does a relational database mainly store data?",
+    "choices": [
+      "Only as connected graph nodes",
+      "Only in object inheritance hierarchies",
+      "In two-dimensional tables made of rows and columns",
+      "Only as XML documents"
+    ],
+    "answer": "In two-dimensional tables made of rows and columns",
+    "explanation": "The relational model represents data as relations, which are two-dimensional tables: rows are tuples (records) and columns are attributes."
+  },
+  {
+    "question": "Which feature is supported by an object-oriented database?",
+    "choices": [
+      "Storage limited to two-dimensional tables",
+      "No integration of data and logic",
+      "Only fixed primitive data types",
+      "User-defined data types and inheritance"
+    ],
+    "answer": "User-defined data types and inheritance",
+    "explanation": "An object-oriented database stores objects and supports object concepts such as user-defined types, encapsulation and inheritance, which a plain relational database does not."
+  },
+  {
+    "question": "Why was the object-relational database introduced?",
+    "choices": [
+      "To combine relational capabilities with object-oriented concepts",
+      "To remove all relational features",
+      "To prohibit large object data types",
+      "To replace databases with HTML files"
+    ],
+    "answer": "To combine relational capabilities with object-oriented concepts",
+    "explanation": "The object-relational database extends the proven relational model with object-oriented features (user-defined types, inheritance) to handle complex data while keeping SQL."
+  },
+  {
+    "question": "What is XML primarily used for?",
+    "choices": [
+      "Replacing all database indexes",
+      "Specifying structure and exchanging data in a web environment",
+      "Managing transaction locks",
+      "Performing physical database recovery"
+    ],
+    "answer": "Specifying structure and exchanging data in a web environment",
+    "explanation": "XML is a markup language whose user-defined tags describe the structure of data, which makes it well suited to exchanging data between systems on the web."
+  },
+  {
+    "question": "What does an XML DTD do?",
+    "choices": [
+      "Stores relational rows by column",
+      "Creates database indexes automatically",
+      "Defines the form of an XML document so it can be validated",
+      "Executes distributed transactions"
+    ],
+    "answer": "Defines the form of an XML document so it can be validated",
+    "explanation": "A DTD (Document Type Definition) declares which elements and attributes an XML document may contain and in what structure, so a document can be checked for validity against it."
+  },
+  {
+    "question": "What is a Main Memory Database?",
+    "choices": [
+      "A database distributed only across disks",
+      "A database that has no recovery needs",
+      "A database stored in main memory",
+      "A database stored only in XML files"
+    ],
+    "answer": "A database stored in main memory",
+    "explanation": "A Main Memory Database keeps all its data in main memory (RAM) instead of on disk, removing disk I/O and giving very fast processing."
+  },
+  {
+    "question": "What is a spatial database designed to represent?",
+    "choices": [
+      "Only user privileges",
+      "Only source-code dependencies",
+      "Spatial relationships between geographic objects",
+      "Only payroll transactions"
+    ],
+    "answer": "Spatial relationships between geographic objects",
+    "explanation": "A spatial database stores geographic objects (points, lines, polygons) and can represent and query the spatial relationships between them, such as distance or containment."
+  },
+  {
+    "question": "How does a column-based database physically store data?",
+    "choices": [
+      "By graph edges only",
+      "By columns",
+      "By complete rows only",
+      "By XML tags only"
+    ],
+    "answer": "By columns",
+    "explanation": "A column-based database stores the values of each column together rather than each row together, which speeds up analytic queries that read a few columns from many rows and compresses well."
+  },
+  {
+    "question": "What is data modeling?",
+    "choices": [
+      "The process of granting user privileges",
+      "The process of compiling SQL code",
+      "The process of backing up a database",
+      "The process of abstracting the real world to create a database"
+    ],
+    "answer": "The process of abstracting the real world to create a database",
+    "explanation": "Data modeling abstracts the real world (its entities, attributes and relationships) into a model from which a database can be built."
+  },
+  {
+    "question": "What is normally produced during conceptual data modeling?",
+    "choices": [
+      "A physical partition plan",
+      "A transaction log",
+      "An entity-relationship model",
+      "A backup schedule"
+    ],
+    "answer": "An entity-relationship model",
+    "explanation": "Conceptual modeling identifies the key entities and relationships independently of any DBMS, and its usual output is an entity-relationship (ER) model."
+  },
+  {
+    "question": "During which modeling level is normalization performed?",
+    "choices": [
+      "Conceptual data modeling",
+      "Logical data modeling",
+      "Physical data modeling",
+      "Data recovery modeling"
+    ],
+    "answer": "Logical data modeling",
+    "explanation": "Normalization is part of logical data modeling, where the conceptual model is converted to a logical schema (such as relations) and refined to remove redundancy."
+  },
+  {
+    "question": "During which modeling level is denormalization performed?",
+    "choices": [
+      "Requirements extraction",
+      "Logical data modeling",
+      "Physical data modeling",
+      "Conceptual data modeling"
+    ],
+    "answer": "Physical data modeling",
+    "explanation": "Denormalization is a performance decision that depends on the actual DBMS and workload, so it is made during physical data modeling."
+  },
+  {
+    "question": "In the Chen model, how is an entity represented?",
+    "choices": [
+      "Rectangle",
+      "Ellipse",
+      "Dotted line",
+      "Diamond"
+    ],
+    "answer": "Rectangle",
+    "explanation": "In Chen's ER notation an entity is drawn as a rectangle. Attributes are ovals and relationships are diamonds."
+  },
+  {
+    "question": "In the Chen model, how is a relationship represented?",
+    "choices": [
+      "Diamond",
+      "Ellipse",
+      "Rectangle",
+      "Triangle"
+    ],
+    "answer": "Diamond",
+    "explanation": "In Chen's ER notation a relationship is drawn as a diamond that connects the rectangles of the participating entities."
+  },
+  {
+    "question": "What does cardinality indicate?",
+    "choices": [
+      "The physical size of a table",
+      "The maximum number of relationship instances that can participate",
+      "The number of backups stored",
+      "The speed of a query"
+    ],
+    "answer": "The maximum number of relationship instances that can participate",
+    "explanation": "Cardinality states the maximum number of instances that can take part in a relationship, such as 1:1, 1:N or N:M."
+  },
+  {
+    "question": "What is a fan trap?",
+    "choices": [
+      "A missing value in a primary key",
+      "A duplicate row caused by denormalization",
+      "An ambiguous path caused by an N:1 relationship followed by a 1:N relationship",
+      "A deadlock caused by circular wait"
+    ],
+    "answer": "An ambiguous path caused by an N:1 relationship followed by a 1:N relationship",
+    "explanation": "A fan trap occurs when two 1:N relationships fan out from the same entity (N:1 followed by 1:N along the path), so it is ambiguous which instances on either end are related."
+  },
+  {
+    "question": "What is a primary key?",
+    "choices": [
+      "A duplicated column added for performance",
+      "A pointer stored in an index",
+      "Any field used in a WHERE clause",
+      "The candidate key selected to uniquely identify a record"
+    ],
+    "answer": "The candidate key selected to uniquely identify a record",
+    "explanation": "A table may have several candidate keys that can uniquely identify a record. The one chosen as the main identifier is the primary key, and it cannot be null or duplicated."
+  },
+  {
+    "question": "What is a foreign key?",
+    "choices": [
+      "An attribute that refers to the primary key of another table",
+      "The smallest possible candidate key in the same table",
+      "A derived attribute shown by a dotted ellipse",
+      "A key used only in main memory"
+    ],
+    "answer": "An attribute that refers to the primary key of another table",
+    "explanation": "A foreign key is an attribute whose values reference the primary key of another table, linking the two tables and enforcing referential integrity."
+  },
+  {
+    "question": "What is an insertion anomaly?",
+    "choices": [
+      "Deleting one fact and unintentionally deleting another",
+      "Updating the same fact several times",
+      "Reading uncommitted transaction data",
+      "Being unable to insert certain information without inserting other information"
+    ],
+    "answer": "Being unable to insert certain information without inserting other information",
+    "explanation": "An insertion anomaly appears in a poorly designed table when one fact cannot be recorded unless another, unrelated fact is also supplied (for example, a new course cannot be added until a student enrols)."
+  },
+  {
+    "question": "What is a deletion anomaly?",
+    "choices": [
+      "A row cannot be inserted without another fact",
+      "Deleting needed information also removes other related information",
+      "Two transactions wait indefinitely",
+      "The same value must be updated repeatedly"
+    ],
+    "answer": "Deleting needed information also removes other related information",
+    "explanation": "A deletion anomaly occurs when deleting one fact unintentionally removes other information stored in the same row (deleting the last enrolled student also deletes the course)."
+  },
+  {
+    "question": "What is an update anomaly?",
+    "choices": [
+      "A transaction reads uncommitted data",
+      "A query optimizer selects a poor path",
+      "A backup contains only changed data",
+      "The same content must be updated repeatedly in several places"
+    ],
+    "answer": "The same content must be updated repeatedly in several places",
+    "explanation": "An update anomaly arises when the same fact is stored in several rows: every copy must be changed, and missing one leaves the data inconsistent."
+  },
+  {
+    "question": "When does X → Y hold in a relation?",
+    "choices": [
+      "When records with the same X values also have the same Y values",
+      "When X and Y are always primary keys",
+      "When X and Y are stored in different databases",
+      "When Y contains more values than X"
+    ],
+    "answer": "When records with the same X values also have the same Y values",
+    "explanation": "X → Y (X functionally determines Y) means that the value of X fixes the value of Y: any two records with the same X must have the same Y."
+  },
+  {
+    "question": "Which dependency is removed to achieve Second Normal Form?",
+    "choices": [
+      "Join dependency",
+      "Partial functional dependency",
+      "Transitive functional dependency",
+      "Multi-valued dependency"
+    ],
+    "answer": "Partial functional dependency",
+    "explanation": "2NF removes partial functional dependencies, where a non-key attribute depends on only part of a composite primary key."
+  },
+  {
+    "question": "Which dependency is removed to achieve Third Normal Form?",
+    "choices": [
+      "Transitive functional dependency",
+      "Partial functional dependency",
+      "Physical dependency",
+      "Replication dependency"
+    ],
+    "answer": "Transitive functional dependency",
+    "explanation": "3NF removes transitive functional dependencies, where a non-key attribute depends on the key only through another non-key attribute (A → B → C)."
+  },
+  {
+    "question": "What is the goal of First Normal Form?",
+    "choices": [
+      "To introduce transitive dependencies",
+      "To merge every related table",
+      "To ensure attributes contain atomic values",
+      "To remove all candidate keys"
+    ],
+    "answer": "To ensure attributes contain atomic values",
+    "explanation": "1NF requires every attribute to hold a single, indivisible (atomic) value: no repeating groups or multi-valued attributes."
+  },
+  {
+    "question": "What does BCNF require for every functional dependency X → Y?",
+    "choices": [
+      "X must contain duplicate values",
+      "Y must be a foreign key",
+      "X must be a candidate key",
+      "Y must be a multi-valued attribute"
+    ],
+    "answer": "X must be a candidate key",
+    "explanation": "BCNF is stricter than 3NF: for every functional dependency X → Y, the determinant X must be a candidate key."
+  },
+  {
+    "question": "What is denormalization?",
+    "choices": [
+      "Removing all duplicate columns regardless of performance",
+      "Intentionally integrating normalized entities or relationships to improve performance and simplify development",
+      "Decomposing every table until no joins are possible",
+      "Converting a physical model into a conceptual model"
+    ],
+    "answer": "Intentionally integrating normalized entities or relationships to improve performance and simplify development",
+    "explanation": "Denormalization deliberately merges or duplicates normalized structures, accepting some redundancy to reduce joins, improve performance and simplify development."
+  },
+  {
+    "question": "What does physical modeling convert an ERD into?",
+    "choices": [
+      "A transaction isolation schedule",
+      "An XML stylesheet",
+      "A user-interface prototype",
+      "A table structure drawing"
+    ],
+    "answer": "A table structure drawing",
+    "explanation": "Physical modeling turns the logical ERD into the actual table structure for the target DBMS: tables, columns, data types, keys and indexes."
+  },
+  {
+    "question": "How is a heap-organized table stored?",
+    "choices": [
+      "Only by hash partition",
+      "According to when records are inserted, regardless of attribute values",
+      "Always in primary-key order",
+      "Only by column value"
+    ],
+    "answer": "According to when records are inserted, regardless of attribute values",
+    "explanation": "A heap-organized table has no particular order: each record is simply placed where space is available as it is inserted, regardless of its values."
+  },
+  {
+    "question": "Why is a partitioned table used?",
+    "choices": [
+      "To prevent distributed processing",
+      "To improve performance by physically splitting data based on criteria",
+      "To remove all data types",
+      "To eliminate every query condition"
+    ],
+    "answer": "To improve performance by physically splitting data based on criteria",
+    "explanation": "Partitioning physically splits a large table by a criterion such as date range. Queries then scan only the relevant partitions, and management tasks such as backup are easier."
+  },
+  {
+    "question": "What is the most important function of an index?",
+    "choices": [
+      "To normalize all relations",
+      "To guarantee transaction durability",
+      "To replace foreign keys",
+      "To speed up searches by reducing the access path"
+    ],
+    "answer": "To speed up searches by reducing the access path",
+    "explanation": "An index works like the index of a book: it shortens the access path to the wanted rows, so searches do not have to scan the whole table."
+  },
+  {
+    "question": "What is a distributed database?",
+    "choices": [
+      "A database without shared access",
+      "A logically integrated database physically distributed across multiple networked computers",
+      "A database stored on one computer with no network",
+      "A database that contains only temporary data"
+    ],
+    "answer": "A logically integrated database physically distributed across multiple networked computers",
+    "explanation": "A distributed database is stored on several computers connected by a network but is logically integrated, so users see it as one database."
+  },
+  {
+    "question": "Which transparency means users do not need to know where data is physically located?",
+    "choices": [
+      "Partitioning transparency",
+      "Replication transparency",
+      "Location transparency",
+      "Concurrency transparency"
+    ],
+    "answer": "Location transparency",
+    "explanation": "With location transparency users access data by name without knowing which site physically stores it. The system finds the location."
+  },
+  {
+    "question": "What is data quality control?",
+    "choices": [
+      "Activities that improve data quality across value, structure, and management process",
+      "A process used only to grant SQL privileges",
+      "A method for creating graph databases",
+      "A technique for physical backup"
+    ],
+    "answer": "Activities that improve data quality across value, structure, and management process",
+    "explanation": "Data quality control is the set of activities that maintain and improve quality in three areas: the data values, the data structure and the data management process."
+  },
+  {
+    "question": "What is data standardization?",
+    "choices": [
+      "Storing all data in one physical file",
+      "Defining consistent names, definitions, formats, and rules for data elements across an organization",
+      "Replacing every table with XML",
+      "Allowing each department to use unrelated formats"
+    ],
+    "answer": "Defining consistent names, definitions, formats, and rules for data elements across an organization",
+    "explanation": "Data standardization sets organisation-wide rules for data elements (names, definitions, formats and rules) so the same data is described the same way everywhere."
+  },
+  {
+    "question": "How does data standardization improve communication?",
+    "choices": [
+      "By preventing data sharing",
+      "By removing all definitions",
+      "By increasing ambiguity",
+      "By unifying data names"
+    ],
+    "answer": "By unifying data names",
+    "explanation": "When everyone uses the same name for the same data, people in different departments and systems mean the same thing by it, so misunderstanding is reduced."
+  },
+  {
+    "question": "What is relational algebra?",
+    "choices": [
+      "A backup method for entire databases",
+      "A set of operations for processing relations in a relational database",
+      "A programming model for big-data batch processing",
+      "A language for defining XML tags"
+    ],
+    "answer": "A set of operations for processing relations in a relational database",
+    "explanation": "Relational algebra is a procedural set of operations (select, project, join, union and so on) that take relations as input and produce relations as output."
+  },
+  {
+    "question": "What does the select operator do?",
+    "choices": [
+      "Chooses attributes and produces a vertical subset",
+      "Deletes tuples permanently",
+      "Chooses tuples satisfying a condition and produces a horizontal subset",
+      "Combines two relations based on a join condition"
+    ],
+    "answer": "Chooses tuples satisfying a condition and produces a horizontal subset",
+    "explanation": "Select (σ) picks the tuples (rows) that satisfy a condition, so the result is a horizontal subset of the relation."
+  },
+  {
+    "question": "What does the project operator do?",
+    "choices": [
+      "Chooses attributes from a relation and produces a vertical subset",
+      "Combines tuples from two relations",
+      "Chooses rows based on a condition",
+      "Sorts records by physical address"
+    ],
+    "answer": "Chooses attributes from a relation and produces a vertical subset",
+    "explanation": "Project (π) picks specified attributes (columns), so the result is a vertical subset of the relation."
+  },
+  {
+    "question": "What does the join operation do in relational algebra?",
+    "choices": [
+      "Creates only the intersection of identical tuples",
+      "Selects rows from one relation using a condition",
+      "Combines tuples from two relations that satisfy a join condition",
+      "Selects only attributes from one relation"
+    ],
+    "answer": "Combines tuples from two relations that satisfy a join condition",
+    "explanation": "Join combines tuples from two relations into one wherever they satisfy the join condition, typically matching values in a common attribute."
+  },
+  {
+    "question": "What is the purpose of DDL?",
+    "choices": [
+      "To perform only database backups",
+      "To analyze multidimensional data",
+      "To define relationships, data, and table structures",
+      "To search and modify row values only"
+    ],
+    "answer": "To define relationships, data, and table structures",
+    "explanation": "DDL (Data Definition Language) defines the database structure with commands such as CREATE, ALTER and DROP."
+  },
+  {
+    "question": "What is the purpose of DCL?",
+    "choices": [
+      "To perform data mining",
+      "To define XML schemas",
+      "To control access, security, integrity, and concurrency",
+      "To create only table rows"
+    ],
+    "answer": "To control access, security, integrity, and concurrency",
+    "explanation": "DCL (Data Control Language) controls the database: access rights and security, integrity and concurrency, with commands such as GRANT and REVOKE."
+  },
+  {
+    "question": "Which command belongs to DML?",
+    "choices": [
+      "CREATE",
+      "INSERT",
+      "GRANT",
+      "ALTER"
+    ],
+    "answer": "INSERT",
+    "explanation": "DML (Data Manipulation Language) works with the data itself: SELECT, INSERT, UPDATE and DELETE. CREATE and DROP are DDL, and GRANT is DCL."
+  },
+  {
+    "question": "Which functions are used for aggregate DML operations?",
+    "choices": [
+      "CREATE, ALTER, and DROP",
+      "REDO, UNDO, and CHECKPOINT",
+      "SUM, AVG, and COUNT",
+      "GRANT, REVOKE, and COMMIT"
+    ],
+    "answer": "SUM, AVG, and COUNT",
+    "explanation": "SUM, AVG and COUNT (along with MAX and MIN) are aggregate functions: they compute one summary value from many rows."
+  },
+  {
+    "question": "What is GROUP BY commonly used for?",
+    "choices": [
+      "Obtaining statistical information for each group",
+      "Creating a physical index",
+      "Defining a transaction lock",
+      "Backing up each table"
+    ],
+    "answer": "Obtaining statistical information for each group",
+    "explanation": "GROUP BY divides rows into groups that share a value and is used with aggregate functions to get statistics for each group, such as average salary per department."
+  },
+  {
+    "question": "What is a stored procedure?",
+    "choices": [
+      "A stored set of queries that executes a series of queries like one function",
+      "A physical database partition",
+      "A collection of uncommitted transactions",
+      "A file used only for XML validation"
+    ],
+    "answer": "A stored set of queries that executes a series of queries like one function",
+    "explanation": "A stored procedure is a named set of SQL statements saved in the database that runs as a unit, like calling one function."
+  },
+  {
+    "question": "How does dynamic SQL differ from static SQL?",
+    "choices": [
+      "Dynamic SQL cannot accept user input",
+      "Dynamic SQL changes according to runtime conditions, while static SQL is fixed during development",
+      "Static SQL has no code definition",
+      "Dynamic SQL is always fixed, while static SQL changes at runtime"
+    ],
+    "answer": "Dynamic SQL changes according to runtime conditions, while static SQL is fixed during development",
+    "explanation": "Static SQL is written in full and fixed at development time. Dynamic SQL is built or changed at run time according to conditions such as user input."
+  },
+  {
+    "question": "What is query optimization?",
+    "choices": [
+      "Executing every possible strategy simultaneously",
+      "Converting every query into XML",
+      "Systematically evaluating alternatives to choose an optimal query execution strategy",
+      "Removing all access paths"
+    ],
+    "answer": "Systematically evaluating alternatives to choose an optimal query execution strategy",
+    "explanation": "The same query can be executed in many ways. Query optimization evaluates the alternatives and chooses the most efficient execution plan."
+  },
+  {
+    "question": "How does a cost-based optimizer choose a path?",
+    "choices": [
+      "It estimates processing costs and selects the least costly method",
+      "It uses only predefined rules without considering cost",
+      "It always chooses the newest index",
+      "It selects a path randomly"
+    ],
+    "answer": "It estimates processing costs and selects the least costly method",
+    "explanation": "A cost-based optimizer uses statistics about the data to estimate the cost (I/O, CPU) of each possible plan and picks the cheapest. A rule-based optimizer follows fixed priorities instead."
+  },
+  {
+    "question": "What is a transaction?",
+    "choices": [
+      "A set of operations that converts a database into another consistent state",
+      "A physical backup device",
+      "A data-standardization rule",
+      "A single database attribute"
+    ],
+    "answer": "A set of operations that converts a database into another consistent state",
+    "explanation": "A transaction is a logical unit of work: a set of operations that takes the database from one consistent state to another."
+  },
+  {
+    "question": "What does atomicity require?",
+    "choices": [
+      "Transactions may expose intermediate data",
+      "All transaction steps either succeed together or fail together",
+      "Successful results may disappear",
+      "Every query must return the same row count"
+    ],
+    "answer": "All transaction steps either succeed together or fail together",
+    "explanation": "Atomicity is \"all or nothing\": every operation in the transaction is applied, or none is. A partial result is never left behind."
+  },
+  {
+    "question": "What does isolation require?",
+    "choices": [
+      "Transactions must not interfere with one another's intermediate data",
+      "Every transaction must use the same user account",
+      "All operations must be stored in one table",
+      "Transactions must never run simultaneously"
+    ],
+    "answer": "Transactions must not interfere with one another's intermediate data",
+    "explanation": "Isolation means a running transaction's intermediate results are not visible to, or disturbed by, other concurrent transactions."
+  },
+  {
+    "question": "What does durability guarantee?",
+    "choices": [
+      "Every transaction uses a temporary table",
+      "A successful transaction's results persist",
+      "Uncommitted changes are visible to all users",
+      "All failed operations are committed"
+    ],
+    "answer": "A successful transaction's results persist",
+    "explanation": "Durability means that once a transaction has committed, its results are permanent and survive later system failures."
+  },
+  {
+    "question": "What is a lost update?",
+    "choices": [
+      "A later transaction overwrites an earlier transaction's update to the same data",
+      "A transaction reads its own committed value",
+      "A backup omits unchanged data",
+      "A query returns a new phantom row"
+    ],
+    "answer": "A later transaction overwrites an earlier transaction's update to the same data",
+    "explanation": "A lost update happens when two transactions update the same data and the later write overwrites the earlier one, so the first update disappears."
+  },
+  {
+    "question": "What is a dirty read?",
+    "choices": [
+      "Reading data from another transaction before that transaction is completed",
+      "Reading only from a backup copy",
+      "Reading the same committed value twice",
+      "Deleting data that has no foreign key"
+    ],
+    "answer": "Reading data from another transaction before that transaction is completed",
+    "explanation": "A dirty read is reading data that another transaction has changed but not yet committed. If that transaction rolls back, the data read was never valid."
+  },
+  {
+    "question": "What does 2-Phase Locking guarantee?",
+    "choices": [
+      "Physical independence",
+      "Denormalization",
+      "Schema validation",
+      "Serialization"
+    ],
+    "answer": "Serialization",
+    "explanation": "Under 2-Phase Locking a transaction acquires all its locks in a growing phase and releases them in a shrinking phase. This guarantees serializability, though it does not prevent deadlock."
+  },
+  {
+    "question": "Which isolation level allows dirty reads?",
+    "choices": [
+      "Serializable",
+      "Read uncommitted",
+      "Read committed",
+      "Repeatable read"
+    ],
+    "answer": "Read uncommitted",
+    "explanation": "Read Uncommitted is the lowest isolation level. It lets a transaction read uncommitted changes from others, so dirty reads can occur."
+  },
+  {
+    "question": "Which anomaly may still occur at Repeatable Read?",
+    "choices": [
+      "Lost update only",
+      "No anomaly",
+      "Dirty read",
+      "Phantom read"
+    ],
+    "answer": "Phantom read",
+    "explanation": "Repeatable Read ensures that rows already read do not change, but other transactions can still insert new rows that match the query, producing phantom reads."
+  },
+  {
+    "question": "What is a deadlock?",
+    "choices": [
+      "A backup runs while the database is active",
+      "A table has no primary key",
+      "Transactions wait indefinitely for resources held by one another",
+      "A query returns different results after an update"
+    ],
+    "answer": "Transactions wait indefinitely for resources held by one another",
+    "explanation": "A deadlock is a state where two or more transactions each hold a resource the other needs, so all of them wait forever."
+  },
+  {
+    "question": "Which failure is caused by power or hardware problems?",
+    "choices": [
+      "Logical independence failure",
+      "System failure",
+      "User failure",
+      "Transaction failure"
+    ],
+    "answer": "System failure",
+    "explanation": "A system failure is caused by problems such as power loss or hardware faults that halt the system and lose the contents of main memory."
+  },
+  {
+    "question": "What is the basic principle of database recovery?",
+    "choices": [
+      "Disabling transaction control",
+      "Removing all duplicate information",
+      "Information redundancy using backups or logs",
+      "Keeping only one copy of data"
+    ],
+    "answer": "Information redundancy using backups or logs",
+    "explanation": "Recovery depends on redundancy: a second copy of the information, kept as backups or logs, from which the database can be restored."
+  },
+  {
+    "question": "What does Redo do?",
+    "choices": [
+      "Deletes all logs",
+      "Loads a recent copy and reapplies changes made after the recovery point",
+      "Replaces the schema with a shadow table only",
+      "Cancels every change since a transaction began"
+    ],
+    "answer": "Loads a recent copy and reapplies changes made after the recovery point",
+    "explanation": "Redo restores from a recent copy and re-executes the logged changes made after that point, so the work of committed transactions is not lost."
+  },
+  {
+    "question": "What does Undo do?",
+    "choices": [
+      "Adds a database index",
+      "Restores the original state by cancelling changes since the transaction began",
+      "Reapplies committed changes after a recovery point",
+      "Creates a new full backup"
+    ],
+    "answer": "Restores the original state by cancelling changes since the transaction began",
+    "explanation": "Undo cancels the changes a transaction has made since it began, returning the database to its original state. It is used for transactions that did not complete."
+  },
+  {
+    "question": "Which recovery technique is described as the fastest?",
+    "choices": [
+      "Shadow paging",
+      "Checkpoint recovery",
+      "Log-based recovery",
+      "Differential backup"
+    ],
+    "answer": "Shadow paging",
+    "explanation": "Shadow paging keeps an unmodified shadow copy of pages while changes go to the current copy. Recovery simply switches back to the shadow pages, with no undo or redo, so it is fast."
+  },
+  {
+    "question": "What is a full backup?",
+    "choices": [
+      "A copy of changes since the last full backup",
+      "A copy of only transaction logs",
+      "A copy of changes since the previous backup activity",
+      "A copy of the entire database"
+    ],
+    "answer": "A copy of the entire database",
+    "explanation": "A full backup copies the entire database. It takes the most time and space but is the simplest to restore."
+  },
+  {
+    "question": "What is an incremental backup?",
+    "choices": [
+      "A backup of only unchanged data",
+      "A cumulative backup since the last full backup",
+      "A backup of data changed or created since the previous backup activity",
+      "A full copy of the database"
+    ],
+    "answer": "A backup of data changed or created since the previous backup activity",
+    "explanation": "An incremental backup copies only data changed or created since the previous backup, which makes it faster and smaller than a full backup."
+  },
+  {
+    "question": "What is a data warehouse?",
+    "choices": [
+      "A system that prohibits historical data",
+      "An integrated system that supports analysis of internal and external data from multiple viewpoints",
+      "A database used only for current transactions",
+      "A temporary cache for one application"
+    ],
+    "answer": "An integrated system that supports analysis of internal and external data from multiple viewpoints",
+    "explanation": "A data warehouse integrates data from internal and external sources into one store built for analysis from many viewpoints to support decisions, separate from operational systems."
+  },
+  {
+    "question": "What does subject-oriented mean in a data warehouse?",
+    "choices": [
+      "Data is organized only by file type",
+      "Data is stored without standards",
+      "Data is organized around business subjects such as customers or products",
+      "Data is deleted after every query"
+    ],
+    "answer": "Data is organized around business subjects such as customers or products",
+    "explanation": "Subject-oriented means the warehouse organises data around the business subjects being analysed, such as customers, products or sales, rather than around applications or processes."
+  },
+  {
+    "question": "What is a fact table?",
+    "choices": [
+      "A table containing no numeric values",
+      "A table used only for user privileges",
+      "A core table containing highly relevant measures",
+      "A table containing only XML tags"
+    ],
+    "answer": "A core table containing highly relevant measures",
+    "explanation": "In a star schema the fact table is the central table. It holds the numeric measures of the business (such as sales amount) plus keys to the dimension tables."
+  },
+  {
+    "question": "What is a dimension table?",
+    "choices": [
+      "A transaction recovery log",
+      "A perspective used to analyze facts",
+      "A physical index pointer",
+      "A table containing only candidate keys"
+    ],
+    "answer": "A perspective used to analyze facts",
+    "explanation": "A dimension table holds the perspectives used to analyse the facts, such as time, product or region."
+  },
+  {
+    "question": "What occurs during ETL transformation?",
+    "choices": [
+      "Converted data is stored in the warehouse",
+      "Extracted data is cleaned and converted into a suitable warehouse format",
+      "All source data is deleted",
+      "Data is first taken from source systems"
+    ],
+    "answer": "Extracted data is cleaned and converted into a suitable warehouse format",
+    "explanation": "In ETL (Extract, Transform, Load) the transform step cleans the extracted data and converts it into the format and standards of the warehouse before it is loaded."
+  },
+  {
+    "question": "What does OLAP allow end users to do?",
+    "choices": [
+      "Compile SQL into machine code",
+      "Validate XML grammar",
+      "Access multidimensional information for decision-making",
+      "Control transaction locks"
+    ],
+    "answer": "Access multidimensional information for decision-making",
+    "explanation": "OLAP (Online Analytical Processing) lets end users directly and interactively explore multidimensional data (drill-down, roll-up, slice, dice) for decision-making."
+  },
+  {
+    "question": "Which data-mining algorithm groups similar records into clusters?",
+    "choices": [
+      "Regression backup",
+      "Association",
+      "Classification",
+      "Clustering"
+    ],
+    "answer": "Clustering",
+    "explanation": "Clustering groups records by similarity without predefined classes. Classification, by contrast, assigns records to classes that are known in advance."
+  },
+  {
+    "question": "What does Volume mean in the 3V model of big data?",
+    "choices": [
+      "Very large data size, reaching petabytes or more",
+      "High data accuracy",
+      "High-speed real-time processing",
+      "Diverse structured and unstructured formats"
+    ],
+    "answer": "Very large data size, reaching petabytes or more",
+    "explanation": "Volume is the scale of the data: big data involves sizes of petabytes or more, beyond what traditional systems handle."
+  },
+  {
+    "question": "What does Velocity mean in big data?",
+    "choices": [
+      "The number of user accounts",
+      "The age of stored data",
+      "High-speed data generation and real-time processing demands",
+      "The number of data formats"
+    ],
+    "answer": "High-speed data generation and real-time processing demands",
+    "explanation": "Velocity is speed: data is generated very quickly and must often be collected and processed in real time."
+  },
+  {
+    "question": "What does Variety mean in big data?",
+    "choices": [
+      "The speed of query execution",
+      "The number of user accounts",
+      "The size of data in petabytes",
+      "The presence of structured, semi-structured, and unstructured data"
+    ],
+    "answer": "The presence of structured, semi-structured, and unstructured data",
+    "explanation": "Variety is the range of data forms: structured (tables), semi-structured (XML, JSON, logs) and unstructured (text, images, video)."
+  },
+  {
+    "question": "What is MapReduce?",
+    "choices": [
+      "A relational algebra operation",
+      "A model for parallel distributed batch processing of big data",
+      "A transaction isolation level",
+      "A database backup method"
+    ],
+    "answer": "A model for parallel distributed batch processing of big data",
+    "explanation": "MapReduce is a programming model that splits a large batch job into map tasks and reduce tasks that run in parallel across many distributed machines."
+  },
+  {
+    "question": "What is NoSQL?",
+    "choices": [
+      "A language that prohibits all queries",
+      "A recovery technique based on logs",
+      "A relational model limited to one table",
+      "A non-relational database approach emphasizing scalability and distributed storage"
+    ],
+    "answer": "A non-relational database approach emphasizing scalability and distributed storage",
+    "explanation": "NoSQL (\"Not only SQL\") refers to non-relational databases that relax the relational model to gain horizontal scalability and distributed storage of very large data."
+  },
+  {
+    "question": "What does Eventually Consistent mean?",
+    "choices": [
+      "Consistency may be temporarily lost but is restored over time",
+      "Transactions cannot be distributed",
+      "All nodes are always instantly identical",
+      "Updates are permanently ignored"
+    ],
+    "answer": "Consistency may be temporarily lost but is restored over time",
+    "explanation": "Eventual consistency (from the BASE properties) accepts that replicas may be inconsistent for a short time, but they converge to a consistent state once updates have propagated."
+  },
+  {
+    "question": "Which NoSQL model provides simple Get, Put, and Delete operations?",
+    "choices": [
+      "Key-value based",
+      "Document based",
+      "Column family based",
+      "Graph based"
+    ],
+    "answer": "Key-value based",
+    "explanation": "A key-value store is the simplest NoSQL model: each value is stored and retrieved by a unique key through Get, Put and Delete."
+  },
+  {
+    "question": "What is artificial intelligence according to the reviewer?",
+    "choices": [
+      "A type of relational algebra",
+      "Technology that realizes human learning, reasoning, perception, and language understanding using computer programs",
+      "A database backup method",
+      "A physical table organization"
+    ],
+    "answer": "Technology that realizes human learning, reasoning, perception, and language understanding using computer programs",
+    "explanation": "Artificial intelligence is technology that implements human intellectual abilities (learning, reasoning, perception and language understanding) in computer programs."
+  },
+  {
+    "question": "What is Artificial Narrow Intelligence?",
+    "choices": [
+      "AI that operates only under given conditions",
+      "AI that thinks like humans in every domain",
+      "AI that surpasses humans in all areas",
+      "AI that cannot perform any defined task"
+    ],
+    "answer": "AI that operates only under given conditions",
+    "explanation": "Artificial Narrow (weak) Intelligence can only perform the specific task it was built for under given conditions, such as playing Go or recognising images."
+  },
+  {
+    "question": "What is Artificial Super Intelligence?",
+    "choices": [
+      "AI that performs only clustering",
+      "AI that cannot reason",
+      "AI that surpasses humans in all areas",
+      "AI limited to navigation tasks"
+    ],
+    "answer": "AI that surpasses humans in all areas",
+    "explanation": "Artificial Super Intelligence is a hypothetical AI that exceeds human ability in every area. General intelligence (AGI) only matches humans."
+  },
+  {
+    "question": "What does the Turing test evaluate?",
+    "choices": [
+      "Whether an algorithm uses multiple hidden layers",
+      "Whether a database follows ACID properties",
+      "Whether an evaluator can distinguish a machine from a human through its responses",
+      "Whether a query uses an index"
+    ],
+    "answer": "Whether an evaluator can distinguish a machine from a human through its responses",
+    "explanation": "In the Turing test an evaluator converses with a machine and a human. If the evaluator cannot tell which is which from the responses, the machine is considered intelligent."
+  },
+  {
+    "question": "What kind of data is used in supervised learning?",
+    "choices": [
+      "Data describing the intended result",
+      "Only unstructured images",
+      "Only transaction logs",
+      "Data without any intended result"
+    ],
+    "answer": "Data describing the intended result",
+    "explanation": "Supervised learning trains on labelled data: each input comes with the correct answer (the intended result) for the model to learn from."
+  },
+  {
+    "question": "What is the purpose of unsupervised learning?",
+    "choices": [
+      "To learn only from rewards and punishments",
+      "To guarantee database consistency",
+      "To execute fixed SQL statements",
+      "To discover common characteristics in input patterns without labeled results"
+    ],
+    "answer": "To discover common characteristics in input patterns without labeled results",
+    "explanation": "Unsupervised learning has no labels. The model finds structure by itself, such as common characteristics or groupings in the input patterns."
+  },
+  {
+    "question": "How does reinforcement learning increase knowledge?",
+    "choices": [
+      "Through rewards for good behavior and punishment for wrong behavior",
+      "Through fixed labeled examples only",
+      "Through XML validation",
+      "Through database normalization"
+    ],
+    "answer": "Through rewards for good behavior and punishment for wrong behavior",
+    "explanation": "In reinforcement learning an agent learns by trial and error: actions with good results are rewarded and wrong ones penalised, and it learns to maximise reward."
+  },
+  {
+    "question": "Which neural network is especially suitable for image processing?",
+    "choices": [
+      "DBN",
+      "CNN",
+      "RNN",
+      "HMM"
+    ],
+    "answer": "CNN",
+    "explanation": "A Convolutional Neural Network (CNN) uses convolution filters to extract spatial features such as edges and shapes, which makes it especially effective on images. RNNs suit sequential data."
+  }
 ]

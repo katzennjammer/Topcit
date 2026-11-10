@@ -7,7 +7,8 @@
       "To replace every written document with verbal communication",
       "To prevent information from moving across departments"
     ],
-    "answer": "To achieve business goals through the sharing of information and meaning"
+    "answer": "To achieve business goals through the sharing of information and meaning",
+    "explanation": "Business communication is not an end in itself: people share information and meaning in order to achieve the goals of the business."
   },
   {
     "question": "Which element converts a sender's idea into a message?",
@@ -17,7 +18,8 @@
       "Feedback",
       "Noise"
     ],
-    "answer": "Encoding"
+    "answer": "Encoding",
+    "explanation": "Encoding is the step in which the sender turns an idea into a message, using words, symbols or gestures that can be transmitted."
   },
   {
     "question": "What does the receiver perform when interpreting a message?",
@@ -27,7 +29,8 @@
       "Filtering",
       "Decoding"
     ],
-    "answer": "Decoding"
+    "answer": "Decoding",
+    "explanation": "Decoding is the receiver's side of the process: interpreting the received message to understand its meaning."
   },
   {
     "question": "What can interfere with the business communication process?",
@@ -37,7 +40,8 @@
       "Noise",
       "Integrity"
     ],
-    "answer": "Noise"
+    "answer": "Noise",
+    "explanation": "Noise is anything that distorts or blocks the message, such as physical noise, unclear wording, prejudice or differences in background."
   },
   {
     "question": "Which type of communication commonly allows real-time feedback?",
@@ -47,7 +51,8 @@
       "Official-letter communication",
       "Manual-based communication"
     ],
-    "answer": "Verbal communication"
+    "answer": "Verbal communication",
+    "explanation": "In verbal (spoken) communication the listener can respond immediately, so feedback happens in real time. Written communication usually has a delay."
   },
   {
     "question": "According to the Law of Mehrabian in the reviewer, what percentage of communication comes from non-verbal gestures?",
@@ -57,7 +62,8 @@
       "38%",
       "93%"
     ],
-    "answer": "55%"
+    "answer": "55%",
+    "explanation": "In Mehrabian's law as given in the reviewer, 55% of the impression comes from non-verbal elements such as gestures and expression, 38% from tone of voice and only 7% from the words."
   },
   {
     "question": "What is top-down communication?",
@@ -67,7 +73,8 @@
       "Communication between a business and its customers only",
       "Instructions and commands sent from higher to lower levels of an organization"
     ],
-    "answer": "Instructions and commands sent from higher to lower levels of an organization"
+    "answer": "Instructions and commands sent from higher to lower levels of an organization",
+    "explanation": "Top-down (downward) communication flows from higher to lower levels of the organization, typically instructions, commands and policies."
   },
   {
     "question": "What is horizontal communication?",
@@ -77,7 +84,8 @@
       "Communication between members or departments at a similar organizational level",
       "Communication between an organization and government agencies"
     ],
-    "answer": "Communication between members or departments at a similar organizational level"
+    "answer": "Communication between members or departments at a similar organizational level",
+    "explanation": "Horizontal communication takes place between members or departments at a similar level, mainly for coordination and cooperation."
   },
   {
     "question": "Which communication channel has very high information integrity and fast feedback?",
@@ -87,7 +95,8 @@
       "Printed manuals",
       "Archived reports"
     ],
-    "answer": "Direct conversation"
+    "answer": "Direct conversation",
+    "explanation": "Direct, face-to-face conversation carries the fullest information (words, voice and expression) and allows immediate feedback, so its information integrity is the highest."
   },
   {
     "question": "What is deductive reasoning?",
@@ -97,7 +106,8 @@
       "Generating ideas without evaluation",
       "Dividing a problem into mutually exclusive groups"
     ],
-    "answer": "Deriving a specific fact from general premises"
+    "answer": "Deriving a specific fact from general premises",
+    "explanation": "Deductive reasoning goes from the general to the specific: a conclusion about a particular case is drawn from general premises. Inductive reasoning goes from specific cases to a general rule."
   },
   {
     "question": "What is the first stage of the business problem-solving process?",
@@ -107,7 +117,8 @@
       "Solution application",
       "Problem definition"
     ],
-    "answer": "Problem definition"
+    "answer": "Problem definition",
+    "explanation": "Problem solving starts with defining the problem clearly: you cannot analyse causes or find solutions until you know exactly what the problem is."
   },
   {
     "question": "What is the main objective of cause analysis?",
@@ -117,7 +128,8 @@
       "To identify, classify, and prioritize the root causes of a problem",
       "To avoid breaking the problem into smaller parts"
     ],
-    "answer": "To identify, classify, and prioritize the root causes of a problem"
+    "answer": "To identify, classify, and prioritize the root causes of a problem",
+    "explanation": "Cause analysis looks beneath the symptoms: it identifies the root causes of the problem, classifies them and decides which matter most."
   },
   {
     "question": "What happens during alternative development and evaluation?",
@@ -127,7 +139,8 @@
       "Only the selected solution is tested without alternatives",
       "Stakeholders are removed from decision-making"
     ],
-    "answer": "Possible solutions are created, compared with criteria, and the best one is selected"
+    "answer": "Possible solutions are created, compared with criteria, and the best one is selected",
+    "explanation": "In this stage several possible solutions are generated, compared against evaluation criteria, and the best one is chosen."
   },
   {
     "question": "What is brainstorming used for?",
@@ -137,7 +150,8 @@
       "Writing formal approval documents",
       "Calculating software development effort"
     ],
-    "answer": "Generating many ideas by freely presenting opinions"
+    "answer": "Generating many ideas by freely presenting opinions",
+    "explanation": "Brainstorming produces as many ideas as possible by letting members present opinions freely, without criticism, to stimulate one another."
   },
   {
     "question": "Which Six Thinking Hats role focuses on objective facts and data?",
@@ -147,7 +161,8 @@
       "Green Hat",
       "White Hat"
     ],
-    "answer": "White Hat"
+    "answer": "White Hat",
+    "explanation": "The White Hat stands for neutral, objective facts and data. Red is emotion, Black is caution, Yellow is optimism, Green is creativity and Blue is managing the process."
   },
   {
     "question": "What is TRIZ?",
@@ -157,7 +172,8 @@
       "A systematic methodology for solving inventive problems",
       "A communication-channel evaluation model"
     ],
-    "answer": "A systematic methodology for solving inventive problems"
+    "answer": "A systematic methodology for solving inventive problems",
+    "explanation": "TRIZ is a Russian \"theory of inventive problem solving\" developed by Altshuller: a systematic method that resolves contradictions using patterns found in past inventions."
   },
   {
     "question": "What does SCAMPER support?",
@@ -167,7 +183,8 @@
       "Prioritizing quality defects using a histogram",
       "Assigning project resources through a matrix"
     ],
-    "answer": "Generating ideas through prompts such as Substitute, Combine, Adapt, and Modify"
+    "answer": "Generating ideas through prompts such as Substitute, Combine, Adapt, and Modify",
+    "explanation": "SCAMPER is a checklist of prompts for generating ideas: Substitute, Combine, Adapt, Modify, Put to another use, Eliminate and Reverse (or Rearrange)."
   },
   {
     "question": "What does MECE require?",
@@ -177,7 +194,8 @@
       "Only the most important element should be included",
       "All alternatives must have equal cost"
     ],
-    "answer": "Elements must have no duplication and no omission"
+    "answer": "Elements must have no duplication and no omission",
+    "explanation": "MECE stands for Mutually Exclusive, Collectively Exhaustive: the items do not overlap (no duplication) and together cover everything (no omission)."
   },
   {
     "question": "What is a Logic Tree?",
@@ -187,7 +205,8 @@
       "A model for evaluating service quality",
       "A tree-form breakdown of key issues according to the MECE principle"
     ],
-    "answer": "A tree-form breakdown of key issues according to the MECE principle"
+    "answer": "A tree-form breakdown of key issues according to the MECE principle",
+    "explanation": "A Logic Tree breaks a key issue down into smaller branches level by level, following the MECE principle, so causes or solutions can be examined systematically."
   },
   {
     "question": "What does the 80-20 Rule suggest?",
@@ -197,7 +216,8 @@
       "A small number of causes or customers often account for most results",
       "Twenty percent of customers create twenty percent of sales"
     ],
-    "answer": "A small number of causes or customers often account for most results"
+    "answer": "A small number of causes or customers often account for most results",
+    "explanation": "The 80-20 (Pareto) rule says roughly 80% of results come from 20% of causes, for example most sales from a small share of customers, so effort should focus on the vital few."
   },
   {
     "question": "What is a business document?",
@@ -207,7 +227,8 @@
       "A personal note without a business purpose",
       "A document that must always use emotional language"
     ],
-    "answer": "A document necessary for business activities"
+    "answer": "A document necessary for business activities",
+    "explanation": "A business document is any document needed to carry out business activities: it conveys, records and preserves business information."
   },
   {
     "question": "How should business documents generally be written?",
@@ -217,7 +238,8 @@
       "Without considering the reader",
       "Using ambiguous and subjective descriptions"
     ],
-    "answer": "Accurately, concisely, clearly, and in a standardized form"
+    "answer": "Accurately, concisely, clearly, and in a standardized form",
+    "explanation": "Business documents must be understood quickly and correctly, so they should be accurate, concise, clear and in a standardised form."
   },
   {
     "question": "Which document is used to report the feasibility of a product or idea?",
@@ -227,7 +249,8 @@
       "Official letter",
       "Report"
     ],
-    "answer": "Report"
+    "answer": "Report",
+    "explanation": "A report presents the results of investigating or reviewing something, such as the feasibility of a product or idea, to the people who need it."
   },
   {
     "question": "Which document is prepared to obtain approval for business promotion?",
@@ -237,7 +260,8 @@
       "Proposal",
       "Meeting minutes"
     ],
-    "answer": "Proposal"
+    "answer": "Proposal",
+    "explanation": "A proposal presents a plan and asks for approval to go ahead with a piece of business."
   },
   {
     "question": "What is the most commonly used business document format mentioned in the reviewer?",
@@ -247,7 +271,8 @@
       "Technical specification only",
       "Verbal briefing without notes"
     ],
-    "answer": "One-page report"
+    "answer": "One-page report",
+    "explanation": "The reviewer names the one-page report as the most commonly used format, because it delivers the essentials to busy decision makers quickly."
   },
   {
     "question": "Where should the key message of a one-page report appear?",
@@ -257,7 +282,8 @@
       "Only in the final paragraph",
       "Only in the table of contents"
     ],
-    "answer": "On the first page"
+    "answer": "On the first page",
+    "explanation": "The key message (the conclusion) should come at the beginning, on the first page, so the reader grasps the main point at once."
   },
   {
     "question": "What does 'How much' represent in the 5W2H framework?",
@@ -267,7 +293,8 @@
       "Reason and significance",
       "Budget or profit plan"
     ],
-    "answer": "Budget or profit plan"
+    "answer": "Budget or profit plan",
+    "explanation": "5W2H adds two \"how\" questions to the five Ws: \"How\" is the method and \"How much\" is the budget or profit plan."
   },
   {
     "question": "Which numeral style is the default in official letters?",
@@ -277,7 +304,8 @@
       "Arabic numerals",
       "Binary numerals"
     ],
-    "answer": "Arabic numerals"
+    "answer": "Arabic numerals",
+    "explanation": "Official letters use Arabic numerals (1, 2, 3) by default for numbers."
   },
   {
     "question": "What principle is used when writing meeting minutes?",
@@ -287,7 +315,8 @@
       "POCA",
       "BCG Matrix"
     ],
-    "answer": "5W1H"
+    "answer": "5W1H",
+    "explanation": "Minutes record who, when, where, what, why and how (5W1H), so the facts of the meeting are captured completely and clearly."
   },
   {
     "question": "What should an effective email title do?",
@@ -297,7 +326,8 @@
       "Repeat the sender's name only",
       "Avoid indicating the topic"
     ],
-    "answer": "Clearly reveal the purpose of the message"
+    "answer": "Clearly reveal the purpose of the message",
+    "explanation": "The title is what the recipient sees first, so it should make the purpose of the message clear at a glance."
   },
   {
     "question": "What is a technical document?",
@@ -307,7 +337,8 @@
       "A communication method that avoids specialized terminology",
       "A document that records product handling, functions, architecture, and related technical information"
     ],
-    "answer": "A document that records product handling, functions, architecture, and related technical information"
+    "answer": "A document that records product handling, functions, architecture, and related technical information",
+    "explanation": "A technical document records technical information about a product, such as how to handle it, its functions and its architecture, for those who use or maintain it."
   },
   {
     "question": "Which feature of technical writing prevents different interpretations by readers?",
@@ -317,7 +348,8 @@
       "Clarity",
       "Profitability"
     ],
-    "answer": "Clarity"
+    "answer": "Clarity",
+    "explanation": "Clarity means a sentence can be read in only one way, so different readers do not interpret it differently."
   },
   {
     "question": "Which feature requires technical documents to conform to objective facts and data?",
@@ -327,7 +359,8 @@
       "Structuredness",
       "Persuasion"
     ],
-    "answer": "Accuracy"
+    "answer": "Accuracy",
+    "explanation": "Accuracy means the content matches objective facts and data, with no errors or unsupported claims."
   },
   {
     "question": "Which is a project-management technical document?",
@@ -337,7 +370,8 @@
       "Customer advertisement",
       "Informal chat message"
     ],
-    "answer": "Requirement Traceability Matrix"
+    "answer": "Requirement Traceability Matrix",
+    "explanation": "A Requirement Traceability Matrix is a project-management document: it is used to manage and track requirements throughout the project."
   },
   {
     "question": "What is a business plan?",
@@ -347,7 +381,8 @@
       "A manual used only after project completion",
       "A guideline describing project content, target market, and possibility of success"
     ],
-    "answer": "A guideline describing project content, target market, and possibility of success"
+    "answer": "A guideline describing project content, target market, and possibility of success",
+    "explanation": "A business plan sets out what the business or project will do, its target market and its chances of success. It guides execution and helps persuade investors."
   },
   {
     "question": "What is an RFP?",
@@ -357,7 +392,8 @@
       "An official document informing potential bidders about the organization's status, problems, and requirements",
       "A personal request for leave"
     ],
-    "answer": "An official document informing potential bidders about the organization's status, problems, and requirements"
+    "answer": "An official document informing potential bidders about the organization's status, problems, and requirements",
+    "explanation": "An RFP (Request for Proposal) is the official document a buyer issues to potential bidders describing its current status, problems and requirements, so they can prepare proposals."
   },
   {
     "question": "What is the purpose of a proposal?",
@@ -367,7 +403,8 @@
       "To replace the requirement analysis",
       "To document only final project statistics"
     ],
-    "answer": "To present the proposer's capabilities and plan in order to win an order"
+    "answer": "To present the proposer's capabilities and plan in order to win an order",
+    "explanation": "A proposal answers an RFP: the bidder presents its capabilities and its plan for doing the work in order to win the order."
   },
   {
     "question": "What does a Requirement Traceability Matrix ensure?",
@@ -377,7 +414,8 @@
       "Only employee assignments are recorded",
       "Technical terms are removed from documents"
     ],
-    "answer": "User requirements are tracked through analysis, design, implementation, testing, and final delivery"
+    "answer": "User requirements are tracked through analysis, design, implementation, testing, and final delivery",
+    "explanation": "An RTM links each user requirement to its analysis, design, implementation and test items, so every requirement can be tracked through to final delivery and none is lost."
   },
   {
     "question": "Which property requires every stated software requirement to be testable?",
@@ -387,7 +425,8 @@
       "Conciseness",
       "Verifiability"
     ],
-    "answer": "Verifiability"
+    "answer": "Verifiability",
+    "explanation": "Verifiability means each requirement is stated so that it can be tested, that is, there is a way to check whether the software meets it."
   },
   {
     "question": "What is the purpose of a project completion report?",
@@ -397,7 +436,8 @@
       "To summarize project results and confirm completion",
       "To replace the final deliverables"
     ],
-    "answer": "To summarize project results and confirm completion"
+    "answer": "To summarize project results and confirm completion",
+    "explanation": "A project completion report summarises what the project achieved and formally confirms that it is complete."
   },
   {
     "question": "Which is one of the three general purposes of a presentation?",
@@ -407,7 +447,8 @@
       "To avoid audience action",
       "To eliminate evidence"
     ],
-    "answer": "To persuade"
+    "answer": "To persuade",
+    "explanation": "Presentations generally aim to inform, to persuade or to motivate (move to action or entertain). Persuasion is one of the three."
   },
   {
     "question": "What does 3P analysis examine?",
@@ -417,7 +458,8 @@
       "Process, Performance, and Profit",
       "People, Platform, and Promotion"
     ],
-    "answer": "Person, Purpose, and Place"
+    "answer": "Person, Purpose, and Place",
+    "explanation": "3P analysis prepares a presentation by examining the Person (audience), the Purpose and the Place."
   },
   {
     "question": "What is the purpose of rehearsal?",
@@ -427,7 +469,8 @@
       "To avoid checking delivery timing",
       "To practice the presentation based on the prepared material"
     ],
-    "answer": "To practice the presentation based on the prepared material"
+    "answer": "To practice the presentation based on the prepared material",
+    "explanation": "A rehearsal is a practice run with the prepared material to check timing, flow and delivery before the real presentation."
   },
   {
     "question": "About how much presentation time is associated with one A4 page of scenario?",
@@ -437,7 +480,8 @@
       "About 3 minutes",
       "About 20 minutes"
     ],
-    "answer": "About 3 minutes"
+    "answer": "About 3 minutes",
+    "explanation": "As a rule of thumb, one A4 page of script takes about three minutes to present."
   },
   {
     "question": "What is the usual order of presentation material?",
@@ -447,7 +491,8 @@
       "Main text, closing, opening, and title",
       "Table of contents, closing, opening, and main text"
     ],
-    "answer": "Opening, table of contents, main text, and closing"
+    "answer": "Opening, table of contents, main text, and closing",
+    "explanation": "Presentation material usually runs: opening, table of contents, main text and closing."
   },
   {
     "question": "Within how long is the first impression of a presentation often determined?",
@@ -457,7 +502,8 @@
       "After the question-and-answer session",
       "Only after the final slide"
     ],
-    "answer": "Within 30 seconds"
+    "answer": "Within 30 seconds",
+    "explanation": "The audience forms its first impression at the very start, often within 30 seconds, so the opening matters a great deal."
   },
   {
     "question": "Which chart type is useful for showing change over time?",
@@ -467,7 +513,8 @@
       "Ranking chart",
       "Time-series chart"
     ],
-    "answer": "Time-series chart"
+    "answer": "Time-series chart",
+    "explanation": "A time-series (line) chart plots values along a time axis, making trends and changes over time easy to see."
   },
   {
     "question": "How should eye contact be distributed according to the reviewer?",
@@ -477,7 +524,8 @@
       "About 60% toward the decision maker and 40% toward the rest of the audience",
       "Entirely toward the decision maker"
     ],
-    "answer": "About 60% toward the decision maker and 40% toward the rest of the audience"
+    "answer": "About 60% toward the decision maker and 40% toward the rest of the audience",
+    "explanation": "The reviewer recommends giving about 60% of eye contact to the decision maker and 40% to the rest of the audience."
   },
   {
     "question": "What is a project?",
@@ -487,7 +535,8 @@
       "A collection of unrelated daily tasks",
       "A process used only for business communication"
     ],
-    "answer": "A temporary effort that uses resources to create a unique product, service, or result"
+    "answer": "A temporary effort that uses resources to create a unique product, service, or result",
+    "explanation": "A project is temporary (it has a start and an end) and produces something unique: a product, service or result. Routine operations are ongoing and repetitive."
   },
   {
     "question": "What is a program?",
@@ -497,7 +546,8 @@
       "A collection of unrelated portfolios",
       "A permanent organizational department"
     ],
-    "answer": "A set of related projects managed together"
+    "answer": "A set of related projects managed together",
+    "explanation": "A program is a group of related projects managed in a coordinated way to obtain benefits not available from managing them separately."
   },
   {
     "question": "What is a portfolio?",
@@ -507,7 +557,8 @@
       "A set of meeting minutes",
       "A collection of programs and projects undertaken to achieve strategic goals"
     ],
-    "answer": "A collection of programs and projects undertaken to achieve strategic goals"
+    "answer": "A collection of programs and projects undertaken to achieve strategic goals",
+    "explanation": "A portfolio is the collection of programs, projects and other work grouped together to achieve the organization's strategic goals. The items need not be related."
   },
   {
     "question": "Which project characteristic means it has a definite beginning and end?",
@@ -517,7 +568,8 @@
       "Temporary",
       "Integrated"
     ],
-    "answer": "Temporary"
+    "answer": "Temporary",
+    "explanation": "Temporary means every project has a definite beginning and a definite end. It does not mean the project is short."
   },
   {
     "question": "What is progressive elaboration?",
@@ -527,7 +579,8 @@
       "Fixing all project details without change",
       "Repeating the same routine operation indefinitely"
     ],
-    "answer": "Gradually defining the product or service in greater detail"
+    "answer": "Gradually defining the product or service in greater detail",
+    "explanation": "Progressive elaboration means the product or plan is defined in more and more detail as the project proceeds and more information becomes available."
   },
   {
     "question": "What are the most common project constraints?",
@@ -537,7 +590,8 @@
       "Hardware, software, and network",
       "Planning, execution, and closing"
     ],
-    "answer": "Scope, cost, and time"
+    "answer": "Scope, cost, and time",
+    "explanation": "Scope, cost and time are the classic \"triple constraint\": a change in one affects the others."
   },
   {
     "question": "In a projectized organization, who has major authority over project execution?",
@@ -547,7 +601,8 @@
       "The procurement officer",
       "The project manager"
     ],
-    "answer": "The project manager"
+    "answer": "The project manager",
+    "explanation": "In a projectized organization the team is organised around projects, and the project manager has full authority over the project and its resources."
   },
   {
     "question": "What is a weak matrix organization?",
@@ -557,7 +612,8 @@
       "A matrix in which the project manager mainly acts as a facilitator",
       "A functional organization with no cross-functional work"
     ],
-    "answer": "A matrix in which the project manager mainly acts as a facilitator"
+    "answer": "A matrix in which the project manager mainly acts as a facilitator",
+    "explanation": "In a weak matrix the functional manager keeps most of the authority, and the project manager acts mainly as a coordinator or facilitator."
   },
   {
     "question": "What is the Project Management Office?",
@@ -567,7 +623,8 @@
       "A cost-estimation formula",
       "A software quality standard"
     ],
-    "answer": "An organization dedicated to enterprise-wide project management support and oversight"
+    "answer": "An organization dedicated to enterprise-wide project management support and oversight",
+    "explanation": "A PMO (Project Management Office) is a dedicated unit that supports and oversees project management across the enterprise through standards, methods, tools and monitoring."
   },
   {
     "question": "Which process group formally starts a project?",
@@ -577,7 +634,8 @@
       "Executing",
       "Closing"
     ],
-    "answer": "Initiating"
+    "answer": "Initiating",
+    "explanation": "The Initiating process group formally authorises and starts a project or phase, for example by issuing the project charter."
   },
   {
     "question": "Which process group completes the work defined in the project management plan?",
@@ -587,7 +645,8 @@
       "Closing",
       "Executing"
     ],
-    "answer": "Executing"
+    "answer": "Executing",
+    "explanation": "The Executing process group carries out the work defined in the project management plan to produce the deliverables."
   },
   {
     "question": "Which process group tracks performance and makes adjustments?",
@@ -597,7 +656,8 @@
       "Monitoring and controlling",
       "Closing"
     ],
-    "answer": "Monitoring and controlling"
+    "answer": "Monitoring and controlling",
+    "explanation": "The Monitoring and Controlling process group tracks and reviews performance against the plan and makes corrective changes where needed."
   },
   {
     "question": "What happens in the closing process group?",
@@ -607,7 +667,8 @@
       "Only risks are identified",
       "The schedule baseline is first created"
     ],
-    "answer": "All project activities and contractual obligations are completed"
+    "answer": "All project activities and contractual obligations are completed",
+    "explanation": "The Closing process group formally finishes the project or phase: all activities and contractual obligations are completed and the result is handed over."
   },
   {
     "question": "What defines a predictive life cycle?",
@@ -617,7 +678,8 @@
       "No project planning is performed",
       "Only the final deliverable is defined"
     ],
-    "answer": "Scope, schedule, and cost are determined early in the project"
+    "answer": "Scope, schedule, and cost are determined early in the project",
+    "explanation": "In a predictive (waterfall) life cycle the scope, schedule and cost are fixed as early as possible and the project follows that plan."
   },
   {
     "question": "What is an iterative life cycle?",
@@ -627,7 +689,8 @@
       "A process that excludes customer feedback",
       "A life cycle in which parts of the product are developed repeatedly"
     ],
-    "answer": "A life cycle in which parts of the product are developed repeatedly"
+    "answer": "A life cycle in which parts of the product are developed repeatedly",
+    "explanation": "In an iterative life cycle the product is built through repeated cycles, each developing and refining parts of it."
   },
   {
     "question": "What is PMBOK?",
@@ -637,7 +700,8 @@
       "A representative project management body of knowledge published by PMI",
       "A communication framework"
     ],
-    "answer": "A representative project management body of knowledge published by PMI"
+    "answer": "A representative project management body of knowledge published by PMI",
+    "explanation": "PMBOK (A Guide to the Project Management Body of Knowledge) is the representative project management standard, published by the Project Management Institute (PMI)."
   },
   {
     "question": "Which methodology was developed in the United Kingdom?",
@@ -647,7 +711,8 @@
       "ISO 21500",
       "Scrum"
     ],
-    "answer": "PRINCE2"
+    "answer": "PRINCE2",
+    "explanation": "PRINCE2 (PRojects IN Controlled Environments) was developed by the UK government. PMBOK comes from the US-based PMI."
   },
   {
     "question": "What does Agile emphasize over comprehensive documentation?",
@@ -657,7 +722,8 @@
       "Fixed schedules",
       "Formal approvals"
     ],
-    "answer": "Working software"
+    "answer": "Working software",
+    "explanation": "The Agile Manifesto values working software over comprehensive documentation: delivering software that works matters more than writing extensive documents."
   },
   {
     "question": "Which activity is part of the Scrum process?",
@@ -667,7 +733,8 @@
       "Official-letter approval",
       "Sprint retrospective"
     ],
-    "answer": "Sprint retrospective"
+    "answer": "Sprint retrospective",
+    "explanation": "Scrum events are sprint planning, the daily scrum, the sprint review and the sprint retrospective, in which the team reflects on how to improve."
   },
   {
     "question": "Which knowledge area handles the identification, analysis, and response to uncertainty?",
@@ -677,7 +744,8 @@
       "Risk Management",
       "Procurement Management"
     ],
-    "answer": "Risk Management"
+    "answer": "Risk Management",
+    "explanation": "Risk is uncertainty that can affect project objectives. Risk Management identifies risks, analyses them and plans and carries out responses."
   },
   {
     "question": "What is project scope?",
@@ -687,7 +755,8 @@
       "Only the approved project budget",
       "Only the project schedule"
     ],
-    "answer": "All work required to create the project's products, services, and outputs"
+    "answer": "All work required to create the project's products, services, and outputs",
+    "explanation": "Project scope is all the work that must be done to deliver the project's products, services and results."
   },
   {
     "question": "What is product scope?",
@@ -697,7 +766,8 @@
       "The project's approved budget",
       "The stakeholder communication plan"
     ],
-    "answer": "The features and functions of the product"
+    "answer": "The features and functions of the product",
+    "explanation": "Product scope is the features and functions that characterise the product itself. Project scope is the work needed to deliver them."
   },
   {
     "question": "What is the purpose of collecting requirements?",
@@ -707,7 +777,8 @@
       "To assign control limits",
       "To determine what customers need and why they need it"
     ],
-    "answer": "To determine what customers need and why they need it"
+    "answer": "To determine what customers need and why they need it",
+    "explanation": "Collecting requirements determines and documents what stakeholders (customers) need and why they need it, as the basis for defining scope."
   },
   {
     "question": "What is the purpose of scope definition?",
@@ -717,7 +788,8 @@
       "To create a clear, complete, agreed-upon, and manageable scope statement",
       "To eliminate customer requirements"
     ],
-    "answer": "To create a clear, complete, agreed-upon, and manageable scope statement"
+    "answer": "To create a clear, complete, agreed-upon, and manageable scope statement",
+    "explanation": "Scope definition produces the project scope statement: a clear, complete and agreed description of the project and product that can be managed."
   },
   {
     "question": "What is a Work Breakdown Structure?",
@@ -727,7 +799,8 @@
       "A financial report of actual costs",
       "A communication network diagram"
     ],
-    "answer": "A hierarchical decomposition of deliverables and project scope into manageable work packages"
+    "answer": "A hierarchical decomposition of deliverables and project scope into manageable work packages",
+    "explanation": "A WBS breaks the project's deliverables and scope down hierarchically into smaller pieces until they are manageable work packages."
   },
   {
     "question": "What is a work package?",
@@ -737,7 +810,8 @@
       "A list of project stakeholders",
       "A type of project contract"
     ],
-    "answer": "The lowest WBS unit for which cost and duration can be estimated"
+    "answer": "The lowest WBS unit for which cost and duration can be estimated",
+    "explanation": "A work package is the lowest level of the WBS, the level at which cost and duration can be reliably estimated and managed."
   },
   {
     "question": "What does the WBS Dictionary provide?",
@@ -747,7 +821,8 @@
       "Only risk response strategies",
       "Detailed descriptions of work packages"
     ],
-    "answer": "Detailed descriptions of work packages"
+    "answer": "Detailed descriptions of work packages",
+    "explanation": "The WBS Dictionary gives the details of each WBS element or work package: a description of the work, the responsible party, schedule, cost and so on."
   },
   {
     "question": "What is a project schedule?",
@@ -757,7 +832,8 @@
       "A display of the start and finish dates of project activities",
       "A document of only actual costs"
     ],
-    "answer": "A display of the start and finish dates of project activities"
+    "answer": "A display of the start and finish dates of project activities",
+    "explanation": "A project schedule shows when each project activity is planned to start and finish."
   },
   {
     "question": "What occurs during activity sequencing?",
@@ -767,7 +843,8 @@
       "Project risks are transferred",
       "The project budget is approved"
     ],
-    "answer": "Relationships between activities are arranged in logical order"
+    "answer": "Relationships between activities are arranged in logical order",
+    "explanation": "Activity sequencing identifies the dependencies between activities and arranges them in logical order (what must come before what)."
   },
   {
     "question": "Which estimating method uses data from similar past projects?",
@@ -777,7 +854,8 @@
       "Bottom-up estimating",
       "Monte Carlo simulation"
     ],
-    "answer": "Analogous estimating"
+    "answer": "Analogous estimating",
+    "explanation": "Analogous (top-down) estimating uses actual data from similar past projects. It is quick but less accurate."
   },
   {
     "question": "What values are used in three-point estimating?",
@@ -787,7 +865,8 @@
       "Scope, cost, and quality",
       "Optimistic, most likely, and pessimistic"
     ],
-    "answer": "Optimistic, most likely, and pessimistic"
+    "answer": "Optimistic, most likely, and pessimistic",
+    "explanation": "Three-point estimating uses an optimistic, a most likely and a pessimistic estimate to allow for uncertainty."
   },
   {
     "question": "What is the PERT average formula?",
@@ -797,7 +876,8 @@
       "(P + 4M + O) / 6",
       "(P + M + 4O) / 6"
     ],
-    "answer": "(P + 4M + O) / 6"
+    "answer": "(P + 4M + O) / 6",
+    "explanation": "PERT uses a weighted average of the three estimates: (Pessimistic + 4 × Most likely + Optimistic) / 6. The most likely value is weighted four times."
   },
   {
     "question": "What does the Critical Path Method determine?",
@@ -807,7 +887,8 @@
       "The most important stakeholder",
       "The quality control limits"
     ],
-    "answer": "The minimum project duration by identifying the critical path"
+    "answer": "The minimum project duration by identifying the critical path",
+    "explanation": "CPM finds the longest path through the activity network, the critical path. Its length is the shortest time in which the project can be completed."
   },
   {
     "question": "What is true of activities on the critical path?",
@@ -817,7 +898,8 @@
       "They have unlimited schedule flexibility",
       "They cannot have dependencies"
     ],
-    "answer": "Their total float is zero"
+    "answer": "Their total float is zero",
+    "explanation": "Activities on the critical path have zero total float (slack), so any delay in one of them delays the whole project."
   },
   {
     "question": "What is fast tracking?",
@@ -827,7 +909,8 @@
       "Moving non-critical activities to the end",
       "Overlapping activities that were originally planned sequentially"
     ],
-    "answer": "Overlapping activities that were originally planned sequentially"
+    "answer": "Overlapping activities that were originally planned sequentially",
+    "explanation": "Fast tracking shortens the schedule by doing in parallel activities that were planned in sequence. It adds risk. Crashing, by contrast, adds resources at extra cost."
   },
   {
     "question": "What is project cost?",
@@ -837,7 +920,8 @@
       "The monetary value of resources invested in producing a product or service",
       "The amount of schedule float"
     ],
-    "answer": "The monetary value of resources invested in producing a product or service"
+    "answer": "The monetary value of resources invested in producing a product or service",
+    "explanation": "Project cost is the monetary value of all the resources (labour, materials, equipment) put into producing the product or service."
   },
   {
     "question": "What is budgeting in project cost management?",
@@ -847,7 +931,8 @@
       "Decomposing project scope",
       "Testing software quality"
     ],
-    "answer": "Aggregating activity and work-package estimates to create an approved cost baseline"
+    "answer": "Aggregating activity and work-package estimates to create an approved cost baseline",
+    "explanation": "Budgeting adds up the cost estimates of activities and work packages to establish the approved cost baseline against which performance is measured."
   },
   {
     "question": "What does Function Point analysis estimate?",
@@ -857,7 +942,8 @@
       "Only project schedule duration",
       "Only the number of team members"
     ],
-    "answer": "Software development size and cost from the user's functional point of view"
+    "answer": "Software development size and cost from the user's functional point of view",
+    "explanation": "Function Point analysis measures the size of software by the functions it provides to the user, independent of the programming language, and estimates cost from that size."
   },
   {
     "question": "Which is a data function in Function Point analysis?",
@@ -867,7 +953,8 @@
       "External Inquiry",
       "Internal Logical File"
     ],
-    "answer": "Internal Logical File"
+    "answer": "Internal Logical File",
+    "explanation": "Function Point analysis has two data functions, the Internal Logical File (ILF) and the External Interface File (EIF), and three transaction functions: EI, EO and EQ."
   },
   {
     "question": "What does Man/Month measure?",
@@ -877,7 +964,8 @@
       "The amount of labor consumed in a project",
       "The duration of each meeting"
     ],
-    "answer": "The amount of labor consumed in a project"
+    "answer": "The amount of labor consumed in a project",
+    "explanation": "A man-month is the amount of work one person does in one month. It measures the labour (effort) a project consumes."
   },
   {
     "question": "What is COCOMO?",
@@ -887,7 +975,8 @@
       "A quality-control chart",
       "A scope verification method"
     ],
-    "answer": "A software cost estimation model using a regression formula and project parameters"
+    "answer": "A software cost estimation model using a regression formula and project parameters",
+    "explanation": "COCOMO (Constructive Cost Model), developed by Barry Boehm, estimates effort and cost from program size using a regression formula adjusted by project parameters."
   },
   {
     "question": "What is Earned Value?",
@@ -897,7 +986,8 @@
       "The actual cost paid for completed work",
       "The remaining project reserve"
     ],
-    "answer": "The budgeted value of work actually completed"
+    "answer": "The budgeted value of work actually completed",
+    "explanation": "Earned Value (EV) is the budgeted value of the work actually completed so far. It is compared with planned value (PV) and actual cost (AC)."
   },
   {
     "question": "What does a positive Schedule Variance mean?",
@@ -907,7 +997,8 @@
       "The project has no approved baseline",
       "The project is ahead of schedule"
     ],
-    "answer": "The project is ahead of schedule"
+    "answer": "The project is ahead of schedule",
+    "explanation": "Schedule Variance is EV minus PV. A positive value means more work has been completed than planned, so the project is ahead of schedule."
   },
   {
     "question": "What is software quality?",
@@ -917,7 +1008,8 @@
       "The characteristics of software that enable it to meet stated requirements",
       "The speed of business communication"
     ],
-    "answer": "The characteristics of software that enable it to meet stated requirements"
+    "answer": "The characteristics of software that enable it to meet stated requirements",
+    "explanation": "Software quality is the set of characteristics of the software that determine how well it satisfies its stated requirements."
   },
   {
     "question": "What are the three stages of quality management?",
@@ -927,7 +1019,8 @@
       "Scope, schedule, and cost",
       "Avoid, transfer, and mitigate"
     ],
-    "answer": "Quality planning, quality assurance, and quality control"
+    "answer": "Quality planning, quality assurance, and quality control",
+    "explanation": "Quality management consists of quality planning (setting standards), quality assurance (checking the process) and quality control (checking the outputs)."
   },
   {
     "question": "What is a cost of conformance?",
@@ -937,7 +1030,8 @@
       "A reserve for unknown risks",
       "An expense caused by schedule delay"
     ],
-    "answer": "A cost incurred to prevent defects or validate product quality"
+    "answer": "A cost incurred to prevent defects or validate product quality",
+    "explanation": "The cost of conformance is money spent to achieve quality: prevention costs (training, process) and appraisal costs (testing, inspection). The cost of non-conformance is the cost of failures."
   },
   {
     "question": "What is a Pareto Chart used for?",
@@ -947,7 +1041,8 @@
       "Mapping causes and effects in a fishbone shape",
       "Prioritizing problems by sorting causes according to frequency"
     ],
-    "answer": "Prioritizing problems by sorting causes according to frequency"
+    "answer": "Prioritizing problems by sorting causes according to frequency",
+    "explanation": "A Pareto chart is a bar chart with causes sorted from most to least frequent, showing which few causes produce most of the problems so they can be addressed first."
   },
   {
     "question": "What is CMMI intended to improve?",
@@ -957,7 +1052,8 @@
       "An organization's processes and capabilities",
       "Only project procurement"
     ],
-    "answer": "An organization's processes and capabilities"
+    "answer": "An organization's processes and capabilities",
+    "explanation": "CMMI (Capability Maturity Model Integration) is a model for assessing and improving an organization's processes and capability, with maturity levels from 1 to 5."
   },
   {
     "question": "What is a contingency reserve used for?",
@@ -967,7 +1063,8 @@
       "Routine operating expenses",
       "Completed project benefits"
     ],
-    "answer": "Known risks assigned to project work packages"
+    "answer": "Known risks assigned to project work packages",
+    "explanation": "A contingency reserve is budget set aside for identified (\"known\") risks. A management reserve is for unknown risks."
   },
   {
     "question": "Which negative-risk strategy transfers the impact and ownership of a threat to a third party?",
@@ -977,7 +1074,8 @@
       "Mitigate",
       "Accept"
     ],
-    "answer": "Transfer"
+    "answer": "Transfer",
+    "explanation": "Transfer shifts the impact of a threat and the ownership of its response to a third party, for example through insurance or outsourcing. The other strategies are avoid, mitigate and accept."
   },
   {
     "question": "What is a Project Management System?",
@@ -987,7 +1085,8 @@
       "A software-quality characteristic",
       "Software that manages a project from creation to completion"
     ],
-    "answer": "Software that manages a project from creation to completion"
+    "answer": "Software that manages a project from creation to completion",
+    "explanation": "A Project Management System (PMS) is software that supports managing a project across its whole life, from creation to completion, including schedule, cost and resources."
   },
   {
     "question": "What is ex-post evaluation?",
@@ -997,6 +1096,7 @@
       "Evaluation performed after project completion to assess effectiveness and investment feasibility",
       "Risk identification performed during planning"
     ],
-    "answer": "Evaluation performed after project completion to assess effectiveness and investment feasibility"
+    "answer": "Evaluation performed after project completion to assess effectiveness and investment feasibility",
+    "explanation": "Ex-post evaluation is carried out after the project is finished to assess whether it was effective and whether the investment was justified."
   }
 ]
