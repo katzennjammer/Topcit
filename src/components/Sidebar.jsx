@@ -12,10 +12,10 @@ const NAV_ITEMS = [
 function WeightMark() {
   return (
     <span className="weight-mark" aria-hidden="true">
-      <i style={{ flex: 365, background: 'var(--m1)' }} />
-      <i style={{ flex: 265, background: 'var(--m2)' }} />
-      <i style={{ flex: 235, background: 'var(--m3)' }} />
-      <i style={{ flex: 135, background: 'var(--m4)' }} />
+      <i style={{ flex: 365, background: 'var(--m1b)' }} />
+      <i style={{ flex: 265, background: 'var(--m2b)' }} />
+      <i style={{ flex: 235, background: 'var(--m3b)' }} />
+      <i style={{ flex: 135, background: 'var(--m4b)' }} />
     </span>
   );
 }

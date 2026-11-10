@@ -7,7 +7,7 @@
   --secondary: #1F4B7A;
   --secondary-hover: #173A60;
   --secondary-light: #E8EEF5;
-  --background: #F4F5F6;
+  --background: #F3F4F7;
   --surface: #FFFFFF;
   --surface-hover: #ECEEF0;
   --border: #D6DADF;
@@ -15,13 +15,24 @@
   --text: #1B2128;
   --text-muted: #57616C;
   --text-light: #8A939D;
-  --mark: #F2CF63;
+  --mark: #E5B544;
+  --gold: #B8862B;
 
-  /* One colour per official module */
-  --m1: #1F4B7A;
-  --m2: #1E6B5C;
-  --m3: #7A3B52;
-  --m4: #8F5F17;
+  /* Navigation rail and hero share one deep navy */
+  --navy: #13243A;
+  --navy-soft: #1D3350;
+  --on-navy: #FFFFFF;
+  --on-navy-muted: #B4C2D3;
+
+  /* One colour per official module: text-safe, then block fill */
+  --m1: #1F5FA8;
+  --m2: #177B68;
+  --m3: #A3406A;
+  --m4: #9A6A12;
+  --m1b: #2F74C0;
+  --m2b: #1F9480;
+  --m3b: #B8517B;
+  --m4b: #C98A1E;
 
   /* Status */
   --success: #1B7447;
@@ -35,20 +46,20 @@
 
   /* Type */
   --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* Depth is shown with borders; shadows are reserved for overlays */
-  --shadow-sm: none;
-  --shadow-md: none;
-  --shadow-lg: 0 6px 20px rgba(27, 33, 40, 0.10);
+  --shadow-sm: 0 1px 2px rgba(19, 36, 58, 0.05);
+  --shadow-md: 0 2px 6px rgba(19, 36, 58, 0.07);
+  --shadow-lg: 0 8px 24px rgba(19, 36, 58, 0.12);
   --shadow-xl: 0 12px 32px rgba(27, 33, 40, 0.16);
 
   /* Radius */
-  --radius-sm: 2px;
-  --radius-md: 3px;
-  --radius-lg: 4px;
-  --radius-xl: 4px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
   --radius-full: 9999px;
 
   /* Transitions */
@@ -74,10 +85,18 @@
   --text-muted: #A0A9B3;
   --text-light: #6E7883;
 
+  --gold: #E0B555;
+  --navy: #0D1622;
+  --navy-soft: #182637;
+
   --m1: #8AB4E0;
   --m2: #6CC3B0;
   --m3: #D48BA6;
   --m4: #D9A857;
+  --m1b: #2A65A6;
+  --m2b: #1B8371;
+  --m3b: #A5456C;
+  --m4b: #B0781A;
 
   --success: #63C08E;
   --success-bg: rgba(99, 192, 142, 0.13);
@@ -88,6 +107,8 @@
   --warning: #D9A857;
   --warning-bg: rgba(217, 168, 87, 0.13);
 
+  --shadow-sm: none;
+  --shadow-md: none;
   --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.4);
   --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
@@ -142,11 +163,16 @@ body {
   padding: 2.25rem 2rem 4rem;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.25;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 @media (max-width: 900px) {
@@ -211,7 +237,7 @@ h1, h2, h3 {
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all var(--transition-fast);

@@ -354,7 +354,7 @@ function ExamReview({ exam, onDone, setGrade, theme }) {
             <div className="score-row" key={m.id}>
               <span className="score-row-label">{m.id} {m.title}</span>
               <span className="score-track">
-                <span className="score-fill" style={{ width: `${m.available ? (m.earned / m.available) * 100 : 0}%`, background: m.color }} />
+                <span className="score-fill" style={{ width: `${m.available ? (m.earned / m.available) * 100 : 0}%`, background: m.fill }} />
               </span>
               <span className="score-row-value">{m.earned} / {m.available}</span>
             </div>
