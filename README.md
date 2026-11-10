@@ -1,8 +1,8 @@
-# 🚀 TOPCIT Reviewer & Practice Platform
+# Topcit
 
-A modern, lightweight, and responsive web application designed for comprehensive **TOPCIT** (*Test of Practical Competency in IT*) preparation, self-assessment, and study review.
+A personal study app for the **TOPCIT** (*Test of Practical Competency in IT*) exam: practice quizzes with explanations, study reviewers, and score tracking.
 
-Made by **[Benedict Avenido](https://github.com/ire-zepelli)**.
+Maintained by **[katzennjammer](https://github.com/katzennjammer)**. Built on [topcit-reviewer](https://github.com/ire-zepelli/topcit-reviewer) by Benedict Avenido.
 
 ---
 
@@ -11,9 +11,10 @@ Made by **[Benedict Avenido](https://github.com/ire-zepelli)**.
 - ⚡ **Interactive Quiz Engine**:
   - **Randomized Questions & Choices**: Questions and choices (A, B, C, D) are randomly shuffled for every new attempt using the Fisher-Yates algorithm, while keeping correct answer mapping accurate.
   - **Multiple Question Types**:
-    - **Multiple-Choice Questions**: Instant visual feedback (green/red active option states), choice selection locking once an answer is cast, and detailed explanation banners.
+    - **Multiple-Choice Questions**: Instant visual feedback (green/red active option states), choice selection locking once an answer is cast, and an explanation of why the correct answer is correct, shown whether you answered right or wrong.
     - **Descriptive / Essay Questions**: Multiline text area for written responses, model reference answer reveal, and self-evaluation grading (*Mark as Correct* / *Mark as Incorrect*).
     - **Code Snippets & Tables**: Formatted monospace code blocks and database schema tables embedded directly in questions.
+  - **Retry Missed Questions**: After a quiz, start a practice round with only the questions you got wrong. Practice rounds do not affect saved scores.
   - **Question Navigation**: Interactive Question Map jumper grid to inspect, flag, or skip questions.
   - **Optional Timer**: Toggleable count-up timer.
   - **Full Keyboard Shortcuts**: `1`-`4` or `A`-`D` to select choices, `Arrow keys` or `N`/`P` to navigate, `F` to flag.
@@ -70,10 +71,10 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your system.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/ire-zepelli/topcit-reviewer.git
+git clone https://github.com/katzennjammer/Topcit.git
 
 # 2. Navigate to the project folder
-cd topcit-reviewer
+cd Topcit
 
 # 3. Install dependencies
 npm install
@@ -86,8 +87,6 @@ Open your browser and navigate to `http://localhost:5173`.
 
 ---
 
-## 👨‍💻 Author
+## Credits
 
-Developed by **Benedict Avenido**
-- **GitHub**: [@ire-zepelli](https://github.com/ire-zepelli)
-- **Repository**: [topcit-reviewer](https://github.com/ire-zepelli/topcit-reviewer)
+This project started from [topcit-reviewer](https://github.com/ire-zepelli/topcit-reviewer) by Benedict Avenido ([@ire-zepelli](https://github.com/ire-zepelli)), who built the original quiz engine, question sets and reviewer notes.
